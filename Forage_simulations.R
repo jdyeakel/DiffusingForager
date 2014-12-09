@@ -19,10 +19,10 @@ for (i in 2:1000) {
 }
 
 #Across dimensions
-max.dim <- 5
+max.dim <- 4
 m.mort <- numeric(max.dim)
 for (i in 1:max.dim) {
   print(paste("i=",i,sep=""))
-  rout <- simple_forage(dim=i,xmax=50,dist_max=100,rep=100)
+  rout <- simple_forage(dim=i,xmax=20,dist_max=100,rep=100)
   m.mort[i] <- mean(rout[[1]])
 }
