@@ -37,13 +37,13 @@ simple_forage <- function(dim,xmax,dist_max,rep) {
       
       x[t] <- max(x[t-1] - 1, 0)
       
-      res_value <- res_array[matrix(origin, 1)]
+      res_value <- res_array[matrix(newpath, 1)]
       if (res_value == 1) {
         x[t] <- xmax
       }
       
       #Eliminate resource
-      res_array[matrix(origin, 1)] <- 0
+      res_array[matrix(newpath, 1)] <- 0
       
     } #end t
     
