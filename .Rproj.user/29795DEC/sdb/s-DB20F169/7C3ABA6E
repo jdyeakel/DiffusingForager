@@ -1,0 +1,17 @@
+{
+    "contents" : "simple_forage <- function(dim,xmax,dist_max,rep) {\n  \n  tmort <- numeric(rep)\n  path_list <- list()\n  x_list <- list()\n  \n  for (r in 1:rep) {\n    \n    origin <- numeric(dim)\n    res_array <- array(data = 1, dim = rep(dist_max,dim))\n    \n    path <- numeric(dim)\n    x <- numeric()\n    \n    x[1] <- xmax\n    t = 1\n    while (x[t] != 0) {\n      t = t+1\n      #Define the next step of the consumer's path\n      step <- sample(c(-1,0,1),dim,replace=TRUE)\n      \n      if (t == 2) {\n        newpath <- path + step\n      } else {\n        newpath <- path[t-1,] + step\n      }\n      \n      \n      #Boundary conditions\n      toolow <- which(newpath < 1)\n      if (length(toolow) > 0) {\n        newpath[toolow] <- 1\n      }\n      \n      #accept proposed step\n      path <- rbind(path,newpath)\n      \n      x[t] <- max(x[t-1] - 1, 0)\n      \n      if (res_array[newpath] == 1) {\n        x[t] <- xmax\n      }\n      \n      #Eliminate resource\n      res_array[newpath] <- 0\n      \n    } #end t\n    \n    tmort[r] <- t\n    path_list[[r]] <- path\n    x_list[[r]] <- x\n    #out <- list()\n    #out[[1]] <- path\n    #out[[2]] <- x\n    \n    #return(out)\n  } #end rep\n  \n  out <- list()\n  out[[1]] <- tmort\n  out[[2]] <- path_list\n  out[[3]] <- x_list\n  \n  return(out)\n}",
+    "created" : 1418079404876.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1377512572",
+    "id" : "7C3ABA6E",
+    "lastKnownWriteTime" : 1418146930,
+    "path" : "~/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/R/simple_forage.R",
+    "project_path" : "R/simple_forage.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
