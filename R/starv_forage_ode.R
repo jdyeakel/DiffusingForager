@@ -2,9 +2,9 @@ starv_forage_ode <- function(t, state, parameters) {
   with(as.list(c(state,parameters)), {
     
     #Rate of change
-    dR <- alpha*R*(1-(R/k)) - R*(X+Y)
-    dX <- p*(1-R)*Y - R*X - mu_x*X
-    dY <- lambda*Y*R + R*X - p*(1-R)*Y - mu_y*Y
+    dR <- alpha*R*(1-R) - epsilon*R*(X+Y)
+    dX <- sigma*(1-R)*Y - rho*epsilon*R*X - mu*X
+    dY <- gamma*epsilon*Y*R + rho*epsilon*R*X - sigma*(1-R)*Y #- mu*Y
     
     #Return rate of change
     list(c(dR,dX,dY))
