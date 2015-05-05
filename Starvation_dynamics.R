@@ -40,74 +40,9 @@ with(as.list(parameters),{
   Y <- out[,4]
   C <- X + Y
   gammaC <- gamma*Y*R - 2*mu*X - mu*Y
-  #plot((R/C),gammaC,pch=".")
-  plot(gammaC)
+  plot((R/C),gammaC,pch=".")
 }
 )
-
-
-
-
-#Vulnerability calculation
-vuln_thresh <- 0.1
-res_vuln <- length(which(out[,2] <= 0.1))/length(out[,2])
-
-#2D and 3D plots
-plot(out[,2],out[,3],type="l",xlab="Resource",ylab="Foragers")
-plot3d(out[,2],out[,3],out[,4],xlab="",ylab="",zlab="",type="l",col=paste(colors[2],"50",sep=""),lwd=2,xaxt="n",yaxt="n",zaxt="n")
-
-sigmavec <- seq(0,5,0.1)
-lsigmavec <- length(sigmavec)
-
-ResSS <- numeric(lsigmavec)
-ResSD <- numeric(lsigmavec)
-PopSS <- numeric(lsigmavec)
-PopSD <- numeric(lsigmavec)
-
-
-for (i in 1:lsigmavec) {
-  
-  state <- c(
-    R = 0.5,            #Resource
-    X = 0.5,          #Starvers
-    Y = 0.5)        #Non-Starvers
-  
-  parameters <- c(
-    alpha = 1,     
-    p = sigmavec[i],       
-    mu_x = 0.2,     
-    mu_y = 0.1,
-    gamma = 5
-  )
-  
-  time <- seq(0,500, by = 0.1)
-  
-  out <- ode(y = state, times = time, func = starv_forage_ode, parms = parameters)
-  
-  ResSS[i] <- median(out[4000:5000,2])
-  ResSD[i] <- sd(out[4000:5000,2])
-  
-  PopSS[i] <- median(out[4000:5000,3] + out[4000:5000,4])
-  PopSD[i] <- sd(out[4000:5000,3] + out[4000:5000,4])
-  
-}
-
-plot(sigmavec,ResSS,ylim=c(0,1),type="b")
-plot(sigmavec,ResSD,ylim=c(0,1),type="b")
-plot(sigmavec,ResSD/ResSS,ylim=c(0,max(ResSD/ResSS)),type="b")
-
-plot(sigmavec,PopSS,ylim=c(0,1),type="b")
-plot(sigmavec,PopSD,ylim=c(0,1),type="b")
-plot(sigmavec,PopSD/PopSS,ylim=c(0,max(PopSD/PopSS)),type="b")
-
-colors <- brewer.pal(5,"Set1")
-plot(sigmavec,PopSD/PopSS,ylim=c(0,max(PopSD/PopSS,ResSD/ResSS)),type="b",pch=16,col=colors[1])
-points(sigmavec,ResSD/ResSS,ylim=c(0,max(ResSD/ResSS)),type="b",pch=16,col=colors[2])
-
-
-
-
-
 
 
 
@@ -143,7 +78,7 @@ for (i in 1:l_sigmavec) {
     
     parameters <- c(
       alpha = 1, 
-      epsilon = 0.8,
+      epsilon = 1,
       sigma = sigmavec[i],
       rho = gammavec[j],
       gamma = gammavec[j],    
@@ -203,9 +138,9 @@ lines(HopfData,lwd=3,col="white")
 #Simulate dynamics over BOTH p and EPSILON
 source("R/starv_forage_ode.R")
 
-sigmavec <- seq(0,0.5,0.025)
+sigmavec <- seq(0,0.5,0.05)
 l_sigmavec <- length(sigmavec)
-epsilonvec <- seq(0.2,2,0.1)
+epsilonvec <- seq(0.1,1,0.1)
 l_epsilonvec <- length(epsilonvec)
 
 ResSS_m <- matrix(0,l_sigmavec,l_epsilonvec)
@@ -230,12 +165,12 @@ for (i in 1:l_sigmavec) {
       Y = 0.5)        #Non-Starvers
     
     parameters <- c(
-      alpha = 2,
-      p = sigmavec[i],  
+      alpha = 1, 
       epsilon = epsilonvec[j],
-      gamma = 1,
-      mu_x = 0.02,     
-      mu_y = 0.002
+      sigma = sigmavec[i],
+      rho = 1,
+      gamma = 1,    
+      mu = 0.02
     )
     t_term <- 2000
     step <- 0.1
