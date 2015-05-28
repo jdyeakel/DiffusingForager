@@ -24,7 +24,7 @@ parameters <- c(
   mu = 0.02
 )
 
-time <- seq(0,5000, by = 0.1)
+time <- seq(0,1000, by = 0.1)
 
 out <- ode(y = state, times = time, func = starv_forage_ode, parms = parameters)
 #Plot ALL
@@ -40,7 +40,9 @@ with(as.list(parameters),{
   Y <- out[,4]
   C <- X + Y
   gammaC <- gamma*Y*R - 2*mu*X - mu*Y
-  plot((R/C),gammaC,pch=".")
+  ericy <- -2*sigma*Y*(1-R) + 2*rho*epsilon*R*X
+  #plot((R/C),gammaC,pch=16,cex=0.4)
+  plot((R/C),ericy,pch=16,cex=0.4)
 }
 )
 
@@ -50,7 +52,7 @@ with(as.list(parameters),{
 #Simulate dynamics over BOTH sigma and gamma
 source("R/starv_forage_ode.R")
 
-sigmavec <- seq(0,0.5,0.05)
+sigmavec <- seq(0,0.2,0.025)
 l_sigmavec <- length(sigmavec)
 gammavec <- seq(0.1,1,0.1)
 l_gammavec <- length(gammavec)
@@ -118,14 +120,14 @@ PopCV_m <- PopSD_m/PopSS_m
 ResCV_m <- ResSD_m/ResSS_m
 
 pal <- wes_palette(name = "Zissou",20, type = "continuous")
-M <-  PopSD_m      #(1+res_vuln_m)/(1+pop_vuln_m)
+M <-  res_vuln_m      #(1+res_vuln_m)/(1+pop_vuln_m)
 filled_contour(sigmavec, 
                gammavec, 
                M,
                levels = seq(min(M), max(M),length.out=20),col = pal,
                lwd = 0.1,xlab="p",ylab="gamma")
 HopfData <- read.csv("HopfData.csv") #Import analytical solution to the Hopf Bifurcation
-lines(HopfData,lwd=3,col="white")
+points(HopfData,col="white",pch=16,cex=0.8)
 
 
 
