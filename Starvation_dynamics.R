@@ -16,7 +16,7 @@ state <- c(
   Y = 0.5)        #Non-Starvers
 
 parameters <- c(
-  alpha = 2, 
+  alpha = 1, 
   epsilon = 0.5,
   sigma = 0.1,
   rho = 0.5,
@@ -24,7 +24,7 @@ parameters <- c(
   mu = 0.02
 )
 
-time <- seq(0,1000, by = 0.1)
+time <- seq(0,5000, by = 0.1)
 
 out <- ode(y = state, times = time, func = starv_forage_ode, parms = parameters)
 #Plot ALL
@@ -46,6 +46,7 @@ with(as.list(parameters),{
 }
 )
 
+plot3d(out[,2],out[,3],out[,4],xlab="",ylab="",zlab="",type="l",col=paste(colors[2],"50",sep=""),lwd=2,xaxt="n",yaxt="n",zaxt="n",axes=FALSE)
 
 
 
