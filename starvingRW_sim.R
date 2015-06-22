@@ -1,76 +1,140 @@
-
+library(RColorBrewer)
+#nearest neighbor with boundary conditions function
+source("R/ipbc.R")
 
 #Cell lattice
 #How many cells? (total)
 L <- 10
 size <- (L+2)^2
-nloc <- seq(1,size,1)
-#Resource state at each location
-r <- rep(1,size)
+#nloc <- seq(1,size,1)
 
-ipbc <- function(x,L) {
-  check <- 0
-  if (x <= L+2) {new_x <- x + L*(L+2); check <- 1}
-  if (x >= ((L+2)^2 - (L+2))) {new_x <- x - L*(L+2); check <- 1}
-  if (x%%(L+2) == 1) {new_x <- x + (L); check <- 1}
-  if (x%%(L+2) == 0) {new_x <- x - (L); check <- 1}
-  if(check == 0) {new_x <- x}
-  nn <- c(new_x+1,new_x-1,new_x+(L+2),new_x-(L+2))
-  return(nn)
-}
 
 #Maximum energetic state
-s_max <- 50
-s_crit <- 25
+s_max <- 1
+s_crit <- 0
 gain <- s_max
+
+############
+#Parameters
+############
+
+#Probability of resource growth | presence of nearest neighbors
+pr_grow <- 0.4
+#Probability of consumer mortality | they are starving
+pr_mort <- 0.5
+#Probability of consumer reproduction
+pr_rep <- 0.8
+
 
 #initial number of random walkers
 nrw <- 10
 #Random walker energetic state
 srw <- rep(s_max,nrw)
+#Location of RWs
+rwloc <- sample(seq(1:size),nrw,replace=TRUE)
+#Resource state at each location
+r <- rep(1,size)
 
-rwloc <- sample(nloc,x,replace=TRUE)
-
+#Maximum time
 tmax <- 1000
 
-#Should all be written in CPP
+#Vectors for consumer and resource population sizes over time
+pop_c <- numeric(tmax)
+pop_r <- numeric(tmax)
 for (t in 1:tmax) {
   
-  #6) RW Move
-  rwloc <- function(rwloc) {}
+  #Across each individual in the system...
+  ind_check <- TRUE
+  num <- length(srw)
+  pop_c[t] <- num
+  pop_r[t] <- sum(r)
+  i <- 0
   
-  # Internal Dynamics
-  
-  #1) update s vector and r vector
-  srw <- srw - 1 + r[rwloc]*gain # Minus 1 for prior movement, and + resource for consumption
-  #Boundary conditions... can't be greater than s_max
-  srw <- sapply(srw,function(x){min(s_max,x)})
-  
-  #2) update r vector
-  r[rwloc] <- r[rwloc] - 1
-  
-  #3) implement starvation and mortality
-  dead <- which(srw <= 0)
-  srw <- srw[-dead]
-  
-  
+  #Across the number of individuals (which will fluctuate)
+  while (ind_check == TRUE) {
+    
+    #individual index
+    i <- i + 1
+    
+    #Move to a new location
+    new_loc <- sample(ipbc(rwloc[i],L),1)
+    #consume resource if it is there
+    new_s <- min(srw[i] - 1 + r[new_loc]*gain,s_max)
+    #deplete the resource
+    r[new_loc] <- 0
+    
+    #Impliment mortality and update
+    #Random mortality
+    if (new_s <= 0) {
+      #Draw random value
+      rdraw <- runif(1)
+      if (rdraw < pr_mort) {
+        #Spaghetti method of removal
+        srw[i] <- srw[num]; srw <- srw[1:(num-1)]
+        rwloc[i] <- rwloc[num]; rwloc <- rwloc[1:(num-1)]
+        i <- i - 1 #reanalyzes the 'new member' of the slot
+      } else {
+        #Individual survives
+        #Record the new location and new state
+        rwloc[i] <- new_loc
+        srw[i] <- new_s
+      }
+    } else {
+      #Individual survives:
+      #Record the new location and new state
+      rwloc[i] <- new_loc
+      srw[i] <- new_s
+    }
+    
+    #Recalculate num (number of individuals)... will be shorter if there is mortality
+    num <- length(srw)
+    if (i == num) {
+      ind_check <- FALSE #The while loop is stopped if you get to the end of the list
+    }
+    
+  } #End while loop
   
   #4) RW reproduction
-  full <- which(srw > s_crit) #Alternatively, write reproduction as a probability as a function of full
-  srw_new <- srw[full] #begin with same S as parents
-  srw <- c(srw,srw_new)
-  rwloc_new <- rwloc[full] #begin at same cell location as parents
-  rwloc <- c(rwloc,rwloc_new)
+  for (i in 1:num) {
+    #Reproduction can only happen if s > s_crit
+    if (srw[i] > s_crit) {
+      #Draw random value
+      rdraw <- runif(1)
+      if (rdraw < pr_rep) {
+        #Add a new individual to the end of the vector
+        srw_new <- srw[i]
+        rwloc_new <- rwloc[i]
+        srw <- c(srw,srw_new)
+        rwloc <- c(rwloc,rwloc_new)
+        #Recalculate the number of individuals... will be greater if there is reproduction
+        num <- length(srw)
+      }
+    }
+  }
   
+  #Resource growth
+  for (j in 1:length(r)) {
+    if (r[j] == 0) {
+      #Determine the number of nearest neighbor resources
+      r_nn <- sum(r[ipbc(j,L)])
+      #Growth only occurs if there is at least one nearest neighbor
+      if (r_nn >= 1) {
+        r_draw <- runif(1)
+        if (r_draw < pr_grow) {
+          r[j] <- 1
+        }
+      }
+    }
+  }
+ #Stop the simulation if the number of individuals is equal to one... never gets to zero - not sure why.
+  if (num == 1) {
+    break
+  }
   
-  #5) Resource growth ~ from NEIGHBORS
-  #The number of nearest neighbors for each resource patch
-  r_nn <- function(r) {}
-  # initiate regrowth
-  r_grow <- which(r_nn > 0) #Alternatively, write colonization as a probability as a funciton of r_nn
-  r[r_grow] <- 1
-
-  #mod = %%
-
   
 }
+pal <- brewer.pal(3,"Set1")
+plot(pop_c,ylim=c(0,(L+2)^2),type="l",col=pal[1],lwd=2)
+points(pop_r,type="l",col=pal[2],lwd=2)
+
+plot(pop_r,pop_c,pch=16,col=pal[2])
