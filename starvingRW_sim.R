@@ -19,11 +19,11 @@ gain <- s_max
 ############
 
 #Probability of resource growth | presence of nearest neighbors
-pr_grow <- 0.4
-#Probability of consumer mortality | they are starving
-pr_mort <- 0.5
+pr_grow <- 0.5
 #Probability of consumer reproduction
-pr_rep <- 0.8
+pr_rep <- 0.5
+#Probability of consumer mortality | they are starving
+pr_mort <- 0.25
 
 
 #initial number of random walkers
@@ -138,3 +138,11 @@ plot(pop_c,ylim=c(0,(L+2)^2),type="l",col=pal[1],lwd=2)
 points(pop_r,type="l",col=pal[2],lwd=2)
 
 plot(pop_r,pop_c,pch=16,col=pal[2])
+
+
+
+
+
+
+
+
