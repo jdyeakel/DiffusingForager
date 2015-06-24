@@ -12,6 +12,9 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
   
   IntegerVector pop_c(t_max);
   IntegerVector pop_r(t_max);
+  List r_frame(t_max);
+  
+  int L_size = (L+2)^2;
   
   //Begin time loop
   for (int t=0; t<t_max; t++) {
@@ -19,38 +22,45 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
     //Across each individual in the system...
     bool ind_check = TRUE;
     int num = srw.size();
-    pop_c[t] = num;
-    pop_r[t] = sum(r);
+    pop_c(t) = num;
+    pop_r(t) = sum(r);
+    r_frame(t) = r;
     int i = -1;
     
     while (ind_check == TRUE) {
       
       //Individual index
       i = i + 1;
-      
+      Rcout << "got here!" << i << std::endl;
       //Move to a new location
       IntegerVector nn(4);
       int x = rwloc(i);
+      //Convert to {1:L}
+      x = x+1;
+      int new_x;
       int check = 0;
+      int mod = (x)%((L+2));
       //Bottom Row
-      if (x <= L+2) {int new_x = x + L*(L+2); check = 1;}
+      if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
       //Top Row
-      if (x >= ((L+2)^2 - (L+1))) {int new_x = x - L*(L+2); check = 1;}
+      if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
       //Left Row
-      if (x%(L+2) == 1) {int new_x = x + L; check = 1;}
+      if (mod == 1) {new_x = x + L; check = 1;}
       //Right Row
-      if (x%(L+2) == 0) {int new_x = x - L; check = 1;}
+      if (mod == 0) {new_x = x - L; check = 1;}
       //Bottom Left
-      if ((x <= L+2) && (x%(L+2) == 1)) {int new_x = x + L*(L+2) + L; check = 1;}
+      if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
       //Bottom Right
-      if ((x <= L+2) && (x%(L+2) == 0)) {int new_x = x + L*(L+2) - L; check = 1;}
+      if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
       //Top Left
-      if ((x >= ((L+2)^2 - (L+1))) && (x%(L+2) == 1)) {int new_x = x - L*(L+2) + L; check = 1;}
+      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
       //Top Right
-      if ((x >= ((L+2)^2 - (L+1))) && (x%(L+2) == 0)) {int new_x = x - L*(L+2) - L; check = 1;}
+      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
       //Middle
-      if(check == 0) {int new_x = x}
-      IntegerVector nn(4); nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
+      if(check == 0) {new_x = x;}
+      //Convert back to {0:L-1}
+      new_x = new_x - 1;
+      nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
       //Sample new_x
       int num_draw = 4;
       NumericVector rdraw_v = runif(1);
@@ -59,7 +69,12 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
       int new_loc = nn(draw);
       
       //Consume resource if it is there
-      int new_s = min(srw(i) - 1 + r(new_loc)*gain,s_max);
+      //int new_s = min(srw(i) - 1 + r(new_loc)*gain,s_max);
+      IntegerVector t_vec(2);
+      t_vec(0) = srw(i) - 1 + r(new_loc)*gain;
+      t_vec(1) = s_max;
+      IntegerVector::iterator it = std::min_element(t_vec.begin(), t_vec.end());
+      int new_s = *it;
       //deplete the resource
       r(new_loc) = 0;
       
@@ -68,7 +83,7 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
       if (new_s <= 0) {
         //Draw random value
         NumericVector rand = runif(1);
-        double rdraw = as<double>(r_draw);
+        double rdraw = as<double>(rand);
         if (rdraw < pr_mort) {
           //Spaghetti method of removal
           srw(i) = srw(num);
@@ -100,18 +115,91 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
       //Recalculate num (number of individuals)... will be shorter if there is mortality
       int num = srw.size();
       if (i == num) {
-        bool ind_check = FALSE //The while loop is stopped if you get to the end of the list
+        ind_check = FALSE; //The while loop is stopped if you get to the end of the list
       }
       
     } //End While loop
     
+    //4) RW reproduction
+    for(int i=0;i<num;i++) {
+      if (srw(i) > s_crit) {
+        NumericVector rand = runif(1);
+        double rdraw = as<double>(rand);
+        if (rdraw < pr_rep) {
+          int srw_new = srw(i);
+          int rwloc_new = rwloc(i);
+          int size_new = srw.size()+1;
+          IntegerVector srw_newvec(size_new);
+          IntegerVector rwloc_newvec(size_new);
+          for (int k=0;k<size_new;k++) {
+            if (k==(size_new - 1)) {
+              srw_newvec(k) = srw_new;
+              rwloc_newvec(k) = rwloc_new;
+            } else {
+              srw_newvec(k) = srw(k);
+              rwloc_newvec(k) = rwloc(k);
+            }
+          }
+          //redefine srw and rwloc
+          IntegerVector srw = srw_newvec;
+          IntegerVector rwloc = rwloc_newvec;
+          //Recalculate the number of individuals... will be greater if there is reproduction
+          //int num = srw.size();
+        }
+      }
+    }
     
-    
-    
-    
+    //Resource growth
+    for(int j=0; j<L_size; j++) {
+      //Determine the number of nearest neighbor resources
+      IntegerVector nn(4);
+      int x = j;
+      //Convert to {1:L}
+      x = x+1;
+      int new_x;
+      int check = 0;
+      int mod = (x)%((L+2));
+      //Bottom Row
+      if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
+      //Top Row
+      if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
+      //Left Row
+      if (mod == 1) {new_x = x + L; check = 1;}
+      //Right Row
+      if (mod == 0) {new_x = x - L; check = 1;}
+      //Bottom Left
+      if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
+      //Bottom Right
+      if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
+      //Top Left
+      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
+      //Top Right
+      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
+      //Middle
+      if(check == 0) {new_x = x;}
+      //Convert back to {0:L-1}
+      new_x = new_x - 1;
+      nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
+      //Total number of nearest neighbors to r
+      int r_nn = r(nn(0)) + r(nn(1)) + r(nn(2)) + r(nn(3));
+      
+      if (r_nn >= 1) {
+        NumericVector rand = runif(1);
+        double rdraw = as<double>(rand);
+        if (rdraw < pr_grow) {
+          r(j) = 1;
+        }
+      }
+      
+    }
     
   } //End t loop
   
+  List cout(3);
+  cout(0) = pop_r;
+  cout(1) = pop_c;
+  cout(2) = r_frame;
   
+  return cout;
   
 }

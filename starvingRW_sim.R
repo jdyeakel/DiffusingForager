@@ -1,12 +1,18 @@
 library(RColorBrewer)
+library(animation)
 #nearest neighbor with boundary conditions function
 source("R/ipbc.R")
 
 #Cell lattice
 #How many cells? (total)
-L <- 10
+L <- 50
 size <- (L+2)^2
 #nloc <- seq(1,size,1)
+
+#
+#RW new location rand
+#Offspring location rand
+#Resource nn rand
 
 
 #Maximum energetic state
@@ -23,7 +29,7 @@ pr_grow <- 0.5
 #Probability of consumer reproduction
 pr_rep <- 0.5
 #Probability of consumer mortality | they are starving
-pr_mort <- 0.25
+pr_mort <- 0.01
 
 
 #initial number of random walkers
@@ -36,11 +42,12 @@ rwloc <- sample(seq(1:size),nrw,replace=TRUE)
 r <- rep(1,size)
 
 #Maximum time
-tmax <- 1000
+tmax <- 500
 
 #Vectors for consumer and resource population sizes over time
 pop_c <- numeric(tmax)
 pop_r <- numeric(tmax)
+r_frame <- list()
 for (t in 1:tmax) {
   
   #Across each individual in the system...
@@ -48,6 +55,8 @@ for (t in 1:tmax) {
   num <- length(srw)
   pop_c[t] <- num
   pop_r[t] <- sum(r)
+  r_frame[[t]] <- r
+  rwloc_frame[[t]] <- rwloc
   i <- 0
   
   #Across the number of individuals (which will fluctuate)
@@ -57,7 +66,8 @@ for (t in 1:tmax) {
     i <- i + 1
     
     #Move to a new location
-    new_loc <- sample(ipbc(rwloc[i],L),1)
+    #new_loc <- sample(ipbc(rwloc[i],L),1)
+    new_loc <- sample(seq(1,size),1)
     #consume resource if it is there
     new_s <- min(srw[i] - 1 + r[new_loc]*gain,s_max)
     #deplete the resource
@@ -103,7 +113,8 @@ for (t in 1:tmax) {
       if (rdraw < pr_rep) {
         #Add a new individual to the end of the vector
         srw_new <- srw[i]
-        rwloc_new <- rwloc[i]
+        #rwloc_new <- rwloc[i]
+        rwloc_new <- sample(seq(1:size),1)
         srw <- c(srw,srw_new)
         rwloc <- c(rwloc,rwloc_new)
         #Recalculate the number of individuals... will be greater if there is reproduction
@@ -116,7 +127,8 @@ for (t in 1:tmax) {
   for (j in 1:length(r)) {
     if (r[j] == 0) {
       #Determine the number of nearest neighbor resources
-      r_nn <- sum(r[ipbc(j,L)])
+      #r_nn <- sum(r[ipbc(j,L)])
+      r_nn <- r[sample(seq(1:size),1)]
       #Growth only occurs if there is at least one nearest neighbor
       if (r_nn >= 1) {
         r_draw <- runif(1)
@@ -133,13 +145,25 @@ for (t in 1:tmax) {
   
   
 }
+
+sourceCpp("src/starvingRW.cpp")
+starvingRW(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, rwloc-1, r)
+
+
 pal <- brewer.pal(3,"Set1")
 plot(pop_c,ylim=c(0,(L+2)^2),type="l",col=pal[1],lwd=2)
 points(pop_r,type="l",col=pal[2],lwd=2)
 
 plot(pop_r,pop_c,pch=16,col=pal[2])
 
-
+#http://programmingr.com/content/animations-r/
+ani.options(interval=.1)
+saveGIF({
+  for (i in 1:300) {
+    image(matrix(r_frame[[i]],(L+2),(L+2)),col=c("white","black"))
+    #points(rwloc_frame[[i]],col="green")
+  }
+},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/animations/resource.gif")
 
 
 
