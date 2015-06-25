@@ -12,7 +12,9 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
   
   IntegerVector pop_c(t_max);
   IntegerVector pop_r(t_max);
-  List r_frame(t_max);
+  //List r_frame(t_max);
+  int rsize = r.size();
+  IntegerMatrix rm(t_max,rsize);
   
   int L_size = (L+2)^2;
   
@@ -20,21 +22,34 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
   for (int t=0; t<t_max; t++) {
     
     //Across each individual in the system...
-    bool ind_check = TRUE;
+    int ind_check = 1;
     int num = srw.size();
     pop_c(t) = num;
     pop_r(t) = sum(r);
-    r_frame(t) = r;
-    int i = -1;
+    //Rcout << "got here! t... " << r(100) << std::endl;
+    for (int j=0;j<rsize;j++) {
+      rm(t,j) = r(j);
+    }
+    //r_frame(t) = r;
     
-    while (ind_check == TRUE) {
+    
+    int i = -1;
+    int x;
+    while (ind_check == 1) {
+      
+      //<--------
       
       //Individual index
       i = i + 1;
-      Rcout << "got here!" << i << std::endl;
+      //Rcout << "got here! 1... " << t << std::endl;
       //Move to a new location
       IntegerVector nn(4);
-      int x = rwloc(i);
+      //Rcout << "Mortality! 1 " << ind_check << std::endl;
+      x = rwloc(i);
+      
+      //------->
+      
+      
       //Convert to {1:L}
       x = x+1;
       int new_x;
@@ -85,20 +100,31 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
         NumericVector rand = runif(1);
         double rdraw = as<double>(rand);
         if (rdraw < pr_mort) {
+          //Mortality occurs...
+          
           //Spaghetti method of removal
-          srw(i) = srw(num);
+          int srw_last = srw(num-1);
+          srw(i) = srw_last; //this is the last element of the vector... because vector starts with 0
           IntegerVector new_srw(num-1);
           for (int k=0;k<(num-1);k++) {
             new_srw(k) = srw(k);
           }
+          
+          //<------
+          //delete srw;
           IntegerVector srw = new_srw;
-          rwloc(i) = rwloc(num);
+          int rwloc_last = rwloc(num-1);
+          rwloc(i) = rwloc_last; //this is the last element of the vector... because vector starts with 0
           IntegerVector new_rwloc(num-1);
           for (int k=0;k<(num-1);k++) {
             new_rwloc(k) = rwloc(k);
           }
+          //------>
+          //Rcout << "got here! 2... " << t << std::endl;
+          //delete rwloc;
           IntegerVector rwloc = new_rwloc;
           i = i - 1; //reanalyzes the 'new member' of the slot
+          
         } else {
           //Individual survives
           //Record the new location and new state
@@ -112,23 +138,27 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
         srw(i) = new_s;
       }
       
+      
       //Recalculate num (number of individuals)... will be shorter if there is mortality
-      int num = srw.size();
-      if (i == num) {
-        ind_check = FALSE; //The while loop is stopped if you get to the end of the list
+      num = srw.size();
+      
+      if (i == (num-1)) {
+        ind_check = 0; //The while loop is stopped if you get to the end of the list
       }
       
     } //End While loop
     
     //4) RW reproduction
     for(int i=0;i<num;i++) {
-      if (srw(i) > s_crit) {
+      int state = srw(i);
+      if (state > s_crit) {
         NumericVector rand = runif(1);
         double rdraw = as<double>(rand);
         if (rdraw < pr_rep) {
           int srw_new = srw(i);
           int rwloc_new = rwloc(i);
           int size_new = srw.size()+1;
+          
           IntegerVector srw_newvec(size_new);
           IntegerVector rwloc_newvec(size_new);
           for (int k=0;k<size_new;k++) {
@@ -140,14 +170,20 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
               rwloc_newvec(k) = rwloc(k);
             }
           }
+          
           //redefine srw and rwloc
-          IntegerVector srw = srw_newvec;
-          IntegerVector rwloc = rwloc_newvec;
-          //Recalculate the number of individuals... will be greater if there is reproduction
-          //int num = srw.size();
+          srw = srw_newvec;
+          rwloc = rwloc_newvec;
+          //Rcout << "Reproduction! " << srw_newvec.size() << std::endl;
         }
+        
       }
+      
     }
+    
+    //Recalculate the number of individuals... will be greater if there is reproduction
+    num = srw.size();
+    
     
     //Resource growth
     for(int j=0; j<L_size; j++) {
@@ -191,14 +227,16 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
         }
       }
       
-    }
+    } //End j
     
+    //Rcout << "Mortality! 2 " << t << std::endl;
+
   } //End t loop
   
   List cout(3);
   cout(0) = pop_r;
   cout(1) = pop_c;
-  cout(2) = r_frame;
+  cout(2) = rm;
   
   return cout;
   

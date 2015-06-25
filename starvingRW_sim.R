@@ -1,4 +1,5 @@
 library(RColorBrewer)
+library(Rcpp)
 library(animation)
 #nearest neighbor with boundary conditions function
 source("R/ipbc.R")
@@ -56,7 +57,7 @@ for (t in 1:tmax) {
   pop_c[t] <- num
   pop_r[t] <- sum(r)
   r_frame[[t]] <- r
-  rwloc_frame[[t]] <- rwloc
+  #rwloc_frame[[t]] <- rwloc
   i <- 0
   
   #Across the number of individuals (which will fluctuate)
@@ -66,8 +67,8 @@ for (t in 1:tmax) {
     i <- i + 1
     
     #Move to a new location
-    #new_loc <- sample(ipbc(rwloc[i],L),1)
-    new_loc <- sample(seq(1,size),1)
+    new_loc <- sample(ipbc(rwloc[i],L),1)
+    #new_loc <- sample(seq(1,size),1)
     #consume resource if it is there
     new_s <- min(srw[i] - 1 + r[new_loc]*gain,s_max)
     #deplete the resource
@@ -113,8 +114,8 @@ for (t in 1:tmax) {
       if (rdraw < pr_rep) {
         #Add a new individual to the end of the vector
         srw_new <- srw[i]
-        #rwloc_new <- rwloc[i]
-        rwloc_new <- sample(seq(1:size),1)
+        rwloc_new <- rwloc[i]
+        #rwloc_new <- sample(seq(1:size),1)
         srw <- c(srw,srw_new)
         rwloc <- c(rwloc,rwloc_new)
         #Recalculate the number of individuals... will be greater if there is reproduction
@@ -127,8 +128,8 @@ for (t in 1:tmax) {
   for (j in 1:length(r)) {
     if (r[j] == 0) {
       #Determine the number of nearest neighbor resources
-      #r_nn <- sum(r[ipbc(j,L)])
-      r_nn <- r[sample(seq(1:size),1)]
+      r_nn <- sum(r[ipbc(j,L)])
+      #r_nn <- r[sample(seq(1:size),1)]
       #Growth only occurs if there is at least one nearest neighbor
       if (r_nn >= 1) {
         r_draw <- runif(1)
@@ -147,8 +148,10 @@ for (t in 1:tmax) {
 }
 
 sourceCpp("src/starvingRW.cpp")
-starvingRW(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, rwloc-1, r)
-
+cout <- starvingRW(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, rwloc-1, r)
+pop_r <- cout[[1]]
+pop_c <- cout[[2]]
+r_frame <- cout[[3]]
 
 pal <- brewer.pal(3,"Set1")
 plot(pop_c,ylim=c(0,(L+2)^2),type="l",col=pal[1],lwd=2)
@@ -166,6 +169,14 @@ saveGIF({
 },movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/animations/resource.gif")
 
 
+ani.options(interval=.1)
+saveGIF({
+  for (i in 1:300) {
+    rl <- r_frame[i,]
+    image(matrix(rl,(L+2),(L+2)),col=c("white","black"))
+    #points(rwloc_frame[[i]],col="green")
+  }
+},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/animations/resource.gif")
 
 
 
