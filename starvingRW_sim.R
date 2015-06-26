@@ -30,7 +30,7 @@ pr_grow <- 0.5
 #Probability of consumer reproduction
 pr_rep <- 0.5
 #Probability of consumer mortality | they are starving
-pr_mort <- 0.01
+pr_mort <- 1
 
 
 #initial number of random walkers
@@ -43,7 +43,7 @@ rwloc <- sample(seq(1:size),nrw,replace=TRUE)
 r <- rep(1,size)
 
 #Maximum time
-tmax <- 500
+tmax <- 100
 
 #Vectors for consumer and resource population sizes over time
 pop_c <- numeric(tmax)
@@ -152,6 +152,7 @@ cout <- starvingRW(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, 
 pop_r <- cout[[1]]
 pop_c <- cout[[2]]
 r_frame <- cout[[3]]
+srwm <- cout[[4]]
 
 pal <- brewer.pal(3,"Set1")
 plot(pop_c,ylim=c(0,(L+2)^2),type="l",col=pal[1],lwd=2)
@@ -171,7 +172,7 @@ saveGIF({
 
 ani.options(interval=.1)
 saveGIF({
-  for (i in 1:300) {
+  for (i in 1:tmax) {
     rl <- r_frame[i,]
     image(matrix(rl,(L+2),(L+2)),col=c("white","black"))
     #points(rwloc_frame[[i]],col="green")

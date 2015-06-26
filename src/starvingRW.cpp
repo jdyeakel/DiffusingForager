@@ -16,7 +16,7 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
   int rsize = r.size();
   IntegerMatrix rm(t_max,rsize);
   
-  int L_size = (L+2)^2;
+  int L_size = pow((L+2),2);
   
   //Begin time loop
   for (int t=0; t<t_max; t++) {
@@ -85,11 +85,17 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
       
       //Consume resource if it is there
       //int new_s = min(srw(i) - 1 + r(new_loc)*gain,s_max);
-      IntegerVector t_vec(2);
-      t_vec(0) = srw(i) - 1 + r(new_loc)*gain;
-      t_vec(1) = s_max;
-      IntegerVector::iterator it = std::min_element(t_vec.begin(), t_vec.end());
-      int new_s = *it;
+      int new_s;
+      if (r(new_loc) == 1) {
+        new_s = 1;
+      } else {
+        new_s = 0;
+      }
+      //IntegerVector t_vec(2);
+      //t_vec(0) = srw(i) - 1 + r(new_loc)*gain;
+      //t_vec(1) = s_max;
+      //IntegerVector::iterator it = std::min_element(t_vec.begin(), t_vec.end());
+      //int new_s = *it;
       //deplete the resource
       r(new_loc) = 0;
       
@@ -224,6 +230,7 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
         double rdraw = as<double>(rand);
         if (rdraw < pr_grow) {
           r(j) = 1;
+          //Rcout << "Mortality! 2 " << rdraw << std::endl;
         }
       }
       
@@ -233,10 +240,11 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
 
   } //End t loop
   
-  List cout(3);
+  List cout(4);
   cout(0) = pop_r;
   cout(1) = pop_c;
   cout(2) = rm;
+  cout(3) = srw;
   
   return cout;
   
