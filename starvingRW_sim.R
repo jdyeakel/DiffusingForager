@@ -6,7 +6,7 @@ source("R/ipbc.R")
 
 #Cell lattice
 #How many cells? (total)
-L <- 50
+L <- 20
 size <- (L+2)^2
 #nloc <- seq(1,size,1)
 
@@ -30,7 +30,7 @@ pr_grow <- 0.5
 #Probability of consumer reproduction
 pr_rep <- 0.5
 #Probability of consumer mortality | they are starving
-pr_mort <- 1
+pr_mort <- 0.25
 
 
 #initial number of random walkers
@@ -43,7 +43,7 @@ rwloc <- sample(seq(1:size),nrw,replace=TRUE)
 r <- rep(1,size)
 
 #Maximum time
-tmax <- 100
+tmax <- 500
 
 #Vectors for consumer and resource population sizes over time
 pop_c <- numeric(tmax)
@@ -152,10 +152,11 @@ cout <- starvingRW(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, 
 pop_r <- cout[[1]]
 pop_c <- cout[[2]]
 r_frame <- cout[[3]]
-srwm <- cout[[4]]
+locm <- cout[[4]]
+srwm <- cout[[5]]
 
 pal <- brewer.pal(3,"Set1")
-plot(pop_c,ylim=c(0,(L+2)^2),type="l",col=pal[1],lwd=2)
+plot(pop_c,ylim=c(0,max(c(pop_c,pop_r))),type="l",col=pal[1],lwd=2)
 points(pop_r,type="l",col=pal[2],lwd=2)
 
 plot(pop_r,pop_c,pch=16,col=pal[2])

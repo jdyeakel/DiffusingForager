@@ -15,6 +15,7 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
   //List r_frame(t_max);
   int rsize = r.size();
   IntegerMatrix rm(t_max,rsize);
+  IntegerMatrix locm(t_max,rsize);
   
   int L_size = pow((L+2),2);
   
@@ -30,24 +31,29 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
     for (int j=0;j<rsize;j++) {
       rm(t,j) = r(j);
     }
+    for (int j=0;j<num;j++) {
+      int l = rwloc(j);
+      locm(t,l) = 1;
+    }
     //r_frame(t) = r;
     
     
-    int i = -1;
+    int i = 0;
     int x;
     while (ind_check == 1) {
       
-      //<--------
+      //Rcout << "beginningwhile =  " << i << std::endl;
+      //Rcout << "rwlocsize...  " << rwloc.size() << std::endl;
+      //Rcout << "srwsize...  " << srw.size() << std::endl;
+      //Rcout << "num...  " << num << std::endl;
+
       
-      //Individual index
-      i = i + 1;
       //Rcout << "got here! 1... " << t << std::endl;
       //Move to a new location
       IntegerVector nn(4);
       //Rcout << "Mortality! 1 " << ind_check << std::endl;
       x = rwloc(i);
       
-      //------->
       
       
       //Convert to {1:L}
@@ -108,36 +114,41 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
         if (rdraw < pr_mort) {
           //Mortality occurs...
           
-          //Spaghetti method of removal
-          int srw_last = srw(num-1);
-          srw(i) = srw_last; //this is the last element of the vector... because vector starts with 0
-          IntegerVector new_srw(num-1);
-          for (int k=0;k<(num-1);k++) {
-            new_srw(k) = srw(k);
-          }
           
-          //<------
-          //delete srw;
-          IntegerVector srw = new_srw;
-          int rwloc_last = rwloc(num-1);
-          rwloc(i) = rwloc_last; //this is the last element of the vector... because vector starts with 0
-          IntegerVector new_rwloc(num-1);
-          for (int k=0;k<(num-1);k++) {
-            new_rwloc(k) = rwloc(k);
-          }
-          //------>
-          //Rcout << "got here! 2... " << t << std::endl;
-          //delete rwloc;
-          IntegerVector rwloc = new_rwloc;
-          i = i - 1; //reanalyzes the 'new member' of the slot
+          //Rcout << "num =  " << num << std::endl;
+          //erase the ith element of the srw vector
+          srw.erase(srw.begin() + i);
+          //erase the ith element of the rwloc vector
+          rwloc.erase(rwloc.begin() + i);
+          
+//          //Spaghetti method of removal
+//          int srw_last = srw(num-1);
+//          srw(i) = srw_last; //this is the last element of the vector... because vector starts with 0
+//          IntegerVector new_srw(num-1);
+//          for (int k=0;k<(num-1);k++) {
+//            new_srw(k) = srw(k);
+//          }
+//
+//          IntegerVector srw = new_srw;
+//          int rwloc_last = rwloc(num-1);
+//          rwloc(i) = rwloc_last; //this is the last element of the vector... because vector starts with 0
+//          IntegerVector new_rwloc(num-1);
+//          for (int k=0;k<(num-1);k++) {
+//            new_rwloc(k) = rwloc(k);
+//          }
+//
+//          IntegerVector rwloc = new_rwloc;
+//          i = i - 1; //reanalyzes the 'new member' of the slot
           
         } else {
+          
           //Individual survives
           //Record the new location and new state
           rwloc(i) = new_loc;
           srw(i) = new_s;
         }
       } else {
+        
         //Individual survives:
         //Record the new location and new state
         rwloc(i) = new_loc;
@@ -148,7 +159,12 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
       //Recalculate num (number of individuals)... will be shorter if there is mortality
       num = srw.size();
       
-      if (i == (num-1)) {
+      //Individual index
+      i = i + 1;
+      
+      //Check while loop
+      //Make sure this is working how it is supposed to...
+      if (i >= (num-1)) {
         ind_check = 0; //The while loop is stopped if you get to the end of the list
       }
       
@@ -193,58 +209,61 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
     
     //Resource growth
     for(int j=0; j<L_size; j++) {
-      //Determine the number of nearest neighbor resources
-      IntegerVector nn(4);
-      int x = j;
-      //Convert to {1:L}
-      x = x+1;
-      int new_x;
-      int check = 0;
-      int mod = (x)%((L+2));
-      //Bottom Row
-      if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
-      //Top Row
-      if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
-      //Left Row
-      if (mod == 1) {new_x = x + L; check = 1;}
-      //Right Row
-      if (mod == 0) {new_x = x - L; check = 1;}
-      //Bottom Left
-      if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
-      //Bottom Right
-      if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
-      //Top Left
-      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
-      //Top Right
-      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
-      //Middle
-      if(check == 0) {new_x = x;}
-      //Convert back to {0:L-1}
-      new_x = new_x - 1;
-      nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
-      //Total number of nearest neighbors to r
-      int r_nn = r(nn(0)) + r(nn(1)) + r(nn(2)) + r(nn(3));
-      
-      if (r_nn >= 1) {
-        NumericVector rand = runif(1);
-        double rdraw = as<double>(rand);
-        if (rdraw < pr_grow) {
-          r(j) = 1;
-          //Rcout << "Mortality! 2 " << rdraw << std::endl;
+      //Only determine growth if r(j) = 0...
+      if (r(j) == 0) {
+        //Determine the number of nearest neighbor resources
+        IntegerVector nn(4);
+        int x = j;
+        //Convert to {1:L}
+        x = x+1;
+        int new_x;
+        int check = 0;
+        int mod = (x)%((L+2));
+        //Bottom Row
+        if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
+        //Top Row
+        if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
+        //Left Row
+        if (mod == 1) {new_x = x + L; check = 1;}
+        //Right Row
+        if (mod == 0) {new_x = x - L; check = 1;}
+        //Bottom Left
+        if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
+        //Bottom Right
+        if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
+        //Top Left
+        if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
+        //Top Right
+        if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
+        //Middle
+        if(check == 0) {new_x = x;}
+        //Convert back to {0:L-1}
+        new_x = new_x - 1;
+        nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
+        //Total number of nearest neighbors to r
+        int r_nn = r(nn(0)) + r(nn(1)) + r(nn(2)) + r(nn(3));
+        
+        if (r_nn >= 1) {
+          NumericVector rand = runif(1);
+          double rdraw = as<double>(rand);
+          if (rdraw < pr_grow) {
+            r(j) = 1;
+            //Rcout << "Mortality! 2 " << rdraw << std::endl;
+          }
         }
-      }
-      
+      } //end if
     } //End j
     
     //Rcout << "Mortality! 2 " << t << std::endl;
 
   } //End t loop
   
-  List cout(4);
+  List cout(5);
   cout(0) = pop_r;
   cout(1) = pop_c;
   cout(2) = rm;
-  cout(3) = srw;
+  cout(3) = locm;
+  cout(4) = srw;
   
   return cout;
   
