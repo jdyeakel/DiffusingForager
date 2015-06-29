@@ -268,3 +268,12 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
   return cout;
   
 }
+
+//ToDo: need to export Starving + Full consumers separately
+//Build in mean field randomizations (separate file??)
+
+
+
+
+
+
