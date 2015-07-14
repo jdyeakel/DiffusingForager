@@ -8,7 +8,19 @@ using namespace Rcpp;
 // For more on using Rcpp click the Help button on the editor toolbar
 
 // [[Rcpp::export]]
-List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_grow, double pr_rep, double pr_mort, IntegerVector srw, IntegerVector rwloc, IntegerVector r) {
+List starvingRW_pr(
+  int L,
+  int s_max,
+  int s_crit,
+  int gain,
+  int t_max,
+  double pr_grow,
+  double pr_rep,
+  double pr_mort,
+  IntegerVector srw,
+  IntegerVector rwloc,
+  IntegerVector r,
+  double p) {
 
   IntegerVector pop_c(t_max);
   IntegerVector pop_r(t_max);
@@ -21,6 +33,9 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
 
   //Begin time loop
   for (int t=0; t<t_max; t++) {
+
+    NumericVector pdraw_v = runif(1);
+    double pdraw = as<double>(pdraw_v);
 
     //Across each individual in the system...
     int ind_check = 1;
@@ -47,47 +62,56 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
       //Rcout << "srwsize...  " << srw.size() << std::endl;
       //Rcout << "num...  " << num << std::endl;
 
+      //With p probability, move to a random location
+      //With (1-p) probability, move to a nn location
 
-      //Rcout << "got here! 1... " << t << std::endl;
-      //Move to a new location
-      IntegerVector nn(4);
-      //Rcout << "Mortality! 1 " << ind_check << std::endl;
-      x = rwloc(i);
+      int new_loc;
+      if (pdraw < p) {
+        NumericVector sitedraw_v = runif(1);
+        double sitedraw = as<double>(sitedraw_v);
+        int sitedraw_rv = (int) floor(sitedraw*(L_size));
+        new_loc = sitedraw_rv;
+      } else {
+        //With (1-p) probability, move to a nn location
 
-
-
-      //Convert to {1:L}
-      x = x+1;
-      int new_x;
-      int check = 0;
-      int mod = (x)%((L+2));
-      //Bottom Row
-      if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
-      //Top Row
-      if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
-      //Left Row
-      if (mod == 1) {new_x = x + L; check = 1;}
-      //Right Row
-      if (mod == 0) {new_x = x - L; check = 1;}
-      //Bottom Left
-      if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
-      //Bottom Right
-      if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
-      //Top Left
-      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
-      //Top Right
-      if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
-      //Middle
-      if(check == 0) {new_x = x;}
-      //Convert back to {0:L-1}
-      new_x = new_x - 1;
-      nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
-      //Sample new_x
-      int num_draw = 4;
-      NumericVector rdraw_v = runif(1);
-      double rdraw = as<double>(rdraw_v);
-      int draw = (int) floor(rdraw*(num_draw));
-      int new_loc = nn(draw);
+        //Rcout << "got here! 1... " << t << std::endl;
+        //Move to a new location
+        IntegerVector nn(4);
+        //Rcout << "Mortality! 1 " << ind_check << std::endl;
+        x = rwloc(i);
+        //Convert to {1:L}
+        x = x+1;
+        int new_x;
+        int check = 0;
+        int mod = (x)%((L+2));
+        //Bottom Row
+        if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
+        //Top Row
+        if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
+        //Left Row
+        if (mod == 1) {new_x = x + L; check = 1;}
+        //Right Row
+        if (mod == 0) {new_x = x - L; check = 1;}
+        //Bottom Left
+        if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
+        //Bottom Right
+        if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
+        //Top Left
+        if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
+        //Top Right
+        if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
+        //Middle
+        if(check == 0) {new_x = x;}
+        //Convert back to {0:L-1}
+        new_x = new_x - 1;
+        nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
+        //Sample new_x
+        int num_draw = 4;
+        NumericVector rdraw_v = runif(1);
+        double rdraw = as<double>(rdraw_v);
+        int draw = (int) floor(rdraw*(num_draw));
+        new_loc = nn(draw);
+      }
 
       //Consume resource if it is there
       //int new_s = min(srw(i) - 1 + r(new_loc)*gain,s_max);
@@ -178,8 +202,22 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
         double rdraw = as<double>(rand);
         if (rdraw < pr_rep) {
           int srw_new = srw(i);
-          int rwloc_new = rwloc(i);
           int size_new = srw.size()+1;
+
+          //With probability p seed offspring to a random site
+          int rwloc_new;
+          if (pdraw < p) {
+            NumericVector offsitedraw_v = runif(1);
+            double offsitedraw = as<double>(offsitedraw_v);
+            int offsite_rv = (int) floor(offsitedraw*(L_size));
+            rwloc_new = offsite_rv;
+          } else {
+            //With probability 1-p, seed offspring to the same site as parent
+            rwloc_new = rwloc(i);
+          }
+
+
+
 
           IntegerVector srw_newvec(size_new);
           IntegerVector rwloc_newvec(size_new);
@@ -211,37 +249,47 @@ List starvingRW(int L, int s_max, int s_crit, int gain, int t_max, double pr_gro
     for(int j=0; j<L_size; j++) {
       //Only determine growth if r(j) = 0...
       if (r(j) == 0) {
-        //Determine the number of nearest neighbor resources
-        IntegerVector nn(4);
-        int x = j;
-        //Convert to {1:L}
-        x = x+1;
-        int new_x;
-        int check = 0;
-        int mod = (x)%((L+2));
-        //Bottom Row
-        if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
-        //Top Row
-        if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
-        //Left Row
-        if (mod == 1) {new_x = x + L; check = 1;}
-        //Right Row
-        if (mod == 0) {new_x = x - L; check = 1;}
-        //Bottom Left
-        if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
-        //Bottom Right
-        if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
-        //Top Left
-        if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
-        //Top Right
-        if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
-        //Middle
-        if(check == 0) {new_x = x;}
-        //Convert back to {0:L-1}
-        new_x = new_x - 1;
-        nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
-        //Total number of nearest neighbors to r
-        int r_nn = r(nn(0)) + r(nn(1)) + r(nn(2)) + r(nn(3));
+
+        int r_nn;
+        if (pdraw < p) {
+          NumericVector nndraw_v = runif(1);
+          double nndraw = as<double>(nndraw_v);
+          int nn_rv = (int) floor(nndraw*(L_size));
+          r_nn = r(nn_rv);
+        } else {
+          //Determine the number of nearest neighbor resources
+          IntegerVector nn(4);
+          int x = j;
+          //Convert to {1:L}
+          x = x+1;
+          int new_x;
+          int check = 0;
+          int mod = (x)%((L+2));
+          //Bottom Row
+          if (x <= (L+2)) {new_x = x + L*(L+2); check = 1;}
+          //Top Row
+          if (x >= (pow((L+2),2) - (L+1))) {new_x = x - L*(L+2); check = 1;}
+          //Left Row
+          if (mod == 1) {new_x = x + L; check = 1;}
+          //Right Row
+          if (mod == 0) {new_x = x - L; check = 1;}
+          //Bottom Left
+          if ((x <= (L+2)) && (mod == 1)) {new_x = x + L*(L+2) + L; check = 1;}
+          //Bottom Right
+          if ((x <= (L+2)) && (mod == 0)) {new_x = x + L*(L+2) - L; check = 1;}
+          //Top Left
+          if ((x >= (pow((L+2),2) - (L+1))) && (mod == 1)) {new_x = x - L*(L+2) + L; check = 1;}
+          //Top Right
+          if ((x >= (pow((L+2),2) - (L+1))) && (mod == 0)) {new_x = x - L*(L+2) - L; check = 1;}
+          //Middle
+          if(check == 0) {new_x = x;}
+          //Convert back to {0:L-1}
+          new_x = new_x - 1;
+          nn(0) = new_x+1; nn(1) = new_x-1; nn(2) = new_x+(L+2); nn(3) = new_x-(L+2);
+          //Total number of nearest neighbors to r
+          r_nn = r(nn(0)) + r(nn(1)) + r(nn(2)) + r(nn(3));
+        }
+
 
         if (r_nn >= 1) {
           NumericVector rand = runif(1);

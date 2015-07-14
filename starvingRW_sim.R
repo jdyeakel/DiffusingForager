@@ -45,8 +45,9 @@ r <- rep(1,size)
 #Maximum time
 tmax <- 5000
 
-sourceCpp("src/starvingRW.cpp")
-cout <- starvingRW(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, rwloc-1, r)
+sourceCpp("src/starvingRW_pr.cpp")
+
+cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, rwloc-1, r, p = 1)
 pop_r <- cout[[1]]
 pop_c <- cout[[2]]
 r_frame <- cout[[3]]
@@ -68,7 +69,7 @@ saveGIF({
     image(matrix(rl,(L+2),(L+2)),col=c("white","black"))
     #points(rwloc_frame[[i]],col="green")
   }
-},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/animations/resourceL200.gif")
+},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/animations/resourceL100_rand.gif")
 
 
 
