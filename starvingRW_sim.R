@@ -26,7 +26,7 @@ gain <- s_max
 ############
 
 #Probability of resource growth | presence of nearest neighbors
-pr_grow <- 0.01
+pr_grow <- 0.1
 #Probability of consumer reproduction
 pr_rep <- 0.5
 #Probability of consumer mortality | they are starving
@@ -47,7 +47,7 @@ tmax <- 5000
 
 sourceCpp("src/starvingRW_pr.cpp")
 
-cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, rwloc-1, r, p = 1)
+cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, pr_grow, pr_rep, pr_mort, srw, rwloc-1, r, p = 0)
 pop_r <- cout[[1]]
 pop_c <- cout[[2]]
 r_frame <- cout[[3]]
