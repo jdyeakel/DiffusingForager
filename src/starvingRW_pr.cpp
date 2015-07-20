@@ -14,9 +14,11 @@ List starvingRW_pr(
   int s_crit,
   int gain,
   int t_max,
-  double pr_grow,
-  double pr_rep,
-  double pr_mort,
+  double alpha,
+  double sigma,
+  double rho,
+  double lambda,
+  double mu,
   IntegerVector srw,
   IntegerVector rwloc,
   IntegerVector r,
@@ -50,9 +52,17 @@ List starvingRW_pr(
     //r_frame(t) = r;
 
     //Resource proportions at time t
-    double Nr = sum(r) / L_size; //Proportion of sites with resource
-    double No = 1 - Nr; //Proportion of sites without resource
-    
+    double total_r = (double) sum(r);
+    double total_sites = (double) L_size;
+    double pRr = total_r / total_sites; //Proportion of sites with resource
+    double pRo = 1.0 - pRr; //Proportion of sites without resource
+
+    //Define the probability of starvation and probability of recovery
+    double pr_starve = sigma*pRo;
+    double pr_recover = rho*pRr;
+    double pr_grow = alpha*pRr;
+    //Rcout << "Prob(resource growth) = " << pr_starve << std::endl;
+
     int i = 0;
     int x;
     while (ind_check == 1) {
@@ -115,14 +125,40 @@ List starvingRW_pr(
         int draw = (int) floor(rdraw*(num_draw));
         new_loc = nn(draw);
       }
-
+      //Rcout << "I got here! t= " << t << std::endl;
       //Consume resource if it is there
       //Make this probabilistic... with probability sigma/rho (!!!!!!!!!!)
       int new_s;
       if (r(new_loc) == 1) {
-        new_s = 1;
+        //If you find a resource, and are Full
+        if (srw(i) == 1) {
+          new_s = 1;
+        }
+        //If you find a resource, and are Starving, recover with rate rho
+        if (srw(i) <= 0) {
+          NumericVector rdraw_v = runif(1);
+          double rdraw = as<double>(rdraw_v);
+          if (rdraw < pr_recover) {
+            new_s = 1;
+          } else {
+            new_s = 0;
+          }
+        }
       } else {
-        new_s = 0;
+        //If you DONT find a resource, and are Full, starve with rate sigma
+        if (srw(i) == 1) {
+          NumericVector rdraw_v = runif(1);
+          double rdraw = as<double>(rdraw_v);
+          if (rdraw < pr_starve) {
+            new_s = 0;
+          } else {
+            new_s = 1;
+          }
+        }
+        //If you DONT find a resource and are starving, no change
+        if (srw(i) <= 0) {
+            new_s = 0;
+        }
       }
       //IntegerVector t_vec(2);
       //t_vec(0) = srw(i) - 1 + r(new_loc)*gain;
@@ -138,7 +174,7 @@ List starvingRW_pr(
         //Draw random value
         NumericVector rand = runif(1);
         double rdraw = as<double>(rand);
-        if (rdraw < pr_mort) {
+        if (rdraw < mu) {
           //Mortality occurs...
 
 
@@ -207,7 +243,7 @@ List starvingRW_pr(
       if (state > s_crit) {
         NumericVector rand = runif(1);
         double rdraw = as<double>(rand);
-        if (rdraw < pr_rep) {
+        if (rdraw < lambda) {
           int srw_new = srw(i);
           int size_new = srw.size()+1;
 
@@ -222,9 +258,6 @@ List starvingRW_pr(
             //With probability 1-p, seed offspring to the same site as parent
             rwloc_new = rwloc(i);
           }
-
-
-
 
           IntegerVector srw_newvec(size_new);
           IntegerVector rwloc_newvec(size_new);
@@ -251,24 +284,23 @@ List starvingRW_pr(
     //Recalculate the number of individuals... will be greater if there is reproduction
     num = srw.size();
 
-    //How many resources are there at timestep t?
-    double num_r = sum(r);
 
     //Resource growth
     for(int j=0; j<L_size; j++) {
       //Only determine growth if r(j) = 0...
-      NumericVector pdraw_v = runif(1);
-      double pdraw = as<double>(pdraw_v);
 
       if (r(j) == 0) {
+        NumericVector pdraw_v = runif(1);
+        double pdraw = as<double>(pdraw_v);
 
-        double pr_grow_scaled;
         int r_nn;
         if (pdraw < p) {
-          NumericVector rand = runif(1);
-          double rdraw = as<double>(rand);
+
+          NumericVector randv = runif(1);
+          double rdraw = as<double>(randv);
           //The probability of growth is scaled to the total num resources...
-          pr_grow_scaled = 1 - pow((1 - pr_grow),num_r);
+          //pr_grow_scaled = 1 - pow((1 - pr_grow),num_r);
+
           if (rdraw < pr_grow) {
             r(j) = 1;
           }
@@ -306,12 +338,12 @@ List starvingRW_pr(
           r_nn = r(nn(0)) + r(nn(1)) + r(nn(2)) + r(nn(3));
 
           //The probability of growth is scaled to the total num resources...
-          pr_grow_scaled = 1 - pow((1 - pr_grow),r_nn);
+          //pr_grow_scaled = 1 - pow((1 - pr_grow),r_nn);
 
           if (r_nn >= 1) {
             NumericVector rand = runif(1);
             double rdraw = as<double>(rand);
-            if (rdraw < pr_grow_scaled) {
+            if (rdraw < pr_grow) {
               r(j) = 1;
               //Rcout << "Mortality! 2 " << rdraw << std::endl;
             }

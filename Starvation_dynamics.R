@@ -52,9 +52,9 @@ plot3d(out[,2],out[,3],out[,4],xlab="",ylab="",zlab="",type="l",col=paste(colors
 #Simulate dynamics over BOTH sigma and lambda
 source("R/starv_forage_ode.R")
 
-sigmavec <- seq(0.1,1,0.1)
+sigmavec <- seq(0.1,1,0.05)
 l_sigmavec <- length(sigmavec)
-lambdavec <- seq(0.1,1,0.1)
+lambdavec <- seq(0.1,1,0.05)
 l_lambdavec <- length(lambdavec)
 
 ResSS_m <- matrix(0,l_sigmavec,l_lambdavec)
@@ -119,17 +119,17 @@ ResCV_m <- ResSD_m/ResSS_m
 
 pal <- wes_palette(name = "Zissou",20, type = "continuous")
 par(mar=c(4,4,1,1))
-M <-  pop_vuln_m      #(1+res_vuln_m)/(1+pop_vuln_m)
+M <-  res_vuln_m      #(1+res_vuln_m)/(1+pop_vuln_m)
 filled_contour(sigmavec, 
                lambdavec, 
                M,
                levels = seq(min(M), max(M),length.out=20),col = pal,
                lwd = 0.1,xlab="sigma",ylab="lambda")
-mtext("Sigma", side = 1, outer = F , line = 2.5)
-mtext("Lambda", side = 2, outer = F , line = 2.5)
+mtext(expression(paste("Starvation rate, ", sigma)), side = 1, outer = F , line = 2.5)
+mtext(expression(paste("Consumer growth rate, ", lambda)), side = 2, outer = F , line = 2.5)
 HopfData <- read.csv("HopfData.csv") #Import analytical solution to the Hopf Bifurcation
 SData <- cbind(seq(0.1,1,0.01),seq(0.1,1,0.01))
-lines(SData,col=colors[5],lwd=3)
-lines(HopfData,col="white",lwd=3)
+lines(SData,col=colors[2],lwd=3)
+lines(HopfData,col=colors[5],lwd=3)
 
 
