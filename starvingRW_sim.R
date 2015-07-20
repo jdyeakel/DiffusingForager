@@ -1,4 +1,5 @@
 library(RColorBrewer)
+library(wesanderson)
 library(Rcpp)
 library(animation)
 #nearest neighbor with boundary conditions function
@@ -128,7 +129,60 @@ plot(sigmaseq,meanpropr,type="l",col=pal[2],ylim=c(0,1),xlim=c(0,1))
 lines(sigmaseq,meanpropc,col=pal[1])
 
 
-
+#Sigma vs. lambda
+#Probability of resource growth | presence of nearest neighbors
+alpha <- 0.5
+#Rate of starvation
+#sigma <- 1
+#Rate of recovery
+rho <- 0.2
+#Probability of consumer reproduction
+#lambda <- 0.1
+#Probability of consumer mortality | they are starving
+mu <- 0.2
+tmax <- 500
+res_burn_l <- list()
+c_burn_l <- list()
+lambdaseq <- seq(0.1,1,0.1)
+sigmaseq <- seq(0.1,1,0.1)
+r_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
+c_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
+toc <- 0
+for (lambda in lambdaseq) {
+  toc <- toc + 1
+#   res_burn_s <- list()
+#   c_burn_s <- list()
+  tic <- 0
+  for (sigma in sigmaseq) {
+    tic <- tic + 1
+    if (lambda < sigma) {
+      cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, alpha, sigma, rho, lambda, mu, srw, rwloc-1, r, p)
+      pop_r <- cout[[1]]
+      pop_c <- cout[[2]]
+#       res_burn_m[[tic]] <- pop_r[500:1000]
+#       c_burn_m[[tic]] <- pop_c[500:1000]
+      r_sd[tic,toc] <- sd(pop_r[floor(tmax/2):tmax])
+      c_sd[tic,toc] <- sd(pop_c[floor(tmax/2):tmax])
+print(paste("toc= ",toc,"; tic= ",tic))
+    } 
+  }
+#   res_burn_l[[toc]] <- res_burn_s
+#   c_burn_l[[toc]] <- res_burn_s
+}
+pal <- wes_palette(name = "Zissou",20, type = "continuous")
+par(mar=c(4,4,1,1))
+M <-  r_sd      #(1+res_vuln_m)/(1+pop_vuln_m)
+filled_contour(sigmaseq, 
+               lambdaseq, 
+               M,
+               levels = seq(min(M), max(M),length.out=20),col = pal,
+               lwd = 0.1,xlab="sigma",ylab="lambda")
+mtext(expression(paste("Starvation rate, ", sigma)), side = 1, outer = F , line = 2.5)
+mtext(expression(paste("Consumer growth rate, ", lambda)), side = 2, outer = F , line = 2.5)
+HopfData <- read.csv("HopfData.csv") #Import analytical solution to the Hopf Bifurcation
+SData <- cbind(seq(0.1,1,0.01),seq(0.1,1,0.01))
+lines(SData,col=colors[2],lwd=3)
+lines(HopfData,col=colors[5],lwd=3)
 
 
 
