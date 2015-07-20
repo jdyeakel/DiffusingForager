@@ -49,7 +49,10 @@ List starvingRW_pr(
     }
     //r_frame(t) = r;
 
-
+    //Resource proportions at time t
+    double Nr = sum(r) / L_size; //Proportion of sites with resource
+    double No = 1 - Nr; //Proportion of sites without resource
+    
     int i = 0;
     int x;
     while (ind_check == 1) {
