@@ -26,6 +26,8 @@ List starvingRW_pr(
 
   IntegerVector pop_c(t_max);
   IntegerVector pop_r(t_max);
+  IntegerVector pop_full(t_max);
+  IntegerVector pop_starve(t_max);
   //List r_frame(t_max);
   int rsize = r.size();
   IntegerMatrix rm(t_max,rsize);
@@ -40,6 +42,8 @@ List starvingRW_pr(
     int ind_check = 1;
     int num = srw.size();
     pop_c(t) = num;
+    pop_full(t) = sum(srw);
+    pop_starve(t) = num - pop_full(t);
     pop_r(t) = sum(r);
     //Rcout << "got here! t... " << r(100) << std::endl;
     for (int j=0;j<rsize;j++) {
@@ -356,12 +360,14 @@ List starvingRW_pr(
 
   } //End t loop
 
-  List cout(5);
+  List cout(7);
   cout(0) = pop_r;
   cout(1) = pop_c;
-  cout(2) = rm;
-  cout(3) = locm;
-  cout(4) = srw;
+  cout(2) = pop_starve;
+  cout(3) = pop_full;
+  cout(4) = rm;
+  cout(5) = locm;
+  cout(6) = srw;
 
   return cout; //check
 

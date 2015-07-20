@@ -50,7 +50,7 @@ sigma <- 1
 #Rate of recovery
 rho <- 0.2
 #Probability of consumer reproduction
-lambda <- 0.1
+lambda <- 0.4
 #Probability of consumer mortality | they are starving
 mu <- 0.2
 
@@ -58,15 +58,18 @@ mu <- 0.2
 cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, alpha, sigma, rho, lambda, mu, srw, rwloc-1, r, p)
 pop_r <- cout[[1]]
 pop_c <- cout[[2]]
-r_frame <- cout[[3]]
-locm <- cout[[4]]
-srwm <- cout[[5]]
+pop_s <- cout[[3]]
+pop_f <- cout[[4]]
+r_frame <- cout[[5]]
+locm <- cout[[6]]
+srwm <- cout[[7]]
 propr <- pop_r/size #(pop_r + pop_c)
 propc <- pop_c/size #(pop_r + pop_c)
 
-pal <- brewer.pal(3,"Set1")
-plot(pop_c,ylim=c(0,max(c(pop_c,pop_r))),type="l",col=pal[1],lwd=2)
-points(pop_r,type="l",col=pal[2],lwd=2)
+pal <- brewer.pal(5,"Set1")
+plot(pop_r,ylim=c(0,max(c(pop_c,pop_r))),type="l",col=pal[2],lwd=2)
+lines(pop_s,type="l",col=pal[5],lwd=2)
+lines(pop_f,type="l",col=pal[3],lwd=2)
 
 
 plot(propc,ylim=c(0,1),type="l",col=pal[1],lwd=2)
