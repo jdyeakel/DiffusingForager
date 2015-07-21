@@ -37,7 +37,7 @@ r <- rep(1,size)
 p <- 1
 
 #Maximum time
-tmax <- 1000
+tmax <- 5000
 
 ############
 #Parameters
@@ -46,11 +46,11 @@ tmax <- 1000
 #Probability of resource growth | presence of nearest neighbors
 alpha <- 0.5
 #Rate of starvation
-sigma <- 1
+sigma <- 0.12
 #Rate of recovery
 rho <- 0.2
 #Probability of consumer reproduction
-lambda <- 0.4
+lambda <- 0.1
 #Probability of consumer mortality | they are starving
 mu <- 0.2
 
@@ -87,7 +87,7 @@ saveGIF({
     image(matrix(rl,(L+2),(L+2)),col=c("white","black"))
     #points(rwloc_frame[[i]],col="green")
   }
-},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/animations/resourceL100_rand.gif")
+},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/animations/resourceL50_rand.gif")
 
 
 
@@ -105,12 +105,16 @@ lambda <- 0.1
 #Probability of consumer mortality | they are starving
 mu <- 0.2
 tmax <- 1000
-sigmaseq <- seq(0.1,1,0.1)
+sigmaseq <- seq(0.12,1,0.01)
 l_sigmaseq <- length(sigmaseq)
 meanr <- numeric(l_sigmaseq)
 meanc <- numeric(l_sigmaseq)
+means <- numeric(l_sigmaseq)
+meanf <- numeric(l_sigmaseq)
 meanpropr <- numeric(l_sigmaseq)
 meanpropc <- numeric(l_sigmaseq)
+meanprops <- numeric(l_sigmaseq)
+meanpropf <- numeric(l_sigmaseq)
 tic <- 0
 for (sigma in sigmaseq) {
   tic <- tic + 1
@@ -118,17 +122,30 @@ for (sigma in sigmaseq) {
   cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, alpha, sigma, rho, lambda, mu, srw, rwloc-1, r, p)
   pop_r <- cout[[1]]
   pop_c <- cout[[2]]
+  pop_s <- cout[[3]]
+  pop_f <- cout[[4]]
   propr <- pop_r/(pop_r + pop_c)
   propc <- pop_c/(pop_r + pop_c)
+  props <- pop_s/(pop_r + pop_c)
+  propf <- pop_f/(pop_r + pop_c)
   meanr[tic] <- mean(pop_r[floor(tmax/2):1000])
   meanc[tic] <- mean(pop_c[floor(tmax/2):1000])
+  means[tic] <- mean(pop_s[floor(tmax/2):1000])
+  meanf[tic] <- mean(pop_f[floor(tmax/2):1000])
   meanpropr[tic] <- mean(propr[floor(tmax/2):1000])
   meanpropc[tic] <- mean(propc[floor(tmax/2):1000])
+  meanprops[tic] <- mean(props[floor(tmax/2):1000])
+  meanpropf[tic] <- mean(propf[floor(tmax/2):1000])
 }
 plot(meanr,type="l",col=pal[2],ylim=c(0,size))
+lines(means, type="l",col=pal[5])
+lines(meanf, type="l",col=pal[3])
 lines(meanc,col=pal[1])
 
-plot(sigmaseq,meanpropr,type="l",col=pal[2],ylim=c(0,1),xlim=c(0,1))
+plot(sigmaseq,meanpropr,type="l",col=pal[2],
+     ylim=c(0,1),xlim=c(0,1),lwd=3,ylab="Prop. Abundance",xlab=expression(paste("Starvation rate ",sigma)))
+lines(sigmaseq,meanprops, type="l",col=pal[5],lwd=3)
+lines(sigmaseq,meanpropf, type="l",col=pal[3],lwd=3)
 lines(sigmaseq,meanpropc,col=pal[1])
 
 
@@ -146,8 +163,8 @@ mu <- 0.2
 tmax <- 500
 res_burn_l <- list()
 c_burn_l <- list()
-lambdaseq <- seq(0.1,1,0.1)
-sigmaseq <- seq(0.1,1,0.1)
+lambdaseq <- seq(0.1,1,0.05)
+sigmaseq <- seq(0.1,1,0.05)
 r_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
 c_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
 toc <- 0
