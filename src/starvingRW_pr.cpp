@@ -65,6 +65,7 @@ List starvingRW_pr(
     double pr_starve = sigma*pRo;
     double pr_recover = rho*pRr;
     double pr_grow = alpha*pRr;
+
     //Rcout << "Prob(resource growth) = " << pr_starve << std::endl;
 
     int i = 0;

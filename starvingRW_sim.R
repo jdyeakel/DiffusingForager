@@ -8,7 +8,7 @@ sourceCpp("src/starvingRW_pr.cpp")
 
 #Cell lattice
 #How many cells? (total)
-L <- 50
+L <- 200
 size <- (L+2)^2
 #nloc <- seq(1,size,1)
 
@@ -105,7 +105,7 @@ lambda <- 0.1
 #Probability of consumer mortality | they are starving
 mu <- 0.2
 tmax <- 1000
-sigmaseq <- seq(0.12,1,0.01)
+sigmaseq <- seq(0.12,1,0.1)
 l_sigmaseq <- length(sigmaseq)
 meanr <- numeric(l_sigmaseq)
 meanc <- numeric(l_sigmaseq)
@@ -136,11 +136,12 @@ for (sigma in sigmaseq) {
   meanpropc[tic] <- mean(propc[floor(tmax/2):1000])
   meanprops[tic] <- mean(props[floor(tmax/2):1000])
   meanpropf[tic] <- mean(propf[floor(tmax/2):1000])
+  print(paste("sigma = ",sigma))
 }
-plot(meanr,type="l",col=pal[2],ylim=c(0,size))
-lines(means, type="l",col=pal[5])
-lines(meanf, type="l",col=pal[3])
-lines(meanc,col=pal[1])
+# plot(meanr,type="l",col=pal[2],ylim=c(0,size))
+# lines(means, type="l",col=pal[5])
+# lines(meanf, type="l",col=pal[3])
+# lines(meanc,col=pal[1])
 
 plot(sigmaseq,meanpropr,type="l",col=pal[2],
      ylim=c(0,1),xlim=c(0,1),lwd=3,ylab="Prop. Abundance",xlab=expression(paste("Starvation rate ",sigma)))
