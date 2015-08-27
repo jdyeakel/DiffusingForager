@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    306244,       6013]
-NotebookOptionsPosition[    304150,       5939]
-NotebookOutlinePosition[    304512,       5955]
-CellTagsIndexPosition[    304469,       5952]
+NotebookDataLength[    305427,       5990]
+NotebookOptionsPosition[    303339,       5916]
+NotebookOutlinePosition[    303695,       5932]
+CellTagsIndexPosition[    303652,       5929]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -4763,30 +4763,6 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"StabilityCorr", " ", "=", 
    RowBox[{"Table", "[", "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"data", " ", "=", 
-        RowBox[{"Transpose", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"LogitValues", "[", 
-            RowBox[{"[", 
-             RowBox[{"All", ",", "i"}], "]"}], "]"}], ",", 
-           RowBox[{"LogitValues", "[", 
-            RowBox[{"[", 
-             RowBox[{"All", ",", "8"}], "]"}], "]"}]}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"logit", " ", "=", " ", 
-        RowBox[{"LogitModelFit", "[", 
-         RowBox[{"data", ",", "x", ",", "x"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"logit", "[", "\"\<CorrelationMatrix\>\"", "]"}], "[", 
-         RowBox[{"[", "2", "]"}], "]"}], "[", 
-        RowBox[{"[", "1", "]"}], "]"}]}], ","}], "*)"}], 
-    "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"Correlation", "[", 
       RowBox[{
@@ -4823,8 +4799,8 @@ Cell[BoxData[{
       RowBox[{"97", ",", "1"}], "]"}]}], ",", 
     RowBox[{"FrameLabel", "\[Rule]", 
      RowBox[{"{", 
-      RowBox[{"\"\<Parameters\>\"", ",", "\"\<Logit Correlation\>\""}], 
-      "}"}]}], ",", 
+      RowBox[{"\"\<Parameters\>\"", ",", "\"\<Correlation\>\""}], "}"}]}], 
+    ",", 
     RowBox[{"ImageSize", "\[Rule]", "300"}]}], "]"}]}]}], "Input",
  CellChangeTimes->{{3.6495045992367153`*^9, 3.649504727836776*^9}, {
    3.649504807357224*^9, 3.6495048272653923`*^9}, {3.649504938875004*^9, 
@@ -4832,7 +4808,7 @@ Cell[BoxData[{
    3.649505669099113*^9, 3.649505681759931*^9}, {3.6495057241901608`*^9, 
    3.649505728744987*^9}, 3.64950576389638*^9, 3.649522543622057*^9, {
    3.649524040398403*^9, 3.649524061301173*^9}, {3.649524127741209*^9, 
-   3.64952412906951*^9}}],
+   3.64952412906951*^9}, {3.6495279039837437`*^9, 3.649527916525465*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{
@@ -5023,7 +4999,7 @@ Cell[BoxData[
        Part[#, 2]]}& )},
   Frame->True,
   FrameLabel->{{
-     FormBox["\"Logit Correlation\"", TraditionalForm], None}, {
+     FormBox["\"Correlation\"", TraditionalForm], None}, {
      FormBox["\"Parameters\"", TraditionalForm], None}},
   FrameTicks->{{Automatic, Automatic}, {{{1., 
        FormBox[
@@ -5063,7 +5039,8 @@ Cell[BoxData[
    3.649505677419191*^9, 3.649505682290944*^9}, {3.649505739790481*^9, 
    3.649505765908189*^9}, 3.649506138107535*^9, 3.649506180609338*^9, 
    3.649506633293502*^9, 3.649521094819216*^9, 3.649521596880301*^9, 
-   3.649522564357085*^9, {3.6495241132293*^9, 3.6495241310669737`*^9}}]
+   3.649522564357085*^9, {3.6495241132293*^9, 3.6495241310669737`*^9}, 
+   3.649527919954401*^9}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -5937,8 +5914,8 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1446, 1026},
-WindowMargins->{{Automatic, 282}, {162, Automatic}},
+WindowSize->{997, 855},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
 2014)",
 StyleDefinitions->"Default.nb"
@@ -5989,30 +5966,30 @@ Cell[34241, 909, 8875, 232, 211, "Output"]
 }, Open  ]],
 Cell[43131, 1144, 1070, 27, 174, "Text"],
 Cell[CellGroupData[{
-Cell[44226, 1175, 1024, 24, 28, "Input"],
+Cell[44226, 1175, 1024, 24, 46, "Input"],
 Cell[45253, 1201, 208826, 3435, 250, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[254128, 4642, 367, 7, 60, "Subsection"],
+Cell[254128, 4642, 367, 7, 85, "Subsection"],
 Cell[254498, 4651, 4503, 106, 322, "Input"],
 Cell[CellGroupData[{
-Cell[259026, 4761, 3020, 73, 148, "Input"],
-Cell[262049, 4836, 8692, 229, 211, "Output"]
+Cell[259026, 4761, 2189, 49, 114, "Input"],
+Cell[261218, 4812, 8712, 230, 211, "Output"]
 }, Open  ]],
-Cell[270756, 5068, 2649, 68, 310, "Text"]
+Cell[269945, 5045, 2649, 68, 367, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[273442, 5141, 195, 2, 44, "Subsection"],
-Cell[273640, 5145, 183, 2, 30, "Text"],
+Cell[272631, 5118, 195, 2, 44, "Subsection"],
+Cell[272829, 5122, 183, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[273848, 5151, 128, 2, 28, "Input"],
-Cell[273979, 5155, 2610, 86, 65, "Output"]
+Cell[273037, 5128, 128, 2, 28, "Input"],
+Cell[273168, 5132, 2610, 86, 65, "Output"]
 }, Open  ]],
-Cell[276604, 5244, 7474, 180, 624, "Input"],
+Cell[275793, 5221, 7474, 180, 624, "Input"],
 Cell[CellGroupData[{
-Cell[284103, 5428, 2665, 55, 63, "Input"],
-Cell[286771, 5485, 17351, 450, 217, "Output"]
+Cell[283292, 5405, 2665, 55, 63, "Input"],
+Cell[285960, 5462, 17351, 450, 217, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
