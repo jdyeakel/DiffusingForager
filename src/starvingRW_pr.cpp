@@ -24,6 +24,11 @@ List starvingRW_pr(
   IntegerVector r,
   double p) {
 
+  //In this simulation, if p=1 it is in the continuous state
+  //If p=0, we are in the fully spatial state
+  //Intermediate values mean that with probability p, you function in
+  //accordance to the mean field model
+
   IntegerVector pop_c(t_max);
   IntegerVector pop_r(t_max);
   IntegerVector pop_full(t_max);
@@ -37,14 +42,25 @@ List starvingRW_pr(
 
   //Begin time loop
   for (int t=0; t<t_max; t++) {
-
     //Across each individual in the system...
     int ind_check = 1;
     int num = srw.size();
+
+    //stop at extinction
+    int r_tot = sum(r);
+    if (r_tot == 0) {
+      break;
+    }
+    //stop at runaway
+    if (num > 100000) {
+      break;
+    }
+
+
     pop_c(t) = num;
     pop_full(t) = sum(srw);
     pop_starve(t) = num - pop_full(t);
-    pop_r(t) = sum(r);
+    pop_r(t) = r_tot;
     //Rcout << "got here! t... " << r(100) << std::endl;
     for (int j=0;j<rsize;j++) {
       rm(t,j) = r(j);
@@ -358,6 +374,7 @@ List starvingRW_pr(
     } //End j
 
     //Rcout << "Mortality! 2 " << t << std::endl;
+
 
   } //End t loop
 

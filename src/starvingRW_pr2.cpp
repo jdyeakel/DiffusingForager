@@ -24,6 +24,12 @@ List starvingRW_pr(
   IntegerVector r,
   double p) {
 
+  //In this simulation, if p=1 it is in the continuous state
+  //If p=0, we are in the fully spatial state
+  //Intermediate values mean that with probability p, you function in
+  //accordance to the mean field model
+
+
   IntegerVector pop_c(t_max);
   IntegerVector pop_r(t_max);
   IntegerVector pop_full(t_max);

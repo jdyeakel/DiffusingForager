@@ -151,16 +151,30 @@ lines(sigmaseq,meanpropc,col=pal[1])
 
 
 #Sigma vs. lambda
+#System Size
+L <- 50
+size <- (L+2)^2
+#Maximum energetic state
+s_max <- 1
+s_crit <- 0
+gain <- s_max
+#initial number of random walkers
+nrw <- floor(0.1*size)
+#Random walker energetic state
+srw <- rep(s_max,nrw)
+#Location of RWs
+rwloc <- sample(seq(1:size),nrw,replace=TRUE)
+#Resource state at each location
+r <- rep(1,size)
 #Probability of resource growth | presence of nearest neighbors
 alpha <- 0.5
-#Rate of starvation
-#sigma <- 1
 #Rate of recovery
 rho <- 0.2
-#Probability of consumer reproduction
-#lambda <- 0.1
 #Probability of consumer mortality | they are starving
 mu <- 0.2
+#Spatial (p=0) vs. Mean Field (p=1)
+p <- 0
+
 tmax <- 500
 res_burn_l <- list()
 c_burn_l <- list()
@@ -169,30 +183,45 @@ sigmaseq <- seq(0.1,1,0.05)
 r_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
 c_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
 toc <- 0
+
+
 for (lambda in lambdaseq) {
   toc <- toc + 1
-#   res_burn_s <- list()
-#   c_burn_s <- list()
+  #   res_burn_s <- list()
+  #   c_burn_s <- list()
   tic <- 0
   for (sigma in sigmaseq) {
     tic <- tic + 1
     if (lambda < sigma) {
-      cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, alpha, sigma, rho, lambda, mu, srw, rwloc-1, r, p)
-      pop_r <- cout[[1]]
-      pop_c <- cout[[2]]
-#       res_burn_m[[tic]] <- pop_r[500:1000]
-#       c_burn_m[[tic]] <- pop_c[500:1000]
-      r_sd[tic,toc] <- sd(pop_r[floor(tmax/2):tmax])
-      c_sd[tic,toc] <- sd(pop_c[floor(tmax/2):tmax])
-print(paste("toc= ",toc,"; tic= ",tic))
+      #Initialize the state for error-reading
+      state <- c(1); state[1] <- "Error : index out of bounds\n"
+      pop_r <- numeric(6);
+      #If there is an out of bounds error in the cpp code, it will be rerun
+      extinct_tic <- 0
+      print(paste("lambda=",lambda,"   sigma=",sigma))
+      while((state[1] == "Error : index out of bounds\n") || (tail(pop_r)[6] == 0)) { 
+        state <- try(cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, alpha, sigma, rho, lambda, mu, srw, rwloc-1, r, p),silent=TRUE)
+        pop_r <- cout[[1]]
+        pop_c <- cout[[2]]
+        #       res_burn_m[[tic]] <- pop_r[500:1000]
+        #       c_burn_m[[tic]] <- pop_c[500:1000]
+        r_sd[tic,toc] <- sd(pop_r[floor(tmax/2):tmax])
+        c_sd[tic,toc] <- sd(pop_c[floor(tmax/2):tmax])
+        extinct_tic <- extinct_tic + 1
+        print(paste("extinctions = ",extinct_tic))
+        if (extinct_tic == 10) {
+          break
+        }
+      }
+      print(paste("toc= ",toc,"; tic= ",tic))
     } 
   }
-#   res_burn_l[[toc]] <- res_burn_s
-#   c_burn_l[[toc]] <- res_burn_s
+  #   res_burn_l[[toc]] <- res_burn_s
+  #   c_burn_l[[toc]] <- res_burn_s
 }
 pal <- wes_palette(name = "Zissou",20, type = "continuous")
 par(mar=c(4,4,1,1))
-M <-  r_sd      #(1+res_vuln_m)/(1+pop_vuln_m)
+M <-  c_sd      #(1+res_vuln_m)/(1+pop_vuln_m)
 filled_contour(sigmaseq, 
                lambdaseq, 
                M,
