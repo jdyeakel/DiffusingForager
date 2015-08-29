@@ -40,8 +40,12 @@ List starvingRW_pr(
 
   int L_size = pow((L+2),2);
 
+  int timestep = 0;
+  String message;
+
   //Begin time loop
   for (int t=0; t<t_max; t++) {
+    timestep = timestep + 1;
     //Across each individual in the system...
     int ind_check = 1;
     int num = srw.size();
@@ -49,10 +53,12 @@ List starvingRW_pr(
     //stop at extinction
     int r_tot = sum(r);
     if (r_tot == 0) {
+      message = "extinction";
       break;
     }
-    //stop at runaway
+    //stop at overflow
     if (num > 100000) {
+      message = "overflow";
       break;
     }
 
@@ -379,15 +385,19 @@ List starvingRW_pr(
   } //End t loop
 
   List cout(7);
-  cout(0) = pop_r;
-  cout(1) = pop_c;
-  cout(2) = pop_starve;
-  cout(3) = pop_full;
-  cout(4) = rm;
-  cout(5) = locm;
-  cout(6) = srw;
-
-  return cout; //check
+  if (timestep < (t_max-2)) {
+    cout(0) = message;
+    return cout;
+  } else {
+    cout(0) = pop_r;
+    cout(1) = pop_c;
+    cout(2) = pop_starve;
+    cout(3) = pop_full;
+    cout(4) = rm;
+    cout(5) = locm;
+    cout(6) = srw;
+    return cout; //check
+  }
 
 }
 
