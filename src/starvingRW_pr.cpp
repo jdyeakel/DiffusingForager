@@ -53,12 +53,12 @@ List starvingRW_pr(
     //stop at extinction
     int r_tot = sum(r);
     if (r_tot == 0) {
-      message = "extinction";
+      message = "resource extinction";
       break;
     }
     //stop at overflow
-    if (num > 100000) {
-      message = "overflow";
+    if (num == 0) {
+      message = "consumer extinction";
       break;
     }
 

@@ -87,7 +87,7 @@ saveGIF({
     image(matrix(rl,(L+2),(L+2)),col=c("white","black"))
     #points(rwloc_frame[[i]],col="green")
   }
-},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/animations/resourceL50_rand.gif")
+},movie.name = "/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/animations/resourceL50_pulse.gif")
 
 
 
@@ -209,7 +209,7 @@ for (lambda in lambdaseq) {
         c_sd[tic,toc] <- sd(pop_c[floor(tmax/2):tmax])
         extinct_tic <- extinct_tic + 1
         print(paste("extinctions = ",extinct_tic))
-        if (extinct_tic == 10) {
+        if (extinct_tic == 20) {
           break
         }
       }
