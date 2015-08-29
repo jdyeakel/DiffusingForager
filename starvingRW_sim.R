@@ -183,7 +183,12 @@ sigmaseq <- seq(0.1,1,0.05)
 r_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
 c_sd <- matrix(0,length(sigmaseq),length(lambdaseq))
 toc <- 0
-
+pop_r_traj <- list()
+pop_c_traj <- list()
+for (i in 1:length(lambdaseq)) {
+  pop_r_traj[[i]] <- list()
+  pop_c_traj[[i]] <- list()
+}
 
 for (lambda in lambdaseq) {
   toc <- toc + 1
@@ -194,22 +199,33 @@ for (lambda in lambdaseq) {
     tic <- tic + 1
     if (lambda < sigma) {
       #Initialize the state for error-reading
-      state <- c(1); state[1] <- "Error : index out of bounds\n"
-      pop_r <- numeric(6);
+      cout <- "resource extinction"
       #If there is an out of bounds error in the cpp code, it will be rerun
       extinct_tic <- 0
       print(paste("lambda=",lambda,"   sigma=",sigma))
-      while((state[1] == "Error : index out of bounds\n") || (tail(pop_r)[6] == 0)) { 
-        state <- try(cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, alpha, sigma, rho, lambda, mu, srw, rwloc-1, r, p),silent=TRUE)
+      while((cout[[1]] == "consumer extinction") || (cout[[1]] == "resource extinction")) { 
+        cout <- starvingRW_pr(L, s_max, s_crit, gain, tmax, alpha, sigma, rho, lambda, mu, srw, rwloc-1, r, p)
         pop_r <- cout[[1]]
         pop_c <- cout[[2]]
-        #       res_burn_m[[tic]] <- pop_r[500:1000]
-        #       c_burn_m[[tic]] <- pop_c[500:1000]
         r_sd[tic,toc] <- sd(pop_r[floor(tmax/2):tmax])
         c_sd[tic,toc] <- sd(pop_c[floor(tmax/2):tmax])
+        #Save trajectories!
+        pop_r_traj[[toc]][[tic]] <- pop_r
+        pop_c_traj[[toc]][[tic]] <- pop_c
         extinct_tic <- extinct_tic + 1
         print(paste("extinctions = ",extinct_tic))
-        if (extinct_tic == 20) {
+        if ((extinct_tic == 20) && (cout[[1]] == "resource extinction")) {
+          r_sd[tic,toc] <- -1
+          c_sd[tic,toc] <- -1
+          pop_r_traj[[toc]][[tic]] <- -1
+          pop_c_traj[[toc]][[tic]] <- -1
+          break
+        }
+        if ((extinct_tic == 20) && (cout[[1]] == "consumer extinction")) {
+          r_sd[tic,toc] <- -2
+          c_sd[tic,toc] <- -2
+          pop_r_traj[[toc]][[tic]] <- -2
+          pop_c_traj[[toc]][[tic]] <- -2
           break
         }
       }

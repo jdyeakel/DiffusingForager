@@ -40,23 +40,29 @@ List starvingRW_pr(
 
   int L_size = pow((L+2),2);
 
+  //For outputing different errors
   int timestep = 0;
   String message;
 
   //Begin time loop
   for (int t=0; t<t_max; t++) {
-    timestep = timestep + 1;
+
     //Across each individual in the system...
     int ind_check = 1;
-    int num = srw.size();
 
-    //stop at extinction
+    //How many consumers are there?
+    int num = srw.size();
+    //How many resources are there?
     int r_tot = sum(r);
+
+    //Assess potential extinctions
+    timestep = timestep + 1;
+    //stop at resource extinction
     if (r_tot == 0) {
       message = "resource extinction";
       break;
     }
-    //stop at overflow
+    //stop at consumer extinction
     if (num == 0) {
       message = "consumer extinction";
       break;
