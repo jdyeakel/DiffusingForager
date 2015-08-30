@@ -55,8 +55,9 @@ List starvingRW_pr(
     //How many resources are there?
     int r_tot = sum(r);
 
-    //Assess potential extinctions
+    //ERROR ASSESSMENT
     timestep = timestep + 1;
+
     //stop at resource extinction
     if (r_tot == 0) {
       message = "resource extinction";
@@ -65,6 +66,11 @@ List starvingRW_pr(
     //stop at consumer extinction
     if (num == 0) {
       message = "consumer extinction";
+      break;
+    }
+    //stop if overflow
+    if (num > 100000) {
+      message = "consumer overflow";
       break;
     }
 
@@ -399,8 +405,8 @@ List starvingRW_pr(
     cout(1) = pop_c;
     cout(2) = pop_starve;
     cout(3) = pop_full;
-    cout(4) = rm;
-    cout(5) = locm;
+    cout(4) = rm; //Very large
+    cout(5) = locm; //Very large
     cout(6) = srw;
     return cout; //check
   }

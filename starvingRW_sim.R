@@ -228,6 +228,13 @@ for (lambda in lambdaseq) {
           pop_c_traj[[toc]][[tic]] <- -2
           break
         }
+        if ((extinct_tic == 20) && (cout[[1]] == "consumer overflow")) {
+          r_sd[tic,toc] <- -3
+          c_sd[tic,toc] <- -3
+          pop_r_traj[[toc]][[tic]] <- -3
+          pop_c_traj[[toc]][[tic]] <- -3
+          break
+        }
       }
       print(paste("toc= ",toc,"; tic= ",tic))
     } 
@@ -235,6 +242,8 @@ for (lambda in lambdaseq) {
   #   res_burn_l[[toc]] <- res_burn_s
   #   c_burn_l[[toc]] <- res_burn_s
 }
+data <- list(); data[[1]] <- pop_r_traj;data[[2]] <- pop_c_traj
+save(data,file="/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/lambda_sigma_traj.RData")
 pal <- wes_palette(name = "Zissou",20, type = "continuous")
 par(mar=c(4,4,1,1))
 M <-  c_sd      #(1+res_vuln_m)/(1+pop_vuln_m)
