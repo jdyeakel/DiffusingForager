@@ -276,7 +276,7 @@ for (i in 1:length(lambdaseq)) {
         #The case of consumer extinction
         if (r_traj == -2) {
           mfreq[i,j] <- -2
-          pal[i,j] <- "white"
+          pal[i,j] <- "gray"
         }
         #The case of consumer overflow (~resource extinction)
         if ((r_traj == "consumer overflow") || (r_traj == -3)) {
