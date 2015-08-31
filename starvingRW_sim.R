@@ -244,6 +244,56 @@ for (lambda in lambdaseq) {
 }
 data <- list(); data[[1]] <- pop_r_traj;data[[2]] <- pop_c_traj
 save(data,file="/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/lambda_sigma_traj.RData")
+
+library(plotrix)
+mfreq <- matrix(0,length(lambdaseq),length(sigmaseq))
+pal <- matrix(0,length(lambdaseq),length(sigmaseq))
+colornames <- smooth_pal(brewer.pal(11,"Spectral"),n=4)
+colorvalues <- seq(0,0.04,0.001)
+for (i in 1:length(lambdaseq)) {
+  for (j in 1:length(sigmaseq)) {
+    if (i < j) {
+      r_traj <- pop_r_traj[[i]][[j]]
+      #c_traj <- pop_c_traj[[i]][[j]]
+      if (length(r_traj) > 5) {
+        r_traj <- r_traj[250:500]
+        if (max(r_traj) == min(r_traj)) {
+          mfreq[i,j] <- 0
+          colorpos <- which.min(abs(colorvalues - mfreq[i,j])) 
+          pal[i,j] <- colornames[colorpos]
+        } else {
+          sv <- spectrum(r_traj);
+          mfreq[i,j] <- sv$freq[which(sv$spec == max(sv$spec))]
+          colorpos <- which.min(abs(colorvalues - mfreq[i,j])) 
+          pal[i,j] <- colornames[colorpos]
+        }
+      } else {
+        #The case of resource extinction
+        if (r_traj == -1) {
+          mfreq[i,j] <- -1
+          pal[i,j] <- "black"
+        }
+        #The case of consumer extinction
+        if (r_traj == -2) {
+          mfreq[i,j] <- -2
+          pal[i,j] <- "white"
+        }
+        #The case of consumer overflow (~resource extinction)
+        if ((r_traj == "consumer overflow") || (r_traj == -3)) {
+          mfreq[i,j] <- -3
+          pal[i,j] <- "black"
+        }
+      }
+    } else {pal[i,j] <- "white"}
+  } 
+}
+color2D.matplot(mfreq, border="white", axes=FALSE, cellcolors=pal,yrev=FALSE,
+                xlab=expression(paste("Starvation rate  ",sigma)),
+                ylab=expression(paste("Consumer growth rate  ",lambda)))
+lines(seq(0,length(lambdaseq)),seq(0,length(lambdaseq)))
+axis(1, at = seq(1,19,2), labels = seq(0.1,1,0.1))
+axis(2, at = seq(1,19,2), labels = seq(0.1,1,0.1))
+
 pal <- wes_palette(name = "Zissou",20, type = "continuous")
 par(mar=c(4,4,1,1))
 M <-  c_sd      #(1+res_vuln_m)/(1+pop_vuln_m)
