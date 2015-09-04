@@ -243,7 +243,7 @@ for (lambda in lambdaseq) {
   #   c_burn_l[[toc]] <- res_burn_s
 }
 data <- list(); data[[1]] <- pop_r_traj;data[[2]] <- pop_c_traj
-save(data,file="/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/lambda_sigma_traj.RData")
+#save(data,file="/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/lambda_sigma_traj.RData")
 
 library(plotrix)
 mfreq <- matrix(0,length(lambdaseq),length(sigmaseq))

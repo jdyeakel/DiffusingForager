@@ -1,0 +1,48 @@
+;; RefTeX parse info file
+;; File: /Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex
+;; User: redner (Sidney Redner)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/")
+
+(label-numbers)
+
+(bof "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex")
+
+(toc "toc" "    1 Introduction" "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil 2 "1" "\\section{Introduction}" 1754)
+
+(toc "toc" "    2 Methods" "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil 2 "2" "\\section{Methods}" 6119)
+
+(toc "toc" "      2.1 Model description" "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil 3 "2.1" "\\subsection{Model description}" 6128)
+
+("RE" "e" "\\begin{split} \\dot F &= \\gamma RF + \\rho RS - \\sigma (1-R)F\\,," "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil)
+
+(toc "toc" "      2.2 Generalized model" "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil 3 "2.2" "\\subsection{Generalized model}" 10607)
+
+(toc "toc" "      2.3 Stochastic dynamic program" "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil 3 "2.3" "\\subsection{Stochastic dynamic program}" 10657)
+
+(toc "toc" "    3 Results" "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil 2 "3" "\\section{Results}" 10699)
+
+(toc "toc" "    4 Discussion" "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil 2 "4" "\\section{Discussion}" 10853)
+
+("SN" "f" "Saddle Node bifurcation " "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil)
+
+("SN" "f" "% Probability that the resource value is less than threshold = 0.05 % " "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" 10657)
+
+("SN1" "f" "Hopf bifurcation " "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex" nil)
+
+(thebib . "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex")
+
+(eof "/Users/redner/Dropbox/2014_DiffusingForager/Manuscript/version1.tex")
+))
+
