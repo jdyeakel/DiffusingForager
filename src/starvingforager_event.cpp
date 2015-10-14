@@ -19,6 +19,10 @@ List starvingforager_event(
   double K,       //Resource carrying capacity
   double D        //Diffusion rate
 ) {
+  //Dimension of the lattice
+  int dim = 2;
+  //Lattice size
+  int size = pow(L-2,dim)
   //Initial time
   double t = 0;
 
@@ -82,27 +86,43 @@ List starvingforager_event(
     //Randomly select an individual (R,S,F) with probability 1/N
     //ind thus represents the POSITION of the individual
     int id = runif(1,0,tot-1);
-
+    int state;
+    int location;
     //If ind is a resource...
     if (ind_vec(id) == 0) {
+      state = 0;
+      location = loc_vec(id);
+
       //Grow, become consumed or move?
       double draw_event = runif(1,0,1);
 
       //Grow
       if (draw_event < R_pr_line(0)) {
-
+        //Append a new resource to the END of the vector
+        ind_vec.push_back(state);
+        //Append the resource's location to the END of the vector
+        ind_loc.push_back(location);
       }
       //Become consumed!!!!
       if ((draw_event >= R_pr_line(0)) && (draw_event < R_pr_line(1))) {
-
+        //Remove the consumed resource from the state vector
+        ind_vec.erase(id);
+        //Remove the consumed resource form the location vector
+        loc_vec.erase(id);
       }
       //Move
       if ((draw_event >= R_pr_line(1)) && (draw_event < 1)) {
-
+        //Draw a random location and update
+        int draw_loc = runif(1,0,size);
+        loc_vec(id) = draw_loc;
       }
+      dt = (alpha*(K-R)) + (F + S) + Dr;
     }
     //If ind is a starver...
     if (ind_vec(id) == 1) {
+      state = 1;
+      location = loc_vec(id);
+
       //Grow, become consumed or move?
       double draw_event = runif(1,0,1);
 
@@ -118,9 +138,13 @@ List starvingforager_event(
       if ((draw_event >= S_pr_line(1)) && (draw_event < 1)) {
 
       }
+      dt = rho*R + mu + Ds;
     }
     //If ind is Full...
     if (ind_vec(id) == 2) {
+      state = 2;
+      location = loc_vec(id);
+
       //Grow, become consumed or move?
       double draw_event = runif(1,0,1);
 
@@ -136,6 +160,7 @@ List starvingforager_event(
       if ((draw_event >= F_pr_line(1)) && (draw_event < 1)) {
 
       }
+      dt = lambda+sigma*(K-R)+Df;
     }
 
     //Advance time
