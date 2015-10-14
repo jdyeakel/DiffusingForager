@@ -34,27 +34,26 @@ List starvingforager_event(
   //ind_vec: the vector of individual states... 0 = resource, 1=starver, 2=full
   //pos_vec: the vector of individual locations
 
+  //Initial count of how many resouces, starvers, and full in this timestep??
+  double R = 0;
+  double S = 0;
+  double F = 0;
+  for (int i=0;i<tot;i++) {
+    if (ind_vec(i) == 0) {
+      R = R + 1;
+    }
+    if (ind_vec(i) == 1) {
+      S = S + 1;
+    }
+    if (ind_vec(i) == 2) {
+      F = F + 1;
+    }
+  }
 
   //Iterate over time
   while (t < t_term) {
     //Count the number of individual R + S + F
     int tot = ind_vec.size();
-
-    //How many resouces, starvers, and full in this timestep??
-    double R = 0;
-    double S = 0;
-    double F = 0;
-    for (int i=0;i<tot;i++) {
-      if (ind_vec(i) == 0) {
-        R = R + 1;
-      }
-      if (ind_vec(i) == 1) {
-        S = S + 1;
-      }
-      if (ind_vec(i) == 2) {
-        F = F + 1;
-      }
-    }
 
     //Construct probability lines, which are a function of R, S, F
 
@@ -86,15 +85,18 @@ List starvingforager_event(
     //Randomly select an individual (R,S,F) with probability 1/N
     //ind thus represents the POSITION of the individual
     int id = runif(1,0,tot-1);
+    
     int state;
     int location;
+
+    double draw_event;
     //If ind is a resource...
     if (ind_vec(id) == 0) {
       state = 0;
       location = loc_vec(id);
 
       //Grow, become consumed or move?
-      double draw_event = runif(1,0,1);
+      draw_event = runif(1,0,1);
 
       //Grow
       if (draw_event < R_pr_line(0)) {
@@ -102,6 +104,8 @@ List starvingforager_event(
         ind_vec.push_back(state);
         //Append the resource's location to the END of the vector
         ind_loc.push_back(location);
+        //Update Tally
+        R = R + 1;
       }
       //Become consumed!!!!
       if ((draw_event >= R_pr_line(0)) && (draw_event < R_pr_line(1))) {
@@ -109,11 +113,14 @@ List starvingforager_event(
         ind_vec.erase(id);
         //Remove the consumed resource form the location vector
         loc_vec.erase(id);
+        //Update Tally
+        R = R - 1;
       }
       //Move
+      int draw_loc;
       if ((draw_event >= R_pr_line(1)) && (draw_event < 1)) {
         //Draw a random location and update
-        int draw_loc = runif(1,0,size);
+        draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
       }
       dt = (alpha*(K-R)) + (F + S) + Dr;
@@ -124,12 +131,15 @@ List starvingforager_event(
       location = loc_vec(id);
 
       //Recover, die, or move??
-      double draw_event = runif(1,0,1);
+      draw_event = runif(1,0,1);
 
       //Recover
       if (draw_event < S_pr_line(0)) {
         //Update the state from starver to full
         ind_vec(id) = 2;
+        //Update Tally
+        S = S - 1;
+        F = F + 1;
       }
       //Die
       if ((draw_event >= S_pr_line(0)) && (draw_event < S_pr_line(1))) {
@@ -137,11 +147,14 @@ List starvingforager_event(
         ind_vec.erase(id);
         //Remove the consumed resource form the location vector
         loc_vec.erase(id);
+        //Update Tally
+        S = S - 1;
       }
       //Move
+      int draw_loc;
       if ((draw_event >= S_pr_line(1)) && (draw_event < 1)) {
         //Draw a random location and update
-        int draw_loc = runif(1,0,size);
+        draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
       }
       dt = rho*R + mu + Ds;
@@ -152,7 +165,7 @@ List starvingforager_event(
       location = loc_vec(id);
 
       //Grow, starve, or move?
-      double draw_event = runif(1,0,1);
+      draw_event = runif(1,0,1);
 
       //Grow
       if (draw_event < F_pr_line(0)) {
@@ -160,16 +173,21 @@ List starvingforager_event(
         ind_vec.push_back(state);
         //Append the resource's location to the END of the vector
         ind_loc.push_back(location);
+        F = F + 1;
       }
       //Starve
       if ((draw_event >= F_pr_line(0)) && (draw_event < F_pr_line(1))) {
         //Update the state from full to starver
         ind_vec(id) = 1;
+        //Update Tally
+        F = F - 1;
+        S = S + 1;
       }
       //Move
+      int draw_loc;
       if ((draw_event >= F_pr_line(1)) && (draw_event < 1)) {
         //Draw a random location and update
-        int draw_loc = runif(1,0,size);
+        draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
       }
       dt = lambda+sigma*(K-R)+Df;
@@ -182,5 +200,9 @@ List starvingforager_event(
 
   } //end while loop over t
 
+  List cout(2);
+  cout(0) = ;
+  cout(1) = ;
+  return(cout);
 
 }
