@@ -9,21 +9,75 @@ using namespace Rcpp;
 
 // [[Rcpp::export]]
 List starvingforager_event(
-  int L,
-  int t_term,
-  double sigma,
-  double rho,
-  double lambda,
-  double mu
+  int L,          //Lattice dim
+  int t_term,     //Terminal time
+  double alpha,   //Resource growth rate
+  double sigma,   //Starvation rate
+  double rho,     //Recovery rate
+  double lambda,  //Growth rate
+  double mu,      //Mortality rate
+  double K,       //Resource carrying capacity
+  double D        //Diffusion rate
 ) {
+  //Initial time
   double t = 0;
+
+  //Assume the diffusion rates of each state are the same
+  double Dr = D;
+  double Ds = D;
+  double Df = D;
 
   //ind_vec: the vector of individual states... 0 = resource, 1=starver, 2=full
   //pos_vec: the vector of individual locations
 
+
+  //Iterate over time
   while (t < t_term) {
     //Count the number of individual R + S + F
     int tot = ind_vec.size();
+
+    //How many resouces, starvers, and full in this timestep??
+    double R = 0;
+    double S = 0;
+    double F = 0;
+    for (int i=0;i<tot;i++) {
+      if (ind_vec(i) == 0) {
+        R = R + 1;
+      }
+      if (ind_vec(i) == 1) {
+        S = S + 1;
+      }
+      if (ind_vec(i) == 2) {
+        F = F + 1;
+      }
+    }
+
+    //Construct probability lines, which are a function of R, S, F
+
+    //Grow <-----> Consumed <-----> Move
+    NumericVector R_pr_line(2);
+    R_pr_line(0) = (alpha*(K-R))/((alpha*(K-R)) + (F + S) + Dr);
+    R_pr_line(1) = R_pr_line(0) + ((F + S)/((alpha*(K-R)) + (F + S) + Dr));
+    //R_pr_line(2) = R_pr_line(1) + (Dr/((alpha*(K-R)) + (F + S) + Dr));
+
+    //Recover <-----> Mortality <-----> Move
+    NumericVector S_pr_line(2);
+    S_pr_line(0) = (rho*R)/(rho*R + mu + Ds);
+    S_pr_line(1) = S_pr_line(0) + (mu/(rho*R + mu + Ds));
+    //S_pr_line(2) = S_pr_line(1) + (Ds/(rho*R + mu + Ds));
+
+    //Grow <-----> Starve <-----> Move
+    NumericVector F_pr_line(2);
+    F_pr_line(0) = lambda/(lambda+sigma*(K-R)+Df);
+    F_pr_line(1) = F_pr_line(0) + ((sigma*(K-R))/(lambda+sigma*(K-R)+Df));
+    //F_pr_line(2) = F_pr_line(1) + (Df/(lambda+sigma*(K-R)+Df));
+
+
+    //Initiate variables
+    double dt;
+
+
+
 
     //Randomly select an individual (R,S,F) with probability 1/N
     //ind thus represents the POSITION of the individual
@@ -31,22 +85,65 @@ List starvingforager_event(
 
     //If ind is a resource...
     if (ind_vec(id) == 0) {
+      //Grow, become consumed or move?
+      double draw_event = runif(1,0,1);
 
+      //Grow
+      if (draw_event < R_pr_line(0)) {
+
+      }
+      //Become consumed!!!!
+      if ((draw_event >= R_pr_line(0)) && (draw_event < R_pr_line(1))) {
+
+      }
+      //Move
+      if ((draw_event >= R_pr_line(1)) && (draw_event < 1)) {
+
+      }
     }
     //If ind is a starver...
     if (ind_vec(id) == 1) {
+      //Grow, become consumed or move?
+      double draw_event = runif(1,0,1);
 
+      //Grow
+      if (draw_event < S_pr_line(0)) {
+
+      }
+      //Become consumed!!!!
+      if ((draw_event >= S_pr_line(0)) && (draw_event < S_pr_line(1))) {
+
+      }
+      //Move
+      if ((draw_event >= S_pr_line(1)) && (draw_event < 1)) {
+
+      }
     }
-    //If ind is a consumer...
+    //If ind is Full...
     if (ind_vec(id) == 2) {
-      
+      //Grow, become consumed or move?
+      double draw_event = runif(1,0,1);
+
+      //Grow
+      if (draw_event < F_pr_line(0)) {
+
+      }
+      //Become consumed!!!!
+      if ((draw_event >= F_pr_line(0)) && (draw_event < F_pr_line(1))) {
+
+      }
+      //Move
+      if ((draw_event >= F_pr_line(1)) && (draw_event < 1)) {
+
+      }
     }
 
+    //Advance time
+    t = t + dt;
 
 
 
-
-  }
+  } //end while loop over t
 
 
 }
