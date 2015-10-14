@@ -123,20 +123,26 @@ List starvingforager_event(
       state = 1;
       location = loc_vec(id);
 
-      //Grow, become consumed or move?
+      //Recover, die, or move??
       double draw_event = runif(1,0,1);
 
-      //Grow
+      //Recover
       if (draw_event < S_pr_line(0)) {
-
+        //Update the state from starver to full
+        ind_vec(id) = 2;
       }
-      //Become consumed!!!!
+      //Die
       if ((draw_event >= S_pr_line(0)) && (draw_event < S_pr_line(1))) {
-
+        //Remove the consumed resource from the state vector
+        ind_vec.erase(id);
+        //Remove the consumed resource form the location vector
+        loc_vec.erase(id);
       }
       //Move
       if ((draw_event >= S_pr_line(1)) && (draw_event < 1)) {
-
+        //Draw a random location and update
+        int draw_loc = runif(1,0,size);
+        loc_vec(id) = draw_loc;
       }
       dt = rho*R + mu + Ds;
     }
@@ -145,20 +151,26 @@ List starvingforager_event(
       state = 2;
       location = loc_vec(id);
 
-      //Grow, become consumed or move?
+      //Grow, starve, or move?
       double draw_event = runif(1,0,1);
 
       //Grow
       if (draw_event < F_pr_line(0)) {
-
+        //Append a new resource to the END of the vector
+        ind_vec.push_back(state);
+        //Append the resource's location to the END of the vector
+        ind_loc.push_back(location);
       }
-      //Become consumed!!!!
+      //Starve
       if ((draw_event >= F_pr_line(0)) && (draw_event < F_pr_line(1))) {
-
+        //Update the state from full to starver
+        ind_vec(id) = 1;
       }
       //Move
       if ((draw_event >= F_pr_line(1)) && (draw_event < 1)) {
-
+        //Draw a random location and update
+        int draw_loc = runif(1,0,size);
+        loc_vec(id) = draw_loc;
       }
       dt = lambda+sigma*(K-R)+Df;
     }
