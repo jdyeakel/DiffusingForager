@@ -18,6 +18,8 @@ List starvingforager_event(
   double mu,      //Mortality rate
   double K,       //Resource carrying capacity
   double D        //Diffusion rate
+  IntegerVector ind_vec //Initial vector of states
+  IntegerVector loc_vec //Initial vector of locations
 ) {
   //Dimension of the lattice
   int dim = 2;
@@ -35,6 +37,8 @@ List starvingforager_event(
   //pos_vec: the vector of individual locations
 
   //Initial count of how many resouces, starvers, and full in this timestep??
+  //Count the number of individual R + S + F
+  int tot = ind_vec.size();
   double R = 0;
   double S = 0;
   double F = 0;
@@ -52,8 +56,6 @@ List starvingforager_event(
 
   //Iterate over time
   while (t < t_term) {
-    //Count the number of individual R + S + F
-    int tot = ind_vec.size();
 
     //Construct probability lines, which are a function of R, S, F
 
@@ -84,8 +86,10 @@ List starvingforager_event(
 
     //Randomly select an individual (R,S,F) with probability 1/N
     //ind thus represents the POSITION of the individual
+    //Update total number of individuals
+    tot = ind_vec.size();
     int id = runif(1,0,tot-1);
-    
+
     int state;
     int location;
 
