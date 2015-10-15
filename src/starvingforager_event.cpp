@@ -27,6 +27,7 @@ List starvingforager_event(
   int size = pow(L-2,dim)
   //Initial time
   double t = 0;
+  double t_next = 1;
 
   //Assume the diffusion rates of each state are the same
   double Dr = D;
@@ -197,7 +198,14 @@ List starvingforager_event(
     //Advance time
     t = t + dt;
 
-
+    //Update output
+    //If t > next integer, record the state of the system
+    if (t >= t_next) {
+        //Record output
+        
+        //Update t_next
+        t_next = t_next + 1;
+    }
 
   } //end while loop over t
 
