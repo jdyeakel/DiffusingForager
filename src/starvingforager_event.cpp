@@ -81,9 +81,6 @@ List starvingforager_event(
     //Initiate variables
     double dt;
 
-
-
-
     //Randomly select an individual (R,S,F) with probability 1/N
     //ind thus represents the POSITION of the individual
     //Update total number of individuals
@@ -122,7 +119,7 @@ List starvingforager_event(
       }
       //Move
       int draw_loc;
-      if ((draw_event >= R_pr_line(1)) && (draw_event < 1)) {
+      if ((draw_event >= R_pr_line(1)) && (draw_event < 1.L)) {
         //Draw a random location and update
         draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
@@ -156,7 +153,7 @@ List starvingforager_event(
       }
       //Move
       int draw_loc;
-      if ((draw_event >= S_pr_line(1)) && (draw_event < 1)) {
+      if ((draw_event >= S_pr_line(1)) && (draw_event < 1.L)) {
         //Draw a random location and update
         draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
@@ -189,7 +186,7 @@ List starvingforager_event(
       }
       //Move
       int draw_loc;
-      if ((draw_event >= F_pr_line(1)) && (draw_event < 1)) {
+      if ((draw_event >= F_pr_line(1)) && (draw_event < 1.L)) {
         //Draw a random location and update
         draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
