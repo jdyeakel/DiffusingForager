@@ -34,6 +34,13 @@ List starvingforager_event(
   double Ds = D;
   double Df = D;
 
+  //Output Lists
+  List ind_out(t_max);
+  List loc_out(t_max);
+  //The initial state
+  ind_out(0) = ind_vec;
+  loc_out(0) = loc_vec;
+
   //ind_vec: the vector of individual states... 0 = resource, 1=starver, 2=full
   //pos_vec: the vector of individual locations
 
@@ -202,7 +209,11 @@ List starvingforager_event(
     //If t > next integer, record the state of the system
     if (t >= t_next) {
         //Record output
-        
+        //States at time t_next
+        ind_out(t_next) = ind_vec;
+        //Locations at time t_next
+        loc_out(t_next) = loc_vec;
+
         //Update t_next
         t_next = t_next + 1;
     }
@@ -210,8 +221,8 @@ List starvingforager_event(
   } //end while loop over t
 
   List cout(2);
-  cout(0) = ;
-  cout(1) = ;
+  cout(0) = ind_out;
+  cout(1) = loc_out;
   return(cout);
 
 }
