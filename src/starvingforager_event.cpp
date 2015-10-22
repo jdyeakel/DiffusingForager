@@ -12,11 +12,11 @@ List starvingforager_event(
   int L,          //Lattice dim
   int t_term,     //Terminal time
   double alpha,   //Resource growth rate
+  double K,       //Resource carrying capacity
   double sigma,   //Starvation rate
   double rho,     //Recovery rate
   double lambda,  //Growth rate
   double mu,      //Mortality rate
-  double K,       //Resource carrying capacity
   double D        //Diffusion rate
   IntegerVector ind_vec //Initial vector of states
   IntegerVector loc_vec //Initial vector of locations
@@ -132,7 +132,7 @@ List starvingforager_event(
         draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
       }
-      dt = (alpha*(K-R)) + (F + S) + Dr;
+      dt = 1.L/((alpha*(K-R)) + (F + S) + Dr);
     }
     //If ind is a starver...
     if (ind_vec(id) == 1) {
@@ -166,7 +166,7 @@ List starvingforager_event(
         draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
       }
-      dt = rho*R + mu + Ds;
+      dt = 1.L/(rho*R + mu + Ds);
     }
     //If ind is Full...
     if (ind_vec(id) == 2) {
@@ -199,7 +199,7 @@ List starvingforager_event(
         draw_loc = runif(1,0,size);
         loc_vec(id) = draw_loc;
       }
-      dt = lambda+sigma*(K-R)+Df;
+      dt = 1.L/(lambda+sigma*(K-R)+Df);
     }
 
     //Advance time
@@ -208,14 +208,14 @@ List starvingforager_event(
     //Update output
     //If t > next integer, record the state of the system
     if (t >= t_next) {
-        //Record output
-        //States at time t_next
-        ind_out(t_next) = ind_vec;
-        //Locations at time t_next
-        loc_out(t_next) = loc_vec;
+      //Record output
+      //States at time t_next
+      ind_out(t_next) = ind_vec;
+      //Locations at time t_next
+      loc_out(t_next) = loc_vec;
 
-        //Update t_next
-        t_next = t_next + 1;
+      //Update t_next
+      t_next = t_next + 1;
     }
 
   } //end while loop over t
