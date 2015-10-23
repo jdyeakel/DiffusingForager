@@ -17,17 +17,20 @@ List starvingforager_event(
   double rho,     //Recovery rate
   double lambda,  //Growth rate
   double mu,      //Mortality rate
-  double D        //Diffusion rate
-  IntegerVector ind_vec //Initial vector of states
+  double D,        //Diffusion rate
+  IntegerVector ind_vec, //Initial vector of states
   IntegerVector loc_vec //Initial vector of locations
 ) {
   //Dimension of the lattice
   int dim = 2;
   //Lattice size
-  int size = pow(L-2,dim)
+  int size = pow(L-2,dim);
   //Initial time
   double t = 0;
   double t_next = 1;
+
+  int max;
+  int min;
 
   //Assume the diffusion rates of each state are the same
   double Dr = D;
@@ -35,8 +38,8 @@ List starvingforager_event(
   double Df = D;
 
   //Output Lists
-  List ind_out(t_max);
-  List loc_out(t_max);
+  List ind_out(t_term);
+  List loc_out(t_term);
   //The initial state
   ind_out(0) = ind_vec;
   loc_out(0) = loc_vec;
@@ -93,7 +96,9 @@ List starvingforager_event(
     //ind thus represents the POSITION of the individual
     //Update total number of individuals
     tot = ind_vec.size();
-    int id = runif(1,0,tot-1);
+    max = tot - 1;
+    min = 0;
+    int id = min + (rand() % (int)(max - min + 1));
 
     int state;
     int location;
@@ -105,14 +110,14 @@ List starvingforager_event(
       location = loc_vec(id);
 
       //Grow, become consumed or move?
-      draw_event = runif(1,0,1);
+      draw_event = rand();
 
       //Grow
       if (draw_event < R_pr_line(0)) {
         //Append a new resource to the END of the vector
         ind_vec.push_back(state);
         //Append the resource's location to the END of the vector
-        ind_loc.push_back(location);
+        loc_vec.push_back(location);
         //Update Tally
         R = R + 1;
       }
@@ -129,7 +134,9 @@ List starvingforager_event(
       int draw_loc;
       if ((draw_event >= R_pr_line(1)) && (draw_event < 1.L)) {
         //Draw a random location and update
-        draw_loc = runif(1,0,size);
+        max = size - 1;
+        min = 0;
+        draw_loc = min + (rand() % (int)(max - min + 1));
         loc_vec(id) = draw_loc;
       }
       dt = 1.L/((alpha*(K-R)) + (F + S) + Dr);
@@ -140,7 +147,7 @@ List starvingforager_event(
       location = loc_vec(id);
 
       //Recover, die, or move??
-      draw_event = runif(1,0,1);
+      draw_event = rand();
 
       //Recover
       if (draw_event < S_pr_line(0)) {
@@ -163,7 +170,9 @@ List starvingforager_event(
       int draw_loc;
       if ((draw_event >= S_pr_line(1)) && (draw_event < 1.L)) {
         //Draw a random location and update
-        draw_loc = runif(1,0,size);
+        max = size - 1;
+        min = 0;
+        draw_loc = min + (rand() % (int)(max - min + 1));
         loc_vec(id) = draw_loc;
       }
       dt = 1.L/(rho*R + mu + Ds);
@@ -174,14 +183,14 @@ List starvingforager_event(
       location = loc_vec(id);
 
       //Grow, starve, or move?
-      draw_event = runif(1,0,1);
+      draw_event = rand();
 
       //Grow
       if (draw_event < F_pr_line(0)) {
         //Append a new resource to the END of the vector
         ind_vec.push_back(state);
         //Append the resource's location to the END of the vector
-        ind_loc.push_back(location);
+        loc_vec.push_back(location);
         F = F + 1;
       }
       //Starve
@@ -196,7 +205,9 @@ List starvingforager_event(
       int draw_loc;
       if ((draw_event >= F_pr_line(1)) && (draw_event < 1.L)) {
         //Draw a random location and update
-        draw_loc = runif(1,0,size);
+        max = size - 1;
+        min = 0;
+        draw_loc = min + (rand() % (int)(max - min + 1));
         loc_vec(id) = draw_loc;
       }
       dt = 1.L/(lambda+sigma*(K-R)+Df);
