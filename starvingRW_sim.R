@@ -4,7 +4,46 @@ library(Rcpp)
 library(animation)
 #nearest neighbor with boundary conditions function
 source("R/ipbc.R")
-sourceCpp("src/starvingRW_pr.cpp")
+sourceCpp("src/starvingforager_event.cpp")
+
+#Initiate starting conditions
+L <- 50
+size <- (L-2)^2
+t_term <- 50
+
+#Parameters
+alpha <- 1
+K <- 1
+sigma <- 0.2
+rho <- 0.5
+lambda <- 0.2
+mu <- 0.1
+D <- 1
+
+ind_vec <- sample(c(0,1,2),size,replace=T)
+loc_vec <- sample(seq(0,size-1),size,replace=T)
+
+starvingforager_event(
+  L,
+  t_term,
+  alpha,
+  K,
+  sigma,
+  rho,
+  lambda,
+  mu,
+  D,
+  ind_vec,
+  loc_vec)
+
+
+
+
+
+
+
+
+
 
 #Cell lattice
 #How many cells? (total)
