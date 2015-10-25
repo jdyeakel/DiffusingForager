@@ -153,8 +153,7 @@ IntegerVector loc_vec //Initial vector of locations
             location = loc_vec(id);
 
             //Recover, die, or move??
-            draw_event = = ((double) rand() / (RAND_MAX));
-            Rcout << "Event: " << draw_event << std::endl;
+            draw_event = ((double) rand() / (RAND_MAX));
 
             //Recover
             if (draw_event < S_pr_line(0)) {
@@ -238,10 +237,9 @@ IntegerVector loc_vec //Initial vector of locations
 
     } //end while loop over t
 
-    List cout(3);
+    List cout(2);
     cout(0) = ind_out;
     cout(1) = loc_out;
-    cout(2) = R_pr_line;
     return(cout);
 
 }
