@@ -7,9 +7,9 @@ source("R/ipbc.R")
 sourceCpp("src/starvingforager_event.cpp")
 
 #Initiate starting conditions
-L <- 50
+L <- 10
 size <- (L-2)^2
-t_term <- 50
+t_term <- 100
 
 #Parameters
 alpha <- 1
@@ -23,7 +23,7 @@ D <- 1
 ind_vec <- sample(c(0,1,2),size,replace=T)
 loc_vec <- sample(seq(0,size-1),size,replace=T)
 
-starvingforager_event(
+Rout <- starvingforager_event(
   L,
   t_term,
   alpha,
@@ -36,10 +36,14 @@ starvingforager_event(
   ind_vec,
   loc_vec)
 
+state <- Rout[[1]]
+loc <- Rout[[2]]
 
+Rden <- unlist(lapply(state,function(x){length(which(x == 0))}))
+Sden <- unlist(lapply(state,function(x){length(which(x == 1))}))
+Fden <- unlist(lapply(state,function(x){length(which(x == 2))}))
 
-
-
+plot(Rden)
 
 
 
