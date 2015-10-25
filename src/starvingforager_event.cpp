@@ -116,7 +116,7 @@ IntegerVector loc_vec //Initial vector of locations
             location = loc_vec(id);
 
             //Grow, become consumed or move?
-            draw_event = rand();
+            draw_event = ((double) rand() / (RAND_MAX));
 
             //Grow
             if (draw_event < R_pr_line(0)) {
@@ -153,7 +153,8 @@ IntegerVector loc_vec //Initial vector of locations
             location = loc_vec(id);
 
             //Recover, die, or move??
-            draw_event = rand();
+            draw_event = = ((double) rand() / (RAND_MAX));
+            Rcout << "Event: " << draw_event << std::endl;
 
             //Recover
             if (draw_event < S_pr_line(0)) {
@@ -189,7 +190,7 @@ IntegerVector loc_vec //Initial vector of locations
             location = loc_vec(id);
 
             //Grow, starve, or move?
-            draw_event = rand();
+            draw_event = ((double) rand() / (RAND_MAX));
 
             //Grow
             if (draw_event < F_pr_line(0)) {
