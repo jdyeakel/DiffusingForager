@@ -5,7 +5,7 @@ using namespace Rcpp;
 // Probably don't need count of RSF... just proportions
 
 // [[Rcpp::export]]
-List starvingforager_event(
+List starvingforager_eventNM(
 int L,          //Lattice dim
 int t_term,     //Terminal time
 double alpha,   //Resource growth rate
@@ -29,10 +29,6 @@ IntegerVector loc_vec //Initial vector of locations
     double max;
     double min;
 
-    //Assume the diffusion rates of each state are the same
-    double Dr = 0.L;
-    double Ds = 0.L;
-    double Df = 0.L;
 
     //Output Lists
     List ind_out(t_term);
@@ -70,9 +66,9 @@ IntegerVector loc_vec //Initial vector of locations
     S = S/size;
     F = F/size;
 
-    NumericVector R_pr_line(2);
-    NumericVector S_pr_line(2);
-    NumericVector F_pr_line(2);
+    double R_pr_line;
+    double S_pr_line;
+    double F_pr_line;
 
     //Iterate over time
     //The loop stops when t > t_term-1... and will record the last value
@@ -80,19 +76,19 @@ IntegerVector loc_vec //Initial vector of locations
 
         //Construct probability lines, which are a function of R, S, F
 
-        //Grow <-----> Consumed <-----> Move
-        R_pr_line(0) = (alpha*(K-R))/((alpha*(K-R)) + (F + S) + Dr);
-        R_pr_line(1) = R_pr_line(0) + ((F + S)/((alpha*(K-R)) + (F + S) + Dr));
+        //Grow <-----> Consumed
+        R_pr_line = (alpha*(K-R))/((alpha*(K-R)) + (F + S));
+        //R_pr_line(1) = R_pr_line(0) + ((F + S)/((alpha*(K-R)) + (F + S) + Dr));
         //R_pr_line(2) = R_pr_line(1) + (Dr/((alpha*(K-R)) + (F + S) + Dr));
 
-        //Recover <-----> Mortality <-----> Move
-        S_pr_line(0) = (rho*R)/(rho*R + mu + Ds);
-        S_pr_line(1) = S_pr_line(0) + (mu/(rho*R + mu + Ds));
+        //Recover <-----> Mortality
+        S_pr_line = (rho*R)/(rho*R + mu);
+        //S_pr_line(1) = S_pr_line(0) + (mu/(rho*R + mu + Ds));
         //S_pr_line(2) = S_pr_line(1) + (Ds/(rho*R + mu + Ds));
 
-        //Grow <-----> Starve <-----> Move
-        F_pr_line(0) = lambda/(lambda+sigma*(K-R)+Df);
-        F_pr_line(1) = F_pr_line(0) + ((sigma*(K-R))/(lambda+sigma*(K-R)+Df));
+        //Grow <-----> Starve
+        F_pr_line = lambda/(lambda+sigma*(K-R));
+        //F_pr_line(1) = F_pr_line(0) + ((sigma*(K-R))/(lambda+sigma*(K-R)+Df));
         //F_pr_line(2) = F_pr_line(1) + (Df/(lambda+sigma*(K-R)+Df));
 
 
@@ -121,7 +117,7 @@ IntegerVector loc_vec //Initial vector of locations
             draw_event = ((double) rand() / (RAND_MAX));
 
             //Grow
-            if (draw_event < R_pr_line(0)) {
+            if (draw_event < R_pr_line) {
                 //Append a new resource to the END of the vector
                 ind_vec.push_back(state);
                 //Append the resource's location to the END of the vector
@@ -130,7 +126,7 @@ IntegerVector loc_vec //Initial vector of locations
                 R = R + (1.L/size);
             }
             //Become consumed!!!!
-            if ((draw_event >= R_pr_line(0)) && (draw_event < R_pr_line(1))) {
+            if ((draw_event >= R_pr_line) && (draw_event < 1.L)) {
                 //Remove the consumed resource from the state vector
                 ind_vec.erase(id);
                 //Remove the consumed resource form the location vector
@@ -138,16 +134,7 @@ IntegerVector loc_vec //Initial vector of locations
                 //Update Tally
                 R = R - (1.L/size);
             }
-            //Move
-            int draw_loc;
-            if ((draw_event >= R_pr_line(1)) && (draw_event < 1.L)) {
-                //Draw a random location and update
-                max = size - 1.L;
-                min = 0.L;
-                draw_loc = min + (rand() % (int)(max - min + 1));
-                loc_vec(id) = draw_loc;
-            }
-            dt = 1.L/((alpha*(K-R)) + (F + S) + Dr);
+            dt = 1.L/((alpha*(K-R)) + (F + S));
         }
         //If ind is a starver...
         if (ind_vec(id) == 1) {
@@ -159,7 +146,7 @@ IntegerVector loc_vec //Initial vector of locations
             draw_event = ((double) rand() / (RAND_MAX));
 
             //Recover
-            if (draw_event < S_pr_line(0)) {
+            if (draw_event < S_pr_line) {
                 //Update the state from starver to full
                 ind_vec(id) = 2;
                 //Update Tally
@@ -167,7 +154,7 @@ IntegerVector loc_vec //Initial vector of locations
                 F = F + (1.L/size);
             }
             //Die
-            if ((draw_event >= S_pr_line(0)) && (draw_event < S_pr_line(1))) {
+            if ((draw_event >= S_pr_line) && (draw_event < 1.L)) {
                 //Remove the consumed resource from the state vector
                 ind_vec.erase(id);
                 //Remove the consumed resource form the location vector
@@ -175,16 +162,7 @@ IntegerVector loc_vec //Initial vector of locations
                 //Update Tally
                 S = S - (1.L/size);
             }
-            //Move
-            int draw_loc;
-            if ((draw_event >= S_pr_line(1)) && (draw_event < 1.L)) {
-                //Draw a random location and update
-                max = size - 1.L;
-                min = 0.L;
-                draw_loc = min + (rand() % (int)(max - min + 1));
-                loc_vec(id) = draw_loc;
-            }
-            dt = 1.L/(rho*R + mu + Ds);
+            dt = 1.L/(rho*R + mu);
         }
         //If ind is Full...
         if (ind_vec(id) == 2) {
@@ -196,7 +174,7 @@ IntegerVector loc_vec //Initial vector of locations
             draw_event = ((double) rand() / (RAND_MAX));
 
             //Grow
-            if (draw_event < F_pr_line(0)) {
+            if (draw_event < F_pr_line) {
                 //Append a new resource to the END of the vector
                 ind_vec.push_back(state);
                 //Append the resource's location to the END of the vector
@@ -204,28 +182,19 @@ IntegerVector loc_vec //Initial vector of locations
                 F = F + (1.L/size);
             }
             //Starve
-            if ((draw_event >= F_pr_line(0)) && (draw_event < F_pr_line(1))) {
+            if ((draw_event >= F_pr_line) && (draw_event < 1.L)) {
                 //Update the state from full to starver
                 ind_vec(id) = 1;
                 //Update Tally
                 F = F - (1.L/size);
                 S = S + (1.L/size);
             }
-            //Move
-            int draw_loc;
-            if ((draw_event >= F_pr_line(1)) && (draw_event < 1.L)) {
-                //Draw a random location and update
-                max = size - 1.L;
-                min = 0.L;
-                draw_loc = min + (rand() % (int)(max - min + 1));
-                loc_vec(id) = draw_loc;
-            }
-            dt = 1.L/(lambda+sigma*(K-R)+Df);
+            dt = 1.L/(lambda+sigma*(K-R));
         }
 
         //Advance time
         t = t + dt;
-        Rcout << "t = " << t << std::endl;
+        Rcout << "t = " << dt << std::endl;
         //Update output
         //If t > next integer, record the state of the system
         if (t >= t_next) {

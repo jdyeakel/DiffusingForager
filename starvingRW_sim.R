@@ -4,26 +4,31 @@ library(Rcpp)
 library(animation)
 #nearest neighbor with boundary conditions function
 source("R/ipbc.R")
-sourceCpp("src/starvingforager_event.cpp")
+sourceCpp("src/starvingforager_eventNM.cpp")
 
 #Initiate starting conditions
-L <- 10
+L <- 20
 size <- (L-2)^2
-t_term <- 100
+t_term <- 5000
 
 #Parameters
-alpha <- 1
+alpha <- 0.5
 K <- 1
-sigma <- 0.2
+sigma <- 0.5
 rho <- 0.5
-lambda <- 0.2
-mu <- 0.1
+lambda <- 0.3
+mu <- 0.2
 D <- 1
 
-ind_vec <- sample(c(0,1,2),size,replace=T)
-loc_vec <- sample(seq(0,size-1),size,replace=T)
 
-Rout <- starvingforager_event(
+# ind_vec <- sample(c(0,1,2),size,replace=T)
+# loc_vec <- sample(seq(0,size-1),size,replace=T)
+
+
+ind_vec <- c(numeric(size),sample(c(1,2),size,replace=T))
+loc_vec <- c(seq(0,size-1),sample(seq(0,size-1),size,replace=T))
+
+Rout <- starvingforager_eventNM(
   L,
   t_term,
   alpha,
@@ -39,11 +44,23 @@ Rout <- starvingforager_event(
 state <- Rout[[1]]
 loc <- Rout[[2]]
 
-Rden <- unlist(lapply(state,function(x){length(which(x == 0))}))
-Sden <- unlist(lapply(state,function(x){length(which(x == 1))}))
-Fden <- unlist(lapply(state,function(x){length(which(x == 2))}))
+Rden <- unlist(lapply(state,function(x){length(which(x == 0))})) #/size
+Sden <- unlist(lapply(state,function(x){length(which(x == 1))})) #/size
+Fden <- unlist(lapply(state,function(x){length(which(x == 2))})) #/size
 
-plot(Rden)
+pal <- brewer.pal(5,"Set1")
+plot(Rden,type="l",ylim=c(0,max(Rden,Sden,Fden)),col=pal[2],lwd=3)
+lines(Sden,col=pal[5],lwd=3)
+lines(Fden,col=pal[3],lwd=3)
+
+
+
+
+
+
+
+
+
 
 
 
