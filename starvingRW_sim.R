@@ -37,21 +37,22 @@ Rout <- starvingforager_eventNM(
   rho,
   lambda,
   mu,
-  D,
+  #D,
   ind_vec,
   loc_vec)
 
 state <- Rout[[1]]
 loc <- Rout[[2]]
+time <- Rout[[3]]
 
 Rden <- unlist(lapply(state,function(x){length(which(x == 0))})) #/size
 Sden <- unlist(lapply(state,function(x){length(which(x == 1))})) #/size
 Fden <- unlist(lapply(state,function(x){length(which(x == 2))})) #/size
 
 pal <- brewer.pal(5,"Set1")
-plot(Rden,type="l",ylim=c(0,max(Rden,Sden,Fden)),col=pal[2],lwd=3)
-lines(Sden,col=pal[5],lwd=3)
-lines(Fden,col=pal[3],lwd=3)
+plot(time,Rden,type="l",ylim=c(0,max(Rden,Sden,Fden)),col=pal[2],lwd=3)
+lines(time,Sden,col=pal[5],lwd=3)
+lines(time,Fden,col=pal[3],lwd=3)
 
 
 

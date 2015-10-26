@@ -14,7 +14,6 @@ double sigma,   //Starvation rate
 double rho,     //Recovery rate
 double lambda,  //Growth rate
 double mu,      //Mortality rate
-double D,        //Diffusion rate
 IntegerVector ind_vec, //Initial vector of states
 IntegerVector loc_vec //Initial vector of locations
 ) {
@@ -31,12 +30,13 @@ IntegerVector loc_vec //Initial vector of locations
 
 
     //Output Lists
-    List ind_out(t_term);
-    List loc_out(t_term);
+    List ind_out(1);
+    List loc_out(1);
+    NumericVector t_out(1);
     //The initial state
     ind_out(0) = ind_vec;
     loc_out(0) = loc_vec;
-
+    t_out(0) = 0;
     //ind_vec: the vector of individual states... 0 = resource, 1=starver, 2=full
     //pos_vec: the vector of individual locations
 
@@ -72,6 +72,7 @@ IntegerVector loc_vec //Initial vector of locations
 
     //Iterate over time
     //The loop stops when t > t_term-1... and will record the last value
+    int tic = 1;
     while (t < (t_term-1)) {
 
         //Construct probability lines, which are a function of R, S, F
@@ -197,22 +198,28 @@ IntegerVector loc_vec //Initial vector of locations
         Rcout << "t = " << dt << std::endl;
         //Update output
         //If t > next integer, record the state of the system
-        if (t >= t_next) {
-            //Record output
-            //States at time t_next
-            ind_out(t_next) = ind_vec;
-            //Locations at time t_next
-            loc_out(t_next) = loc_vec;
-
-            //Update t_next
-            t_next = t_next + 1;
-        }
+        // if (t >= t_next) {
+        //     //Record output
+        //     //States at time t_next
+        //     ind_out(t_next) = ind_vec;
+        //     //Locations at time t_next
+        //     loc_out(t_next) = loc_vec;
+        //
+        //     //Update t_next
+        //     t_next = t_next + 1;
+        // }
+        //Option 2: record all dynamics!
+        ind_out.push_back(ind_vec);
+        loc_out.push_back(loc_vec);
+        t_out.push_back(t);
+        tic = tic + 1;
 
     } //end while loop over t
 
-    List cout(2);
+    List cout(3);
     cout(0) = ind_out;
     cout(1) = loc_out;
+    cout(2) = t_out;
     return(cout);
 
 }
