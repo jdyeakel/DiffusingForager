@@ -23,7 +23,6 @@ IntegerVector loc_vec //Initial vector of locations
     double size = pow(L-2,dim);
     //Initial time
     double t = 0;
-    double t_next = 1;
 
     double max;
     double min;
@@ -62,9 +61,9 @@ IntegerVector loc_vec //Initial vector of locations
     }
 
     //R,S,F are thus densities over the landscape of size 'size'
-    R = R/size;
-    S = S/size;
-    F = F/size;
+    // R = R/size;
+    // S = S/size;
+    // F = F/size;
 
     double R_pr_line;
     double S_pr_line;
@@ -124,7 +123,7 @@ IntegerVector loc_vec //Initial vector of locations
                 //Append the resource's location to the END of the vector
                 loc_vec.push_back(location);
                 //Update Tally
-                R = R + (1.L/size);
+                R = R + 1; //(1.L/size);
             }
             //Become consumed!!!!
             if ((draw_event >= R_pr_line) && (draw_event < 1.L)) {
@@ -133,7 +132,7 @@ IntegerVector loc_vec //Initial vector of locations
                 //Remove the consumed resource form the location vector
                 loc_vec.erase(id);
                 //Update Tally
-                R = R - (1.L/size);
+                R = R - 1; //(1.L/size);
             }
             dt = 1.L/((alpha*(K-R)) + (F + S));
         }
@@ -151,8 +150,8 @@ IntegerVector loc_vec //Initial vector of locations
                 //Update the state from starver to full
                 ind_vec(id) = 2;
                 //Update Tally
-                S = S - (1.L/size);
-                F = F + (1.L/size);
+                S = S - 1; //(1.L/size);
+                F = F + 1; //(1.L/size);
             }
             //Die
             if ((draw_event >= S_pr_line) && (draw_event < 1.L)) {
@@ -161,7 +160,7 @@ IntegerVector loc_vec //Initial vector of locations
                 //Remove the consumed resource form the location vector
                 loc_vec.erase(id);
                 //Update Tally
-                S = S - (1.L/size);
+                S = S - 1; //(1.L/size);
             }
             dt = 1.L/(rho*R + mu);
         }
@@ -180,35 +179,23 @@ IntegerVector loc_vec //Initial vector of locations
                 ind_vec.push_back(state);
                 //Append the resource's location to the END of the vector
                 loc_vec.push_back(location);
-                F = F + (1.L/size);
+                F = F + 1; //(1.L/size);
             }
             //Starve
             if ((draw_event >= F_pr_line) && (draw_event < 1.L)) {
                 //Update the state from full to starver
                 ind_vec(id) = 1;
                 //Update Tally
-                F = F - (1.L/size);
-                S = S + (1.L/size);
+                F = F - 1; //(1.L/size);
+                S = S + 1; //(1.L/size);
             }
             dt = 1.L/(lambda+sigma*(K-R));
         }
 
         //Advance time
         t = t + dt;
-        Rcout << "t = " << dt << std::endl;
+        //Rcout << "t = " << dt << std::endl;
         //Update output
-        //If t > next integer, record the state of the system
-        // if (t >= t_next) {
-        //     //Record output
-        //     //States at time t_next
-        //     ind_out(t_next) = ind_vec;
-        //     //Locations at time t_next
-        //     loc_out(t_next) = loc_vec;
-        //
-        //     //Update t_next
-        //     t_next = t_next + 1;
-        // }
-        //Option 2: record all dynamics!
         ind_out.push_back(ind_vec);
         loc_out.push_back(loc_vec);
         t_out.push_back(t);

@@ -9,24 +9,24 @@ sourceCpp("src/starvingforager_eventNM.cpp")
 #Initiate starting conditions
 L <- 20
 size <- (L-2)^2
-t_term <- 5000
+t_term <- 50000
 
 #Parameters
 alpha <- 0.5
 K <- 1
 sigma <- 0.5
-rho <- 0.5
-lambda <- 0.3
+rho <- 0.2
+lambda <- 0.2
 mu <- 0.2
-D <- 1
+#D <- 1
 
 
 # ind_vec <- sample(c(0,1,2),size,replace=T)
 # loc_vec <- sample(seq(0,size-1),size,replace=T)
 
-
-ind_vec <- c(numeric(size),sample(c(1,2),size,replace=T))
-loc_vec <- c(seq(0,size-1),sample(seq(0,size-1),size,replace=T))
+cons_init <- 1000
+ind_vec <- c(numeric(size),sample(c(1,2),cons_init,replace=T))
+loc_vec <- c(sample(seq(0,size-1),size,replace=T),sample(seq(0,size-1),cons_init,replace=T))
 
 Rout <- starvingforager_eventNM(
   L,
