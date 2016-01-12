@@ -1,0 +1,257 @@
+\documentclass[11pt]{iopart}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{cite}
+\usepackage{float}
+\makeatletter
+\makeatother
+
+\expandafter\let\csname equation*\endcsname\relax
+\expandafter\let\csname endequation*\endcsname\relax
+\usepackage{amsmath}
+\newcommand{\agt}{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\begin{document}
+
+\title{Role of Starvation on Foraging Dynamics}
+
+
+\author{J. D. Yeakel} \address{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, New
+  Mexico 87501, USA}
+
+\author{S. Redner} \address{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, New
+  Mexico 87501, USA}
+
+\begin{abstract}
+
+  We outline an event-driven simulation approach for the foragin model, which
+  involves the interplay between reproduction and starvation of the foragers,
+  and the regeneration of resources.  The system consists of a resource that
+  renews by logistic growth, as well as two classes of foragers---satiated
+  and starving.  Satiated foragers reproduce at a fixed rate and are not
+  vulnerable to mortality.  However, a satiated forager can starve when
+  resources are scarce; conversely, a starving forager can become satiated
+  when the resource is abundant.  Starving foragers do not reproduce and they
+  die at a rate $\mu$.  
+\end{abstract}
+
+%\maketitle
+
+\section{The Model}
+
+We incorporate energetics into the model dynamics by assuming that the
+foragers can exist in two discrete energetic states---satiated and starving.
+Satiated (or full) foragers $F$ are those that have just encountered and
+consumed a unit of resource $R$.  On the other hand, a satiated forager that
+does not encounter a resource as it wanders is converted to a starving
+forager $S$ with rate $\sigma$.  Whenever a forager, either satiating or
+starving, encounters resources, one unit of the resource is consumed.  If the
+forager was starving, it is recruited into the satiated population with rate
+$\rho$.  During the time that a forager is starving, it dies with a fixed
+mortality rate $\mu$, while satiated foragers do not experience mortality
+risk.  Furthermore, satiated foragers reproduce with rate $\lambda$.
+Finally, we assume that, in the absence of foragers, the underlying resource
+undergoes logistic growth, with growth rate $\alpha$ and carrying capacity
+equal to one.
+
+According to these processes and also under the assumption that the densities
+of satiated foragers, starving foragers, and resources (also denoted by $F$,
+$S$, and $R$, respectively) are perfectly mixed, they evolve according to the
+rate equations:
+\begin{align}
+  \label{RE}
+\begin{split}
+\dot F &= \lambda F + \rho  RS - \sigma (1-R)F\,,\\
+\dot S &= \sigma (1-R)F - \rho RS - \mu S\,, \\
+\dot R &= \alpha R(1-R) -  R(F+S),\\
+\end{split}
+\end{align}
+where the overdot denotes time derivative.
+
+This system of equations admits four fixed points.  Two of them, at
+$(F^*\!=\!0,S^*\!=\!0,R^*\!=\!0)$ and $(F^*\!=\!0,S^*\!=\!0,R^*\!=\!1)$
+correspond to an environment without foragers.  In this case, the latter
+fixed point is stable.  There is also an unphysical fixed point at negative
+densities and a non-trivial fixed point in which all populations are
+represented, $(F^*,S^*,R^*\!>\!0)$, corresponding to an ecologically active
+steady state.  If this unique steady state is stable, the species populations
+will be globally attracted to it for any non-zero initial conditions.
+
+To determine the stability of the non-trivial fixed point, we compute the
+Jacobian Matrix $\bf J$, whose elements are given by
+$J_{ij}=\partial X_i/\partial X_j$, where $X_i$, with $i=1,2,3$, refers to
+the densities $F,S,R$, respectively.  At the non-trivial fixed point, the
+Jacobian matrix is
+\begin{equation}
+\mathbf{J}|_* = 
+\left(
+\begin{array}{lll}
+  \lambda  - \sigma(1-R^*)  & \rho R^* & \sigma(S^*+ S^*) \\
+  \sigma(1-R^*) & - \rho R^*-\mu &   -\rho  (S^*+ F^*) \\
+  - R^* & - R^* & \alpha(1-2 R^*)-(S^*+F^*) \\
+\end{array}
+\right).
+\end{equation}
+
+
+Whether the internal steady state is attracting or repelling is conditioned
+on the values of the parameters in the system.  If the parameters of the
+Jacobian matrix (at the internal steady state) are such that its eigenvalues
+have negative real values, then it is stable.  The stability of the system
+changes if a Saddle-Node bifurcation is crossed, such that a single
+eigenvalue obtains a positive real part, defined by the condition
+${\rm Det}({\bf J})=0$.  A single Saddle-Node bifurcation always exists for
+$\alpha = 0$, such that $\alpha > 0$ for the internal state to be stable.
+% Although a closed-form solution is not possible, a second stability
+% condition generally requires $\delta > a \exp \{\frac{b}{c+\epsilon}\}$
+% assuming low values of $\mu_x$ and $\mu_y$ (where $a$, $b$, and $c$ are
+% some combination of the model parameters), which simplifies to
+% $\delta > \frac{\mu_y}{\epsilon}$ when $p=0$.  This condition places a
+% lower bound on the consumer's rate of growth as a function of its rate of
+% predation on the resource.  As the rate of consumption decreases, system is
+% more likely to become unstable if the consumer's rate of reproduction
+% declines.
+
+Of more interest here is the existence of parameter regions that permit the
+existence of cyclic behavior.  Cycles arise when a pair of complex conjugate
+eigenvalues cross the imaginary axis and attain positive real parts.  This
+condition is called a Hopf bifurcation, and is defined by
+${\rm Det}({\bf S}) = 0$, where $\bf S$ is the Sylvester matrix, which is
+composed of the coefficients of the characteristic polynomial describing the
+Jacobian matrix.  Although the Hopf condition cannot be solved analytically
+for the specific 2-stage model, it can be explored numerically.
+
+\subsection{Generalized model}
+
+$\xi$ ~~ $\zeta$
+
+\subsection{Stochastic dynamic program}
+
+
+\section{Results}
+
+To determine how the consumer-resource system impacted by different rates of starvation, we analyze the systems with respect to $p$.
+
+
+\section{Discussion}
+
+%The reproductive tradeoff as a strategy
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig_Hopf.pdf}
+	\caption{
+	Saddle Node bifurcation
+	}
+	\label{SN}
+\end{figure}
+
+
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=0.5\textwidth]{fig_resvuln.pdf}
+% 	\caption{
+% 	Probability that the resource value is less than threshold = 0.05
+% 	}
+% 	\label{SN}
+% \end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig_Competition.pdf}
+	\caption{
+	Hopf bifurcation
+	}
+	\label{SN1}
+\end{figure}
+
+JY thanks......  SR thanks NSF Grant No.\ DMR-1205797 (SR) and a grant from
+the John S. Templeton Foundation) for partial support of this research.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{B91} J. W. Bell, Searching Behaviour, the Behavioural Ecology of
+  Finding Resources, Animal Behaviour Series (Chapman and Hall, London,
+  1991).
+
+\bibitem{OB90} W. J. O'Brien, H. I. Browman, and B. I. Evans, Am.\ Sci.\ {\bf
+    78}, 152 (1990).
+
+\bibitem{KM01} L. D. Kramer and R. L. McLaughlin, Am.\ Zool.\ {\bf 41}, 137 (2001).
+
+
+\bibitem{ASD97} J. P. Anderson, D. W. Stephens, and S. R. Dunbar, Behav.\
+  Ecol.\ {\bf 8}, 307 (1997).
+
+\bibitem{KR85} P. Knoppien and J. Reddingius, J. Theor.\ Biol.\ {\bf 114}, 273 (1985).
+
+\bibitem{SK86} D. W. Stephens and J. R. Krebs, Foraging Theory (Princeton
+  University Press, Princeton, NJ, 1986).
+
+\bibitem{Vea96} G. M. Viswanathan et al., Nature (London) {\bf 381}, 413
+  (1996); G. M. Viswanathan et al., Nature (London) {\bf 401}, 911 (1999).
+
+\bibitem{LKW88} M. Levandowsky, J. Klafter, and B. S. White, Bull.\ Mar.\
+  Sci.\ {\bf 43}, 758 (1988).
+    
+\bibitem{BLMV11} O. B\'enichou, C. Loverdo, M. Moreau, and R. Voituriez,
+  Rev.\ Mod.\ Phys.\ {\bf 83}, 03 (2011).
+
+\bibitem{R85} S. A. Rice, in Diffusion-Limited Reactions, Comprehensive
+  Chemical Kinetics Vol.\ 25, edited by C. H. Bamford, C. F. H. Tipper, and
+  R. G. Compton (Elsevier, New York, 1985).
+
+\bibitem{BB76} O. G. Berg and C. Blomberg, Biophys.\ Chem.\ {\bf 4}, 367
+  (1976).
+
+\bibitem{GDB14} T. Gueudr\'e, A. Dobrinevski, and J.-P. Bouchaud, Phys.\
+  Rev.\ Lett.\ {\bf 112}, 050602 (2014).
+
+\bibitem{T80} M. Tachiya, Chem.\ Phys.\ Lett.\ {\bf 69}, 605 (1980)
+
+\bibitem{BNHW87} R. F. Bonner, R. Nossal, S. Havlin, and G. H. Weiss, J. Opt.\
+  Soc.\ Am.\ A {\bf 4}, 423 (1987).
+
+\bibitem{KF00} A. B. Kolomeisky and M. E. Fisher, Physica (Amsterdam) {\bf
+    279A}, 1 (2000).
+
+\bibitem{YAL13} S. B. Yuste, E. Abad, and K. Lindenberg, Phys.\ Rev.\
+  Lett. {\bf 110}, 220603 (2013).
+
+\bibitem{PW97} M. Perman and W. Werner, Probab.\ Theory Relat.\ Fields {\bf
+    108}, 357 (1997).
+
+\bibitem{D99} B. Davis,  Probab.\ Theory Relat.\ Fields {\bf 113}, 501 (1999).
+
+\bibitem{BW03} I. Benjamini and D. B. Wilson, Electr.\ Commun.\ Probab.\ {\bf
+    8}, 86 (2003).
+
+\bibitem{ABV03} O. Angel O, I. Benjamini, and B. Virag, Electr.\ Commun.\
+  Probab.\ {\bf 8}, 66 (2003).
+
+\bibitem{Z04} M. P. W. Zerner, Probab.\ Theory Relat.\ Fields {\bf 133}, 98 (2005).
+
+\bibitem{AR05} T. Antal and S. Redner, J. Phys.\ A {\bf 38}, 2555 (2005).
+
+\bibitem{W94} G. H. Weiss, \textit{Aspects and Applications of the Random Walk}
+(North-Holland, Amsterdam, 1994).
+
+\bibitem{H95} B. D. Hughes, Random Walks and Random Environments (Clarendon,
+  Oxford, 1995), Vol. 1.
+
+
+\bibitem{R01} S. Redner, A Guide to First-Passage Processes (Cambridge
+  University Press, Cambridge, England, 2001).
+
+\bibitem{future} O. B\'enichou and S. Redner, unpublished.
+
+\end{thebibliography}
+
+
+
+\end{document}

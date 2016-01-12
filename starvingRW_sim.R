@@ -7,16 +7,16 @@ source("R/ipbc.R")
 sourceCpp("src/starvingforager_eventNM.cpp")
 
 #Initiate starting conditions
-L <- 20
+L <- 50
 size <- (L-2)^2
-t_term <- 50000
+t_term <- 10
 
 #Parameters
-alpha <- 0.5
-K <- 1
+alpha <- 1
+K <- size
 sigma <- 0.5
 rho <- 0.2
-lambda <- 0.2
+lambda <- 0.3
 mu <- 0.2
 #D <- 1
 
