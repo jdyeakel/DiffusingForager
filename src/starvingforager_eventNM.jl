@@ -60,23 +60,93 @@ while t < (t_term-1)
 
   #If randomly selected individual is a resource
   if ind_vec(id) == 0
-    #Append a new resource to the END of the vector
-    push!(ind_vec,state);
-    #Append the resource's location to the END of the vector
-    push!(loc_vec,location);
-    #Update Tally
-    R = R + 1;
+    state = 0;
+    location = loc_vec[id];
+
+    #Draw a random event
+    #Grow, become consumed or move?
+    draw_event = rand();
+
+    #GROW
+    if draw_event < R_Pr_line
+
+      #Append a new resource to the END of the vector
+      push!(ind_vec,state);
+      #Append the resource's location to the END of the vector
+      push!(loc_vec,location);
+      #Update Tally
+      R = R + 1;
+
+    end
+
+    #BECOME CONSUMED!
+    if draw_event >= R_pr_line && draw_event < 1
+      deleteat!(ind_vec,id);
+      deleteat!(loc_vec,id);
+      R = R-1;
+    end
+
 
   end
 
   #If randomly selected individual is a starver
   if ind_vec(id) == 1
+    state = 1;
+    location = loc_vec[id];
 
+    #Draw a random event
+    #Recover, die, or move??
+    draw_event = rand();
+
+    #Recover
+    if draw_event < S_pr_line
+      loc_vec[id] = 2;
+      S = S-1;
+      F = F+1;
+    end
+
+    #Die
+    if draw_event >= S_pr_line && draw_event < 1
+      deleteat!(ind_vec,id);
+      deleteat!(loc_vec,id);
+      S = S-1;
+    end
 
   end
 
   #If randomly selected individual is a full
   if ind_vec(id) == 2
+    state = 2;
+    location = loc_vec[id];
 
+    draw_event = rand();
 
+    #GROW
+    if draw_event < F_pr_line
+      push!(ind_vec,state);
+      push!(loc_vec,location);
+      F = F+1;
+    end
+
+    #STARVE
+    if draw_event >= F_pr_line && draw_event < 1
+      ind_vec[id] = 1;
+
+      S = S+1;
+      F = F-1;
+    end
   end
+
+  #NEED TO DEFINE dt
+
+  #Advance time
+  t = t + dt;
+
+  #Update output
+
+
+
+end #end while loop over t
+
+
+#Posthoc analysis
