@@ -61,20 +61,23 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   while t < (t_term-1)
     tic = tic + 1;
 
+    #Calculate Rate
+    Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(1-R) + (F+H));
+    dt = 1/(Rate*N);
 
     #Construct probability lines, which are a function of R, S, F
     #Grow <-----> Starve <-----> Diffuse
 
-    F_pr_line[1] = lambda/(lambda+sigma*(K-R) + DF);
-    F_pr_line[2] = F_pr_line[1] + (sigma*(K-R))/(lambda+sigma*(K-R) + DF);
+    F_pr_line[1] = lambda/Rate;
+    F_pr_line[2] = F_pr_line[1] + (sigma*(K-R))/Rate;
 
     #Recover <-----> Mortality <-----> Diffuse
 
-    H_pr_line[1] = (rho*R)/(rho*R + mu + DH);
-    H_pr_line[2] = H_pr_line[1] + mu/(rho*R + mu + DH);
+    H_pr_line[1] = (rho*R)/Rate;
+    H_pr_line[2] = H_pr_line[1] + mu/Rate;
 
     #Grow <-----> Consumed
-    R_pr_line = (alpha*(K-R))/((alpha*(K-R)) + (F + H));
+    R_pr_line = (alpha*(K-R))/Rate;
 
 
 
@@ -201,9 +204,6 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     H = NH/N;
     R = NR/N;
 
-    #Calculate Rate
-    Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(1-R) + (F+H));
-    dt = 1/(Rate*N);
 
     #Advance time
     t = t + dt;

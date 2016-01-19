@@ -3,16 +3,16 @@ using StatsBase
 using Gadfly
 
 
-L = 50;
+L = 20;
 dim = 2;
 initsize = 100;
-t_term = 100;
+t_term = 20;
 alpha = 0.5;
 K = 1;
-sigma = 0.25;
+sigma = 0.6;
 rho = 0.25;
 lambda = 0.3;
-mu = 0.1;
+mu = 0.2;
 DF = 0.2;
 DH = 0.2;
 
