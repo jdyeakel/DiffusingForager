@@ -1,4 +1,4 @@
-function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
+function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -10,8 +10,6 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
   size = (L-2)^dim;
 
 
-  #Starting number of foragers & resources
-  initsize = 10;
   #Initial state values
   ind_vec = [rand(collect(1:2),Int(2*round(initsize/3)));zeros(Int64,Int(round(initsize/3)))];
   #Initial location values
@@ -23,13 +21,13 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
   initsize = length(ind_vec);
 
   #Arrays for output
-  ind_out = Array(Array{Int64},1);
-  loc_out = Array(Array{Int64},1);
-  time_out = Array(Float64,1);
+  ind_out = (Array{Int64,1})[];
+  loc_out = (Array{Int64,1})[];
+  time_out = Array(Float64,0);
 
-  ind_out[1] = ind_vec;
-  loc_out[1] = loc_vec;
-  time_out[1] = 0;
+  push!(ind_out, copy(ind_vec));
+  push!(loc_out, copy(loc_vec));
+  push!(time_out, 0);
 
   #NEED TO ENSURE THAT RESOURCES ARE PLACED 1 PER SITE
   #HAVE A noresourcesites vector that accounts for sites WITHOUT resources
@@ -73,7 +71,7 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
     #Recover <-----> Mortality <-----> Diffuse
 
     H_pr_line[1] = (rho*R)/(rho*R + mu + DH);
-    H_pr_line[2] = mu/(rho*R + mu + DH);
+    H_pr_line[2] = H_pr_line[1] + mu/(rho*R + mu + DH);
 
     #Grow <-----> Consumed
     R_pr_line = (alpha*(K-R))/((alpha*(K-R)) + (F + H));
@@ -90,7 +88,7 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
     id = rand(collect(1:N));
 
     #Also, we need to make an ind_vec_old that is NOT updated for the sequence of IF statements
-    ind_vec_old = ind_vec;
+    ind_vec_old = copy(ind_vec);
 
     #If randomly selected individual is Full
     if ind_vec_old[id] == 2
@@ -116,7 +114,7 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
       end
 
       #MOVE
-      if draw_event > F_pr_line[2]
+      if draw_event >= F_pr_line[2]
         #Move to a random location
         loc_vec[id] = rand(collect(1:size));
       end
@@ -136,7 +134,7 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
 
       #Recover (become full)
       if draw_event < H_pr_line[1]
-        loc_vec[id] = 2;
+        ind_vec[id] = 2;
         NH = NH-1;
         NF = NF+1;
       end
@@ -149,7 +147,7 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
       end
 
       #MOVE
-      if draw_event > H_pr_line[2]
+      if draw_event >= H_pr_line[2]
         #Move to a random location
         loc_vec[id] = rand(collect(1:size));
       end
@@ -166,7 +164,7 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
       draw_event = rand();
 
       #GROW
-      if draw_event < R_pr_line
+      if draw_event < R_pr_line[1]
 
         #Append a new resource to the END of the vector
         push!(ind_vec,state);
@@ -183,7 +181,9 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
         #Update the no resource site by deleting the position that has been filled
         deleteat!(noresourcesites,newresourcepos);
 
-      else
+      end
+
+      if draw_event >= R_pr_line[1]
 
         #BECOME CONSUMED!
         deleteat!(ind_vec,id);
@@ -208,9 +208,13 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
     #Advance time
     t = t + dt;
 
+    #Make sure only values are pushed to the output
+    ind_vec_new = copy(ind_vec);
+    loc_vec_new = copy(loc_vec);
+
     #Update output
-    push!(ind_out,ind_vec);
-    push!(loc_out,loc_vec);
+    push!(ind_out,ind_vec_new);
+    push!(loc_out,loc_vec_new);
     push!(time_out,t);
 
     #Break loop if extinction occurs
@@ -221,6 +225,6 @@ function starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
 
   end #end while loop over t
 
-  return(ind_out);
+  return ind_out,loc_out,time_out
 
 end #end function

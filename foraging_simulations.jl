@@ -3,9 +3,10 @@ using StatsBase
 using Gadfly
 
 
-L = 10;
+L = 50;
 dim = 2;
-t_term = 50;
+initsize = 100;
+t_term = 100;
 alpha = 0.5;
 K = 1;
 sigma = 0.25;
@@ -15,12 +16,12 @@ mu = 0.1;
 DF = 0.2;
 DH = 0.2;
 
-ind_out = starvingforager_event(L,dim,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);
+ind_out, loc_out, time_out = starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);
 
 
 
 #Posthoc analysis
-steps = tic;
+steps = length(ind_out);
 pop_F = zeros(steps);
 pop_H = zeros(steps);
 pop_R = zeros(steps);
@@ -29,3 +30,7 @@ for i=1:steps
   pop_H[i] = length(find(x->x==1,ind_out[i]));
   pop_R[i] = length(find(x->x==0,ind_out[i]));
 end
+
+plot(layer(x=time_out,y=pop_F,Geom.line),
+layer(x=time_out,y=pop_H,Geom.line),
+layer(x=time_out,y=pop_R,Geom.line))
