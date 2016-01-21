@@ -12,19 +12,26 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
   #Initial state values
   ind_vec = [rand(collect(1:2),Int(2*round(initsize/3)));zeros(Int64,Int(round(initsize/3)))];
+  #OR Pure Resource Start (for testing)
+  #ind_vec = zeros(Int64,initsize);
+
+
   #Initial location values
   #2/3 of initsize will be foragers; 1/3 will be resources
+  #replace = false because want only one resource per site
   resourceloc_vec = sample(collect(1:size),Int(round(initsize/3)),replace=false);
   loc_vec = [rand(collect(1:size),Int(2*round(initsize/3)));resourceloc_vec];
 
   #Re-establish initsize to account for rounding errors
   initsize = length(ind_vec);
 
-  #Arrays for output
+  #Arrays for output (start out empty)
   ind_out = (Array{Int64,1})[];
   loc_out = (Array{Int64,1})[];
   time_out = Array(Float64,0);
+  prop_out = (Array{Float64,1})[];
 
+  #Copy so that ind_vec is independent of ind_out
   push!(ind_out, copy(ind_vec));
   push!(loc_out, copy(loc_vec));
   push!(time_out, 0);
@@ -49,6 +56,8 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   F = NF/N;
   H = NH/N;
   R = NR/N;
+  prop = [F,H,R];
+  push!(prop_out,copy(prop));
 
   tic = 0;
 
@@ -60,6 +69,14 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
   while t < (t_term-1)
     tic = tic + 1;
+
+    next_time_int = round(t+1,0)
+
+    # #ERRORS
+    # if length(ind_vec) < 1
+    #   print("Extinction has occured at t=",round(t,2)," and loop ",tic)
+    #   break
+    # end
 
     #Calculate Rate
     Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(1-R) + (F+H));
@@ -173,6 +190,9 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
         push!(ind_vec,state);
 
         #Choose random no-resource site
+        # if length(noresourcesites) == 0
+        #   print("R_pr_line =", round(R_pr_line[1],2),"   R=",round(R,2),"   NR=", NR)
+        # end
         newresourcepos = rand(collect(1:length(noresourcesites)));
         location = noresourcesites[newresourcepos];
 
@@ -186,12 +206,20 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
       end
 
+      #BECOME CONSUMED!
       if draw_event >= R_pr_line[1]
 
-        #BECOME CONSUMED!
+        #Update the no resource site by adding the position that is now empty
+        #Needs to be done BEFORE the ind/loc information is deleted.
+        push!(noresourcesites,copy(loc_vec[id]));
+
+        #Delete individual from the list
         deleteat!(ind_vec,id);
+        #Delete individual location from the list
         deleteat!(loc_vec,id);
         NR = NR-1;
+
+
 
       end
 
@@ -204,9 +232,16 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     H = NH/N;
     R = NR/N;
 
+    prop = [F,H,R];
+
+    push!(prop_out,copy(prop));
 
     #Advance time
     t = t + dt;
+
+    if t > next_time_int
+      print("time= ",t)
+    end
 
     #Make sure only values are pushed to the output
     ind_vec_new = copy(ind_vec);
@@ -217,14 +252,24 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     push!(loc_out,loc_vec_new);
     push!(time_out,t);
 
+    #ERRORS
     #Break loop if extinction occurs
-    if length(ind_vec) < 1
+    if length(ind_vec_new) < 1
       print("Extinction has occured at t=",round(t,2)," and loop ",tic)
       break
     end
+    #Break loop if resources go extinct and the other populations run away
+    if NR == 0 && (NF + NH) > size
+      print("Runaway growth has occured at t=",round(t,2)," and loop ",tic)
+      break
+    end
+
+
 
   end #end while loop over t
 
-  return ind_out,loc_out,time_out
+  print("Simulation successful at t= ",round(t,2)," and loop= ",tic)
+
+  return ind_out,loc_out,time_out,prop_out
 
 end #end function
