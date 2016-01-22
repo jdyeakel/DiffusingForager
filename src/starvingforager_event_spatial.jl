@@ -1,4 +1,4 @@
-function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
+function starvingforager_event_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
   #Read in packages/function
   #ipbc :: torus movement
   include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -109,6 +109,12 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     #Calculate Rate
     Rate = F*(lambda + sigma*(1-R_local) + DF) + H*(rho*R_local + mu + DH) + R*(alpha*(1-R_local) + (F+H));
     dt = 1/(Rate*N);
+
+    if t > next_time_int
+      println("time= ",round(t,2))
+      next_time_int = round(t+1,0)
+    end
+
 
     if Rate > 0
       tic = tic + 1;
@@ -256,10 +262,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       #Advance time
       t = t + dt;
 
-      if t > next_time_int
-        println("time= ",round(t,2))
-        next_time_int = round(t+1,0)
-      end
+
 
       #Make sure only values are pushed to the output
       ind_vec_new = copy(ind_vec);
