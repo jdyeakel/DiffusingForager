@@ -6,37 +6,28 @@ using Gadfly
 
 L = 50;
 dim = 2;
-initsize = (L-2)^dim;
+prop_fill = 1
+initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
 t_term = 100;
 alpha = 0.5;
 K = 1;
-sigma = 0.6;
+sigma = 0.4;
 rho = 0.25;
 lambda = 0.2;
 mu = 0.2;
 DF = 0.2;
 DH = 0.2;
 
-ind_out, loc_out, time_out, prop_out = starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);
+time_out, prop_out, N_out = starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);
+
+F = prop_out[1,:];
+H = prop_out[2,:];
+R = prop_out[3,:];
+plot(layer(x=time_out,y=F,Geom.line,Theme(default_color=colorant"green")),
+layer(x=time_out,y=H,Geom.line,Theme(default_color=colorant"orange")),
+layer(x=time_out,y=R,Geom.line,Theme(default_color=colorant"blue")))
 
 
+plot(x=H,y=F,Geom.point,Theme(default_point_size=0.2pt,default_color=colorant"black",highlight_width = 0pt))
 
-#Posthoc analysis
-steps = length(ind_out);
-pop_F = zeros(steps);
-pop_H = zeros(steps);
-pop_R = zeros(steps);
-for i=1:steps
-  pop_F[i] = length(find(x->x==2,ind_out[i]));
-  pop_H[i] = length(find(x->x==1,ind_out[i]));
-  pop_R[i] = length(find(x->x==0,ind_out[i]));
-end
-
-
-
-plot(layer(x=time_out,y=pop_F,Geom.line,Theme(default_color=color("green"))),
-layer(x=time_out,y=pop_H,Geom.line,Theme(default_color=color("orange"))),
-layer(x=time_out,y=pop_R,Geom.line,Theme(default_color=color("blue"))))
-
-
-plot(x=time_out,y=prop_out)
+plot(x=R,y=H+F,Geom.point,Theme(default_point_size=0.2pt,default_color=colorant"black",highlight_width = 0pt))

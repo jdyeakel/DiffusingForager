@@ -26,14 +26,15 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   initsize = length(ind_vec);
 
   #Arrays for output (start out empty)
-  ind_out = (Array{Int64,1})[];
-  loc_out = (Array{Int64,1})[];
+  # ind_out = (Array{Int64,1})[];
+  # loc_out = (Array{Int64,1})[];
   time_out = Array(Float64,0);
-  prop_out = (Array{Float64,1})[];
+  N_out = Array(Int64,0);
+  #prop_out = (Array{Float64,1})[];
 
   #Copy so that ind_vec is independent of ind_out
-  push!(ind_out, copy(ind_vec));
-  push!(loc_out, copy(loc_vec));
+  # push!(ind_out, copy(ind_vec));
+  # push!(loc_out, copy(loc_vec));
   push!(time_out, 0);
 
   #NEED TO ENSURE THAT RESOURCES ARE PLACED 1 PER SITE
@@ -43,6 +44,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   deleteat!(noresourcesites,sort(resourceloc_vec));
 
   t = 0;
+  next_time_int = t + 1;
 
   #Initial count of how many resouces, starvers, and full in this timestep??
   #Count the number of individual R + S + F
@@ -53,11 +55,13 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   N = NF + NH + NR;
 
   #Initial densities
-  F = NF/N;
-  H = NH/N;
-  R = NR/N;
-  prop = [F,H,R];
-  push!(prop_out,copy(prop));
+  F = NF/size;
+  H = NH/size;
+  R = NR/size;
+  prop_out = Array{Float64}(3,1);
+  prop_out[:,1] = [F,H,R];
+  push!(N_out,N);
+  #push!(prop_out,copy(prop));
 
   tic = 0;
 
@@ -70,7 +74,6 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   while t < (t_term-1)
     tic = tic + 1;
 
-    next_time_int = round(t+1,0)
 
     # #ERRORS
     # if length(ind_vec) < 1
@@ -81,6 +84,10 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     #Calculate Rate
     Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(1-R) + (F+H));
     dt = 1/(Rate*N);
+    if Rate == 0
+      println("Welcome to Daisy World")
+      break
+    end
 
     #Construct probability lines, which are a function of R, S, F
     #Grow <-----> Starve <-----> Diffuse
@@ -228,19 +235,21 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     #Recalculate the size of the foragers and resources
     N = NF + NH + NR;
     #Recalculate the densities of each
-    F = NF/N;
-    H = NH/N;
-    R = NR/N;
+    F = NF/size;
+    H = NH/size;
+    R = NR/size;
 
     prop = [F,H,R];
 
-    push!(prop_out,copy(prop));
+    #push!(prop_out,copy(prop));
+    prop_out = hcat(prop_out,prop);
 
     #Advance time
     t = t + dt;
 
     if t > next_time_int
-      print("time= ",t)
+      println("time= ",round(t,2))
+      next_time_int = round(t+1,0)
     end
 
     #Make sure only values are pushed to the output
@@ -248,19 +257,20 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     loc_vec_new = copy(loc_vec);
 
     #Update output
-    push!(ind_out,ind_vec_new);
-    push!(loc_out,loc_vec_new);
+    # push!(ind_out,ind_vec_new);
+    # push!(loc_out,loc_vec_new);
     push!(time_out,t);
+    push!(N_out,N);
 
     #ERRORS
     #Break loop if extinction occurs
     if length(ind_vec_new) < 1
-      print("Extinction has occured at t=",round(t,2)," and loop ",tic)
+      println("Extinction has occured at t=",round(t,2)," and loop ",tic)
       break
     end
     #Break loop if resources go extinct and the other populations run away
     if NR == 0 && (NF + NH) > size
-      print("Runaway growth has occured at t=",round(t,2)," and loop ",tic)
+      println("Runaway growth has occured at t=",round(t,2)," and loop ",tic)
       break
     end
 
@@ -268,8 +278,8 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
   end #end while loop over t
 
-  print("Simulation successful at t= ",round(t,2)," and loop= ",tic)
+  println("Simulation successful at t= ",round(t,2)," and loop= ",tic)
 
-  return ind_out,loc_out,time_out,prop_out
-
+  # return ind_out,loc_out,time_out,prop_out,N_out
+  return time_out,prop_out,N_out
 end #end function
