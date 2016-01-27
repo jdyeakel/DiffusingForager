@@ -1,7 +1,7 @@
 function starvingforager_event_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH)
   #Read in packages/function
   #ipbc :: torus movement
-  include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
+  include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
 
   #Initiate values
   #Lattice dimension
