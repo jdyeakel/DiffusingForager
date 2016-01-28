@@ -7,24 +7,58 @@ using StatsBase
 using Gadfly
 using Cairo
 
+sigmavec = [0.4,0.5,0.6,0.7,0.8,0.9,1.0];
+Fstar = zeros(length(sigmavec));
+Hstar = zeros(length(sigmavec));
+Rstar = zeros(length(sigmavec));
+Fsimstar = zeros(length(sigmavec));
+Hsimstar = zeros(length(sigmavec));
+Rsimstar = zeros(length(sigmavec));
+for i = 1:length(sigmavec)
 
-L = 10;
-dim = 2;
-prop_fill = 0.5
-initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
-t_term = 50;
-alpha = 0.5;
-K = 1;
-sigma = 0.3;
-rho = 0.25;
-lambda = 0.2;
-mu = 0.2;
-DF = 0.2;
-DH = 0.2;
+  L = 50;
+  dim = 2;
+  prop_fill = 0.5
+  initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
+  t_term = 50;
+  alpha = 0.5;
+  K = 1;
+  sigma = sigmavec[i];
+  rho = copy(sigma);
+  lambda = 0.2;
+  mu = 0.2;
+  DF = 0;
+  DH = 0;
 
-time_out, prop_out, N_out = starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);
 
-time_out, prop_out, N_out = starvingforager_event_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);
+
+  eta = copy(sigma);
+  Fstar[i] = (alpha*lambda*mu*(eta+mu))/(eta^2*(lambda+mu)^2);
+  Hstar[i] = (alpha*lambda^2*(eta+mu))/(eta^2*(lambda+mu)^2);
+  Rstar[i] = (mu*(eta-lambda))/(eta*(mu+lambda));
+
+  #The simulation
+  time_out, prop_out, N_out = starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);
+  F = prop_out[1,:];
+  H = prop_out[2,:];
+  R = prop_out[3,:];
+  last = length(F);
+  burnin = Int(round(last*0.75));
+  Fsimstar[i] = mean(F[burnin:last]);
+  Hsimstar[i] = mean(H[burnin:last]);
+  Rsimstar[i] = mean(R[burnin:last]);
+
+end
+
+comparison = plot(
+layer(x=sigmavec,y=Fstar,Geom.point,Theme(default_color=colorant"green")),
+layer(x=sigmavec,y=Fsimstar,Geom.point,Theme(default_color=colorant"green",default_point_size=2pt)),
+layer(x=sigmavec,y=Hstar,Geom.point,Theme(default_color=colorant"orange")),
+layer(x=sigmavec,y=Hsimstar,Geom.point,Theme(default_color=colorant"orange",default_point_size=2pt)),
+layer(x=sigmavec,y=Rstar,Geom.point,Theme(default_color=colorant"blue")),
+layer(x=sigmavec,y=Rsimstar,Geom.point,Theme(default_color=colorant"blue",default_point_size=2pt)),
+)
+
 
 F = prop_out[1,:];
 H = prop_out[2,:];
@@ -44,3 +78,6 @@ RvsHF = plot(x=R[burnin:ts_l],y=H[burnin:ts_l]+F[burnin:ts_l],Geom.point,Theme(d
 
 draw(PNG("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_HvsF.png", 8inch, 5inch), HvsF)
 draw(PNG("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_RvsHF.png", 8inch, 5inch), RvsHF)
+
+
+time_out, prop_out, N_out = starvingforager_event_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);

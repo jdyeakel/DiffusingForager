@@ -82,7 +82,9 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     # end
 
     #Calculate Rate
-    Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(1-R) + (F+H));
+    # TESTING!
+    # Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
+    Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + sigma*(F+H));
     dt = 1/(Rate*N);
     if Rate == 0
       println("Welcome to Daisy World")
@@ -191,7 +193,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       draw_event = rand();
 
       #GROW
-      if draw_event < R_pr_line[1]
+      if draw_event < R_pr_line
 
         #Append a new resource to the END of the vector
         push!(ind_vec,state);
@@ -214,7 +216,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       end
 
       #BECOME CONSUMED!
-      if draw_event >= R_pr_line[1]
+      if draw_event >= R_pr_line
 
         #Update the no resource site by adding the position that is now empty
         #Needs to be done BEFORE the ind/loc information is deleted.
