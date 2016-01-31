@@ -24,7 +24,7 @@ for i = 1:length(sigmavec)
   alpha = 0.5;
   K = 1;
   sigma = sigmavec[i];
-  rho = copy(sigma);
+  rho = 0.2;
   lambda = 0.2;
   mu = 0.2;
   DF = 0;
@@ -33,8 +33,8 @@ for i = 1:length(sigmavec)
 
 
   eta = copy(sigma);
-  Fstar[i] = (alpha*lambda*mu*(eta+mu))/(eta^2*(lambda+mu)^2);
-  Hstar[i] = (alpha*lambda^2*(eta+mu))/(eta^2*(lambda+mu)^2);
+  Fstar[i] = (alpha*lambda*mu*(eta+mu))/(eta*(lambda+mu)^2);
+  Hstar[i] = (alpha*lambda^2*(eta+mu))/(eta*(lambda+mu)^2);
   Rstar[i] = (mu*(eta-lambda))/(eta*(mu+lambda));
 
   #The simulation
