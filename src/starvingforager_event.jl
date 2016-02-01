@@ -82,9 +82,10 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     # end
 
     #Calculate Rate
-    # TESTING!
-    # Rate = F*(lambda + sigma*(1-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
     Rate = F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
+
+    # TESTING!
+    # Rate = F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
     dt = 1/(Rate*N);
     if Rate == 0
       println("Welcome to Daisy World")
@@ -95,12 +96,12 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     #Grow <-----> Starve <-----> Diffuse
 
     F_pr_line[1] = lambda/Rate;
-    F_pr_line[2] = F_pr_line[1] + (sigma*(K-R))/Rate;
+    F_pr_line[2] = copy(F_pr_line[1]) + (sigma*(K-R))/Rate;
 
     #Recover <-----> Mortality <-----> Diffuse
 
     H_pr_line[1] = (rho*R)/Rate;
-    H_pr_line[2] = H_pr_line[1] + mu/Rate;
+    H_pr_line[2] = copy(H_pr_line[1]) + mu/Rate;
 
     #Grow <-----> Consumed
     R_pr_line = (alpha*(K-R))/Rate;

@@ -1,13 +1,14 @@
 #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
 include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
-include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_spatial.jl")
+# include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_spatial.jl")
 
 
 using StatsBase
 using Gadfly
 using Cairo
+using Plots
 
-sigmavec = [0.4,0.5,0.6,0.7,0.8,0.9,1.0];
+sigmavec = collect(0.4:0.1:1.0);
 Fstar = zeros(length(sigmavec));
 Hstar = zeros(length(sigmavec));
 Rstar = zeros(length(sigmavec));
@@ -20,7 +21,7 @@ for i = 1:length(sigmavec)
   dim = 2;
   prop_fill = 0.5
   initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
-  t_term = 50;
+  t_term = 100;
   alpha = 0.5;
   K = 1;
   sigma = sigmavec[i];
@@ -51,12 +52,12 @@ for i = 1:length(sigmavec)
 end
 
 comparison = plot(
-layer(x=sigmavec,y=Fstar,Geom.point,Theme(default_color=colorant"green")),
-layer(x=sigmavec,y=Fsimstar,Geom.point,Theme(default_color=colorant"green",default_point_size=2pt)),
-layer(x=sigmavec,y=Hstar,Geom.point,Theme(default_color=colorant"orange")),
-layer(x=sigmavec,y=Hsimstar,Geom.point,Theme(default_color=colorant"orange",default_point_size=2pt)),
-layer(x=sigmavec,y=Rstar,Geom.point,Theme(default_color=colorant"blue")),
-layer(x=sigmavec,y=Rsimstar,Geom.point,Theme(default_color=colorant"blue",default_point_size=2pt)),
+layer(x=sigmavec,y=Fstar,Geom.line,Theme(default_color=colorant"green")),
+layer(x=sigmavec,y=Fsimstar,Geom.point,Theme(default_color=colorant"green",default_point_size=3pt)),
+layer(x=sigmavec,y=Hstar,Geom.line,Theme(default_color=colorant"orange")),
+layer(x=sigmavec,y=Hsimstar,Geom.point,Theme(default_color=colorant"orange",default_point_size=3pt)),
+layer(x=sigmavec,y=Rstar,Geom.line,Theme(default_color=colorant"blue")),
+layer(x=sigmavec,y=Rsimstar,Geom.point,Theme(default_color=colorant"blue",default_point_size=3pt)),
 )
 
 
