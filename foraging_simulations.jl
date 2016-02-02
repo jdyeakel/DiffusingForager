@@ -6,7 +6,7 @@ include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src
 using StatsBase
 using Gadfly
 using Cairo
-using Plots
+
 
 sigmavec = collect(0.4:0.1:1.0);
 Fstar = zeros(length(sigmavec));
@@ -21,7 +21,7 @@ for i = 1:length(sigmavec)
   dim = 2;
   prop_fill = 0.5
   initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
-  t_term = 100;
+  t_term = 120;
   alpha = 0.5;
   K = 1;
   sigma = sigmavec[i];
@@ -34,9 +34,9 @@ for i = 1:length(sigmavec)
 
 
   eta = copy(sigma);
-  Fstar[i] = (alpha*lambda*mu*(eta+mu))/(eta*(lambda+mu)^2);
-  Hstar[i] = (alpha*lambda^2*(eta+mu))/(eta*(lambda+mu)^2);
-  Rstar[i] = (mu*(eta-lambda))/(eta*(mu+lambda));
+  Fstar[i] = (alpha*lambda*mu*(mu + rho))/((lambda + mu)*(lambda*rho + mu*sigma));
+  Hstar[i] = (alpha*lambda^2*(mu + rho))/((lambda + mu)*(lambda*rho + mu*sigma));
+  Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho+mu*sigma);
 
   #The simulation
   time_out, prop_out, N_out = starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH);

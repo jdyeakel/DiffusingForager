@@ -41,6 +41,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   #HAVE A noresourcesites vector that accounts for sites WITHOUT resources
   #Updated each timestep
   noresourcesites = collect(1:size);
+  #Deletes locations of sites with resources from the list of open sites (noresourcesites)
   deleteat!(noresourcesites,sort(resourceloc_vec));
 
   t = 0;
@@ -86,7 +87,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
     # TESTING!
     # Rate = F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
-    dt = 1/(Rate*N);
+    dt = 1/(Rate*size);
     if Rate == 0
       println("Welcome to Daisy World")
       break
@@ -117,7 +118,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     #Choose a random individual position
     id = rand(collect(1:N));
 
-    #Also, we need to make an ind_vec_old that is NOT updated for the sequence of IF statements
+    #Also, we need to make an ind_vec_old that is NOT updated for the following sequence of IF statements
     ind_vec_old = copy(ind_vec);
 
     #If randomly selected individual is Full
@@ -173,7 +174,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       if draw_event >= H_pr_line[1] && draw_event < H_pr_line[2]
         deleteat!(ind_vec,id);
         deleteat!(loc_vec,id);
-        NH = NH-1;
+        NH = NH - 1;
       end
 
       #MOVE
@@ -203,7 +204,10 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
         # if length(noresourcesites) == 0
         #   print("R_pr_line =", round(R_pr_line[1],2),"   R=",round(R,2),"   NR=", NR)
         # end
+
+        #Choose random position on the noresourcesite list
         newresourcepos = rand(collect(1:length(noresourcesites)));
+        #Define the new position as the empty site for resource growth
         location = noresourcesites[newresourcepos];
 
         #Append the resource's location to the END of the vector
@@ -227,7 +231,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
         deleteat!(ind_vec,id);
         #Delete individual location from the list
         deleteat!(loc_vec,id);
-        NR = NR-1;
+        NR = NR - 1;
 
 
 
