@@ -16,7 +16,7 @@ Fsimstar = zeros(length(sigmavec));
 Hsimstar = zeros(length(sigmavec));
 Rsimstar = zeros(length(sigmavec));
 for i = 1:length(sigmavec)
-
+  println("sigma = ",sigmavec[i])
   L = 50;
   dim = 2;
   prop_fill = 0.5
@@ -28,8 +28,8 @@ for i = 1:length(sigmavec)
   rho = 0.2;
   lambda = 0.2;
   mu = 0.2;
-  DF = 0;
-  DH = 0;
+  DF = 1;
+  DH = 1;
 
 
 
@@ -58,8 +58,9 @@ layer(x=sigmavec,y=Hstar,Geom.line,Theme(default_color=colorant"orange")),
 layer(x=sigmavec,y=Hsimstar,Geom.point,Theme(default_color=colorant"orange",default_point_size=3pt)),
 layer(x=sigmavec,y=Rstar,Geom.line,Theme(default_color=colorant"blue")),
 layer(x=sigmavec,y=Rsimstar,Geom.point,Theme(default_color=colorant"blue",default_point_size=3pt)),
-)
+Guide.XLabel("sigma"),Guide.YLabel("Steady state; F=green; H=orange; R=blue"));
 
+draw(PDF("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_comparison.pdf", 8inch, 5inch), comparison)
 
 F = prop_out[1,:];
 H = prop_out[2,:];

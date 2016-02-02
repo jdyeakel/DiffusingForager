@@ -7,7 +7,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   #Initiate values
   #Lattice dimension
 
-  size = (L-2)^dim;
+  S = (L-2)^dim;
 
 
   #Initial state values
@@ -19,8 +19,8 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   #Initial location values
   #2/3 of initsize will be foragers; 1/3 will be resources
   #replace = false because want only one resource per site
-  resourceloc_vec = sample(collect(1:size),Int(round(initsize/3)),replace=false);
-  loc_vec = [rand(collect(1:size),Int(2*round(initsize/3)));resourceloc_vec];
+  resourceloc_vec = sample(collect(1:S),Int(round(initsize/3)),replace=false);
+  loc_vec = [rand(collect(1:S),Int(2*round(initsize/3)));resourceloc_vec];
 
   #Re-establish initsize to account for rounding errors
   initsize = length(ind_vec);
@@ -40,7 +40,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   #NEED TO ENSURE THAT RESOURCES ARE PLACED 1 PER SITE
   #HAVE A noresourcesites vector that accounts for sites WITHOUT resources
   #Updated each timestep
-  noresourcesites = collect(1:size);
+  noresourcesites = collect(1:S);
   #Deletes locations of sites with resources from the list of open sites (noresourcesites)
   deleteat!(noresourcesites,sort(resourceloc_vec));
 
@@ -56,9 +56,9 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
   N = NF + NH + NR;
 
   #Initial densities
-  F = NF/size;
-  H = NH/size;
-  R = NR/size;
+  F = NF/S;
+  H = NH/S;
+  R = NR/S;
   prop_out = Array{Float64}(3,1);
   prop_out[:,1] = [F,H,R];
   push!(N_out,N);
@@ -85,9 +85,13 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     #Calculate Rate
     Rate = F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
 
+    # TESTING
+    # Rate = (NF/N)*(lambda + sigma*(K-R) + DF) + (NH/N)*(rho*R + mu + DH) + (NR/N)*(alpha*(K-R) + (F+H));
+
     # TESTING!
     # Rate = F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
-    dt = 1/(Rate*size);
+
+    dt = 1/(Rate*N);
     if Rate == 0
       println("Welcome to Daisy World")
       break
@@ -131,7 +135,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       if draw_event < F_pr_line[1]
         push!(ind_vec,2); #ensure the new individual is in the full state
         #Offspring appears at a random location
-        location = rand(collect(1:size));
+        location = rand(collect(1:S));
         push!(loc_vec,location);
         NF = NF+1;
       end
@@ -147,7 +151,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       #MOVE
       if draw_event >= F_pr_line[2]
         #Move to a random location
-        loc_vec[id] = rand(collect(1:size));
+        loc_vec[id] = rand(collect(1:S));
       end
 
 
@@ -180,7 +184,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       #MOVE
       if draw_event >= H_pr_line[2]
         #Move to a random location
-        loc_vec[id] = rand(collect(1:size));
+        loc_vec[id] = rand(collect(1:S));
       end
 
     end
@@ -239,12 +243,12 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
     end
 
-    #Recalculate the size of the foragers and resources
+    #Recalculate the S of the foragers and resources
     N = NF + NH + NR;
     #Recalculate the densities of each
-    F = NF/size;
-    H = NH/size;
-    R = NR/size;
+    F = NF/S;
+    H = NH/S;
+    R = NR/S;
 
     prop = [F,H,R];
 
@@ -276,7 +280,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       break
     end
     #Break loop if resources go extinct and the other populations run away
-    if NR == 0 && (NF + NH) > size
+    if NR == 0 && (NF + NH) > S
       println("Runaway growth has occured at t=",round(t,2)," and loop ",tic)
       break
     end
