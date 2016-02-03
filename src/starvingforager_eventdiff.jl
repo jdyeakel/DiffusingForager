@@ -83,7 +83,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     # end
 
     #Calculate Rate
-    Rate = (F + H + R) + F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
+    Rate = F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H) + DR);
 
     # TESTING
     # Rate = (NF/N)*(lambda + sigma*(K-R) + DF) + (NH/N)*(rho*R + mu + DH) + (NR/N)*(alpha*(K-R) + (F+H));
@@ -110,7 +110,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
     #Grow <-----> Consumed
     R_pr_line[1] = (alpha*(K-R))/Rate;
-    # R_pr_line[2] = R_pr_line[1] + (F+H)/Rate;
+    R_pr_line[2] = R_pr_line[1] + (F+H)/Rate;
 
 
 
@@ -226,7 +226,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       end
 
       #BECOME CONSUMED!
-      if draw_event >= R_pr_line[1]
+      if draw_event >= R_pr_line[1] && draw_event < R_pr_line[2]
 
         #Update the no resource site by adding the position that is now empty
         #Needs to be done BEFORE the ind/loc information is deleted.
@@ -240,6 +240,23 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
 
       end
+
+      #Resource Movement
+      if draw_event >= R_pr_line[2]
+        old_location = copy(loc_vec[id]);
+        #Choose random position on the noresourcesite list
+        newresourcepos = rand(collect(1:length(noresourcesites)));
+        #Define the new position as the empty site for resource movement
+        location = noresourcesites[newresourcepos];
+        #Change the current resource location
+        loc_vec[id] = location;
+
+        #Update the no resource site by deleting the position that has been filled
+        deleteat!(noresourcesites,newresourcepos);
+        #AND adding the position that the resource has moved FROM!
+        push!(noresourcesites,old_location)
+      end
+
 
     end
 
