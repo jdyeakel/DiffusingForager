@@ -1,4 +1,4 @@
-function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH,DR)
+function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -66,11 +66,11 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
 
   tic = 0;
 
-  F_pr_line = Array(Float64,2);
-  H_pr_line = Array(Float64,2);
-  R_pr_line = Array(Float64,2);
+  # F_pr_line = 0.0;
+  # H_pr_line = 0.0;
+  # R_pr_line = 0.0;
 
-  id = Array(Float64,1);
+  # id = Array(Float64,1);
 
   while t < (t_term-1)
     tic = tic + 1;
@@ -83,13 +83,10 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     # end
 
     #Calculate Rate
-    Rate = (1 - (N/S)) + F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H)); #
+    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (F+H)); # (1 - (N/S)) +
 
     # TESTING
-    # Rate = (NF/N)*(lambda + sigma*(K-R) + DF) + (NH/N)*(rho*R + mu + DH) + (NR/N)*(alpha*(K-R) + (F+H));
-
-    # TESTING!
-    # Rate = F*(lambda + sigma*(K-R) + DF) + H*(rho*R + mu + DH) + R*(alpha*(K-R) + (F+H));
+    # Rate = (NF/N)*(lambda + sigma*(K-R)) + (NH/N)*(rho*R + mu) + (NR/N)*(alpha*(K-R) + (F+H));
 
     dt = 1/(Rate*N);
     if Rate == 0
@@ -100,16 +97,16 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
     #Construct probability lines, which are a function of R, S, F
     #Grow <-----> Starve <-----> Diffuse
 
-    F_pr_line[1] = lambda/Rate;
-    F_pr_line[2] = copy(F_pr_line[1]) + (sigma*(K-R))/Rate;
+    F_pr_line = lambda/Rate;
+    #F_pr_line[2] = copy(F_pr_line[1]) + (sigma*(K-R))/Rate;
 
     #Recover <-----> Mortality <-----> Diffuse
 
-    H_pr_line[1] = (rho*R)/Rate;
-    H_pr_line[2] = copy(H_pr_line[1]) + mu/Rate;
+    H_pr_line = (rho*R)/Rate;
+    #H_pr_line[2] = copy(H_pr_line[1]) + mu/Rate;
 
     #Grow <-----> Consumed
-    R_pr_line[1] = (alpha*(K-R))/Rate;
+    R_pr_line = (alpha*(K-R))/Rate;
     # R_pr_line[2] = R_pr_line[1] + (F+H)/Rate;
 
 
@@ -133,7 +130,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       draw_event = rand();
 
       #GROW
-      if draw_event < F_pr_line[1]
+      if draw_event < F_pr_line
         push!(ind_vec,2); #ensure the new individual is in the full state
         #Offspring appears at a random location
         location = rand(collect(1:S));
@@ -142,18 +139,18 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       end
 
       #STARVE
-      if draw_event >= F_pr_line[1] && draw_event < F_pr_line[2]
+      if draw_event >= F_pr_line #&& draw_event < F_pr_line[2]
         ind_vec[id] = 1;
 
         NH = NH+1;
         NF = NF-1;
       end
 
-      #MOVE
-      if draw_event >= F_pr_line[2]
-        #Move to a random location
-        loc_vec[id] = rand(collect(1:S));
-      end
+      # #MOVE
+      # if draw_event >= F_pr_line[2]
+      #   #Move to a random location
+      #   loc_vec[id] = rand(collect(1:S));
+      # end
 
 
     end
@@ -169,24 +166,24 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       draw_event = rand();
 
       #Recover (become full)
-      if draw_event < H_pr_line[1]
+      if draw_event < H_pr_line
         ind_vec[id] = 2;
         NH = NH-1;
         NF = NF+1;
       end
 
       #Die
-      if draw_event >= H_pr_line[1] && draw_event < H_pr_line[2]
+      if draw_event >= H_pr_line #&& draw_event < H_pr_line[2]
         deleteat!(ind_vec,id);
         deleteat!(loc_vec,id);
         NH = NH - 1;
       end
 
-      #MOVE
-      if draw_event >= H_pr_line[2]
-        #Move to a random location
-        loc_vec[id] = rand(collect(1:S));
-      end
+      # #MOVE
+      # if draw_event >= H_pr_line[2]
+      #   #Move to a random location
+      #   loc_vec[id] = rand(collect(1:S));
+      # end
 
     end
 
@@ -200,15 +197,10 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       draw_event = rand();
 
       #GROW
-      if draw_event < R_pr_line[1]
+      if draw_event < R_pr_line
 
         #Append a new resource to the END of the vector
         push!(ind_vec,state);
-
-        #Choose random no-resource site
-        # if length(noresourcesites) == 0
-        #   print("R_pr_line =", round(R_pr_line[1],2),"   R=",round(R,2),"   NR=", NR)
-        # end
 
         #Choose random position on the noresourcesite list
         newresourcepos = rand(collect(1:length(noresourcesites)));
@@ -226,7 +218,7 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
       end
 
       #BECOME CONSUMED!
-      if draw_event >= R_pr_line[1]
+      if draw_event >= R_pr_line
 
         #Update the no resource site by adding the position that is now empty
         #Needs to be done BEFORE the ind/loc information is deleted.
@@ -238,12 +230,11 @@ function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu
         deleteat!(loc_vec,id);
         NR = NR - 1;
 
-
       end
 
     end
 
-    #Recalculate the S of the foragers and resources
+    #Recalculate the total # of the foragers and resources
     N = NF + NH + NR;
     #Recalculate the densities of each
     F = NF/S;

@@ -1,0 +1,237 @@
+\documentclass[11pt]{iopart}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{cite}
+\usepackage{float}
+\makeatletter
+\makeatother
+
+\expandafter\let\csname equation*\endcsname\relax
+\expandafter\let\csname endequation*\endcsname\relax
+\usepackage{amsmath}
+\newcommand{\agt}{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\begin{document}
+
+\title{Event-Driven Simulation of Foraging Dynamics}
+
+
+\begin{abstract}
+
+  We outline an event-driven simulation for the foraging model, which
+  involves a resource that renews by logistic growth, as well as two classes
+  of foragers---full and hungry.  Full foragers reproduce at a fixed rate and
+  are not vulnerable to mortality.  However, a full forager can become hungry
+  when resources are scarce; conversely, a hungry forager can become full
+  when the resource is abundant.  Hungry foragers do not reproduce and die at
+  a fixed rate.
+\end{abstract}
+
+%\maketitle
+
+\section{The Model}
+
+We assume that foragers can exist in two discrete states---full and hungry.
+Full foragers $F$ are those that have just encountered and consumed a unit of
+resource $R$.  On the other hand, a full forager that does not encounter a
+resource as it wanders converts to a hungry forager $H$ with rate equal to
+the product of a parameter $\sigma$ and the density of non-resources.
+Whenever a forager, either full or hungry, encounters a resource, one unit of
+the resource is consumed.  If the forager was hungry, it turns into a full
+forager with rate $\rho$.  During the time that a forager is hungry, it dies
+with mortality rate $\mu$, while full foragers do not experience mortality
+risk.  Furthermore, full foragers reproduce with rate $\lambda$.  Finally, we
+assume that, in the absence of foragers, the underlying resource undergoes
+logistic growth, with growth rate $\alpha$ and carrying capacity equal to
+one.
+
+According to these processes and also under the assumption that the densities
+of full foragers, hungry foragers, and resources (also denoted by $F$,
+$H$, and $R$, respectively) are perfectly mixed, they evolve according to the
+rate equations:
+\begin{align}
+  \label{RE}
+\begin{split}
+\dot F &= \lambda F + \rho  RH - \sigma (1-R)F\,,\\
+\dot H &= \sigma (1-R)F - \rho RH - \mu H\,, \\
+\dot R &= \alpha R(1-R) -  R(F+H),\\
+\end{split}
+\end{align}
+where the overdot denotes time derivative.  An important feature is the
+assumption that the carrying capacity is set equal to 1.  This means that
+when the system is completely occupied by resources there can be no further
+generation of the resource.
+
+We now outline an event-driven algorithm that mimic these rate equations.  We
+will also generalize to the situation where the full and hungry foragers
+undergo diffusion with possibly different diffusion coefficients on a
+finite-dimensional lattice.  Suppose that the system at some time consists of
+$N_F$ full foragers, $N_H$ hungry foragers, and $N_R$ individual resources.
+The total number of particles $N=N_F+N_H+N_R$.
+
+In each elemental event a lattice site is picked: it is occupied by a full
+forager with probability $N_F/V$, a hungry forager with probability $N_H/V$,
+ a resource with probability $N_R/V$, or the site may be empty with
+ probability $1-N/V$, where $N=N_F+N_H+N_R$ is the total number of particles.  If an $F$ is picked, it reproduces
+at rate $\lambda$ and becomes hungry with rate $\sigma(1-R)$.  If an $H$ is
+picked, it becomes full with rate $\rho R$ and dies with rate $\mu$.
+Finally, if an $R$ is picked, it grows with rate $\alpha(1-R)$ and is eaten
+with rate $(F+H)$.  Thus the total rate for each elemental event is
+\begin{equation}
+\mathcal{R}=F\big[\lambda +\sigma(1-R)\big]+ H\big[\rho R+\mu\big]+
+R\big[\alpha(1-R)+(F+H)\big]\,.
+\end{equation}
+
+Now let's look at how the system evolves according to its constituent
+processes.  If an $F$ is picked, then it may either reproduce or go hungry
+according to the steps outlined above.  That is:
+\begin{align*}
+&\mathrm{growth,~ prob.\ } \lambda/\mathcal{R}\hskip 0.82 in N_F\to N_F\!+\!1\,,\\
+&\mathrm{starve,~ prob.\ } \sigma(1-R)/\mathcal{R} \hskip 0.35 in N_F\to N_F\!-\!1,\,
+  N_H\to N_H\!+\!1\,.
+\end{align*}
+Similarly, if an $H$ is picked, it may either become full or die following the
+processes given above.  That is:
+\begin{align*}
+&\mathrm{become\ full,~  prob.\ } \rho R/\mathcal{R}\hskip 0.4in N_H\to N_H\!-\!1,\,
+  N_F\to N_F\!+\!1\,,\\
+&\mathrm{die,~ prob.\ } \mu/\mathcal{R}\hskip 1.12 in N_H\to N_H\!-\!1\,.
+\end{align*}
+Finally, if an $R$ is picked, it may either grow or be eaten following the
+processes given above.  That is:
+\begin{align*}
+&\mathrm{grow,~ prob.\ } \alpha(1\!-\!R)/\mathcal{R}\hskip 0.8in N_R\to N_R\!+\!1\,,\phantom{~~~~~~~~~~}\\
+&\mathrm{eaten,~ prob.\ } (F\!+\!H)/\mathcal{R}\hskip 0.82in  N_R\to N_R\!-\!1\,.\phantom{~~~~~~~~~~}
+\end{align*}
+
+We now determine the change in the expected number of individuals of each
+type in a single event that are consistent with the above processes.  For
+full foragers, this change is
+\begin{subequations}
+\begin{equation}
+  \Delta N_F =\left[\frac{N_F}{N}\big(\lambda-\sigma(1-R)\big)+\frac{N_H}{N}\rho
+      R\right]/\mathcal{R}\,.
+\end{equation}
+The term proportional to $N_F$ comes from processes in which a full forager
+is picked while the term proportional to $N_H$ comes from processes in which
+a hungry forager is picked and it converted to a full forager.  Consequently,
+the change in the density of full foragers simply is
+\begin{equation}
+  \Delta F =\left[F\big(\lambda-\sigma(1-R)\big)+H\rho
+    R\right]/N\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+Thus if we take the time step for each event to be
+$\Delta t = (N\mathcal{R})^{-1}$, the above reduces to the rate equation
+\eqref{RE} for $F$.  Thus in each microscopic event of the model, the time
+should be advanced by $\Delta t = (N\mathcal{R})^{-1}$.
+
+In a similar fashion, the change in the expected number of hungry foragers in
+a single event is given by
+\begin{subequations}
+\begin{equation}
+  \Delta N_H =\left[-\frac{N_H}{N}(\rho R+\mu)+\frac{N_F}{N}\sigma
+    (1-R)\right]/\mathcal{R}\,,
+\end{equation}
+so that the change in the density of hungry foragers simply is
+\begin{equation}
+  \Delta H =\left[-H(\rho R+\mu)+F\sigma (1-R)\right]/N\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+Finally, the change in the expected number of individual resources in a
+single event is given by
+\begin{subequations}
+\begin{equation}
+  \Delta N_R =\left[\frac{N_R}{N}\big(\alpha(1-R)\big)-\frac{(N_F+N_H)}{N}\right]/\mathcal{R}\,,
+\end{equation}
+so that the change in the density of resources is
+\begin{equation}
+  \Delta R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/N\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+The equations for $\Delta F$, $\Delta H$, and $\Delta R$ then reproduce the
+original rate equations \eqref{RE} when the time step for an elemental event
+is taken to be $\Delta t = (N\mathcal{R})^{-1}$.
+
+We can straightforwardly generalize the above approach to the situation where
+the foragers are diffusing on a lattice.  Suppose that the full and hungry
+foragers diffuse with respective diffusion coefficients $D_F$ and $D_H$.  In
+this case, the rate equations \eqref{RE} generalize to the set of partial
+differential equations
+\begin{align}
+  \label{pde}
+\begin{split}
+\frac{\partial F}{\partial t} &= \lambda F + \rho  RH - \sigma (1-R)F+D_F\nabla^2F\,,\\[0.125in]
+\frac{\partial H}{\partial t}  &= \sigma (1-R)F - \rho RH - \mu H+D_H\nabla^2H\,, \\[0.125in]
+\frac{\partial R}{\partial t}  &= \alpha R(1-R) -  R(F+H).\\
+\end{split}
+\end{align}
+Here the densities $F,H,R$ are now functions of space and time,
+$F=F(\mathbf{r},t)$ and similarly for $H$ and $R$.
+
+We now determine the total rate for an elemental event.  If an $F$ is picked,
+it reproduces at rate $\lambda$, becomes hungry with rate $\sigma(1-R)$, and
+moves with rate $D_F$.  If an $H$ is picked, it becomes full with rate
+$\rho R$, dies with rate $\mu$, and moves with rate $D_H$.  As before, if an
+$R$ is picked, it grows with rate $\alpha(1-R)$ and is eaten with rate
+$(F+H)$.  Thus the total rate for each elemental event is
+\begin{equation}
+\mathcal{R}_d=F\big[\lambda +\sigma(1-R)+D_F\big]+ H\big[\rho R+\mu+D_H\big]+
+R\big[\alpha(1-r)+(F+H)\big]\,.
+\end{equation}
+Here the subscript $d$ indicates that this rate pertains to the foraging
+model with diffusing foragers on a $d$-dimensional lattice.
+
+As before, we determine at how the system evolves according to the various
+constituent processes.  If an $F$ is picked, it may either reproduce, go
+hungry, or move.  That is:
+\begin{align*}
+&\mathrm{growth,~ prob.\ } \lambda/\mathcal{R}_d\hskip 0.82 in N_F\to N_F\!+\!1\,,\\
+&\mathrm{starve,~ prob.\ } \sigma(1-R)/\mathcal{R}_d \hskip 0.35 in N_F\to N_F\!-\!1,\,\\
+&\mathrm{move,~ prob.\ } D_F/\mathcal{R}_d \hskip 0.8 in N_F\to N_F\,.
+\end{align*}
+Similarly, if an $H$ is picked, it may become full, die, or move following
+the processes given above.  That is:
+\begin{align*}
+&\mathrm{become\ full,~  prob.\ } \rho R/\mathcal{R}_d\hskip 0.4in N_H\to N_H\!-\!1,\,
+  N_F\to N_F\!+\!1\,,\\
+&\mathrm{die,~ prob.\ } \mu/\mathcal{R}_d\hskip 1.12 in N_H\to N_H\!-\!1\,,\\
+&\mathrm{move,~ prob.\ } D_H/\mathcal{R}_d\hskip 0.82 in N_H\to N_H\,.
+\end{align*}
+The evolution of the resource is the same as the mean-field case.  Following
+the same logic as in the mean-field case, the evolution of the densities will
+be described by the evolution equations \eqref{pde} when the time step of
+each elemental event is taken to be $(N\mathcal{R}_d)^{-1}$.
+
+There are several additional detailed subtleties of the simulation that are
+worth mentioning.  First, it seems that there does not need to be any
+constraint on the number of foragers on any site, so I think it's best to let
+this number be arbitrary.  However, the carrying capacity of the resource has
+been set to 1, so that the number of individual resources at any site should
+be either 0 or 1.
+
+Now let's turn to the mechanics of the various update events.  In the
+mean-field limit, when a full forager reproduces, its offspring should be
+placed anywhere.  For a finite-dimensional lattice, it seems reasonable to
+place the offspring at the same site as the parent.  Diffusion of a full
+forager on a lattice can be modeled by allowing it to hop to a nearest
+neighbor; similarly for the motion of hungry foragers.
+
+The mechanics of the resource evolution is a bit subtle.  In the mean-field
+limit, if an individual resource is picked a new resource is created with
+probability proportional to $1-R$, where $R$ is the global density of
+resource, which is necessarily less than 1.  If a new resource is created, it
+should be place randomly on any one of the sites that does not contain a
+resource, but this site could be occupied by a forager.  On a lattice, the
+creation of a new resource should be proportional to a local version of
+$1-R$.  I think it's reasonable to consider the $z$ nearest-neighbor sites of
+the current resource and put a new individual resource at one of the vacant
+nearest neighbors with probability $1-{n}/{z}$, where $n$ is the number
+of individual resources in the local neighborhood of $z$ sites.  The
+disappearance of an individual resource by consumption is straightforward.
+
+
+\end{document}
+

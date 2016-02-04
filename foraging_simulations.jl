@@ -1,11 +1,14 @@
-#include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
-include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
-# include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_spatial.jl")
-
 
 using StatsBase
 using Gadfly
 using Cairo
+
+
+#include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
+include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_nodiff.jl")
+# include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_spatial.jl")
+
+
 
 
 sigmavec = collect(0.4:0.1:1.0);
@@ -28,10 +31,6 @@ for i = 1:length(sigmavec)
   rho = 0.2;
   lambda = 0.2;
   mu = 0.2;
-  DF = 0;
-  DH = 0;
-  DR = 0;
-
 
 
   eta = copy(sigma);
@@ -40,7 +39,7 @@ for i = 1:length(sigmavec)
   Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho+mu*sigma);
 
   #The simulation
-  time_out, prop_out, N_out = starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH,DR);
+  time_out, prop_out, N_out = starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu);
   F = prop_out[1,:];
   H = prop_out[2,:];
   R = prop_out[3,:];
