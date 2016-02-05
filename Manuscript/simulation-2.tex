@@ -1,0 +1,297 @@
+\documentclass[11pt]{iopart}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{cite}
+\usepackage{float}
+\makeatletter
+\makeatother
+
+\expandafter\let\csname equation*\endcsname\relax
+\expandafter\let\csname endequation*\endcsname\relax
+\usepackage{amsmath}
+\newcommand{\agt}{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\begin{document}
+
+\title{Event-Driven Simulation of Foraging Dynamics}
+
+
+\begin{abstract}
+
+  We outline an event-driven simulation for the foraging model, which
+  involves a resource that renews by logistic growth, as well as two classes
+  of foragers---full and hungry.  Full foragers reproduce at a fixed rate and
+  are not vulnerable to mortality.  However, a full forager can become hungry
+  when resources are scarce; conversely, a hungry forager can become full
+  when the resource is abundant.  Hungry foragers do not reproduce and die at
+  a fixed rate.
+\end{abstract}
+
+%\maketitle
+
+\section{The Model}
+
+We assume that foragers can exist in two discrete states---full and hungry.
+Full foragers $F$ are those that have just encountered and consumed a unit of
+resource $R$.  On the other hand, a full forager that does not encounter a
+resource as it wanders converts to a hungry forager $H$ with rate equal to
+the product of a parameter $\sigma$ and the density of non-resources.
+Whenever a forager, either full or hungry, encounters a resource, one unit of
+the resource is consumed.  If the forager was hungry, it turns into a full
+forager with rate $\rho$.  During the time that a forager is hungry, it dies
+with mortality rate $\mu$, while full foragers do not experience mortality
+risk.  Furthermore, full foragers reproduce with rate $\lambda$.  Finally, we
+assume that, in the absence of foragers, the underlying resource undergoes
+logistic growth, with growth rate $\alpha$ and carrying capacity equal to
+one.
+
+According to these processes and also under the assumption that the densities
+of full foragers, hungry foragers, and resources (also denoted by $F$,
+$H$, and $R$, respectively) are perfectly mixed, they evolve according to the
+rate equations:
+\begin{align}
+  \label{RE}
+\begin{split}
+\dot F &= \lambda F + \rho  RH - \sigma (1-R)F\,,\\
+\dot H &= \sigma (1-R)F - \rho RH - \mu H\,, \\
+\dot R &= \alpha R(1-R) -  R(F+H),\\
+\end{split}
+\end{align}
+where the overdot denotes time derivative.  An important feature is the
+assumption that the carrying capacity is set equal to 1.  This means that
+when the system is completely occupied by resources there can be no further
+generation of the resource.  The approach described below can be generalized
+to carrying capacity less than 1, but one can take the carrying capacity
+equal to 1 without loss of generality.
+
+We now outline an event-driven algorithm that mimic these rate equations.
+Suppose that the system at a given time consists of $N_F$ full foragers,
+$N_H$ hungry foragers, and $N_R$ individual resources.  The total number of
+particles $N=N_F+N_H+N_R$.  There are six basic processes embodied by the
+rate equations \eqref{RE}:
+\begin{enumerate}
+\item Reproduction:  $F\to F+1$
+\item Starvation:  $F\to H$
+\item Recruitment: $H\to F$
+\item Death: $H\to H-1$
+\item Resource growth: $R\to R+1$
+\item Resource consumption: $R\to R-1$
+\end{enumerate}
+
+In an event-driven simulation, one of the above events is picked with the
+appropriate probability (to be defined below), the selected event is
+implemented, and then the time is updated accordingly.  The total rate for
+any event is proportional to
+\begin{equation}
+\mathcal{R}=F\big[\lambda +\sigma(1-R)\big]+ H\big[\rho R+\mu\big]+
+R\big[\alpha(1-R)+(F+H)\big]\,.
+\end{equation}
+Here $F=N_F/V$, $H=N_H/V$, and $R=N_R/V$, where $N_i$ is the total number of
+particles of type $i$, and $V$ is the total number of lattice sites.  Thus $F$,
+$H$, and $R$ are the densities of each type of entity in the system.  The
+total rate is defined only up to an overall constant, but this constant is
+immaterial because the time step is also proportional to this same constant.
+
+Now we define the steps of an event-driven simulation.  
+\begin{enumerate}
+\item With probability $\lambda F/\mathcal{R}$ implement the reproduction step.
+  This step consists of picking one of the full foragers and allowing it to
+  reproduce.
+\item With probability $\sigma(1-R)F/\mathcal{R}$ implement the starvation
+  step; a full forager is picked and it changes to a hungry forager.
+\item With probaibility $\rho HR/\mathcal{R}$ implement the recruitment step;
+  a hungry forager is picked and becomes full.
+\item With probability $\mu H/\mathcal{R}$ implement the death step; a hungry
+  forager is picked and is removed. 
+\item With probability $\alpha R(1-R)/\mathcal{R}$ implement the growth step;
+  a unit of resource is created.
+\item With probability $(F+H)R/\mathcal{R}$ implement the consumption step; a
+  unit of resource is removed.
+\end{enumerate}
+By explicit construction, the probabilities for the above events sum to 1.
+
+We now determine the change in the expected number of individuals of each
+type in a single event.  For
+full foragers, the change in its number $N_F$ is
+\begin{subequations}
+\begin{equation}
+  \Delta N_F =\left[F\big(\lambda-\sigma(1-R)\big)+\rho H
+    R\right]/\mathcal{R}\,.
+\end{equation}
+The term proportional to $F$ comes from processes in which a full forager is
+picked, while the term proportional to $N_H$ comes from processes in which a
+hungry forager is picked and converted to a full forager.  Thus the change in
+the density of full foragers is
+\begin{equation}
+  \Delta F =\frac{\Delta N_F}{V} =\left[F\big(\lambda-\sigma(1-R)\big)+H\rho
+    R\right]/V\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+Thus if we take the time step for each event to be
+$\Delta t = (V\mathcal{R})^{-1}$, the above reduces to the rate equation
+\eqref{RE} for $F$.  Thus in each microscopic event of the model, the time
+should be advanced by $\Delta t = (V\mathcal{R})^{-1}$.
+
+In a similar fashion, the change in the expected number of hungry foragers in
+a single event is given by
+\begin{subequations}
+\begin{equation}
+  \Delta N_H =\left[-H(\rho R+\mu)+F\sigma
+    (1-R)\right]/\mathcal{R}\,,
+\end{equation}
+so that the change in the density of hungry foragers simply is
+\begin{equation}
+  \Delta H =\left[-H(\rho R+\mu)+F\sigma (1-R)\right]/V\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+Finally, the change in the expected number of individual resources in a
+single event is given by
+\begin{subequations}
+\begin{equation}
+  \Delta N_R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/\mathcal{R}\,,
+\end{equation}
+so that the change in the resource density is
+\begin{equation}
+  \Delta R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/V\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+The equations for $\Delta F$, $\Delta H$, and $\Delta R$ would then reproduce
+the original rate equations \eqref{RE} when the time step for an elemental
+event is taken to be $\Delta t = (V\mathcal{R})^{-1}$.  To summarize, pick an
+event according to the probabilities enumerated above and update the
+densities according (3b), (4b), and (5b), and then increment the time by
+$(N\mathcal{R})^{-1}$ after each event.
+
+There are several details of the simulation that need to be specified.
+First, there is no constraint on the number of foragers on any site, but
+given that we are describing a harsh environment, the parameters should be
+chosen so that this number is not large.  The carrying capacity of the
+resource has been set to 1, so that the number of individual resources at any
+site should be either 0 or 1.  Finally, when a full forager reproduces, its
+offspring should be placed anywhere.  With these details, a simulation that
+is based on the above sprocedure should reproduce the predictions of the rate
+equations \eqref{RE}.
+
+
+We now generalize the above approach to the situation where the foragers are
+diffusing on a lattice.  Suppose that the full and hungry foragers diffuse
+with respective diffusion coefficients $D_F$ and $D_H$.  In this case, the
+rate equations \eqref{RE} generalize to the set of partial differential
+equations
+\begin{align}
+  \label{pde}
+\begin{split}
+\frac{\partial F}{\partial t} &= \lambda F + \rho  RH - \sigma (1-R)F+D_F\nabla^2F\,,\\[0.125in]
+\frac{\partial H}{\partial t}  &= \sigma (1-R)F - \rho RH - \mu H+D_H\nabla^2H\,, \\[0.125in]
+\frac{\partial R}{\partial t}  &= \alpha R(1-R) -  R(F+H).\\
+\end{split}
+\end{align}
+Here the densities $F,H,R$ are now functions of space and time,
+$F=F(\mathbf{r},t)$ and similarly for $H$ and $R$.
+
+To construct an event-driven simulation that mimic these rate equations, we
+have to include two additional processes:
+\begin{enumerate}
+\item[vii] Full forager diffusion
+\item[viii] Hungry forager diffusion
+\end{enumerate}
+In an event-driven simulation, one of the eight possible events is picked
+with the appropriate probability (see below), the selected event is
+implemented, and the time is updated accordingly.
+
+The total rate for any event is
+\begin{equation}
+\mathcal{R}=F\big[\lambda +\sigma(1-R)+D_F\big]+ H\big[\rho R+\mu+D_H\big]+
+R\big[\alpha(1-R)+(F+H)\big]\,.
+\end{equation}
+Now we define the steps of an event-driven simulation.  
+\begin{enumerate}
+\item With probability $\lambda F/\mathcal{R}$ implement the reproduction step.
+  This step consists of picking one of the full foragers and allowing it to
+  reproduce.
+\item With probability $\sigma(1-R)F/\mathcal{R}$ implement the starvation
+  step; a full forager is picked and it changes to a hungry forager.
+\item With probaibility $\rho HR/\mathcal{R}$ implement the recruitment step;
+  a hungry forager is picked and becomes full.
+\item With probability $\mu H/\mathcal{R}$ implement the death step; a hungry
+  forager is picked and is removed. 
+\item With probability $\alpha R(1-R)/\mathcal{R}$ implement the growth step;
+  a unit of resource is created.
+\item With probability $(F+H)R/\mathcal{R}$ implement the consumption step; a
+  unit of resource is removed.
+\item With probability $D_F F/\mathcal{R}$, a full forager moves; pick one
+  such forager at random and move it.
+\item With probability $D_H H/\mathcal{R}$, a full forager moves; pick one
+  such forager at random and move it.
+\end{enumerate}
+By explicit construction, the probabilities for the above events sum to 1.
+
+
+We now determine the change in the expected number of individuals of each
+type at a given site $\mathbf{R}$ in a single event.  For full foragers, the
+change in its number $N_F(\mathbf{R})$ at site $\mathbf{R}$ is
+\begin{subequations}
+\begin{equation}
+  \Delta N_F(\mathbf{R}) =\left[F(\mathbf{R})\big(\lambda-\sigma(1-R(\mathbf{R}))\big)+\rho H
+    R\right]/\mathcal{R}\,.
+\end{equation}
+The term proportional to $F$ comes from processes in which a full forager is
+picked, while the term proportional to $N_H$ comes from processes in which a
+hungry forager is picked and converted to a full forager.  Thus the change in
+the density of full foragers is
+\begin{equation}
+  \Delta F =\frac{\Delta N_F}{V} =\left[F\big(\lambda-\sigma(1-R)\big)+H\rho
+    R\right]/V\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+Thus if we take the time step for each event to be
+$\Delta t = (V\mathcal{R})^{-1}$, the above reduces to the rate equation
+\eqref{RE} for $F$.  Thus in each microscopic event of the model, the time
+should be advanced by $\Delta t = (V\mathcal{R})^{-1}$.
+
+In a similar fashion, the change in the expected number of hungry foragers in
+a single event is given by
+\begin{subequations}
+\begin{equation}
+  \Delta N_H =\left[-H(\rho R+\mu)+F\sigma
+    (1-R)\right]/\mathcal{R}\,,
+\end{equation}
+so that the change in the density of hungry foragers simply is
+\begin{equation}
+  \Delta H =\left[-H(\rho R+\mu)+F\sigma (1-R)\right]/V\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+Finally, the change in the expected number of individual resources in a
+single event is given by
+\begin{subequations}
+\begin{equation}
+  \Delta N_R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/\mathcal{R}\,,
+\end{equation}
+so that the change in the resource density is
+\begin{equation}
+  \Delta R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/V\mathcal{R}\,.
+\end{equation}
+\end{subequations}
+The equations for $\Delta F$, $\Delta H$, and $\Delta R$ would then reproduce
+the original rate equations \eqref{RE} when the time step for an elemental
+event is taken to be $\Delta t = (V\mathcal{R})^{-1}$.  To summarize, pick an
+event according to the probabilities enumerated above and update the
+densities according (3b), (4b), and (5b), and then increment the time by
+$(N\mathcal{R})^{-1}$ after each event.
+
+There are several details of the simulation that need to be specified.
+First, there is no constraint on the number of foragers on any site, but
+given that we are describing a harsh environment, the parameters should be
+chosen so that this number is not large.  The carrying capacity of the
+resource has been set to 1, so that the number of individual resources at any
+site should be either 0 or 1.  Finally, when a full forager reproduces, its
+offspring should be placed anywhere.  With these details, a simulation that
+is based on the above sprocedure should reproduce the predictions of the rate
+equations \eqref{RE}.
+
+
+
+\end{document}
+

@@ -69,7 +69,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
   # F_pr_line = 0.0;
   # H_pr_line = 0.0;
   # R_pr_line = 0.0;
-
+  pr_line = zeros(6);
   # id = Array(Float64,1);
 
   while t < (t_term-1)
@@ -83,7 +83,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
     # end
 
     #Calculate Rate
-    Rate = (1 - (N/S)) + F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (F+H)); # (1 - (N/S)) +
+    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (F+H)); # (1 - (N/S)) +
 
     # TESTING
     # Rate = (NF/N)*(lambda + sigma*(K-R)) + (NH/N)*(rho*R + mu) + (NR/N)*(alpha*(K-R) + (F+H));
@@ -94,27 +94,6 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
       break
     end
 
-    #Construct probability lines, which are a function of R, S, F
-    #Grow <-----> Starve <-----> Diffuse
-    #
-    # F_pr_line = lambda/Rate;
-    # #F_pr_line[2] = copy(F_pr_line[1]) + (sigma*(K-R))/Rate;
-    #
-    # #Recover <-----> Mortality <-----> Diffuse
-    #
-    # H_pr_line = (rho*R)/Rate;
-    # #H_pr_line[2] = copy(H_pr_line[1]) + mu/Rate;
-    #
-    # #Grow <-----> Consumed
-    # R_pr_line = (alpha*(K-R))/Rate;
-    # # R_pr_line[2] = copy(R_pr_line[1]) + (F+H)/Rate;
-
-    # 2/4/2016
-    # The probabilities for each event sequence need to add up to one...
-    F_pr_line = lambda/(lambda + sigma*(1-R));
-    H_pr_line = (rho*R)/(rho*R + mu);
-    R_pr_line = (alpha*(1-R))/(alpha*(1-R) + (H + F));
-
 
 
     #Randomly select an individual (R,S,F) with probability 1/N
@@ -123,7 +102,47 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
 
     #Update the total
 
-    #Choose a random individual position
+    #Events
+    pr_line[1] = (lambda*F)/Rate;
+    #2  Starvation
+    pr_line[2] = pr_line[1] + (sigma*(1-R)*F)/Rate;
+    #3  Recruitment
+    pr_line[3] = pr_line[2] + (rho*H*R)/Rate;
+    #4  Death
+    pr_line[4] = pr_line[3] + (mu*H)/Rate;
+    #5  Resource Growth
+    pr_line[5] = pr_line[4] + (alpha*R*(1-R))/Rate;
+    #6  Resource consumption
+    pr_line[6] = pr_line[5] + ((F+H)*R)/Rate;
+
+    draw_event = rand();
+
+    #1  Reproduction (F)
+    if draw_event < pr_line[1]
+    end
+
+    #2  Starvation (F)
+    if draw_event >= pr_line[1] && draw_event < pr_line[2]
+    end
+
+    #3  Recruitment (H)
+    if draw_event >= pr_line[2] && draw_event < pr_line[3]
+    end
+
+    #4  Death (H)
+    if draw_event >= pr_line[3] && draw_event < pr_line[4]
+    end
+
+    #5  Resource Growth (R)
+    if draw_event >= pr_line[4] && draw_event < pr_line[5]
+    end
+
+    #6  Resource consumption (R)
+    if draw_event >= pr_line[5] && draw_event < pr_line[6]
+    end
+
+
+
     id = rand(collect(1:N));
 
     #Also, we need to make an ind_vec_old that is NOT updated for the following sequence of IF statements

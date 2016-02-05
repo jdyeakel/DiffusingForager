@@ -5,7 +5,7 @@ using Cairo
 
 
 #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
-include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_nodiff.jl")
+include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_eventdiff.jl")
 # include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_spatial.jl")
 
 
@@ -24,14 +24,16 @@ for i = 1:length(sigmavec)
   dim = 2;
   prop_fill = 0.5
   initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
-  t_term = 500;
+  t_term = 120;
   alpha = 0.5;
   K = 1;
   sigma = sigmavec[i];
   rho = 0.2;
   lambda = 0.2;
   mu = 0.2;
-
+  DF = 1;
+  DH = 1;
+  DR = 1;
 
   eta = copy(sigma);
   Fstar[i] = (alpha*lambda*mu*(mu + rho))/((lambda + mu)*(lambda*rho + mu*sigma));
@@ -39,7 +41,7 @@ for i = 1:length(sigmavec)
   Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho+mu*sigma);
 
   #The simulation
-  time_out, prop_out, N_out = starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu);
+  time_out, prop_out, N_out = starvingforager_eventdiff(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH,DR);
   F = prop_out[1,:];
   H = prop_out[2,:];
   R = prop_out[3,:];
@@ -51,7 +53,7 @@ for i = 1:length(sigmavec)
 
 end
 
-comparison = plot(
+comparisondiff = plot(
 layer(x=sigmavec,y=Fstar,Geom.line,Theme(default_color=colorant"green")),
 layer(x=sigmavec,y=Fsimstar,Geom.point,Theme(default_color=colorant"green",default_point_size=3pt)),
 layer(x=sigmavec,y=Hstar,Geom.line,Theme(default_color=colorant"orange")),
@@ -60,7 +62,7 @@ layer(x=sigmavec,y=Rstar,Geom.line,Theme(default_color=colorant"blue")),
 layer(x=sigmavec,y=Rsimstar,Geom.point,Theme(default_color=colorant"blue",default_point_size=3pt)),
 Guide.XLabel("sigma"),Guide.YLabel("Steady state; F=green; H=orange; R=blue"));
 
-draw(PDF("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_comparison.pdf", 8inch, 5inch), comparison)
+draw(PDF("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_comparisondiff.pdf", 8inch, 5inch), comparisondiff)
 
 F = prop_out[1,:];
 H = prop_out[2,:];

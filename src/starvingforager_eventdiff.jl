@@ -1,4 +1,4 @@
-function starvingforager_event(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH,DR)
+function starvingforager_eventdiff(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu,DF,DH,DR)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
