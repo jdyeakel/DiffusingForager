@@ -1,4 +1,4 @@
-function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu)
+function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -11,7 +11,11 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
 
 
   #Initial state values
-  ind_vec = [rand(collect(1:2),Int(2*round(initsize/3)));zeros(Int64,Int(round(initsize/3)))];
+  Find_vec = zeros(Int64,Int(round(initsize/3))) + 2;
+  Hind_vec = zeros(Int64,Int(round(initsize/3))) + 1;
+  Rind_vec = zeros(Int64,Int(round(initsize/3)));
+
+  ind_vec = [Find_vec;Hind_vec;Rind_vec];
   #OR Pure Resource Start (for testing)
   #ind_vec = zeros(Int64,initsize);
 
@@ -19,8 +23,12 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
   #Initial location values
   #2/3 of initsize will be foragers; 1/3 will be resources
   #replace = false because want only one resource per site
-  resourceloc_vec = sample(collect(1:S),Int(round(initsize/3)),replace=false);
-  loc_vec = [rand(collect(1:S),Int(2*round(initsize/3)));resourceloc_vec];
+
+  Floc_vec = sample(collect(1:S),Int(round(initsize/3)));
+  Hloc_vec = sample(collect(1:S),Int(round(initsize/3)));
+  Rloc_vec = sample(collect(1:S),Int(round(initsize/3)),replace=false);
+
+  loc_vec = [Floc_vec;Hloc_vec;Rloc_vec];
 
   #Re-establish initsize to account for rounding errors
   initsize = length(ind_vec);
@@ -42,7 +50,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
   #Updated each timestep
   noresourcesites = collect(1:S);
   #Deletes locations of sites with resources from the list of open sites (noresourcesites)
-  deleteat!(noresourcesites,sort(resourceloc_vec));
+  deleteat!(noresourcesites,sort(Rloc_vec));
 
   t = 0;
   next_time_int = t + 1;
@@ -50,9 +58,9 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
   #Initial count of how many resouces, starvers, and full in this timestep??
   #Count the number of individual R + S + F
   #tot = length(ind_vec);
-  NF = length(find(x->x==2,ind_vec));
-  NH = length(find(x->x==1,ind_vec));
-  NR = initsize - (NF + NH);
+  NF = length(Floc_vec);
+  NH = length(Hloc_vec);
+  NR = length(Rloc_vec);
   N = NF + NH + NR;
 
   #Initial densities
@@ -83,7 +91,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
     # end
 
     #Calculate Rate
-    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (F+H)); # (1 - (N/S)) +
+    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (rho*H + m*F)); # (1 - (N/S)) +
 
     # TESTING
     # Rate = (NF/N)*(lambda + sigma*(K-R)) + (NH/N)*(rho*R + mu) + (NR/N)*(alpha*(K-R) + (F+H));
@@ -111,9 +119,9 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,la
     #4  Death
     pr_line[4] = pr_line[3] + (mu*H)/Rate;
     #5  Resource Growth
-    pr_line[5] = pr_line[4] + (alpha*R*(1-R))/Rate;
+    pr_line[5] = pr_line[4] + (alpha*R*(K-R))/Rate;
     #6  Resource consumption
-    pr_line[6] = pr_line[5] + ((F+H)*R)/Rate;
+    pr_line[6] = pr_line[5] + ((rho*H + m*F)*R)/Rate;
 
     draw_event = rand();
 

@@ -29,17 +29,18 @@ for i = 1:length(sigmavec)
   K = 1;
   sigma = sigmavec[i];
   rho = 0.2;
+  m = 0.2;
   lambda = 0.2;
   mu = 0.2;
 
 
   eta = copy(sigma);
-  Fstar[i] = (alpha*lambda*mu*(mu + rho))/((lambda + mu)*(lambda*rho + mu*sigma));
-  Hstar[i] = (alpha*lambda^2*(mu + rho))/((lambda + mu)*(lambda*rho + mu*sigma));
-  Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho+mu*sigma);
+  Fstar[i] = (alpha*lambda*mu*(mu + rho))/((lambda*rho + m*mu)*(lambda*rho + sigma*mu));
+  Hstar[i] = (alpha*lambda^2*(mu + rho))/((lambda*rho + m*mu)*(lambda*rho + sigma*mu));
+  Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho + mu*sigma);
 
   #The simulation
-  time_out, prop_out, N_out = starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,lambda,mu);
+  time_out, prop_out, N_out = starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu);
   F = prop_out[1,:];
   H = prop_out[2,:];
   R = prop_out[3,:];

@@ -64,21 +64,31 @@ assumption that the carrying capacity is set equal to 1.  This means that
 when the system is completely occupied by resources there can be no further
 generation of the resource.  The approach described below can be generalized
 to carrying capacity less than 1, but one can take the carrying capacity
-equal to 1 without loss of generality.
+equal to 1 without loss of generality.  Here is another subtle point worth
+mentioning: $\dot R$ does not involve the recruitment rate $\rho$.  From the
+perspective of the resource, either type of forager can consume it.  However,
+from the perspective of the hungry forager, once it has eaten a resource, it
+converts to a full forager with rate $\rho$.  One has to be careful to not
+overcount the events that involve interactions between a hungry forager and a
+resource.
 
-We now outline an event-driven algorithm that mimic these rate equations.
+We now outline an event-driven algorithm that mimic these rate equations. 
 Suppose that the system at a given time consists of $N_F$ full foragers,
 $N_H$ hungry foragers, and $N_R$ individual resources.  The total number of
 particles $N=N_F+N_H+N_R$.  There are six basic processes embodied by the
 rate equations \eqref{RE}:
 \begin{enumerate}
-\item Reproduction:  $F\to F+1$
+\item Reproduction:  $F\to 2F$
 \item Starvation:  $F\to H$
-\item Recruitment: $H\to F$
-\item Death: $H\to H-1$
-\item Resource growth: $R\to R+1$
-\item Resource consumption: $R\to R-1$
+\item Recruitment: $H\to F$ and $R\to 0$
+\item Death: $H\to 0$
+\item Growth: $R\to 2R$
+\item Consumption: $R\to 0$
 \end{enumerate}
+Note that recruitment also involves consumption of a resource, so we must be
+careful to not double count.  So I define ``Recruitment'' as the consumption
+of the resource by a hungry forager and ``Consumption'' as the consumption of
+the resource by a full forager.
 
 In an event-driven simulation, one of the above events is picked with the
 appropriate probability (to be defined below), the selected event is
@@ -90,38 +100,48 @@ R\big[\alpha(1-R)+(F+H)\big]\,.
 \end{equation}
 Here $F=N_F/V$, $H=N_H/V$, and $R=N_R/V$, where $N_i$ is the total number of
 particles of type $i$, and $V$ is the total number of lattice sites.  Thus $F$,
-$H$, and $R$ are the densities of each type of entity in the system.  The
+$H$, and $R$ are the densities of each type of entity.  The
 total rate is defined only up to an overall constant, but this constant is
 immaterial because the time step is also proportional to this same constant.
 
-Now we define the steps of an event-driven simulation.  
+At the simplest level one merely keeps three variables: $N_F$, $N_H$, and
+$N_R$ and updates these numbers according to the steps outlined below.
+However, we want a simulation that can be directly adapted to treat foragers
+that diffuse on a lattice.  Thus the algorithm outlined below is based on
+populating a lattice with the three types of entities and then updating the
+occupancy on the lattice sites according to the following event-driven
+simulation:
 \begin{enumerate}
-\item With probability $\lambda F/\mathcal{R}$ implement the reproduction step.
-  This step consists of picking one of the full foragers and allowing it to
-  reproduce.
-\item With probability $\sigma(1-R)F/\mathcal{R}$ implement the starvation
-  step; a full forager is picked and it changes to a hungry forager.
-\item With probaibility $\rho HR/\mathcal{R}$ implement the recruitment step;
-  a hungry forager is picked and becomes full.
-\item With probability $\mu H/\mathcal{R}$ implement the death step; a hungry
-  forager is picked and is removed. 
-\item With probability $\alpha R(1-R)/\mathcal{R}$ implement the growth step;
-  a unit of resource is created.
-\item With probability $(F+H)R/\mathcal{R}$ implement the consumption step; a
-  unit of resource is removed.
+\item Reproduction.  With probability $\lambda F/\mathcal{R}$, pick one of
+  the full foragers and allow it to reproduce.  The offspring should be
+  placed anywhere in the system; this is consistent with there being no
+  spatial structure.
+\item Starvation.  With probability $\sigma(1-R)F/\mathcal{R}$, pick a full
+  forager and change it to a hungry forager.  The factor $1-R$ is the
+  fraction of resource-free space.
+\item Recruitment.  With probability $\rho HR/\mathcal{R}$, pick a hungry
+  forager, turn it into a full forager, and remove the resource.
+\item Death.  With probability $\mu H/\mathcal{R}$, pick a hungry forager and
+  remove it.
+\item Growth.  With probability $\alpha R(1-R)/\mathcal{R}$, pick a resource
+  unit and create another unit of resource anywhere in the system.
+\item Consumption.  With probability $(F+H)R/\mathcal{R}$, pick a resource
+  unit and remove it.
 \end{enumerate}
 By explicit construction, the probabilities for the above events sum to 1.
+Note also that a good test of the correctness of the above lattice-based
+algorithm is to compare it with the three-variable update rule that is
+mentioned at the start of this paragraph.
 
 We now determine the change in the expected number of individuals of each
-type in a single event.  For
-full foragers, the change in its number $N_F$ is
+type in a single event.  For full foragers, the change in its number $N_F$ is
 \begin{subequations}
 \begin{equation}
   \Delta N_F =\left[F\big(\lambda-\sigma(1-R)\big)+\rho H
     R\right]/\mathcal{R}\,.
 \end{equation}
-The term proportional to $F$ comes from processes in which a full forager is
-picked, while the term proportional to $N_H$ comes from processes in which a
+The terms proportional to $F$ describes processes in which a full forager is
+picked, while the term proportional to $H$ describes processes in which a
 hungry forager is picked and converted to a full forager.  Thus the change in
 the density of full foragers is
 \begin{equation}
@@ -157,35 +177,36 @@ so that the change in the resource density is
   \Delta R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/V\mathcal{R}\,.
 \end{equation}
 \end{subequations}
-The equations for $\Delta F$, $\Delta H$, and $\Delta R$ would then reproduce
-the original rate equations \eqref{RE} when the time step for an elemental
-event is taken to be $\Delta t = (V\mathcal{R})^{-1}$.  To summarize, pick an
-event according to the probabilities enumerated above and update the
-densities according (3b), (4b), and (5b), and then increment the time by
-$(N\mathcal{R})^{-1}$ after each event.
+The expressions for $\Delta F/\Delta t$, $\Delta H/\Delta t$, and
+$\Delta R/\Delta t$ reproduce the original rate equations \eqref{RE} when the
+time step for an elemental event is $\Delta t = (V\mathcal{R})^{-1}$.  To
+summarize, pick an event according to the probabilities enumerated above and
+update the densities according (3b), (4b), and (5b), and then increment the
+time by $(V\mathcal{R})^{-1}$ after each event.  In the three-variable
+simulation, we keep only $N_F$, $N_H$, and $N_R$.  In an update, pick an
+event according to the above probabilities, update $N_F$, $N_H$, and $N_R$
+appropriately,and then increment the time.
 
-There are several details of the simulation that need to be specified.
-First, there is no constraint on the number of foragers on any site, but
-given that we are describing a harsh environment, the parameters should be
-chosen so that this number is not large.  The carrying capacity of the
-resource has been set to 1, so that the number of individual resources at any
-site should be either 0 or 1.  Finally, when a full forager reproduces, its
-offspring should be placed anywhere.  With these details, a simulation that
-is based on the above sprocedure should reproduce the predictions of the rate
-equations \eqref{RE}.
-
+There are several aspects of this algorithm that need to be specified for a
+lattice simulation.  First, there is no constraint on the number of foragers
+on any site, but given that we are describing a harsh environment, it seems
+that the parameters should be chosen so that this number is not large.  Since
+the carrying capacity of the resource has been set to 1, this means that
+$N_R$ cannot exceed $V$.  However, the number of resource units on any given
+site can exceed 1.  With these details, a simulation that is based on the
+above steps should reproduce the predictions of the rate equations
+\eqref{RE}.
 
 We now generalize the above approach to the situation where the foragers are
 diffusing on a lattice.  Suppose that the full and hungry foragers diffuse
 with respective diffusion coefficients $D_F$ and $D_H$.  In this case, the
-rate equations \eqref{RE} generalize to the set of partial differential
-equations
+rate equations \eqref{RE} generalize to the reaction-diffusion equations
 \begin{align}
   \label{pde}
 \begin{split}
 \frac{\partial F}{\partial t} &= \lambda F + \rho  RH - \sigma (1-R)F+D_F\nabla^2F\,,\\[0.125in]
 \frac{\partial H}{\partial t}  &= \sigma (1-R)F - \rho RH - \mu H+D_H\nabla^2H\,, \\[0.125in]
-\frac{\partial R}{\partial t}  &= \alpha R(1-R) -  R(F+H).\\
+\frac{\partial R}{\partial t}  &= \alpha R(1-R) -  R(F+H)\,.\\
 \end{split}
 \end{align}
 Here the densities $F,H,R$ are now functions of space and time,
@@ -194,104 +215,192 @@ $F=F(\mathbf{r},t)$ and similarly for $H$ and $R$.
 To construct an event-driven simulation that mimic these rate equations, we
 have to include two additional processes:
 \begin{enumerate}
-\item[vii] Full forager diffusion
-\item[viii] Hungry forager diffusion
+\item[(vii)] Diffusion of full foragers
+\item[(viii)] Diffusion of hungry foragers
 \end{enumerate}
 In an event-driven simulation, one of the eight possible events is picked
 with the appropriate probability (see below), the selected event is
 implemented, and the time is updated accordingly.
 
 The total rate for any event is
-\begin{equation}
-\mathcal{R}=F\big[\lambda +\sigma(1-R)+D_F\big]+ H\big[\rho R+\mu+D_H\big]+
-R\big[\alpha(1-R)+(F+H)\big]\,.
-\end{equation}
-Now we define the steps of an event-driven simulation.  
+\begin{align}
+\label{R}
+\mathcal{R}=&\frac{1}{V}\sum_{\mathbf{r}}\Big\{F(\mathbf{r})\big[\lambda
+  +\sigma(1-R(\mathbf{r}))+D_F\big]
++ H(\mathbf{r})\big[\rho R(\mathbf{r})+\mu+D_H\big]\Big.\nonumber \\[-0.05in]
+&\Big.\hskip 0.5in
+  +R(\mathbf{r})\big[\alpha(1-R(\mathbf{r'}))+(F(\mathbf{r})+H(\mathbf{r}))\big]\Big\}\,\nonumber
+  \\[0.1in]
+&=F\big[\lambda +\sigma(1-R)+D_F\big]
++ H\big[\rho R+\mu+D_H\big]+R\big[\alpha(1-R)+(F+H)\big]\,,
+\end{align}
+in which the role of diffusion is now included.  Notice also the presence of
+a two-particle correlation in the term $R(\mathbf{r})(1-R(\mathbf{r}'))$,
+where $\mathbf{r'}$ is a neighbor of $\mathbf{r}$.  Thus going to the second
+line of the above equation is not quite kosher, but below I give a
+prescription to deal with this issue in a way that avoids using a correlation
+function.
+
+The steps of an event-driven simulation are:
 \begin{enumerate}
-\item With probability $\lambda F/\mathcal{R}$ implement the reproduction step.
-  This step consists of picking one of the full foragers and allowing it to
-  reproduce.
-\item With probability $\sigma(1-R)F/\mathcal{R}$ implement the starvation
-  step; a full forager is picked and it changes to a hungry forager.
-\item With probaibility $\rho HR/\mathcal{R}$ implement the recruitment step;
-  a hungry forager is picked and becomes full.
-\item With probability $\mu H/\mathcal{R}$ implement the death step; a hungry
-  forager is picked and is removed. 
-\item With probability $\alpha R(1-R)/\mathcal{R}$ implement the growth step;
-  a unit of resource is created.
-\item With probability $(F+H)R/\mathcal{R}$ implement the consumption step; a
-  unit of resource is removed.
-\item With probability $D_F F/\mathcal{R}$, a full forager moves; pick one
-  such forager at random and move it.
-\item With probability $D_H H/\mathcal{R}$, a full forager moves; pick one
-  such forager at random and move it.
+\item Reproduction.  With probability $\lambda F/\mathcal{R}$, pick one of
+  the full foragers at random and let it reproduce.  Since the process occurs
+  on a finite-dimensional lattice, the offspring should be placed close to
+  the parent.  This could be either on the same site or a neighboring site.
+\item Starvation.  With probability $\sigma(1-R)F/\mathcal{R}$, pick a random
+  full forager that is on a resource-free site and change the forager from
+  full to hungry.  Note the two-particle nature of this rule: we need both
+  the forager type and the resource state on a given site.  There is a way to
+  get around tracking sites that are simultaneously resource free and
+  occupied by a full forager.  This leads to the alternative rule:
+\item[(ii')] Starvation'.  With probability $\sigma F/\mathcal{R}$, pick a
+  random full forager.  If the site is resource free, change the forager from
+  full to hungry.  If not, nothing happens.
+\item Recruitment.  With probability $\rho HR/\mathcal{R}$, pick a random
+  hungry forager on a site that contains a resource unit and change the
+  forager from hungry to full and remove the resource.  This process also
+  involves a two-body reaction and perhaps a simpler way to implement this
+  two-body feature is the following:
+\item[(iii')] Recruitment'.  With probability $\rho H/\mathcal{R}$, pick a
+  random hungry forager.  If the site contains a resource unit, change the
+  forager from hungry to full and remove the resource.
+\item Death.  With probability $\mu H/\mathcal{R}$, pick and remove a random
+  hungry forager.
+\item Growth.  With probability $\alpha R(1-R)/\mathcal{R}$, pick a random
+  neighboring pair of sites in which one contains a resource unit and the
+  neighbor does not.  Create a resource on the site without a resource.  A
+  computationally simpler alternative is the following:
+\item[(v)'] Growth.  With probability $\alpha R/\mathcal{R}$, pick a random
+  resource unit.  A new resource unit is created on one of the neighboring
+  sites with probability $1-m/z$, where $z$ is the number of
+  nearest-neighbors and $m$ is the number of these neighbors that are
+  occupied by resource.  Thus if the local neighborhood is devoid of
+  resources, growth necessarily occurs at one of these neighbors, while if
+  the local neighborhood is full of resources, there is no growth.  This rule
+  ensures that the growth rate is proportional to $(1-R)_{\rm local}$.
+\item Consumption.  With probability $(F+H)\,R/\mathcal{R}$, pick a random
+  resource unit on a site that is also occupied by a forager of either type
+  and remove the resource  Alternatively:
+\item[(vi')] With probability $R/\mathcal{R}$, pick a random resource unit.
+  If the site also contains a forager, remove the resource.  Note the
+  implicit assumption that the density of foragers is not large because the
+  rate of resource removal does not increase if there are multiple foragers
+  on the site.  If this forager density is large then the following will
+  work:
+\item[(vi'')] With probability $(F+H)/\mathcal{R}$, pick a random forager
+  (either full or hungry).  If the site also contains a resource, remove the
+  resource.  This prescription works if the forager density is small or large
+  (as long as the resource density is less than 1) so perhaps it's best to
+  use this last alternative.
+\item Diffusion.  With probability $D_F\, F/\mathcal{R}$, pick a random full
+  forager and move it to a neighboring site.
+\item Diffusion.  With probability $D_H\, H/\mathcal{R}$, pick a random
+  hungry forager and move it to a neighboring site.
 \end{enumerate}
 By explicit construction, the probabilities for the above events sum to 1.
-
+Note also that the steps (ii'), (iii'), (v'), and (vi'') are computationally
+simpler than the unprimed steps, but allow for the possibility of a null
+step.  A true event-driven simulation avoids all null steps, but perhaps the
+computational tradeoff in bookkeeping simplicity is worth the loss of
+efficiency in allowing for null steps.  This is somewhat a matter of user
+taste.
 
 We now determine the change in the expected number of individuals of each
-type at a given site $\mathbf{R}$ in a single event.  For full foragers, the
-change in its number $N_F(\mathbf{R})$ at site $\mathbf{R}$ is
+type at a given site $\mathbf{r}$ in a single event.  For full foragers, the
+change in its number $N_F(\mathbf{r})$ at site $\mathbf{r}$ is
 \begin{subequations}
 \begin{equation}
-  \Delta N_F(\mathbf{R}) =\left[F(\mathbf{R})\big(\lambda-\sigma(1-R(\mathbf{R}))\big)+\rho H
-    R\right]/\mathcal{R}\,.
+  \Delta N_F(\mathbf{r})  =\Big\{F(\mathbf{r})\big(\lambda-\sigma(1-R(\mathbf{r}))\big)+
+\rho H(\mathbf{r})  R(\mathbf{r})
++D_F\big[\sum_{\mathbf{r}'}F(\mathbf{r}')-zF(\mathbf{r})\big]\Big\}/\mathcal{R}\,.
 \end{equation}
-The term proportional to $F$ comes from processes in which a full forager is
-picked, while the term proportional to $N_H$ comes from processes in which a
-hungry forager is picked and converted to a full forager.  Thus the change in
-the density of full foragers is
+The terms proportional to $F$ accounts for processes in which a full forager
+is picked, while the term proportional to $H$ accounts for processes in which
+a hungry forager is picked and converts to a full forager.  The terms
+proportional to $D_F$ account for nearest-neighbor hopping: $F(\mathbf{r})$
+increases because full foragers at neighboring sites $\mathbf{r}'$ hop to
+$\mathbf{r}$, while $F(\mathbf{r})$ decreases because full foragers at
+$\mathbf{r}$ hop to one of the $z$ neighboring sites.  Thus the change in the
+density of full foragers at site $\mathbf{r}$ is (after taking the continuum
+limit for the nearest-neighbor hopping)
 \begin{equation}
-  \Delta F =\frac{\Delta N_F}{V} =\left[F\big(\lambda-\sigma(1-R)\big)+H\rho
-    R\right]/V\mathcal{R}\,.
+  \Delta F(\mathbf{r}) =\frac{\Delta N_F(\mathbf{r})}{V} 
+  =\left[F(\mathbf{r})\big(\lambda-\sigma(1-R(\mathbf{r}))\big)+\rho H(\mathbf{r})
+    R(\mathbf{r})+\nabla^2F(\mathbf{r})\right]/V\mathcal{R}\,.
 \end{equation}
 \end{subequations}
 Thus if we take the time step for each event to be
-$\Delta t = (V\mathcal{R})^{-1}$, the above reduces to the rate equation
-\eqref{RE} for $F$.  Thus in each microscopic event of the model, the time
-should be advanced by $\Delta t = (V\mathcal{R})^{-1}$.
+$\Delta t = (V\mathcal{R})^{-1}$, the above reduces to the partial
+differential evolution equation \eqref{pde} for $F(\mathbf{r})$.  Thus in
+each microscopic event of the model, the time should be advanced by
+$\Delta t = (V\mathcal{R})^{-1}$.
 
-In a similar fashion, the change in the expected number of hungry foragers in
-a single event is given by
-\begin{subequations}
+In a similar fashion, the change in the density of hungry foragers is
 \begin{equation}
-  \Delta N_H =\left[-H(\rho R+\mu)+F\sigma
-    (1-R)\right]/\mathcal{R}\,,
+  \Delta H(\mathbf{r}) =\left[-H(\mathbf{r})(\rho R(\mathbf{r})+\mu)+F(\mathbf{r})\sigma (1-R(\mathbf{r}))+\nabla^2H(\mathbf{r})\right]/V\mathcal{R}\,.
 \end{equation}
-so that the change in the density of hungry foragers simply is
+Finally, the change in the resource density is
 \begin{equation}
-  \Delta H =\left[-H(\rho R+\mu)+F\sigma (1-R)\right]/V\mathcal{R}\,.
+  \Delta R(\mathbf{r}) =\left[R(\mathbf{r})\big(\alpha(1-R(\mathbf{r}))\big)-(F(\mathbf{r})+H(\mathbf{r}))\right]/V\mathcal{R}\,.
 \end{equation}
-\end{subequations}
-Finally, the change in the expected number of individual resources in a
-single event is given by
-\begin{subequations}
-\begin{equation}
-  \Delta N_R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/\mathcal{R}\,,
-\end{equation}
-so that the change in the resource density is
-\begin{equation}
-  \Delta R =\left[R\big(\alpha(1-R)\big)-(F+H)\right]/V\mathcal{R}\,.
-\end{equation}
-\end{subequations}
 The equations for $\Delta F$, $\Delta H$, and $\Delta R$ would then reproduce
-the original rate equations \eqref{RE} when the time step for an elemental
-event is taken to be $\Delta t = (V\mathcal{R})^{-1}$.  To summarize, pick an
-event according to the probabilities enumerated above and update the
-densities according (3b), (4b), and (5b), and then increment the time by
-$(N\mathcal{R})^{-1}$ after each event.
+the partial differential equations \eqref{pde} when the time step for an
+elemental event is taken to be $\Delta t = (V\mathcal{R})^{-1}$.
 
-There are several details of the simulation that need to be specified.
-First, there is no constraint on the number of foragers on any site, but
-given that we are describing a harsh environment, the parameters should be
-chosen so that this number is not large.  The carrying capacity of the
+
+There are various aspects of the simulation that require discussion.  First,
+single-particle and two-particle reactions must be treated differently.  In
+the former case, a particle of the right type is picked at random.  In the
+latter case, a random \emph{pair} of particles of the appropriate types is
+picked.  Again, there is no constraint on the number of foragers on any site,
+but given that we are describing a harsh environment, the parameters should
+be chosen so that this number is not large.  The carrying capacity of the
 resource has been set to 1, so that the number of individual resources at any
-site should be either 0 or 1.  Finally, when a full forager reproduces, its
-offspring should be placed anywhere.  With these details, a simulation that
-is based on the above sprocedure should reproduce the predictions of the rate
-equations \eqref{RE}.
+site must be either 0 or 1.
 
+It would be nice if there was a simple way to adjust parameters in the
+lattice simulation so as to recover the mean-field limit.  I describe a
+simple modification of the steps in the event-driven lattice simulation that
+I think should recover the mean-field limit.  We use the same rate as in
+Eq.~\eqref{R}, but the actual update steps are slightly modified compared to
+the rules of the lattice simulation above.  The differences are highlighted in
+italics.  I'm also assuming that the simulation with steps (ii'), (iii'),
+(v'), and (vi'') are being used.
+\begin{enumerate}
+\item Reproduction.  With probability $\lambda F/\mathcal{R}$, pick one of
+  the full foragers at random and let it reproduce.  \emph{Place the
+    offspring anywhere.}
+\item Starvation.  With probability $\sigma F/\mathcal{R}$, \emph{change a
+    random full forager to hungry with probability $(1-R)$.}
+\item Recruitment.  With probability $\rho H/\mathcal{R}$, pick a random
+  hungry forager and \emph{change it to full with probability $R$.}
+\item Death.  With probability $\mu H/\mathcal{R}$, pick and remove a random
+  hungry forager.
+\item Growth.  With probability $\alpha R(1-R)/\mathcal{R}$, pick a random
+  neighboring pair of sites in which one contains a resource unit and the
+  neighbor does not contain a resource unit.  Create a resource on the site
+  without a resource (see below for a simpler alternative).
+\item With probability $(F+H)/\mathcal{R}$, pick a random forager
+  (either full or hungry).  \emph{With probability $R$ remove a randomly
+    chosen resource unity.}
+\item Consumption.  With probability $(F+H)\,R/\mathcal{R}$, pick a random
+  resource unit on a site that is also occupied by a forager of either type
+  and remove the resource.
+\item Diffusion.  With probability $D_F\, F/\mathcal{R}$, pick a random full
+  forager and move it to a neighboring site.
+\item Diffusion.  With probability $D_H\, H/\mathcal{R}$, pick a random
+  hungry forager and move it to a neighboring site.
+\end{enumerate}
+By explicit construction, the probabilities for the above events sum to 1.
+
+It is important to appreciate that there are multiple ways to simulate the
+elemental reaction steps that involve a tradeoff between bookkeeping
+complexity and computational efficiency and still reproduce the same behavior
+as in the rate equations \eqref{RE} or the reaction-diffusion equations
+\eqref{pde} in the limit of a large system.
 
 
 \end{document}
+
+
 
