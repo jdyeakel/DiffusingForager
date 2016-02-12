@@ -1,4 +1,4 @@
-function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
+function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -91,7 +91,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,m,
     # end
 
     #Calculate Rate
-    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (rho*H + m*F)); # (1 - (N/S)) +
+    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (rho*H + B*F)); # (1 - (N/S)) +
 
     # TESTING
     # Rate = (NF/N)*(lambda + sigma*(K-R)) + (NH/N)*(rho*R + mu) + (NR/N)*(alpha*(K-R) + (F+H));
@@ -121,7 +121,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,m,
     #5  Resource Growth
     pr_line[5] = pr_line[4] + (alpha*R*(K-R))/Rate;
     #6  Resource consumption
-    pr_line[6] = pr_line[5] + ((rho*H + m*F)*R)/Rate;
+    pr_line[6] = pr_line[5] + ((rho*H + B*F)*R)/Rate;
 
     draw_event = rand();
 
