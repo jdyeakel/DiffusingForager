@@ -1,4 +1,4 @@
-function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,lambda,mu)
+function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -9,13 +9,16 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
 
   S = (L-2)^dim;
 
+  #intisize after rounding
+  r_initsize = Int(round(initsize/3));
 
   #Initial state values
-  Find_vec = zeros(Int64,Int(round(initsize/3))) + 2;
-  Hind_vec = zeros(Int64,Int(round(initsize/3))) + 1;
-  Rind_vec = zeros(Int64,Int(round(initsize/3)));
+  Find_vec = zeros(Int64,r_initsize) + 2;
+  Hind_vec = zeros(Int64,r_initsize) + 1;
+  Rind_vec = zeros(Int64,r_initsize);
 
-  ind_vec = [Find_vec;Hind_vec;Rind_vec];
+  #Join the three types... not sure if I will need to use this?
+  #ind_vec = [Find_vec;Hind_vec;Rind_vec];
   #OR Pure Resource Start (for testing)
   #ind_vec = zeros(Int64,initsize);
 
@@ -24,14 +27,12 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
   #2/3 of initsize will be foragers; 1/3 will be resources
   #replace = false because want only one resource per site
 
-  Floc_vec = sample(collect(1:S),Int(round(initsize/3)));
-  Hloc_vec = sample(collect(1:S),Int(round(initsize/3)));
-  Rloc_vec = sample(collect(1:S),Int(round(initsize/3)),replace=false);
+  Floc_vec = sample(collect(1:S),r_initsize);
+  Hloc_vec = sample(collect(1:S),r_initsize);
+  #Use replace=false to ensure that no location is chosen twice for resources only
+  Rloc_vec = sample(collect(1:S),r_initsize,replace=false);
 
-  loc_vec = [Floc_vec;Hloc_vec;Rloc_vec];
-
-  #Re-establish initsize to account for rounding errors
-  initsize = length(ind_vec);
+  #loc_vec = [Floc_vec;Hloc_vec;Rloc_vec];
 
   #Arrays for output (start out empty)
   # ind_out = (Array{Int64,1})[];
@@ -77,7 +78,6 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
   # F_pr_line = 0.0;
   # H_pr_line = 0.0;
   # R_pr_line = 0.0;
-  pr_line = zeros(6);
   # id = Array(Float64,1);
 
   while t < (t_term-1)
@@ -91,7 +91,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
     # end
 
     #Calculate Rate
-    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (rho*H + B*F)); # (1 - (N/S)) +
+    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (rho*H + m*F)); # (1 - (N/S)) +
 
     # TESTING
     # Rate = (NF/N)*(lambda + sigma*(K-R)) + (NH/N)*(rho*R + mu) + (NR/N)*(alpha*(K-R) + (F+H));
@@ -107,13 +107,12 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
     #Randomly select an individual (R,S,F) with probability 1/N
     #ind thus represents the POSITION of the individual
     #Update total number of individuals
-
+    pr_line = zeros(6);
     #Update the total
-
     #Events
     pr_line[1] = (lambda*F)/Rate;
     #2  Starvation
-    pr_line[2] = pr_line[1] + (sigma*(1-R)*F)/Rate;
+    pr_line[2] = pr_line[1] + (sigma*(K-R)*F)/Rate;
     #3  Recruitment
     pr_line[3] = pr_line[2] + (rho*H*R)/Rate;
     #4  Death
@@ -121,154 +120,101 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
     #5  Resource Growth
     pr_line[5] = pr_line[4] + (alpha*R*(K-R))/Rate;
     #6  Resource consumption
-    pr_line[6] = pr_line[5] + ((rho*H + B*F)*R)/Rate;
+    pr_line[6] = pr_line[5] + ((rho*H + m*F)*R)/Rate;
 
     draw_event = rand();
 
-    #1  Reproduction (F)
+    #1  Consumer Reproduction (F)
     if draw_event < pr_line[1]
+      #Add individual to end of Find_vec
+      push!(Find_vec,2);
+      #Add random location to Floc_vec
+      location = rand(collect(1:S));
+      push!(Floc_vec,location);
+
+      #Update
+      NF = NF + 1;
     end
 
     #2  Starvation (F)
     if draw_event >= pr_line[1] && draw_event < pr_line[2]
+      #Randomly draw F position from Find_vec
+      id = rand(collect(1:NF));
+      location = Floc_vec[id];
+      #Delete that individual from Find_vec/Floc_vec; add to Hind_vec/Hloc_vec
+      deleteat!(Find_vec,id);
+      deleteat!(Floc_vec,id);
+      push!(Hind_vec,1);
+      push!(Hloc_vec,location);
+
+      #Update
+      NF = NF - 1;
+      NH = NH + 1;
     end
 
-    #3  Recruitment (H)
+    #3  Recruitment/Recover (H)
     if draw_event >= pr_line[2] && draw_event < pr_line[3]
+      #Randomly draw H position from Hind_vec
+      id = rand(collect(1:NH));
+      location = Hloc_vec[id];
+      #Delete that individual from Hind_vec/Hloc_vec; add to Find_vec/Floc_vec
+      deleteat!(Hind_vec,id);
+      deleteat!(Hloc_vec,id);
+      push!(Find_vec,2);
+      push!(Floc_vec,location);
+
+      #Update
+      NH = NH - 1;
+      NF = NF + 1;
     end
 
     #4  Death (H)
     if draw_event >= pr_line[3] && draw_event < pr_line[4]
+      #Randomly draw H position
+      id = rand(collect(1:NH));
+      #Delete from vector
+      deleteat!(Hind_vec,id);
+      deleteat!(Hloc_vec,id);
+
+      #Update
+      NH = NH - 1;
     end
 
     #5  Resource Growth (R)
     if draw_event >= pr_line[4] && draw_event < pr_line[5]
+      #Draw a random location WITHOUT A RESOURCE
+      newresourcepos = rand(collect(1:length(noresourcesites)));
+      location = noresourcesites[newresourcepos];
+
+      push!(Rind_vec,0);
+      push!(Rloc_vec,location);
+
+      #Update
+      NR = NR + 1;
+      #Delete the filled resource postion from list of noresourcesites
+      deleteat!(noresourcesites,newresourcepos);
     end
 
     #6  Resource consumption (R)
     if draw_event >= pr_line[5] && draw_event < pr_line[6]
-    end
+      #Draw a random R postion
+      id = rand(collect(1:NR));
+      location = Rloc_vec[id];
+      #Delete from vector
+      deleteat!(Rind_vec,id);
+      deleteat!(Rloc_vec,id);
 
-
-
-    id = rand(collect(1:N));
-
-    #Also, we need to make an ind_vec_old that is NOT updated for the following sequence of IF statements
-    ind_vec_old = copy(ind_vec);
-
-    #If randomly selected individual is Full
-    if ind_vec_old[id] == 2
-      state = 2;
-
-      draw_event = rand();
-
-      #GROW
-      if draw_event < F_pr_line
-        push!(ind_vec,2); #ensure the new individual is in the full state
-        #Offspring appears at a random location
-        location = rand(collect(1:S));
-        push!(loc_vec,location);
-        NF = NF+1;
-      end
-
-      #STARVE
-      if draw_event >= F_pr_line #&& draw_event < F_pr_line[2]
-        ind_vec[id] = 1;
-
-        NH = NH+1;
-        NF = NF-1;
-      end
-
-      # #MOVE
-      # if draw_event >= F_pr_line[2]
-      #   #Move to a random location
-      #   loc_vec[id] = rand(collect(1:S));
-      # end
-
+      #Update
+      NR = NR - 1;
+      #Update noresourcesites (add site that resource was eliminated from)
+      push!(noresourcesites,location);
 
     end
 
-
-
-    #If randomly selected individual is Hungry
-    if ind_vec_old[id] == 1
-      state = 1;
-
-      #Draw a random event
-      #Recover, die, or move??
-      draw_event = rand();
-
-      #Recover (become full)
-      if draw_event < H_pr_line
-        ind_vec[id] = 2;
-        NH = NH-1;
-        NF = NF+1;
-      end
-
-      #Die
-      if draw_event >= H_pr_line #&& draw_event < H_pr_line[2]
-        deleteat!(ind_vec,id);
-        deleteat!(loc_vec,id);
-        NH = NH - 1;
-      end
-
-      # #MOVE
-      # if draw_event >= H_pr_line[2]
-      #   #Move to a random location
-      #   loc_vec[id] = rand(collect(1:S));
-      # end
-
-    end
-
-
-    #If randomly selected individual is a resource
-    if ind_vec_old[id] == 0
-      state = 0;
-
-      #Draw a random event
-      #Grow, become consumed or move?
-      draw_event = rand();
-
-      #GROW
-      if draw_event < R_pr_line
-
-        #Append a new resource to the END of the vector
-        push!(ind_vec,state);
-
-        #Choose random position on the noresourcesite list
-        newresourcepos = rand(collect(1:length(noresourcesites)));
-        #Define the new position as the empty site for resource growth
-        location = noresourcesites[newresourcepos];
-
-        #Append the resource's location to the END of the vector
-        push!(loc_vec,location);
-        #Update Tally
-        NR = NR + 1;
-
-        #Update the no resource site by deleting the position that has been filled
-        deleteat!(noresourcesites,newresourcepos);
-
-      end
-
-      #BECOME CONSUMED!
-      if draw_event >= R_pr_line
-
-        #Update the no resource site by adding the position that is now empty
-        #Needs to be done BEFORE the ind/loc information is deleted.
-        push!(noresourcesites,copy(loc_vec[id]));
-
-        #Delete individual from the list
-        deleteat!(ind_vec,id);
-        #Delete individual location from the list
-        deleteat!(loc_vec,id);
-        NR = NR - 1;
-
-      end
-
-    end
 
     #Recalculate the total # of the foragers and resources
     N = NF + NH + NR;
+
     #Recalculate the densities of each
     F = NF/S;
     H = NH/S;
@@ -288,8 +234,8 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
     end
 
     #Make sure only values are pushed to the output
-    ind_vec_new = copy(ind_vec);
-    loc_vec_new = copy(loc_vec);
+    # ind_vec_new = copy(ind_vec);
+    # loc_vec_new = copy(loc_vec);
 
     #Update output
     # push!(ind_out,ind_vec_new);
@@ -299,7 +245,7 @@ function starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,
 
     #ERRORS
     #Break loop if extinction occurs
-    if length(ind_vec_new) < 1
+    if N < 1
       println("Extinction has occured at t=",round(t,2)," and loop ",tic)
       break
     end

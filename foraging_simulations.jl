@@ -5,7 +5,7 @@ using Cairo
 
 
 #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
-include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_nodiff.jl")
+include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_rate.jl")
 # include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_spatial.jl")
 
 
@@ -24,12 +24,12 @@ for i = 1:length(sigmavec)
   dim = 2;
   prop_fill = 0.5
   initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
-  t_term = 500;
+  t_term = 80;
   alpha = 0.5;
   K = 1;
   sigma = sigmavec[i];
   rho = 0.2;
-  B = 0.2;
+  m = 0.2;
   lambda = 0.2;
   mu = 0.2;
 
@@ -40,7 +40,7 @@ for i = 1:length(sigmavec)
   Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho + mu*sigma);
 
   #The simulation
-  time_out, prop_out, N_out = starvingforager_event_nodiff(L,dim,initsize,t_term,alpha,K,sigma,rho,B,lambda,mu);
+  time_out, prop_out, N_out = starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu);
   F = prop_out[1,:];
   H = prop_out[2,:];
   R = prop_out[3,:];
