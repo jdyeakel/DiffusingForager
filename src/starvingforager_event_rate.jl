@@ -1,4 +1,4 @@
-function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
+function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -13,14 +13,27 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
   r_initsize = Int(round(initsize/3));
 
   #Initial state values
-  Find_vec = zeros(Int64,r_initsize) + 2;
-  Hind_vec = zeros(Int64,r_initsize) + 1;
-  Rind_vec = zeros(Int64,r_initsize);
+  # Find_vec = zeros(Int64,r_initsize) + 2;
+  # Hind_vec = zeros(Int64,r_initsize) + 1;
+  # Rind_vec = zeros(Int64,r_initsize);
 
-  #Join the three types... not sure if I will need to use this?
-  #ind_vec = [Find_vec;Hind_vec;Rind_vec];
-  #OR Pure Resource Start (for testing)
-  #ind_vec = zeros(Int64,initsize);
+  time_out = Array(Float64,0);
+  N_out = Array(Int64,0);
+
+  NF = r_initsize;
+  NH = r_initsize;
+  NR = r_initsize;
+
+  N = NF + NH + NR;
+
+  #Initial densities
+  F = NF/S;
+  H = NH/S;
+  R = NR/S;
+  prop_out = Array{Float64}(3,1);
+  prop_out[:,1] = [F,H,R];
+  push!(N_out,N);
+
 
 
   #Initial location values
@@ -32,18 +45,7 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
   #Use replace=false to ensure that no location is chosen twice for resources only
   Rloc_vec = sample(collect(1:S),r_initsize,replace=false);
 
-  #loc_vec = [Floc_vec;Hloc_vec;Rloc_vec];
 
-  #Arrays for output (start out empty)
-  # ind_out = (Array{Int64,1})[];
-  # loc_out = (Array{Int64,1})[];
-  time_out = Array(Float64,0);
-  N_out = Array(Int64,0);
-  #prop_out = (Array{Float64,1})[];
-
-  #Copy so that ind_vec is independent of ind_out
-  # push!(ind_out, copy(ind_vec));
-  # push!(loc_out, copy(loc_vec));
   push!(time_out, 0);
 
   #NEED TO ENSURE THAT RESOURCES ARE PLACED 1 PER SITE
@@ -56,21 +58,7 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
   t = 0;
   next_time_int = t + 1;
 
-  #Initial count of how many resouces, starvers, and full in this timestep??
-  #Count the number of individual R + S + F
-  #tot = length(ind_vec);
-  NF = length(Floc_vec);
-  NH = length(Hloc_vec);
-  NR = length(Rloc_vec);
-  N = NF + NH + NR;
 
-  #Initial densities
-  F = NF/S;
-  H = NH/S;
-  R = NR/S;
-  prop_out = Array{Float64}(3,1);
-  prop_out[:,1] = [F,H,R];
-  push!(N_out,N);
   #push!(prop_out,copy(prop));
 
   tic = 0;
@@ -127,7 +115,7 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
     #1  Consumer Reproduction (F)
     if draw_event < pr_line[1]
       #Add individual to end of Find_vec
-      push!(Find_vec,2);
+      # push!(Find_vec,2);
       #Add random location to Floc_vec
       location = rand(collect(1:S));
       push!(Floc_vec,location);
@@ -142,9 +130,9 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       id = rand(collect(1:NF));
       location = Floc_vec[id];
       #Delete that individual from Find_vec/Floc_vec; add to Hind_vec/Hloc_vec
-      deleteat!(Find_vec,id);
+      # deleteat!(Find_vec,id);
       deleteat!(Floc_vec,id);
-      push!(Hind_vec,1);
+      # push!(Hind_vec,1);
       push!(Hloc_vec,location);
 
       #Update
@@ -158,9 +146,9 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       id = rand(collect(1:NH));
       location = Hloc_vec[id];
       #Delete that individual from Hind_vec/Hloc_vec; add to Find_vec/Floc_vec
-      deleteat!(Hind_vec,id);
+      # deleteat!(Hind_vec,id);
       deleteat!(Hloc_vec,id);
-      push!(Find_vec,2);
+      # push!(Find_vec,2);
       push!(Floc_vec,location);
 
       #Update
@@ -173,7 +161,7 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       #Randomly draw H position
       id = rand(collect(1:NH));
       #Delete from vector
-      deleteat!(Hind_vec,id);
+      # deleteat!(Hind_vec,id);
       deleteat!(Hloc_vec,id);
 
       #Update
@@ -186,7 +174,7 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       newresourcepos = rand(collect(1:length(noresourcesites)));
       location = noresourcesites[newresourcepos];
 
-      push!(Rind_vec,0);
+      # push!(Rind_vec,0);
       push!(Rloc_vec,location);
 
       #Update
@@ -201,7 +189,7 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       id = rand(collect(1:NR));
       location = Rloc_vec[id];
       #Delete from vector
-      deleteat!(Rind_vec,id);
+      # deleteat!(Rind_vec,id);
       deleteat!(Rloc_vec,id);
 
       #Update

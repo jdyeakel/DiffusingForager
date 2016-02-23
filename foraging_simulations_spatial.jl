@@ -29,9 +29,9 @@ for i = 1:length(sigmavec)
   K = 1;
   sigma = sigmavec[i];
   rho = 0.2;
-  m = 0.2;
+  m = 0.8;
   lambda = 0.2;
-  mu = 0.2;
+  mu = 0.1;
 
 
   eta = copy(sigma);
