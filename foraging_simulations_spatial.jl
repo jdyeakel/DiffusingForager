@@ -32,6 +32,8 @@ for i = 1:length(sigmavec)
   m = 0.8;
   lambda = 0.2;
   mu = 0.1;
+  Df = 0.2;
+  Dh = 0.2;
 
 
   eta = copy(sigma);
@@ -40,7 +42,7 @@ for i = 1:length(sigmavec)
   Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho + mu*sigma);
 
   #The simulation
-  time_out, prop_out, N_out = starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu);
+  time_out, prop_out, N_out = starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh);
   F = prop_out[1,:];
   H = prop_out[2,:];
   R = prop_out[3,:];

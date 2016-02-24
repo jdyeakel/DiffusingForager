@@ -1,4 +1,4 @@
-function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
+function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -79,7 +79,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     # end
 
     #Calculate Rate
-    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (rho*H + m*F)); # (1 - (N/S)) +
+    Rate = F*(lambda + sigma*(K-R) + Df) + H*(rho*R + mu + Dh) + R*(alpha*(K-R) + (rho*H + m*F)); # (1 - (N/S)) +
 
     # TESTING
     # Rate = (NF/N)*(lambda + sigma*(K-R)) + (NH/N)*(rho*R + mu) + (NR/N)*(alpha*(K-R) + (F+H));
@@ -98,17 +98,22 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     pr_line = zeros(6);
     #Update the total
     #Events
+    #1 F growth
     pr_line[1] = (lambda*F)/Rate;
     #2  Starvation
     pr_line[2] = pr_line[1] + (sigma*(K-R)*F)/Rate;
+    #3  F Movement
+    pr_line[3] = pr_line[2] + (Df*F)/Rate;
     #3  Recruitment
-    pr_line[3] = pr_line[2] + (rho*H*R)/Rate;
+    pr_line[4] = pr_line[3] + (rho*H*R)/Rate;
     #4  Death
-    pr_line[4] = pr_line[3] + (mu*H)/Rate;
+    pr_line[5] = pr_line[4] + (mu*H)/Rate;
+    #5  H Movement
+    pr_line[6] = pr_line[5] + (Dh*H)/Rate;
     #5  Resource Growth
-    pr_line[5] = pr_line[4] + (alpha*R*(K-R))/Rate;
+    pr_line[7] = pr_line[6] + (alpha*R*(K-R))/Rate;
     #6  Resource consumption
-    pr_line[6] = pr_line[5] + ((rho*H + m*F)*R)/Rate;
+    pr_line[8] = pr_line[7] + ((rho*H + m*F)*R)/Rate;
 
     draw_event = rand();
 
