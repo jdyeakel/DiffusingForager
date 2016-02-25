@@ -1,4 +1,4 @@
-function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh)
+function starvingforager_event_rateV(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -45,8 +45,8 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
   #Use replace=false to ensure that no location is chosen twice for resources only
   Rloc_vec = sample(collect(1:S),r_initsize,replace=false);
 
-  #Record the location of F/H/R in this vector, where each element is a site.
-  #F and H can have more than one element in a site; R can only have 1.
+
+  #Record the location of resources in this vector, where each element is a site.
   Fsite_vec = zeros(S);
   Hsite_vec = zeros(S);
   for i=1:r_initsize
@@ -58,6 +58,13 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
   Rsite_vec[Rloc_vec] = 1;
 
   push!(time_out, 0);
+
+  #NEED TO ENSURE THAT RESOURCES ARE PLACED 1 PER SITE
+  #HAVE A noresourcesites vector that accounts for sites WITHOUT resources
+  #Updated each timestep
+  noresourcesites = collect(1:S);
+  #Deletes locations of sites with resources from the list of open sites (noresourcesites)
+  deleteat!(noresourcesites,sort(Rloc_vec));
 
   t = 0;
   next_time_int = t + 1;
@@ -83,7 +90,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     # end
 
     #Calculate Rate
-    Rate = F*(lambda + sigma*(K-R) + Df) + H*(rho*R + mu + Dh) + R*(alpha*(K-R) + (rho*H + m*F)); # (1 - (N/S)) +
+    Rate = F*(lambda + sigma*(K-R)) + H*(rho*R + mu) + R*(alpha*(K-R) + (rho*H + m*F)); # (1 - (N/S)) +
 
     # TESTING
     # Rate = (NF/N)*(lambda + sigma*(K-R)) + (NH/N)*(rho*R + mu) + (NR/N)*(alpha*(K-R) + (F+H));
@@ -102,22 +109,17 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     pr_line = zeros(6);
     #Update the total
     #Events
-    #1 F growth
     pr_line[1] = (lambda*F)/Rate;
     #2  Starvation
     pr_line[2] = pr_line[1] + (sigma*(K-R)*F)/Rate;
-    #3  F Movement
-    pr_line[3] = pr_line[2] + (Df*F)/Rate;
     #3  Recruitment
-    pr_line[4] = pr_line[3] + (rho*H*R)/Rate;
+    pr_line[3] = pr_line[2] + (rho*H*R)/Rate;
     #4  Death
-    pr_line[5] = pr_line[4] + (mu*H)/Rate;
-    #5  H Movement
-    pr_line[6] = pr_line[5] + (Dh*H)/Rate;
+    pr_line[4] = pr_line[3] + (mu*H)/Rate;
     #5  Resource Growth
-    pr_line[7] = pr_line[6] + (alpha*R*(K-R))/Rate;
+    pr_line[5] = pr_line[4] + (alpha*R*(K-R))/Rate;
     #6  Resource consumption
-    pr_line[8] = pr_line[7] + ((rho*H + m*F)*R)/Rate;
+    pr_line[6] = pr_line[5] + ((rho*H + m*F)*R)/Rate;
 
     draw_event = rand();
 
@@ -129,7 +131,6 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       location = rand(collect(1:S));
       push!(Floc_vec,location);
 
-      #update site vectors
       Fsite_vec[location] += 1;
 
       #Update
@@ -147,32 +148,16 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       # push!(Hind_vec,1);
       push!(Hloc_vec,location);
 
-      #update site vectors
       Fsite_vec[location] -= 1;
-      Hsite_vec[locaiton] += 1;
+      Hsite_vec[location] += 1;
 
       #Update
       NF = NF - 1;
       NH = NH + 1;
     end
 
-    #3 F Movement
+    #3  Recruitment/Recover (H)
     if draw_event >= pr_line[2] && draw_event < pr_line[3]
-      #Randomly draw F position
-      id = rand(collect(1:NF));
-      location = Floc_vec[id];
-
-      nn = ipbc(location,(L-2));
-      new_location = rand(nn);
-      Floc_vec[id] = new_location;
-
-      #update site vectors
-      Fsite_vec[location] -= 1;
-      Fsite_vec[new_locaiton] += 1;
-    end
-
-    #4  Recruitment/Recover (H)
-    if draw_event >= pr_line[3] && draw_event < pr_line[4]
       #Randomly draw H position from Hind_vec
       id = rand(collect(1:NH));
       location = Hloc_vec[id];
@@ -186,12 +171,12 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       Hsite_vec[location] -= 1;
 
       #Update
-      NH = NH - 1;
       NF = NF + 1;
+      NH = NH - 1;
     end
 
-    #5  Death (H)
-    if draw_event >= pr_line[4] && draw_event < pr_line[5]
+    #4  Death (H)
+    if draw_event >= pr_line[3] && draw_event < pr_line[4]
       #Randomly draw H position
       id = rand(collect(1:NH));
       location = Hloc_vec[id];
@@ -199,78 +184,44 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       # deleteat!(Hind_vec,id);
       deleteat!(Hloc_vec,id);
 
-      #update site vectors
       Hsite_vec[location] -= 1;
 
       #Update
       NH = NH - 1;
     end
 
-    #6  H Movement
+    #5  Resource Growth (R)
+    if draw_event >= pr_line[4] && draw_event < pr_line[5]
+      #Draw a random location WITHOUT A RESOURCE
+      newresourcepos = rand(collect(1:length(noresourcesites)));
+      location = noresourcesites[newresourcepos];
+
+      # push!(Rind_vec,0);
+      push!(Rloc_vec,location);
+
+      Rsite_vec[location] = 1;
+
+      #Update
+      NR = NR + 1;
+      #Delete the filled resource postion from list of noresourcesites
+      deleteat!(noresourcesites,newresourcepos);
+    end
+
+    #6  Resource consumption (R)
     if draw_event >= pr_line[5] && draw_event < pr_line[6]
-      #Randomly draw H position
-      id = rand(collect(1:NH));
-      location = Hloc_vec[id];
-
-      nn = ipbc(location,(L-2));
-      new_location = rand(nn);
-      Hloc_vec[id] = new_location;
-
-      #update site vectors
-      Hsite_vec[location] -= 1;
-      Hsite_vec[new_location] += 1;
-    end
-
-    #7  Resource Growth (R)
-    if draw_event >= pr_line[6] && draw_event < pr_line[7]
-
-      #Choose a random resource
-      id = rand(collect(1:NR));
-      location = Rloc_vec[id];
-      nn = ipbc(location,(L-2));
-      #What is the LOCAL DENSITY OF RESOURCES?
-      nn_id = Rsite_vec[nn];
-      LS = sum(nn_id)/length(nn_id); #Local density value
-
-      #if there are any open spots
-      if LS < 1
-        #Which nn_id == 1? Grab a random one
-        open_sites = nn_id[find(x->x==1,nn_id)];
-        new_location = rand(open_sites);
-
-        #place new resource at new location
-        push!(Rloc_vec,new_location);
-        Rsite_vec[new_location] = 1;
-
-        #Update
-        NR = NR + 1;
-      end
-    end
-
-    #8  Resource consumption (R)
-    if draw_event >= pr_line[7] && draw_event < pr_line[8]
       #Draw a random R postion
       id = rand(collect(1:NR));
       location = Rloc_vec[id];
+      #Delete from vector
+      # deleteat!(Rind_vec,id);
+      deleteat!(Rloc_vec,id);
 
-      #Are there ANY F + H in nearest neighbor positions?
-      #IF THERE ARE > 0 NF + NH in local neighborhood, then resource is consumed!
-      nn = ipbc(location,(L-2));
-      nn_idF = Fsite_vec[nn];
-      nn_idH = Hsite_vec[nn];
-      if sum(nn_idF) + sum(nn_idH) > 0
+      Rsite_vec[location] = 0;
 
-        #Delete from vector
-        # deleteat!(Rind_vec,id);
-        deleteat!(Rloc_vec,id);
-        Rsite_vec[location] = 0;
-
-        #Update
-        NR = NR - 1;
-        #Update noresourcesites (add site that resource was eliminated from)
-        push!(noresourcesites,location);
-
-      end
+      #Update
+      NR = NR - 1;
+      #Update noresourcesites (add site that resource was eliminated from)
+      push!(noresourcesites,location);
 
     end
 
