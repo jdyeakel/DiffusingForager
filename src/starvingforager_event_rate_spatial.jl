@@ -1,7 +1,7 @@
 function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh)
   #Read in packages/function
   #ipbc :: torus movement
-  #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
+  include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
 
 
   #Initiate values
@@ -59,6 +59,14 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
 
   push!(time_out, 0);
 
+  #NEED TO ENSURE THAT RESOURCES ARE PLACED 1 PER SITE
+  #HAVE A noresourcesites vector that accounts for sites WITHOUT resources
+  #Updated each timestep
+  noresourcesites = collect(1:S);
+  #Deletes locations of sites with resources from the list of open sites (noresourcesites)
+  deleteat!(noresourcesites,sort(Rloc_vec));
+
+
   t = 0;
   next_time_int = t + 1;
 
@@ -99,7 +107,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     #Randomly select an individual (R,S,F) with probability 1/N
     #ind thus represents the POSITION of the individual
     #Update total number of individuals
-    pr_line = zeros(6);
+    pr_line = zeros(8);
     #Update the total
     #Events
     #1 F growth
@@ -149,7 +157,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
 
       #update site vectors
       Fsite_vec[location] -= 1;
-      Hsite_vec[locaiton] += 1;
+      Hsite_vec[location] += 1;
 
       #Update
       NF = NF - 1;
@@ -162,13 +170,13 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       id = rand(collect(1:NF));
       location = Floc_vec[id];
 
-      nn = ipbc(location,(L-2));
+      nn = ipbc(location,L);
       new_location = rand(nn);
       Floc_vec[id] = new_location;
 
       #update site vectors
       Fsite_vec[location] -= 1;
-      Fsite_vec[new_locaiton] += 1;
+      Fsite_vec[new_location] += 1;
     end
 
     #4  Recruitment/Recover (H)
@@ -212,7 +220,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       id = rand(collect(1:NH));
       location = Hloc_vec[id];
 
-      nn = ipbc(location,(L-2));
+      nn = ipbc(location,L);
       new_location = rand(nn);
       Hloc_vec[id] = new_location;
 
@@ -227,15 +235,15 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       #Choose a random resource
       id = rand(collect(1:NR));
       location = Rloc_vec[id];
-      nn = ipbc(location,(L-2));
+      nn = ipbc(location,L);
       #What is the LOCAL DENSITY OF RESOURCES?
       nn_id = Rsite_vec[nn];
       LS = sum(nn_id)/length(nn_id); #Local density value
 
-      #if there are any open spots
-      if LS < 1
+      #if there are any open spots (such that LS > 0)
+      if LS > 0
         #Which nn_id == 1? Grab a random one
-        open_sites = nn_id[find(x->x==1,nn_id)];
+        open_sites = nn[find(x->x==1,nn_id)];
         new_location = rand(open_sites);
 
         #place new resource at new location
@@ -255,7 +263,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
 
       #Are there ANY F + H in nearest neighbor positions?
       #IF THERE ARE > 0 NF + NH in local neighborhood, then resource is consumed!
-      nn = ipbc(location,(L-2));
+      nn = ipbc(location,L);
       nn_idF = Fsite_vec[nn];
       nn_idH = Hsite_vec[nn];
       if sum(nn_idF) + sum(nn_idH) > 0
