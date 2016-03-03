@@ -1,12 +1,13 @@
 
 using StatsBase
+using DataFrames
 using Gadfly
 using Cairo
 
 
 #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event.jl")
 include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_rate_spatial.jl")
-# include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/starvingforager_event_spatial.jl")
+# include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
 
 
 
@@ -24,7 +25,7 @@ for i = 1:length(sigmavec)
   dim = 2;
   prop_fill = 0.5
   initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
-  t_term = 80;
+  t_term = 500;
   alpha = 0.5;
   K = 1;
   sigma = sigmavec[i];
@@ -32,9 +33,9 @@ for i = 1:length(sigmavec)
   m = 0.8;
   lambda = 0.2;
   mu = 0.1;
-  Df = 0.2;
-  Dh = 0.2;
-
+  Df = 0.8;
+  Dh = 0.8;
+  write_out = true;
 
   eta = copy(sigma);
   Fstar[i] = (alpha*lambda*mu*(mu + rho))/((lambda*rho + m*mu)*(lambda*rho + sigma*mu));
@@ -42,7 +43,7 @@ for i = 1:length(sigmavec)
   Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho + mu*sigma);
 
   #The simulation
-  time_out, prop_out, N_out = starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh);
+  time_out, prop_out, N_out = starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh,write_out);
   F = prop_out[1,:];
   H = prop_out[2,:];
   R = prop_out[3,:];
@@ -63,7 +64,7 @@ layer(x=sigmavec,y=Rstar,Geom.line,Theme(default_color=colorant"blue")),
 layer(x=sigmavec,y=Rsimstar,Geom.point,Theme(default_color=colorant"blue",default_point_size=3pt)),
 Guide.XLabel("sigma"),Guide.YLabel("Steady state; F=green; H=orange; R=blue"));
 
-draw(PDF("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_comparison.pdf", 8inch, 5inch), comparison)
+draw(PDF("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_comparison_spatial.pdf", 8inch, 5inch), comparison)
 
 F = prop_out[1,:];
 H = prop_out[2,:];

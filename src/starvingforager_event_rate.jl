@@ -1,4 +1,4 @@
-function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
+function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -108,7 +108,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     #5  Resource Growth
     pr_line[5] = pr_line[4] + (alpha*R*(K-R))/Rate;
     #6  Resource consumption
-    pr_line[6] = pr_line[5] + ((rho*H + m*F)*R)/Rate;
+    pr_line[6] = pr_line[5] + (m*F*R)/Rate;
 
     draw_event = rand();
 
@@ -151,9 +151,18 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
       # push!(Find_vec,2);
       push!(Floc_vec,location);
 
+      #Remove a resource unit
+      idR = rand(collect(1:NR));
+      locationR = Rloc_vec[idR];
+      #Delete from vector
+      # deleteat!(Rind_vec,id);
+      deleteat!(Rloc_vec,idR);
+      push!(noresourcesites,locationR);
+
       #Update
       NH = NH - 1;
       NF = NF + 1;
+      NR = NR - 1;
     end
 
     #4  Death (H)
@@ -185,6 +194,7 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
 
     #6  Resource consumption (R)
     if draw_event >= pr_line[5] && draw_event < pr_line[6]
+
       #Draw a random R postion
       id = rand(collect(1:NR));
       location = Rloc_vec[id];

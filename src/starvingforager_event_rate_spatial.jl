@@ -1,14 +1,14 @@
-function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh)
+function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu,Df,Dh,write_out)
   #Read in packages/function
   #ipbc :: torus movement
-  include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
+  include("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
 
 
   #Initiate values
   #Lattice dimension
 
-  S = (L-2)^dim;
-
+  S = (L+2)^dim;
+  S_func = L^dim;
   #intisize after rounding
   r_initsize = Int(round(initsize/3));
 
@@ -27,9 +27,9 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
   N = NF + NH + NR;
 
   #Initial densities
-  F = NF/S;
-  H = NH/S;
-  R = NR/S;
+  F = NF/S_func;
+  H = NH/S_func;
+  R = NR/S_func;
   prop_out = Array{Float64}(3,1);
   prop_out[:,1] = [F,H,R];
   push!(N_out,N);
@@ -287,9 +287,9 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     N = NF + NH + NR;
 
     #Recalculate the densities of each
-    F = NF/S;
-    H = NH/S;
-    R = NR/S;
+    F = NF/S_func;
+    H = NH/S_func;
+    R = NR/S_func;
 
     prop = [F,H,R];
 
@@ -313,6 +313,16 @@ function starvingforager_event_rate_spatial(L,dim,initsize,t_term,alpha,K,sigma,
     # push!(loc_out,loc_vec_new);
     push!(time_out,t);
     push!(N_out,N);
+
+    if write_out == true
+      #Export for Animation
+      name = "$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/output/" * "lattice" * @sprintf("%i",tic) * ".csv";
+      R_array = Array{Int64}((L+2),(L+2));
+      R_array[1:S] = Rsite_vec;
+      writedlm(name,R_array,',');
+      #R_array_db = DataFrame(R_array);
+      #writetable("$(homedir())/Dropbox/PostDoc/2014_DiffusingForager/output/name.csv",R_array);
+    end
 
     #ERRORS
     #Break loop if extinction occurs
