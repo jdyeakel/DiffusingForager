@@ -248,7 +248,7 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       break
     end
     #Break loop if resources go extinct and the other populations run away
-    if NR == 0 && (NF + NH) > S
+    if NR == 0 && (NF + NH) > S*2
       println("Runaway growth has occured at t=",round(t,2)," and loop ",tic)
       break
     end

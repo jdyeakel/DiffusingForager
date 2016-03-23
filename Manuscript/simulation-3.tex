@@ -245,13 +245,13 @@ The steps of an event-driven simulation are:
   the forager type and the resource state on a given site.  To avoid keeping
   track of sites that are simultaneously resource free and occupied by a full
   forager, a simpler alternative is:
-\item[(ii')] Starvation'.  With probability $\sigma F/\mathcal{R}$, pick a
+\item[(ii$'$)] Starvation$'$.  With probability $\sigma F/\mathcal{R}$, pick a
   random full forager.  If the site is resource free, change the forager from
   full to hungry.  If not, nothing happens.
-\item Consumption.  With probability $mFR/\mathcal{R}$, pick a random on a
-  site that is also by a full forager and remove the resource.  To avoid
-  tracking sites that simultaneously contain a resource and a full forager,
-  perform the following alternative:
+\item Consumption.  With probability $mFR/\mathcal{R}$, pick a random site
+  that is also by a full forager and remove the resource.  To avoid tracking
+  sites that simultaneously contain a resource and a full forager, perform
+  the following alternative:
 \item[(iii$^\prime$)] Consumption$^\prime$.  With probability
   $R/\mathcal{R}$, pick a random resource.  If the site also contains a
   forager, remove the resource with probability $m$.  Note the implicit

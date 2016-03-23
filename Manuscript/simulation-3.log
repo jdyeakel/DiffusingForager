@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_8) (preloaded format=pdflatex 2015.7.13)  12 FEB 2016 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_8) (preloaded format=pdflatex 2015.7.13)  11 MAR 2016 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -363,7 +363,7 @@ Here is how much of TeX's memory you used:
  6895 multiletter control sequences out of 15000+600000
  10474 words of font info for 39 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 38i,15n,26p,297b,175s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,15n,26p,297b,177s stack positions out of 5000i,500n,10000p,200000b,80000s
 </opt/local/share/texmf-texlive/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm
 /cmbx12.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx
@@ -377,7 +377,7 @@ ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texlive/fo
 nts/type1/public/amsfonts/cm/cmsy6.pfb></opt/local/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmsy8.pfb></opt/local/share/texmf-texlive/fonts/type1/pu
 blic/amsfonts/cm/cmti12.pfb>
-Output written on simulation-3.pdf (7 pages, 157549 bytes).
+Output written on simulation-3.pdf (7 pages, 157656 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
