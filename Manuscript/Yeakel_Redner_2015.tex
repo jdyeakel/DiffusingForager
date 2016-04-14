@@ -51,30 +51,35 @@ The influence of resource limitation on an organism's ability to maintain its nu
 %Such tradeoffs are also bound to have population-level consequences, although this has received little theoretical or empirical attention.
 
 %The reproductive vs. storage tradeoff
-Maximizing fitness between growth and maintenance activities vs. reproductive behaviors in large part structures the life-history of species, and this can be achieved by a variety of potential mechanisms all of which, to some extent, depend on resource availability:
+Maximizing fitness between growth and maintenance activities vs. reproductive behaviors in large part structures the life-history of species, and this can be achieved by a variety of potential mechanisms all of which, to some extent, depend on resource availability.
 %Reproduction can be separated from somatic growth/maintenance by a variety of potential mechanisms:
 %Multiple mechanisms contribute to the differentiation of these behaviors:
-\emph{i}) Behavioral: The investment of time and energy towards reproductive and parental behaviors depends on resource availability \citep{Morris:1987eo}.
+Behavioral: The investment of time and energy towards reproductive and parental behaviors depends on resource availability \citep{Morris:1987eo}.
 %, while stress can generally lead to reprodusuppression of reproductive behaviors \citep{Morgan:1999do}. 
-For example, reindeer invest less in calves born after harsh winters (when the mother's energetic state is poor) than in calves born after moderate winters \citep{Tveraa:2003fq}, whereas many bird species invest differently in broods during periods of resource scarcity \citep{Daan:1988va,Jacot:2009dv}, sometimes delaying or foregoing reproduction for an entire season \citep{Barboza:2002in}.
+For example, reindeer invest less in calves born after harsh winters (when the mother's energetic state is poor) than in calves born after moderate winters \citep{Tveraa:2003fq}, whereas many bird species invest differently in broods during periods of resource scarcity \citep{Daan:1988va,Jacot:2009dv}, sometimes delaying or foregoing reproduction for a breeding season \citep{Barboza:2002in}.
 Resource limitation can also alter the behaviors of species in well-mixed environments: freshwater and marine zooplankton have been observed to avoid reproduction under nutritional stress \citep{Threlkeld:1976ih}, while those that do reproduce evince lower survival rates \citep{Kirk:1997cc}.
 Similarly, artificially induced stress has been observed to decrease reproductive success in Atlantic cod \citep{Morgan:1999do}.
-\emph{ii}) Physiological: Diverse mammals (47 species in 10 families) exhibit delayed implantation whereby females postpone fetal development (blastocyst implantation), often timing with accumulation of nutritional reserves \citep{Mead:1989dt,Sandell:1990kw}. %, including multiple species of Grizzly bears (\emph{Ursus horribilis}) and the European badger (\emph{Meles melesc}) \citep{Woodroffe:1995id
+Physiological: Diverse mammals (47 species in 10 families) exhibit delayed implantation whereby females postpone fetal development (blastocyst implantation), often timing with accumulation of nutritional reserves \citep{Mead:1989dt,Sandell:1990kw}. %, including multiple species of Grizzly bears (\emph{Ursus horribilis}) and the European badger (\emph{Meles melesc}) \citep{Woodroffe:1995id
 Furthermore, many mammals (including humans) suffer irregular menstrual cycling and higher rates of spontaneous abortion during periods of nutritional stress \citep{Bulik:1999eo,Trites:2003cc}.
-\emph{iii}) Spatio-temporal: Organisms may also separate maintenance/growth from reproduction over space and time. 
+Spatio-temporal: Organisms may also separate maintenance/growth from reproduction over space and time. 
 For example, many salmonids, birds, and some mammals return to migratory breeding sites to reproduce after one or multiple seasons in alternative environments spent accumulating body mass and nutritional reserves \citep{Weber:1998jg,Mduma:1999cp,Moore:2014hi}.
 %great tits invest more energy into broods when resource abundance is greater, while food availability is generally seen to correlate with clutch size among many bird species \citep{Daan:1988va}.
 %The mechanisms that control reproductive effort as a function of energetic reserves differ among species.
 %Even humans alter their growth trajectories and have higher chances of fetal abortion during periods of starvation.
 %Thus, some organisms partition reproductive vs. foraging effort over both space and time, whereas other rely on physiological mechanisms to optimize reproductive success against survival when adequate resources are unavailable.
-The existence of so many independently evolved mechanisms across such a diverse suite of organisms points to the importance and universality of the fundamental tradeoff between spending energy on ones own tissues and spending energy on passing down genetic material.
+The existence of so many independently evolved mechanisms across such a diverse suite of organisms points to the importance and universality of the fundamental tradeoff between spending energy on tissues vs. spending energy on passing down genetic material.
 
 %To population-level effects
 Organisms employ different strategies to avoid reproduction during times of nutritional stress, and how this is achieved has received tremendous empirical and theoretical attention, owing to the importance of these activities in shaping life-history [REF].
-Less well understood is how resource limitation affect dynamics at the level of the population when organisms are able to avoid the risk of spending energy on reproduction when starvation is likely.
+Less well understood is how resource limitation and these behavioral/physiological tradeoffs affect dynamics at the level of the population.
+% when organisms are able to avoid the risk of spending energy on reproduction when starvation is likely.
 Traditional Lotka-Volterra models assume a dependence of consumer population growth rates on resource density, thus implicitly incorporating the requirement of resource availability for reproduction.
-However, resource limitation and the subsequent effects of starvation can also be accounted for \emph{explicitly}, such that reproductive growth of a population is only allowed to occur if individuals have sufficient energetic reserves.
-Incorporating energetic dynamics that occur on an individual level [REF] into a population-based framework \citep{Kooi2000,Sousa:2010ez}, though straightforward conceptually, has many challenges that arise mathematically \citep{Diekmann:2010da}, and this has limited simple theoretical models aiding our understanding of larger-scale dynamics.
+Although this implicit dependence connects resource limitation to lower consumer growth rates, the following biological realities are not taken into account:
+\emph{i}) some individuals experience nutritional stress at a given time and under a given set of external conditions, while others do not; those that do have multiple pathways enabling reproductive cessation, 
+\emph{ii}) the portion of the population that is not nutritionally stressed reproduces at a near-constant rate, constrained by allometric relationships, and
+\emph{iii}) the rate at which individuals transition from nutritionally poor to replete states (and vice versa) are governed by the organism's metabolism, which is also strongly constrained by allometry.
+To incorporate these important elements, resource limitation and the subsequent effects of starvation can be accounted for \emph{explicitly}, such that reproductive growth of a population is only allowed to occur for individuals with sufficient energetic reserves.
+Incorporating energetic dynamics that occur at an individual level [REF] into a population-based framework \citep{Kooi2000,Sousa:2010ez}, though straightforward conceptually, has many challenges that arise mathematically \citep{Diekmann:2010da}, and this has limited simple theoretical models aiding our understanding of larger-scale dynamics.
 
 %What we did...
 Here we explore how reproductive trade-offs, which occur at the level of the individual, may influence the dynamics of a population.
@@ -94,10 +99,10 @@ We show [WHAT]?
 
 We first integrate energetics into the dynamics of a consumer-resource system by assuming that the consumer population can be divided into discrete energetic states, the occupation of each being contingent on the consumption of a single resource $R$.
 In the simplest case, there are only two energetic states for the consumer population: \emph{i}) an energetically replete (full) state $F$, where the consumer reproduces at rate $\lambda$, and \emph{ii}) an energetically deficient (hungry) state $H$, where reproduction is suppressed, and mortality occurs at rate $\mu$.
-Consumers transition from state $F$ to state $H$ by starvation at rate $\sigma$ and in proportion to the lack of food $1-R$.
+Consumers transition from state $F$ to state $H$ by starvation at rate $\sigma$ and in proportion to the lack of food $(1-R)$.
 Conversely, consumers recover from state $H$ to the full state $F$ at rate $\rho$ and in proportion to the density of resources consumed $R$.
 The resource has logistic growth with a linear growth rate $a$ and a carrying capacity of unity.
-Resources are eliminated by the consumer in either state: by energetically deficient consumers at rate $\rho$, and by energetically replete consumers at rate $b$.
+Resources are eliminated by the consumer in both states: by energetically deficient consumers at rate $\rho$, and by energetically replete consumers at rate $b$.
 Accordingly, the system of equations is written
 
 \begin{align}
@@ -273,28 +278,53 @@ Population growth requires that individuals
 
 \section{Results}
 
-\subsection{2-stage consumer resource model}
 
-Analysis of the continuous-time 2-stage consumer resource model shows that the equilibrial states of both populations are highly sensitive to changes in  starvation and recovery rates of the consumer.
-The consumer and resource population densities vary inveresely: when the consumer densities are high, resource densities are low, and vice versa.
+Analysis of the 2-stage consumer resource model shows that the equilibrial states of both populations are highly sensitive to changes in  starvation and recovery rates of the consumer.
+The consumer and resource population densities vary inversely: when the consumer densities are high, resource densities are low, and vice versa.
 High starvation and low recovery rates result in low consumer densities and high resource densities. %whereas the opposite is true for low starvation and high recovery rates.
 If starvation rates are low, resources have a fixed point near zero for any value of the recovery rate.
 Full and hungry consumer stages tend have fixed points that are tightly correlated, the extent to which is driven by the similarity of consumer growth and mortality rates; if $\lambda = \mu$, then $F^* = H^*$.
 
 %Transcritical & rate law ranges
 A transcritical bifurcation exists at $\lambda = \sigma$, such that the condition $\sigma > \lambda$ is required for biologically reasonable dynamics.
-The TC bifurcation occurs in this model because we have assumed that all energetically replete individuals reproduce at the same rate, whereas the traditional Lotka-Volterra dynamic assumes that the reproductive rate of the consumer is scaled to resource density, such that the growth function would be $G(F,R) = \lambda R F$.
-Thus, the Lotka-Volterra dynamic \emph{implicitly} accounts for starvation in reducing the reproductive rate of the consumer.
-However, our 2-stage model \emph{explicitly} accounts for starvation as well as recovery, such that individuals who are not starved should adopt a reproductive rate independent of resource density.
-
-The existence of the transcritical bifurcation reveals important biological insight.
+The TC bifurcation occurs in this model because we have assumed that the portion of the population that is not starved reproduces at a constant rate.
+Because the process of starvation is incorporated explicitly, the consumer's rate of reproduction is not dependent on the density of resources.
+In fact, the existence of the TC bifurcation at $\lambda = \sigma$ reveals an important biological insight. 
 Reproduction requires maintenance and growth of biological tissues, both of which have strong scaling relationships with body size.
 Recent work by Kempes et al. [REF] derived the timescale of reproduction in terms of allometric considerations, where $t_\lambda \propto M^{1-\eta}$ (REF).
 Starvation is the loss of energy required for maintenance, and we have shown it to have a timescale $t_\sigma \propto \log(M)$.
-Accordingly, the timescale of reproduction is always larger than the timescale of starvation, such that $\lambda < \sigma$.
+Accordingly, the timescale of reproduction is always larger than the timescale of starvation, such that $\lambda$ must be less than $\sigma$ by definition.
 A third important parameter in our framework is the rate of recovery.
 The recovery timescale $t_\rho$ controls the rate at which individuals move from the hungry class to the full class, and this requires not only tissue maintenance, but growth, such that it is bounded on the short side by $t_\sigma$.
 Moreover, [why is recovery timescale bounded on the high side], such that it is bounded on the long side by $t_\lambda$.
+Thus, incorporating allometric considerations shows us that $\lambda < \rho < \sigma$ (alternatively $t_\lambda > t_\rho > t_\sigma$).
+
+%Hopf bifurcation and oscillations sigma vs. rho
+The 2-stage consumer resource model exhibits two qualitatively different behavioral regimes.
+Because portions of the consumer population exist in either full or hungry states simultaneously, the internal fixed point can either be a stable equilibrium, or exhibit sustained oscillatory behavior, depending on the rates of starvation $\sigma$ and recovery $\rho$.
+The transition from stable non-oscillatory dynamics to oscillatory dynamics occurs at the Hopf bifurcation condition where two complex conjugate eigenvalues cross the imaginary axis and attain positive real parts.
+Although there is an analytical solution to the Hopf bifurcation condition, it cannot be written efficiently
+When the starvation rate is low, oscillatory dynamics are more likely to occur for a given value of the recovery rate.
+This can be understood intuitively: for low starvation rates, resources are depressed by an infusion of full consumers, which subsequently starve thereby allowing the resource to recover and continuing the cycle.
+When the starvation rate is high, the response of consumer growth to resource abundance is muted, such that oscillations tend to decay over time.
+Thus, higher starvation rates $\sigma$ desensitizes changes in the consumer population to changes in resource density, and lower rates of recovery $\rho$ amplifies this effect.
+
+%Hopf bifurcation as a function of b
+Both full and hungry consumers remove resources at rates $b$ and $\rho$, respectively.
+As the rate of resource consumption by full consumers increases, the Hopf condition changes from a convex to a concave function over $\sigma$, limiting the potential for oscillatory dynamics.
+These rates are considered separately because full consumers need only to maintain their tissues, whereas hungry consumers require both growth and maintenance, such that $t_\rho > t_b$, or $\rho < b$.
+If this constraint is enacted, the likelihood of oscillatory dynamics is reduced for a given 
+
+
+
+If instead the consumer's growth was proportional to resource abundance, such that the effects of starvation on reproduction were incorporated explicitly (where the 2-stage consumer resource model collapses to the Lotka-Volterra consumer-resource model with logistic growth of the resource), the TC bifurcation exists only for $\lambda = \mu$, such that the rate of mortality cannot exceed the intrinsic birth rate.
+
+
+ whereas the traditional Lotka-Volterra dynamic assumes that the reproductive rate of the consumer is scaled to resource density, such that the growth function would be $G(F,R) = \lambda R F$.
+Thus, the Lotka-Volterra dynamic \emph{implicitly} accounts for starvation in reducing the reproductive rate of the consumer.
+However, our 2-stage model \emph{explicitly} accounts for starvation as well as recovery, such that individuals who are not starved should adopt a reproductive rate independent of resource density.
+
+
 
 We have used scaling relationships between tissue turnover and growth to strictly constrain 5/6 population-level parameters in our 2-stage consumer resource model (including the mortality rate $t_\mu$, which we have shown is just a xxx of $t_\sigma$).
 This exercise accomplishes two goals:
@@ -318,16 +348,50 @@ Constraining the model with allometric scaling relationships yields important in
 
 \section{Discussion}
 
+
+
+
+%Starving Random Walk
+In our modeling, foragers look for food by wandering in this changing
+environment.  If such a search is successful, the forager is satiated and it
+can engage in the essential activity of reproduction.  However, if the search
+is unsuccessful for a sufficiently long period, the forager ``starves''.
+Such a forager can do nothing else but forage, until it either finds food and
+again becomes satiated or it dies when it goes too long without finding
+nourishment.  These rules are reminiscent of the ``starving random walk''
+model, where a single random walk can take $\mathcal{S}$ steps without
+encountering food before starving to death.  Moreover, the resource does not
+regenerate, so that the forager ultimately starves to death.  For this
+idealized model, it was found that the average lifetime of the forager scales
+algebraically with $\mathcal{S}$ in $d\!=\!1$ and $d\!=\!2$ dimensions, and
+as $\exp(-A\mathcal{S}^\omega)$ for $d>2$.  Here the exponent
+$\omega\approx \frac{1}{2}$ for $d=3$, while $\omega\to 1$ only as
+$d\to \infty$, with the latter behavior corresponding to the mean-field
+limit.  As we will discuss, regeneration of the resource, together with the
+behavioral change between starving and satiated foragers leads to still much
+richer dynamical behavior.
+
+
+
 %The reproductive tradeoff as a strategy
 %
-% \begin{figure}[h]
-% 	\centering
-% 	\includegraphics[width=0.5\textwidth]{fig_Hopf.pdf}
-% 	\caption{
-% 	Saddle Node bifurcation
-% 	}
-% 	\label{SN}
-% \end{figure}
+
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[width=1\textwidth]{fig_HopfFP.jpg}
+ 	\caption{
+ 	}
+ 	\label{Hopfb}
+ \end{figure}
+
+
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[width=0.5\textwidth]{fig_HopfPlotb.pdf}
+ 	\caption{
+ 	}
+ 	\label{Hopfb}
+ \end{figure}
 %
 %
 % \begin{figure}[h]
