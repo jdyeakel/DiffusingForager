@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/.texpadtmp/Yeakel_Kempes_Redner_2015-checked-out.aux
+The style file: ieeetr.bst
+Database file #1: ../aa_starving.bib
+Warning--I didn't find a database entry for "Mduma:1999cp"
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "delong"
+Warning--I didn't find a database entry for "kempes"
+Warning--empty publisher in Kooi2000
+You've used 17 entries,
+            1876 wiz_defined-function locations,
+            608 strings with 6793 characters,
+and the built_in function-call counts, 5106 in all, are:
+= -- 538
+> -- 163
+< -- 0
++ -- 62
+- -- 45
+* -- 374
+:= -- 700
+add.period$ -- 18
+call.type$ -- 17
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 258
+empty$ -- 458
+format.name$ -- 45
+if$ -- 1241
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 18
+newline$ -- 55
+num.names$ -- 17
+pop$ -- 38
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 211
+stack$ -- 0
+substring$ -- 425
+swap$ -- 127
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 57
+width$ -- 19
+write$ -- 167
+(There were 5 warnings)

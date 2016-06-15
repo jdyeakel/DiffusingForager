@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/Yeakel_Kempes_Redner-5-16-2016.aux
+The style file: ieeetr.bst
+Database file #1: aa_starving.bib
+Warning--I didn't find a database entry for "Mangel:1988uaa"
+Warning--I didn't find a database entry for "Mduma:1999cp"
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "delong"
+Warning--I didn't find a database entry for "kempes"
+Warning--empty publisher in Kooi2000
+You've used 18 entries,
+            1876 wiz_defined-function locations,
+            618 strings with 6962 characters,
+and the built_in function-call counts, 5443 in all, are:
+= -- 575
+> -- 174
+< -- 0
++ -- 66
+- -- 48
+* -- 400
+:= -- 745
+add.period$ -- 19
+call.type$ -- 18
+change.case$ -- 17
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 274
+empty$ -- 486
+format.name$ -- 48
+if$ -- 1323
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 19
+newline$ -- 58
+num.names$ -- 18
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 226
+stack$ -- 0
+substring$ -- 457
+swap$ -- 136
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 61
+width$ -- 20
+write$ -- 177
+(There were 6 warnings)
