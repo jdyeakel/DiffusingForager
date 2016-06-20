@@ -1,4 +1,4 @@
-function starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_sd,rho_mean,rho_sd,mutation,m,lambda,mu)
+function starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_sd,rho_mean,rho_sd,m,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -45,23 +45,30 @@ function starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_s
   #Use replace=false to ensure that no location is chosen twice for resources only
   Rloc_vec = sample(collect(1:S),r_initsize,replace=false);
 
+  #Define mutation variance (this might depend on the rate values!)
+  mutation = 0.001;
+
   #DEFINE TRAIT VEC
   #Keep track of F and H trait_vec... maybe use later.
   if (sigma_sd > 0)
     d_sigma = Normal(sigma_mean,sigma_sd);
     F_sigma_vec = rand(d_sigma,r_initsize);
     H_sigma_vec = rand(d_sigma,r_initsize);
+    d_mutation = Normal(0,mutation);
   else
     F_sigma_vec = ones(r_initsize)*sigma_mean;
     H_sigma_vec = ones(r_initsize)*sigma_mean;
+    d_mutation = Bernoulli(0);
   end
   if (rho_sd > 0)
     d_rho = Normal(rho_mean,rho_sd);
     F_rho_vec = rand(d_rho,r_initsize);
     H_rho_vec = rand(d_rho,r_initsize);
+    d_mutation = Normal(0,mutation);
   else
     F_rho_vec = ones(r_initsize)*rho_mean;
     H_sigma_vec = ones(r_initsize)*rho_mean;
+    d_mutation = Bernoulli(0);
   end
 
   #Set initial sigma and rho
@@ -69,10 +76,8 @@ function starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_s
   rho = mean([F_rho_vec;H_rho_vec]);
 
   trait_out = Array{Float64}(2,1);
-  prop_out[:,1] = [sigma,rho];
+  trait_out[:,1] = [sigma,rho];
 
-  #Define mutation distribution rate
-  d_mutation = Normal(0,mutation);
 
   push!(time_out, 0);
 
@@ -149,9 +154,9 @@ function starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_s
 
       #Introduce new mutated traits
       id = rand(collect(1:NF)); #This is the individual that is reproducing
-      new_sigma = copy(sigma_vec[id]) + rand(d_mutation);
+      new_sigma = copy(F_sigma_vec[id]) + rand(d_mutation);
       push!(F_sigma_vec,new_sigma);
-      new_rho = copy(rho_vec[id]) + rand(d_mutation);
+      new_rho = copy(F_rho_vec[id]) + rand(d_mutation);
       push!(F_rho_vec,new_rho);
 
       #Update
@@ -187,8 +192,8 @@ function starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_s
       #Randomly draw H position from Hind_vec
       id = rand(collect(1:NH));
       location = Hloc_vec[id];
-      sigma_id = copy(F_sigma_vec[id]);
-      rho_id = copy(F_rho_vec[id]);
+      sigma_id = copy(H_sigma_vec[id]);
+      rho_id = copy(H_rho_vec[id]);
       #Delete that individual from Hind_vec/Hloc_vec; add to Find_vec/Floc_vec
       # deleteat!(Hind_vec,id);
       deleteat!(Hloc_vec,id);

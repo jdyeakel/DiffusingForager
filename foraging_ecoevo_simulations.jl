@@ -25,21 +25,23 @@ for i = 1:length(sigmavec)
   dim = 2;
   prop_fill = 0.5
   initsize = convert(Int64,round(((L-2)^dim)*prop_fill));
-  t_term = 100;
+  t_term = 1000;
   alpha = 0.5;
   K = 1;
-  sigma = sigmavec[i];
-  rho = 0.2;
+  sigma_mean = sigmavec[i];
+  sigma_sd = 0.01;
+  rho_mean = 0.2;
+  rho_sd = 0.01;
   m = 0.8;
   lambda = 0.2;
   mu = 0.1;
 
-  Fstar[i] = (alpha*lambda*mu*(mu + rho))/((lambda*rho + m*mu)*(lambda*rho + sigma*mu));
-  Hstar[i] = (alpha*lambda^2*(mu + rho))/((lambda*rho + m*mu)*(lambda*rho + sigma*mu));
-  Rstar[i] = (mu*(-lambda+sigma))/(lambda*rho + mu*sigma);
+  Fstar[i] = (alpha*lambda*mu*(mu + rho_mean))/((lambda*rho_mean + m*mu)*(lambda*rho_mean + sigma_mean*mu));
+  Hstar[i] = (alpha*lambda^2*(mu + rho_mean))/((lambda*rho_mean + m*mu)*(lambda*rho_mean + sigma_mean*mu));
+  Rstar[i] = (mu*(-lambda+sigma_mean))/(lambda*rho_mean + mu*sigma_mean);
 
   #The simulation
-  time_out, prop_out, N_out, trait_out = starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu);
+  time_out, prop_out, N_out, trait_out = starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_sd,rho_mean,rho_sd,m,lambda,mu);
   F = prop_out[1,:];
   H = prop_out[2,:];
   R = prop_out[3,:];
@@ -70,6 +72,11 @@ layer(x=time_out,y=H,Geom.line,Theme(default_color=colorant"orange")),
 layer(x=time_out,y=R,Geom.line,Theme(default_color=colorant"blue")));
 
 draw(PNG("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_timeseries.png", 8inch, 5inch), timeseries)
+
+traitseries = plot(layer(x=time_out,y=trait_out[1,:],Geom.line,Theme(default_color=colorant"blue")),
+layer(x=time_out,y=trait_out[2,:],Geom.line,Theme(default_color=colorant"orange")))
+
+draw(PNG("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/figs/fig_traitseries.png", 8inch, 5inch), traitseries)
 
 ts_l = length(time_out);
 burnin = convert(Int64,round(ts_l/2,0));
