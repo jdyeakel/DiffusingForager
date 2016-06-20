@@ -1,4 +1,4 @@
-function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,lambda,mu)
+function starvingforager_ecoevo(L,dim,initsize,t_term,alpha,K,sigma_mean,sigma_sd,rho_mean,rho_sd,mutation,m,lambda,mu)
   #Read in packages/function
   #ipbc :: torus movement
   #include("/Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/src/ipbc.jl")
@@ -45,6 +45,34 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
   #Use replace=false to ensure that no location is chosen twice for resources only
   Rloc_vec = sample(collect(1:S),r_initsize,replace=false);
 
+  #DEFINE TRAIT VEC
+  #Keep track of F and H trait_vec... maybe use later.
+  if (sigma_sd > 0)
+    d_sigma = Normal(sigma_mean,sigma_sd);
+    F_sigma_vec = rand(d_sigma,r_initsize);
+    H_sigma_vec = rand(d_sigma,r_initsize);
+  else
+    F_sigma_vec = ones(r_initsize)*sigma_mean;
+    H_sigma_vec = ones(r_initsize)*sigma_mean;
+  end
+  if (rho_sd > 0)
+    d_rho = Normal(rho_mean,rho_sd);
+    F_rho_vec = rand(d_rho,r_initsize);
+    H_rho_vec = rand(d_rho,r_initsize);
+  else
+    F_rho_vec = ones(r_initsize)*rho_mean;
+    H_sigma_vec = ones(r_initsize)*rho_mean;
+  end
+
+  #Set initial sigma and rho
+  sigma = mean([F_sigma_vec;H_sigma_vec]);
+  rho = mean([F_rho_vec;H_rho_vec]);
+
+  trait_out = Array{Float64}(2,1);
+  prop_out[:,1] = [sigma,rho];
+
+  #Define mutation distribution rate
+  d_mutation = Normal(0,mutation);
 
   push!(time_out, 0);
 
@@ -70,7 +98,6 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
 
   while t < (t_term-1)
     tic = tic + 1;
-
 
     # #ERRORS
     # if length(ind_vec) < 1
@@ -120,6 +147,13 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       location = rand(collect(1:S));
       push!(Floc_vec,location);
 
+      #Introduce new mutated traits
+      id = rand(collect(1:NF)); #This is the individual that is reproducing
+      new_sigma = copy(sigma_vec[id]) + rand(d_mutation);
+      push!(F_sigma_vec,new_sigma);
+      new_rho = copy(rho_vec[id]) + rand(d_mutation);
+      push!(F_rho_vec,new_rho);
+
       #Update
       NF = NF + 1;
     end
@@ -129,11 +163,19 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       #Randomly draw F position from Find_vec
       id = rand(collect(1:NF));
       location = Floc_vec[id];
+      sigma_id = copy(F_sigma_vec[id]);
+      rho_id = copy(F_rho_vec[id]);
       #Delete that individual from Find_vec/Floc_vec; add to Hind_vec/Hloc_vec
       # deleteat!(Find_vec,id);
       deleteat!(Floc_vec,id);
       # push!(Hind_vec,1);
       push!(Hloc_vec,location);
+
+      #Track trait values
+      deleteat!(F_sigma_vec,id);
+      push!(H_sigma_vec,sigma_id);
+      deleteat!(F_rho_vec,id);
+      push!(H_rho_vec,rho_id);
 
       #Update
       NF = NF - 1;
@@ -145,11 +187,19 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       #Randomly draw H position from Hind_vec
       id = rand(collect(1:NH));
       location = Hloc_vec[id];
+      sigma_id = copy(F_sigma_vec[id]);
+      rho_id = copy(F_rho_vec[id]);
       #Delete that individual from Hind_vec/Hloc_vec; add to Find_vec/Floc_vec
       # deleteat!(Hind_vec,id);
       deleteat!(Hloc_vec,id);
       # push!(Find_vec,2);
       push!(Floc_vec,location);
+
+      #Track trait values
+      deleteat!(H_sigma_vec,id);
+      push!(F_sigma_vec,sigma_id);
+      deleteat!(H_rho_vec,id);
+      push!(F_rho_vec,rho_id);
 
       #Remove a resource unit
       idR = rand(collect(1:NR));
@@ -172,6 +222,8 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
       #Delete from vector
       # deleteat!(Hind_vec,id);
       deleteat!(Hloc_vec,id);
+      deleteat!(H_sigma_vec,id);
+      deleteat!(H_rho_vec,id);
 
       #Update
       NH = NH - 1;
@@ -223,6 +275,13 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
     #push!(prop_out,copy(prop));
     prop_out = hcat(prop_out,prop);
 
+    #Recalculate the average sigma and rho
+    sigma = mean([F_sigma_vec;H_sigma_vec]);
+    rho = mean([F_rho_vec;H_rho_vec]);
+
+    trait = [sigma,rho];
+    trait_out = hcat(trait_out,trait);
+
     #Advance time
     t = t + dt;
 
@@ -260,5 +319,5 @@ function starvingforager_event_rate(L,dim,initsize,t_term,alpha,K,sigma,rho,m,la
   println("Simulation successful at t= ",round(t,2)," and loop= ",tic)
 
   # return ind_out,loc_out,time_out,prop_out,N_out
-  return time_out,prop_out,N_out
+  return time_out,prop_out,N_out,trait_out
 end #end function
