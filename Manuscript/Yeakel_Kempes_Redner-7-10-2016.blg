@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/Yeakel_Kempes_Redner-7-10-2016.aux
+The style file: apalike.bst
+Database file #1: aa_starving.bib
+Warning--I didn't find a database entry for "DeLong:2010dy"
+Warning--I didn't find a database entry for "muscle"
+Warning--empty publisher in Kooi2000
+You've used 31 entries,
+            1935 wiz_defined-function locations,
+            696 strings with 8963 characters,
+and the built_in function-call counts, 12264 in all, are:
+= -- 1227
+> -- 448
+< -- 20
++ -- 146
+- -- 146
+* -- 1077
+:= -- 2124
+add.period$ -- 95
+call.type$ -- 31
+change.case$ -- 224
+chr.to.int$ -- 31
+cite$ -- 32
+duplicate$ -- 449
+empty$ -- 896
+format.name$ -- 195
+if$ -- 2383
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 35
+newline$ -- 158
+num.names$ -- 93
+pop$ -- 178
+preamble$ -- 1
+purify$ -- 228
+quote$ -- 0
+skip$ -- 335
+stack$ -- 0
+substring$ -- 978
+swap$ -- 40
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 178
+warning$ -- 1
+while$ -- 110
+width$ -- 0
+write$ -- 403
+(There were 3 warnings)
