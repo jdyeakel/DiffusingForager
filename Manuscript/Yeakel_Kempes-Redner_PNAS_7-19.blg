@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/Yeakel_Kempes-Redner_PNAS_7-19.aux
+The style file: pnas.bst
+Database file #1: aa_starving.bib
+Warning--I didn't find a database entry for "DeLong:2010dy"
+Warning--I didn't find a database entry for "muscle"
+You've used 31 entries,
+            1765 wiz_defined-function locations,
+            685 strings with 8868 characters,
+and the built_in function-call counts, 6810 in all, are:
+= -- 674
+> -- 263
+< -- 1
++ -- 98
+- -- 67
+* -- 515
+:= -- 1103
+add.period$ -- 56
+call.type$ -- 31
+change.case$ -- 25
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 301
+empty$ -- 629
+format.name$ -- 68
+if$ -- 1472
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 35
+newline$ -- 157
+num.names$ -- 31
+pop$ -- 63
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 47
+stack$ -- 0
+substring$ -- 590
+swap$ -- 76
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 77
+width$ -- 33
+write$ -- 334
+(There were 2 warnings)
