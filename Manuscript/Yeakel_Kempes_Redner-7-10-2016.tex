@@ -152,6 +152,10 @@ R^* &= \frac{\mu  (\sigma -\lambda )}{\lambda  \rho +\mu  \sigma }.
 \noindent Because there is only one internal fixed point, as long as it is stable the population trajectories will serve as a global attractor for any set of positive initial conditions.
 %Analysis of the stability of the NSM is explored with respect to the local stability of the internal steady state, which is the only feasible steady state as long as both the consumer and resource have non-zero, positive, values.
 In a multidimensional system, linear stability is determined with respect to the Jacobian Matrix $\bf J|_*$ (where $|_*$ denotes evaluation at the internal steady state), where each element of the matrix is defined by the partial derivative of each differential equation with respect to each variable.
+%General statement on stability
+If the parameters of $\bf J|_*$ are such that the real part of its leading eigenvalue is $<0$, then the system is stable to small pulse perturbations. 
+
+
 %In the case of the 2-stage consumer model, the Jacobian evaluated at the internal steady state (denoted by $|_*$) is written
 %
 %\begin{equation}
@@ -171,36 +175,6 @@ In a multidimensional system, linear stability is determined with respect to the
 %\end{array}
 %\right).
 %\end{equation}
-
-
-%Transcritical bifurcation
-If the parameters of $\bf J|_*$ are such that the real part of its leading eigenvalue is $<0$, then the system is stable to small pulse perturbations. 
-In the case of the NSM, stability is conditioned on the consumer's starvation rate $\sigma$ relative to the its reproduction rate $\lambda$.
-As $\sigma$ becomes less than $\lambda$, the $R^*$ crosses the origin and the fixed point becomes unstable.
-This condition $\sigma = \lambda$  marks a transcritical (TC) bifurcation, thus marking a hard boundary below which the system becomes unphysical due to the unregulated growth of the consumer population.
-That the timescale of reproduction is larger than the timescale of starvation is intuitive for macroscopic organisms, as the rate at which one loses tissue due to lack of resources is generally much faster than reproduction, though we will show using allometric principles that this relationship always holds.
-%such that if a consumer's starvation rate is lower than it's reproductive rate, the consumer population's growth becomes exponential and unphysical.
-%Thus, the timescale of starvation must be less than the timescale of reproduction, an expectation that will hold for most classes of organisms, which we will show by deriving allometric scaling relationship that serve to constrain the covariation of parameter values.
-%[Explain what a transcritical bifurcation means in terms of the dynamics. From a regime where resources are negative and consumer populations become infinite to one that is biological feasable]
-%As such, a transcritical bifurcation exists at $\lambda = \sigma$, such that the existence of an internal stable fixed point is dependent on the condition that $\sigma > \lambda$.
-%This means that the rate of starvation must be greater (operating on a smaller timescale) than the rate of consumer reproduction (operating on a relatively longer timescale).
-%This general expectation will hold for most classes of organisms, which we will show by deriving allometric scaling relationship that serve to constrain the covariation of parameter values.
-% while the exact difference in timescales between reproduction and starvation can be derived using allometric scaling relationships.
-%Kempes (REF) has shown that population growth rates scale to $M^{\alpha-1}$ (where $M$ is the reproductive mass of an organism and $\alpha$ is the scaling exponent), whereas starvation is necessarily bound to shorter timescales, which will be elaborated on below.
-
-
-%Hopf bifurcation
-In addition to the hard bound defined by the TC bifurcation, oscillating or cyclic dynamics present an implicit constraint to persistence by increasing the risk of extinction.
-%also present certain constraints to the feasibility of populations.
-%Oscillating, or cyclic, dynamics present additional risks to populations.
-If cycles are large, stochastic effects may result in either the consumer or resource population.
-In continuous-time systems, a stable limit cycle arises when a pair of complex conjugate eigenvalues crosses the imaginary axis to attain positive real parts \citep{GuckHolmes}.
-%Of additional interest is the existence of parameter regions that permit the existence of oscillatory, or cyclic, dynamics.
-This condition is called a Hopf bifurcation, and is defined by ${\rm Det}({\bf S}) = 0$, where $\bf S$ is the Sylvester matrix, which is composed of the coefficients of the characteristic polynomial describing the Jacobian \citep{Gross:2004p2428}.
-In addition to the onset of stable cycles, as a system with a stable fixed point nears the Hopf bifurcation, transient or decaying cycles can grow in magnitude.
-Given that ecological systems exist in a state of constant perturbation \citep{Hastings:2001jh}, even the onset of transient cycles that decay over time can increase the risk of extinction \citep{Neubert:1997wk,Caswell:2005eo,Neubert:2009td}, such that the distance of a system from the Hopf bifurcation, even in the stable region, is relevant to persistence.
-
-%Although the Hopf condition for the specific 2-stage model cannot be easily written, the analytical solution can be explored using a symbolic computational language such as \emph{Mathematica}.
 
 
 
@@ -236,6 +210,7 @@ m\left(t\right)=Me^{-B_{m}t/E_{m}^{\prime}}.
 \end{equation}
 Considering that only certain tissues can be digested for energy, for example the brain cannot be degraded to fuel metabolism, we define the rate for starvation and death by the timescales required to reach specific fractions of normal adult mass. We define $m_{starve}=\epsilon M$ where it could be the case that organisms have a systematic size-dependent requirement for essential tissues, such as the minimal bone or brain mass. For example, considering the observation that body fat in mammals scales with overall body size according to $M_{f}=f_{0}M^{\gamma}$, and assuming that once this mass is fully digested the organism begins to starve, would imply that $\epsilon=1-f_{0}M^{\gamma}/M$. Taken together the time scale for starvation is given by
 \begin{equation}
+\label{eqsigma}
 t_{\sigma}=-\frac{E_{m}\log\left(\epsilon\right)}{B_{m}}.
 \end{equation}
 The starvation rate is $\sigma=1/t_{\sigma}$, which implies that $\sigma$ is independent of adult mass if $\epsilon$ is a constant, and if $\epsilon$ does scale with mass, then $\sigma$ will have a factor of $1/\log\left(1-f_{0}M^{\gamma}/M\right)$. In either case $\sigma$ does not have a simple scaling with $\lambda$ which is important for the dynamics that we later discuss. 
@@ -256,9 +231,10 @@ m\left(t\right)=\left[1-\left(1-\frac{b}{a}m_{0}^{1-\eta}\right)e^{-b\left(1-\et
 with $a=B_{0}/E_{m}$ and $b=B_{m}/E_{m}$. We are then interested in the timescale, $t_{\rho}=t_{2}-t_{1}$, which is the time it takes to go from $m\left(t_{1}\right)=\epsilon M$ to $m\left(t_{2}\right)=M$, which has the final form of 
 \begin{equation}
 t_{\rho}=\frac{\log \left(1-\left(M \left(\frac{a}{b}\right)^{\frac{1}{\eta -1}}\right)^{1-\eta }\right)-\log \left(1-\left(M \epsilon  \left(\frac{a}{b}\right)^{\frac{1}{\eta
-   -1}}\right)^{1-\alpha }\right)}{(\eta -1) b}.
+   -1}}\right)^{1-\eta }\right)}{(\eta -1) b}.
 \end{equation}
-
+Although these rate equations are general and will hold for any organism, here we focus on parameterizations specifically for terrestrial-bound endotherms, specifically mammals, which range from $M\approx1$ gram (the Etruscan shrew \emph{Suncus etruscus}) to $M\approx10^7$ grams (the late Eocene to early Miocene Indricotheriinae).
+Investigating other classes of organisms requires only substituting the energetic and scale parameters shown in Table \ref{param}, though this is beyond the current scope of our analysis, and we henceforth focus our examination on mammalian species.
 
 
 
@@ -272,15 +248,94 @@ t_{\rho}=\frac{\log \left(1-\left(M \left(\frac{a}{b}\right)^{\frac{1}{\eta -1}}
 
 
 \noindent {\bf The stabilizing effects of allometric constraints} \\ \noindent
+%Transcritical bifurcation
+Stability in the NSM is conditioned on the consumer's starvation rate $\sigma$ relative to the its reproduction rate $\lambda$.
+As $\sigma$ becomes less than $\lambda$, the resource steady state density becomes negative and extinction is inevitable.
+This condition $\sigma = \lambda$ marks a transcritical (TC) bifurcation, thus marking a hard boundary below which the system becomes unphysical due to the unregulated growth of the consumer population.
+That the timescale of reproduction is larger than the timescale of starvation is intuitive for macroscopic organisms, as the rate at which one loses tissue due to a lack of resources is generally much faster than reproduction.
+In fact, allometric derivations for both reproduction \citep{Kempes:2012hy} and starvation (Eq. \ref{eqsigma}) show that this relationship always holds for organisms within observed body size ranges.
+We note that the asymptote for the starvation rate at $M \approx 8.3\times10^8$ defines the mass at which fat tissue accounts for 100\% of organismal weight, thereby placing a hard scaling boundary on our derivation for the starvation rate.
+%According to this derivation, the endotherm (the blue whale \emph{}) is 74\% fat, which accords with empirical estimates REF.
+
+%
+%%Transcritical & rate law ranges
+%The TC bifurcation occurs in this model because we have assumed that the portion of the population that is not starved reproduces at a constant rate.
+%Because the process of starvation is incorporated explicitly, the consumer's rate of reproduction is not dependent on the density of resources.
+%In fact, the existence of the TC bifurcation at $\lambda = \sigma$ reveals an important biological insight. 
+%Reproduction requires maintenance and growth of biological tissues, both of which have strong scaling relationships with body size.
+%Recent work by Kempes et al. [REF] derived the timescale of reproduction in terms of allometric considerations, where $t_\lambda \propto M^{1-\eta}$ (REF).
+%Starvation is the loss of energy required for maintenance, and we have shown it to have a timescale $t_\sigma \propto \log(M)$.
+%
+%A third important parameter in our framework is the rate of recovery.
+%The recovery timescale $t_\rho$ controls the rate at which individuals move from the hungry class to the full class, and this requires not only tissue maintenance, but growth, such that it is bounded on the short side by $t_\sigma$.
+%Moreover, [why is recovery timescale bounded on the high side], such that it is bounded on the long side by $t_\lambda$.
+%Thus, incorporating allometric considerations shows us that $\lambda < \rho < \sigma$ (alternatively $t_\lambda > t_\rho > t_\sigma$).
+
+
+
+
+%General Hopf bifurcation info
+In addition to the hard bound defined by the TC bifurcation, oscillating or cyclic dynamics present an implicit constraint to persistence by increasing the risk of extinction.
+%also present certain constraints to the feasibility of populations.
+%Oscillating, or cyclic, dynamics present additional risks to populations.
+If cycles are large, stochastic effects may result in extinction in either the consumer or resource population.
+In continuous-time systems, a stable limit cycle arises when a pair of complex conjugate eigenvalues crosses the imaginary axis to attain positive real parts \citep{GuckHolmes}.
+%Of additional interest is the existence of parameter regions that permit the existence of oscillatory, or cyclic, dynamics.
+This condition, known as a Hopf bifurcation, is defined by ${\rm Det}({\bf S}) = 0$, where $\bf S$ is the Sylvester matrix, which is composed of the coefficients of the characteristic polynomial describing the Jacobian \citep{Gross:2004p2428}.
+
+%%Hopf bifurcation and oscillations sigma vs. rho
+%The NSM exhibits both non-cyclic as well as cyclic dynamics, and which behavior is predominant depends strongly on the rate of starvation relative to the rate of recovery.
+%When the starvation rate is low, cyclic dynamics are more likely to occur for a given value of the recovery rate.
+%This can be understood intuitively: for low starvation rates, resources are depressed by an infusion of full consumers, which subsequently starve thereby allowing the resource to recover and continuing the cycle.
+%When the starvation rate is high, the response of consumer growth to resource abundance is muted, such that oscillations tend to decay over time.
+%Thus, higher starvation rates $\sigma$ dampens changes in the consumer population to changes in resource density, and lower rates of recovery $\rho$ amplifies this effect.
+
+%General transient dynamics statement
+In addition to the onset of stable cycles, as a system with a stable fixed point nears the Hopf bifurcation, transient or decaying cycles can grow in magnitude, despite the existence of a positive, non-cyclic, steady state density.
+Given that ecological systems exist in a state of constant perturbation \citep{Hastings:2001jh}, even the onset of transient cycles that decay over time can increase the risk of extinction \citep{Neubert:1997wk,Caswell:2005eo,Neubert:2009td}, such that the distance of a system from the Hopf bifurcation, even in the stable region, is relevant to persistence.
+
+%Although the Hopf condition for the specific 2-stage model cannot be easily written, the analytical solution can be explored using a symbolic computational language such as \emph{Mathematica}.
+
+
+
+The NSM exhibits both non-cyclic as well as cyclic dynamics, and which behavior dominates depends strongly on the rate of starvation $\sigma$ relative to the rate of recovery $\rho$.
 Although starvation leads to mortality risk for the individual, a moderate amount promotes persistence of both consumer and resource populations.
 %Sigma and rho vs. Hopf and TC
-Analysis of the NSM shows that (non-cyclic) stability of the fixed point generally requires a higher starvation rate $\sigma$ relative to the recovery rate $\rho$.
+Non-cyclic stability of the fixed point generally requires a higher starvation rate $\sigma$ relative to the recovery rate $\rho$.
 The intuition behind this is that transition to the hungry (non-reproductive) state permits the resource to recover and transient dynamics to subside, whereas a low $\sigma$ overloads the system with energetically-replete (reproducing) individuals, thus producing maintained oscillations between consumer and resource (Fig. \ref{Hopfb}).
 However if $\sigma$ is too large, mortality due to starvation depletes the consumer population, resulting in a lower steady state density for the consumer and an opposingly higher steady state density for the resource.
 
 Whereas the rate of consumer growth defines a hard bound of biological feasibility (the TC bifurcation), the rate of starvation determines the sensitivity of the consumer population to changes in resource density.
 While higher rates of starvation result in lower steady state population size -- increasing the risk of stochastic extinction -- lower rates of starvation result in a system poised near either the TC or Hopf bifurcation (or both), which will lead to elimination of the resource or the development of cyclic oscillations, respectively.
 Which bifurcation is approached is wholly dependent on the rate of recovery: if it is high, then cyclic dynamics will develop; if it is low, resource extinction becomes increasingly likely.
+
+
+%
+%
+%
+%%Hopf bifurcation as a function of b
+%Both full and hungry consumers remove resources at rates $b$ and $\rho$, respectively.
+%As the rate of resource consumption by full consumers increases, the Hopf condition changes from a convex to a concave function over $\sigma$, limiting the potential for oscillatory dynamics.
+%These rates are considered separately because full consumers need only to maintain their tissues, whereas hungry consumers require both growth and maintenance, such that $t_\rho > t_b$, or $\rho < b$.
+%If this constraint is enacted, the likelihood of oscillatory dynamics is reduced for a given 
+%
+%
+%
+%If instead the consumer's growth was proportional to resource abundance, such that the effects of starvation on reproduction were incorporated explicitly (where the 2-stage consumer resource model collapses to the Lotka-Volterra consumer-resource model with logistic growth of the resource), the TC bifurcation exists only for $\lambda = \mu$, such that the rate of mortality cannot exceed the intrinsic birth rate.
+%
+%
+% whereas the traditional Lotka-Volterra dynamic assumes that the reproductive rate of the consumer is scaled to resource density, such that the growth function would be $G(F,R) = \lambda R F$.
+%Thus, the Lotka-Volterra dynamic \emph{implicitly} accounts for starvation in reducing the reproductive rate of the consumer.
+%However, our 2-stage model \emph{explicitly} accounts for starvation as well as recovery, such that individuals who are not starved should adopt a reproductive rate independent of resource density.
+%
+%
+%
+%We have used scaling relationships between tissue turnover and growth to strictly constrain 5/6 population-level parameters in our 2-stage consumer resource model (including the mortality rate $t_\mu$, which we have shown is just a xxx of $t_\sigma$).
+%This exercise accomplishes two goals:
+%1) it allows us to constrain the plausible parameter space of the two-stage model, and 
+%2) 
+%
+%This allows us to derive many aspects of the system in terms of consumer body mass $M$ and the allometric scaling exponent $\eta$.
 
 
 
@@ -299,23 +354,21 @@ Although the prediction of larger oscillations for animals with smaller body siz
 
 
 %Extinction to the left and the right
-Higher rates of starvation results in a larger flux of the population to the hungry state, eliminating reproduction and increasing the likelihood of death, however it is the relative size of the rate of starvation to the rate of recovery that determines the long-term dynamics of the system.
-By examining the ratio $\sigma/\rho$, we can understand the competing effects of cyclic dynamics and population density on the probability of extinction.
-We computed the probability of extinction, which we defined as $H(t)+F(t)=10$ at any instant across all values of $t$, for 1000 replicates of the continuous-time system shown in Eq. XX with random starting conditions within the interval $(R^*,H^*,F^*)\pm10\%$ (check) for an organism of $M=100{\rm g}$.
-By allowing the rate of starvation to vary, we assessed extinction risk across a range of the ratio $\sigma/\rho$ varying between XXX and XXX, thus examining a vertical cross-ection of Fig \ref{Hopfb}.
+Higher rates of starvation results in a larger flux of the population to the hungry state, eliminating reproduction and increasing the likelihood of death, however it is the rate of starvation relative to the rate of recovery that determines the long-term dynamics of the system (Fig \ref{Hopfb}).
+By examining the ratio $\sigma/\rho$, we can understand the competing effects of cyclic dynamics vs. population density on the probability of extinction.
+We computed the probability of extinction, which we defined as $H(t)+F(t)=10$ at any instant across all values of $t>100$ for 1000 replicates of the continuous-time system shown in Eq. XX with random initial conditions within the interval $(R^*,H^*,F^*)\pm100\%$ (check) for an organism of $M=100{\rm g}$.
+By allowing the rate of starvation to vary, we assessed extinction risk across a range of values for the ratio $\sigma/\rho$ varying between $10^-2$ to $2.5$, thus examining a vertical cross-ection of Fig. \ref{Hopfb}.
 As we expected, we found higher rates of extinction for both low and high values of $\sigma/\rho$; for low values the higher extinction risk is the consequence of transient cycles with larger amplitudes as the system nears the Hopf bifurcation.
 For high values of $\sigma/\rho$, higher extinction risk is due to the steady decrease in the steady state consumer population density.
-This interplay creates an `extinction refuge', such that for a relatively small range of $\sigma/\rho$ extinction probabilities are minimized.
+This interplay creates an `extinction refuge', such that for a relatively small range of $\sigma/\rho$, extinction probabilities are minimized.
 
 As has been described, the $\sigma$ vs. $\rho$ space cannot be freely traversed, such that not all values of $\sigma/\rho$ are biologically feasible.
-We observe that the allometrically constrained values of $\sigma/\rho$ (with $\pm 20\%$ variability around the expectation) fall squarely within the extinction refugia, such that the are close enough to the Hopf bifurcation to avoid low steady state densities, but far enough away to avoid large-amplitude transient cycles.
-The fact that allometric values of $\sigma$ and $\rho$ fall within this relatively small window is suggestive of a selective mechanism driving these rates within populations, and suggests that the NSM system provides insight to a general phenomena that may both drive -- and constrain -- natural animal populations.
+We observe that the allometrically constrained values of $\sigma/\rho$ (with $\pm 20\%$ variability around the mean for the energetic parameters used to determine each rate) fall within the extinction refugia, such that they are close enough to the Hopf bifurcation to avoid low steady state densities, though far enough away to avoid large-amplitude transient cycles.
+The fact that allometric values of $\sigma$ and $\rho$ fall within this relatively small window supports the possibility that a selective mechanism has constrained the physiological conditions driving observed starvation and recovery rates within populations.
+Such a mechanism would involve a feedback between the dynamics of the population and the fitness of individuals within the population, though to what extent the dynamics of the population influence rates of starvation and recovery would also involve potential tradeoffs in reproduction and somatic maintenance.
+Despite the possible mechanisms, our finding that allometrically-determined energetic rates place the system within this low probability of extinction region suggests that the NSM system provides general insight to a phenomena that may both drive -- and constrain -- natural animal populations.
 
 
-
-
-
-The ratio $\sigma/\rho$  
 
 %Results are insensitive to alpha but possibly sensitive to beta (eff parameter)
 
@@ -326,67 +379,6 @@ The ratio $\sigma/\rho$
 %Lots of food web lit on stabilizing effects of body size! Brose, Petchey for instance. Good for discussion.
 
 
-
-both the location of TC and Hopf bifurcations over $\sigma$ and $\rho$ relative to the allometrically-determined starvation and recovery rates of species across different body sizes 
-%Mass changes the values of the fixed points as well
-
-[First describe the dynamics of the model and HOW IT WORKS]
-[Then Allometry and stability]
-
-Analysis of the 2-stage consumer resource model shows that the equilibrial states of both populations are highly sensitive to changes in  starvation and recovery rates of the consumer.
-The consumer and resource population densities vary inversely: when the consumer densities are high, resource densities are low, and vice versa.
-High starvation and low recovery rates result in low consumer densities and high resource densities. %whereas the opposite is true for low starvation and high recovery rates.
-If starvation rates are low, resources have a fixed point near zero for any value of the recovery rate.
-Full and hungry consumer stages tend have fixed points that are tightly correlated, the extent to which is driven by the similarity of consumer growth and mortality rates; if $\lambda = \mu$, then $F^* = H^*$.
-
-%Transcritical & rate law ranges
-A transcritical bifurcation exists at $\lambda = \sigma$, such that the condition $\sigma > \lambda$ is required for biologically reasonable dynamics.
-The TC bifurcation occurs in this model because we have assumed that the portion of the population that is not starved reproduces at a constant rate.
-Because the process of starvation is incorporated explicitly, the consumer's rate of reproduction is not dependent on the density of resources.
-In fact, the existence of the TC bifurcation at $\lambda = \sigma$ reveals an important biological insight. 
-Reproduction requires maintenance and growth of biological tissues, both of which have strong scaling relationships with body size.
-Recent work by Kempes et al. [REF] derived the timescale of reproduction in terms of allometric considerations, where $t_\lambda \propto M^{1-\eta}$ (REF).
-Starvation is the loss of energy required for maintenance, and we have shown it to have a timescale $t_\sigma \propto \log(M)$.
-Accordingly, the timescale of reproduction is always larger than the timescale of starvation, such that $\lambda$ must be less than $\sigma$ by definition.
-A third important parameter in our framework is the rate of recovery.
-The recovery timescale $t_\rho$ controls the rate at which individuals move from the hungry class to the full class, and this requires not only tissue maintenance, but growth, such that it is bounded on the short side by $t_\sigma$.
-Moreover, [why is recovery timescale bounded on the high side], such that it is bounded on the long side by $t_\lambda$.
-Thus, incorporating allometric considerations shows us that $\lambda < \rho < \sigma$ (alternatively $t_\lambda > t_\rho > t_\sigma$).
-
-%Hopf bifurcation and oscillations sigma vs. rho
-The 2-stage consumer resource model exhibits two qualitatively different behavioral regimes.
-Because portions of the consumer population exist in either full or hungry states simultaneously, the internal fixed point can either be a stable equilibrium, or exhibit sustained oscillatory behavior, depending on the rates of starvation $\sigma$ and recovery $\rho$.
-The transition from stable non-oscillatory dynamics to oscillatory dynamics occurs at the Hopf bifurcation condition where two complex conjugate eigenvalues cross the imaginary axis and attain positive real parts.
-Although there is an analytical solution to the Hopf bifurcation condition, it cannot be written efficiently.
-
-When the starvation rate is low, oscillatory dynamics are more likely to occur for a given value of the recovery rate.
-This can be understood intuitively: for low starvation rates, resources are depressed by an infusion of full consumers, which subsequently starve thereby allowing the resource to recover and continuing the cycle.
-When the starvation rate is high, the response of consumer growth to resource abundance is muted, such that oscillations tend to decay over time.
-Thus, higher starvation rates $\sigma$ desensitizes changes in the consumer population to changes in resource density, and lower rates of recovery $\rho$ amplifies this effect.
-
-%Hopf bifurcation as a function of b
-Both full and hungry consumers remove resources at rates $b$ and $\rho$, respectively.
-As the rate of resource consumption by full consumers increases, the Hopf condition changes from a convex to a concave function over $\sigma$, limiting the potential for oscillatory dynamics.
-These rates are considered separately because full consumers need only to maintain their tissues, whereas hungry consumers require both growth and maintenance, such that $t_\rho > t_b$, or $\rho < b$.
-If this constraint is enacted, the likelihood of oscillatory dynamics is reduced for a given 
-
-
-
-If instead the consumer's growth was proportional to resource abundance, such that the effects of starvation on reproduction were incorporated explicitly (where the 2-stage consumer resource model collapses to the Lotka-Volterra consumer-resource model with logistic growth of the resource), the TC bifurcation exists only for $\lambda = \mu$, such that the rate of mortality cannot exceed the intrinsic birth rate.
-
-
- whereas the traditional Lotka-Volterra dynamic assumes that the reproductive rate of the consumer is scaled to resource density, such that the growth function would be $G(F,R) = \lambda R F$.
-Thus, the Lotka-Volterra dynamic \emph{implicitly} accounts for starvation in reducing the reproductive rate of the consumer.
-However, our 2-stage model \emph{explicitly} accounts for starvation as well as recovery, such that individuals who are not starved should adopt a reproductive rate independent of resource density.
-
-
-
-We have used scaling relationships between tissue turnover and growth to strictly constrain 5/6 population-level parameters in our 2-stage consumer resource model (including the mortality rate $t_\mu$, which we have shown is just a xxx of $t_\sigma$).
-This exercise accomplishes two goals:
-1) it allows us to constrain the plausible parameter space of the two-stage model, and 
-2) 
-
-This allows us to derive many aspects of the system in terms of consumer body mass $M$ and the allometric scaling exponent $\eta$.
 
 
 
@@ -427,7 +419,7 @@ This allows us to derive many aspects of the system in terms of consumer body ma
 
 \begin{table}[h]
 \caption{Parameter Values For Various Classes of Organisms}
-\label{parameter-values}
+\label{param}
     \begin{center}
     \small
      \begin{tabular}{| p{1.2cm}| p{3.2cm} | p{2.6cm} | p{3.2cm} | }
@@ -454,52 +446,62 @@ This allows us to derive many aspects of the system in terms of consumer body ma
     \end{center}
    \end{table}
 
-\clearpage
 
- \begin{figure}[h]
- 	\centering
- 	\includegraphics[width=0.75\textwidth]{Growth-trajectory-diagram.pdf}
- 	\caption{
- 	}
- 	\label{growth-diagram}
- \end{figure}
+
 
 \clearpage
-
-
- \begin{figure}[h]
- 	\centering
- 	\includegraphics[width=0.75\textwidth]{fig_FixedPoint.pdf}
- 	\caption{
- 	}
- 	\label{Hopfb}
- \end{figure}
-
-
- \begin{figure}[h]
- 	\centering
- 	\includegraphics[width=0.8\textwidth]{fig_DataHopf.pdf}
- 	\caption{
- 	}
- 	\label{DataHopf}
- \end{figure}
  
+	 \begin{figure}[h]
+		 \centering
+		 \includegraphics[width=0.5\textwidth]{Growth-trajectory-diagram.pdf}
+		 \caption{
+		 }
+		 \label{growth-diagram}
+	 \end{figure}
+	 
+	 \begin{figure}[h]
+		 \centering
+		 \includegraphics[width=0.5\textwidth]{fig_GvS.pdf}
+		 \caption{
+		 }
+		 \label{GvS}
+	 \end{figure}
+
+
+	\begin{figure}[h]
+	 	\centering
+	 	\includegraphics[width=0.75\textwidth]{fig_FixedPoint.pdf}
+	 	\caption{
+	 	}
+		\label{Hopfb}
+	\end{figure}
+
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig_DataHopf.pdf}
+		\caption{
+		}
+		\label{DataHopf}
+	\end{figure}
+	 
  
 	\begin{figure}[h]
- 	\centering
- 	\includegraphics[width=0.5\textwidth]{fig_FPAllometric.pdf}
- 	\caption{
- 	}
- 	\label{Asymp}
- \end{figure}
- 
-  \begin{figure}[h]
- 	\centering
- 	\includegraphics[width=0.8\textwidth]{fig_ExtinctionAllometric.pdf}
- 	\caption{
- 	}
- 	\label{Ext}
- \end{figure}
+		\centering
+	 	\includegraphics[width=0.8\textwidth]{fig_ExtinctionAllometric.pdf}
+	 	\caption{
+	 	}
+	 	\label{Ext}
+	\end{figure}
+	
+	\begin{figure}[h]
+	 	\centering
+	 	\includegraphics[width=0.5\textwidth]{fig_FPAllometric.pdf}
+	 	\caption{
+	 	}
+	 	\label{Asymp}
+	\end{figure}
+
  
 
  
