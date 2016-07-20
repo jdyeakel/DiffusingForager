@@ -3,47 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/Yeakel_Kempes-Redner_PNAS_7-19.aux
 The style file: pnas.bst
 Database file #1: aa_starving.bib
-Warning--I didn't find a database entry for "DeLong:2010dy"
 Warning--I didn't find a database entry for "muscle"
-You've used 31 entries,
+You've used 48 entries,
             1765 wiz_defined-function locations,
-            685 strings with 8868 characters,
-and the built_in function-call counts, 6810 in all, are:
-= -- 674
-> -- 263
+            795 strings with 12007 characters,
+and the built_in function-call counts, 10787 in all, are:
+= -- 1072
+> -- 420
 < -- 1
-+ -- 98
-- -- 67
-* -- 515
-:= -- 1103
-add.period$ -- 56
-call.type$ -- 31
-change.case$ -- 25
++ -- 156
+- -- 108
+* -- 842
+:= -- 1753
+add.period$ -- 90
+call.type$ -- 48
+change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 301
-empty$ -- 629
-format.name$ -- 68
-if$ -- 1472
+cite$ -- 48
+duplicate$ -- 453
+empty$ -- 974
+format.name$ -- 111
+if$ -- 2305
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 35
-newline$ -- 157
-num.names$ -- 31
-pop$ -- 63
+int.to.str$ -- 48
+missing$ -- 52
+newline$ -- 242
+num.names$ -- 48
+pop$ -- 81
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 47
+skip$ -- 65
 stack$ -- 0
-substring$ -- 590
-swap$ -- 76
+substring$ -- 1024
+swap$ -- 110
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 77
-width$ -- 33
-write$ -- 334
-(There were 2 warnings)
+while$ -- 122
+width$ -- 50
+write$ -- 520
+(There was 1 warning)
