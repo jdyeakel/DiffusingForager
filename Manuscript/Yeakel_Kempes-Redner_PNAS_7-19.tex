@@ -331,7 +331,7 @@ If $\sigma<\lambda$, the resource steady state density is negative and extinctio
 The condition $\sigma = \lambda$ is a transcritical (TC) bifurcation, thus marking a hard boundary below which the system is unphysical due to the unregulated growth of the consumer population.
 That the timescale of reproduction is larger than the timescale of starvation is intuitive for macroscopic organisms, as the rate at which one loses tissue due to a lack of resources is generally much faster than reproduction.
 In fact, allometric derivations for both reproduction \cite{Kempes:2012hy} and starvation (Eq. \ref{eq:sigma}) show that this relationship always holds for organisms within observed body size ranges (Fig. \ref{fig:gvs}).
-We note that the asymptote for the starvation rate at $M \approx 8\times10^8$ defines the mass at which body fat accounts for 100\% of organismal weight, thereby placing a scaling bound on our derivation for the starvation rate.
+%We note that the asymptote for the starvation rate at $M \approx 8\times10^8$ defines the mass at which body fat accounts for 100\% of organismal weight, thereby placing a scaling bound on our derivation for the starvation rate.
 %According to this derivation, the endotherm (the blue whale \emph{}) is 74\% fat, which accords with empirical estimates REF.
 
 %
@@ -377,79 +377,47 @@ Given that ecological systems exist in a state of constant perturbation \cite{Ha
 
 
 The NSM exhibits both non-cyclic as well as cyclic dynamics, and which behavior dominates depends strongly on the rate of starvation $\sigma$ relative to the rate of recovery $\rho$.
-Although starvation leads to mortality risk for the individual, a moderate amount promotes persistence of both consumer and resource populations.
-%Sigma and rho vs. Hopf and TC
-Non-cyclic stability of the fixed point generally requires a higher starvation rate $\sigma$ relative to the recovery rate $\rho$.
-The intuition behind this is that transition to the hungry (non-reproductive) state permits the resource to recover and transient dynamics to subside, whereas a low $\sigma$ overloads the system with energetically-replete (reproducing) individuals, thus maintaining oscillations between consumer and resource (Fig. \ref{fig:fp}).
-However if $\sigma$ is too large, mortality due to starvation depletes the consumer population, resulting in a lower steady state density for the consumer and a higher steady state density for the resource.
+Although starvation leads to mortality risk, a moderate amount promotes persistence of both consumer and resource populations as non-cyclic stability of the fixed point generally requires a higher $\sigma$ relative to $\rho$.
+The intuition behind this is that transition to the hungry (non-reproductive) state permits the resource to recover and transient dynamics to subside, whereas a low $\sigma$ overloads the system with energetically-replete (reproducing) individuals, maintaining oscillations between consumer and resource (Fig. \ref{fig:fp}).
+If $\sigma$ is too large, mortality due to starvation depletes the consumer population, resulting in a lower steady state density for the consumer and a higher steady state density for the resource.
 
-Whereas the rate of consumer growth defines a hard bound of biological feasibility (the TC bifurcation), the rate of starvation determines the sensitivity of the consumer population to changes in resource density.
-While higher rates of starvation result in lower steady state population size -- increasing the risk of stochastic extinction -- lower rates of starvation result in a system poised near either the TC or Hopf bifurcation (or both), which will lead to elimination of the resource or the development of cyclic oscillations, respectively.
+Whereas the rate of consumer growth defines a hard bound of biological feasibility (the TC bifurcation), the rate of starvation thus determines the sensitivity of the consumer population to changes in resource density.
+While higher rates of starvation result in lower steady state population size -- increasing the risk of stochastic extinction -- lower rates of starvation result in a system poised near either the TC or Hopf bifurcation, which will lead to elimination of the resource or the development of cyclic oscillations, respectively.
 Which bifurcation is approached is wholly dependent on the rate of recovery: if it is high, then cyclic dynamics will develop; if it is low, resource extinction becomes increasingly likely.
 
 
-%
-%
-%
-%%Hopf bifurcation as a function of b
-%Both full and hungry consumers remove resources at rates $b$ and $\rho$, respectively.
-%As the rate of resource consumption by full consumers increases, the Hopf condition changes from a convex to a concave function over $\sigma$, limiting the potential for oscillatory dynamics.
-%These rates are considered separately because full consumers need only to maintain their tissues, whereas hungry consumers require both growth and maintenance, such that $t_\rho > t_b$, or $\rho < b$.
-%If this constraint is enacted, the likelihood of oscillatory dynamics is reduced for a given 
-%
-%
-%
-%If instead the consumer's growth was proportional to resource abundance, such that the effects of starvation on reproduction were incorporated explicitly (where the 2-stage consumer resource model collapses to the Lotka-Volterra consumer-resource model with logistic growth of the resource), the TC bifurcation exists only for $\lambda = \mu$, such that the rate of mortality cannot exceed the intrinsic birth rate.
-%
-%
-% whereas the traditional Lotka-Volterra dynamic assumes that the reproductive rate of the consumer is scaled to resource density, such that the growth function would be $G(F,R) = \lambda R F$.
-%Thus, the Lotka-Volterra dynamic \emph{implicitly} accounts for starvation in reducing the reproductive rate of the consumer.
-%However, our 2-stage model \emph{explicitly} accounts for starvation as well as recovery, such that individuals who are not starved should adopt a reproductive rate independent of resource density.
-%
-%
-%
-%We have used scaling relationships between tissue turnover and growth to strictly constrain 5/6 population-level parameters in our 2-stage consumer resource model (including the mortality rate $t_\mu$, which we have shown is just a xxx of $t_\sigma$).
-%This exercise accomplishes two goals:
-%1) it allows us to constrain the plausible parameter space of the two-stage model, and 
-%2) 
-%
-%This allows us to derive many aspects of the system in terms of consumer body mass $M$ and the allometric scaling exponent $\eta$.
-
-
-
-
 %Bifurcation space as a function of mass
-As the allometric derivations of NSM rate laws reveal, $\sigma$ and $\rho$ are not independent parameters, such that the bifurcation space shown in Fig. \ref{Hopfb} cannot be freely navigated if assuming biologically reasonable parameterizations.
-Given the parameterization for terrestrial endotherms shown in Table \ref{param} with mass $M$ as the only free parameter, rates of starvation and recovery are constrained to a fairly small window of potential values (Fig. \ref{fig:hopf}), thus confining dynamics to the steady state regime for all reasonable body size classes.
+As the allometric derivations of NSM rate laws reveal, $\sigma$ and $\rho$ are not independent parameters, and the bifurcation space shown in Fig. \ref{fig:fp} cannot be freely navigated if assuming biologically reasonable parameterizations.
+Given the parameterization for terrestrial endotherms shown in Table \ref{param} with mass $M$ as a free parameter, we show that $\sigma$ and $\rho$ are constrained to a small window of potential values (Fig. \ref{fig:hopf}), thus confining dynamics to the steady state regime for all realized body size classes.
 %, which for mammals ranges from ca. 1 gram (the Etruscan shrew) to ca. $10^7$ grams (represented by the Indricotheriinae, a subfamily of mammals living from the mid-Eocene to early Miocene).
-Moreover, for larger $M$, the distance increases between the allometric values for $\sigma(M)$ and $\rho(M)$ relative to the Hopf bifurcation, while uncertainty in allometric parameters (20\% variation around the mean; Fig. \ref{fig:hopf}) results in little difference in the position of the TC and Hopf bifurcations as well as consumer energetic rates.
-This result suggests 
-1) that small mammals are more prone to population oscillations -- including both stable limit cycles as well as transient cycles -- than large mammals, and
-2) the decreasing distance to the Hopf bifurcation with lower body sizes is suggestive of a dynamic barrier to the mass of endothermic organisms.
+Moreover, for larger $M$, the distance to the Hopf bifurcation increases, while uncertainty in allometric parameters (20\% variation around the mean; Fig. \ref{fig:hopf}) results in little qualitative difference.
+This suggests that small mammals are more prone to population oscillations -- including both stable limit cycles as well as transient cycles -- than mammals with larger body size. %, and
+%2) the decreasing distance to the Hopf bifurcation with lower body sizes is suggestive of a dynamic barrier to the mass of endothermic organisms.
 
 
 Allometric constraints have been invoked to explain the periodicity of cyclic populations \cite{CalderIII:1983jd,Peterson:1984hj,Krukonis:1991fk}, such that period $\propto M^{0.25}$, however this relationship seems to hold only for some species \cite{Hendriks:2012fc} and competing explanations exist \cite{Kendall:1999iy,Hogstedt:2005cr}.
 %It is more difficult to ascertain whether a population is truly cycling according to an internal or external dynamic \cite{Kendall:1999iy} or if fluctuations are due to stochasticity, and this is particularly true for longer-lived organisms.
-Though statistically significant support for the existence of population cycles among mammals is based on data for smaller body sized organisms \cite{Kendall:1998hl}, we acknowledge that absence of evidence for cyclic dynamics for longer-lived species is not necessarily evidence of absence.
-We thus obtain a specific prediction from our model: population cycles should be less common among larger species and more common for smaller species, particularly in environments where resources are limiting, emphasizing the role of starvation on dynamics.
+Statistically significant support for the existence of population cycles among mammals is predominantly based on time-series for smaller bodied mammals \cite{Kendall:1998hl}, though we acknowledge that longer generation times precludes similar quality data for larger organisms.
+%, we acknowledge that absence of evidence for cyclic dynamics among longer-lived species is not necessarily evidence of absence.
+We thus obtain a specific prediction from our model: population cycles should be less common for larger species and more common for smaller species, particularly in environments where resources are limiting. %, emphasizing the role of starvation on dynamics.
 
 
 
 
 %Extinction to the left and the right
 Higher rates of starvation results in a larger flux of the population to the hungry state, eliminating reproduction and increasing the likelihood of mortality, however it is the rate of starvation relative to the rate of recovery that determines the long-term dynamics of the system (Fig \ref{fig:fp}).
-By examining the ratio $\sigma/\rho$, we can understand the competing effects of cyclic dynamics vs. steady state density on extinction risk.
-We computed the probability of extinction, where extinction is defined as $H(t)+F(t)=10$ at any instant across all values of $10^3<t\leq 10^6$, for 1000 replicates of the continuous-time system shown in Eq. \ref{eq:system} for an organism of $M=100$ grams, assuming random initial conditions around the steady state (Eq. \ref{eq:ss}). %random initial conditions within the interval $(R^*,H^*,F^*)\pm100\%$.
-By allowing the rate of starvation to vary, we assessed extinction risk across a range of values for the ratio $\sigma/\rho$ varying between $10^{-2}$ to $2.5$, thus examining a horizontal cross-section of Fig. \ref{fig:fp}.
+We examine the competing effects of cyclic dynamics vs. changes in steady state density on extinction risk as a function of the ratio $\sigma/\rho$.
+We computed the probability of extinction, where extinction is defined as $H(t)+F(t)=10$ at any instant across all values of $10^2<t\leq 10^6$, for 1000 replicates of the continuous-time system shown in Eq. \ref{eq:system} for an organism of $M=100$ grams, assuming random initial conditions around the steady state (Eq. \ref{eq:ss}). %random initial conditions within the interval $(R^*,H^*,F^*)\pm100\%$.
+By allowing the rate of starvation to vary, we assessed extinction risk across a range of values of the ratio $\sigma/\rho$ varying between $10^{-2}$ to $2.5$, thus examining a horizontal cross-section of Fig. \ref{fig:fp}.
 As expected, higher rates of extinction correlated with both low and high values of $\sigma/\rho$; for low values the higher extinction risk results from transient cycles with larger amplitudes as the system nears the Hopf bifurcation (Fig. \ref{fig:ext}).
 For large values of $\sigma/\rho$, higher extinction risk is due to the decrease in the steady state consumer population density.
-This interplay creates an `extinction refuge' as shown in Fig. \ref{fig:ext}, such that for a relatively small range of $\sigma/\rho$, extinction probabilities are minimized.
+This interplay creates an `extinction refuge' as shown in Fig. \ref{fig:ext}, such that for a relatively constrained range of $\sigma/\rho$, extinction probabilities are minimized.
 
 As has been described, the $\sigma$ vs. $\rho$ space cannot be freely traversed, such that not all values of $\sigma/\rho$ are biologically feasible.
-We observe that the allometrically constrained values of $\sigma/\rho$ (with $\pm 20\%$ variability around energetic parameter means) fall within the extinction refugia, such that they are close enough to the Hopf bifurcation to avoid low steady state densities, though far enough away to avoid large-amplitude transient cycles.
+We observe that the allometrically constrained values of $\sigma/\rho$ (with $\pm 20\%$ variability around energetic parameter means) fall within the extinction refuge, such that they are close enough to the Hopf bifurcation to avoid low steady state densities, though far enough away to avoid large-amplitude transient cycles.
 The fact that allometric values of $\sigma$ and $\rho$ fall within this relatively small window supports the possibility that a selective mechanism has constrained the physiological conditions driving observed starvation and recovery rates within populations.
 Such a mechanism would involve a feedback between the dynamics of the population and the fitness of individuals within the population, though to what extent the dynamics of the population influence rates of starvation and recovery would also involve potential tradeoffs in reproduction and somatic maintenance.
-Nevertheless, our finding that allometrically-determined energetic rates place the system within this low probability of extinction region suggests that the NSM system provides general insight to a phenomena that may both drive -- and constrain -- natural animal populations.
+Nevertheless, our finding that allometrically-determined energetic rates place the system within this low extinction probability region suggests that the NSM system provides general insight to a phenomena that may both drive -- and constrain -- natural animal populations.
 
 
 
@@ -465,30 +433,31 @@ Nevertheless, our finding that allometrically-determined energetic rates place t
 
 
 \vspace{2mm}
-\noindent {\bf Dynamic and energetic barriers on body size} \\ \nonumber
+\noindent {\bf Dynamic and energetic barriers to body size} \\ \nonumber
 Metabolite transportation constraints are widely thought to place strict boundaries on biological scaling \cite{Brown:1993p708,West:1997cg,Brown:2004wq}, leading to specific predictions on the minimum possible body size for organisms \cite{West:2002ud}.
-In the opposite vein, a number of energetic and evolutionary mechanisms have been explored to assess the costs and benefits of larger body masses, particularly for mammals.
+Above this bound, a number of energetic and evolutionary mechanisms have been explored to assess the costs and benefits associated with larger body masses, particularly for mammals.
 The \emph{fasting endurance hypothesis} contends that larger body size, being energetically more efficient per unit biomass, may buffer organisms against environmental fluctuations in resource availability \cite{Millar:1990p923}.
-Over evolutionary time, terrestrial mammalian lineages show a significant trend towards larger body size (known as Cope's Rule) \cite{Alroy:1998p1594,Clauset:2009fh,Smith:2010p3442,Saarinen:2014br}, and it is thought that within-lineage drivers may instigate a selective force towards an optimal upper-bound of ca. $10^7$ grams \cite{Alroy:1998p1594}, the value of which may be due to higher extinction risks for large taxa over longer timescales \cite{Clauset:2009fh}.
-These evolutionary trends are thought to be driven by a combination of climate and niche availability \cite{Saarinen:2014br}, however the underpinning energetic costs and benefits of larger body sizes, and how they influence dynamics over ecological timescales, has not been explored, and we contend that the NSM provides a suitable framework to explore this problem.
+Over evolutionary time, terrestrial mammalian lineages show a significant trend towards larger body size (known as Cope's Rule) \cite{Alroy:1998p1594,Clauset:2009fh,Smith:2010p3442,Saarinen:2014br}, and it is thought that within-lineage drivers generate a selective force towards an optimal upper-bound of ca. $10^7$ grams \cite{Alroy:1998p1594}, the value of which may arise from higher extinction risk for large taxa over evolutionary timescales \cite{Clauset:2009fh}.
+These trends are thought to be driven by a combination of climate change and niche availability \cite{Saarinen:2014br}, however the underpinning energetic costs and benefits of larger body sizes, and how they influence dynamics over ecological timescales, has not been explored, and we contend that the NSM provides a suitable framework to explore this problem.
 
 %Minimal mass bound
-The NSM correctly predicts that species with smaller masses have larger steady state population densities, however we observe that there is a sharp asymptote in both steady state densities as well as $\sigma/\rho$ at $M \approx 0.3$ grams  (Fig. \ref{fig:mass}b).
-Observation of the rates of starvation and recovery explain why: as mass decreases, the rate of starvation increases steadily, while the rate of recovery begins to decline precipitously.
-This exponential decline in $\rho$ occurs when body fat percentage is $1 - 1/(cM) \approx 2\%$, whereupon consumers have no eligible route out of starvation, leading to extinction.
-Compellingly, this dynamic bound determined by the rate of energetic recovery is close to the minimum observed mammalian body size of ca. 1.3-2.5 grams (Fig. \ref{fig:mass}b,c), a range that occurs as the recovery rate begins to decline exponentially.
-In addition to barriers associated with metabolite transport constraints \cite{West:2002ud}, we suggest that an additional limitation stems from the dynamics of starvation.
+The NSM correctly predicts that species with smaller masses have larger steady state population densities, however we observe that there is a sharp asymptote in both steady state densities as well as $\sigma/\rho$ at $M \approx 0.3$ grams  (Fig. \ref{fig:mass}a,b).
+Observation of the rates of starvation and recovery explain why: as mass decreases, the rate of starvation increases, while the rate of recovery declines super-exponentially.
+This decline in $\rho$ occurs when body fat percentage is $1 - 1/(cM) \approx 2\%$, whereupon consumers have no eligible route out of starvation.
+Compellingly, this dynamic bound determined by the rate of energetic recovery is close to the minimum observed mammalian body size of ca. 1.3-2.5 grams (Fig. \ref{fig:mass}b,c), a range that occurs as the recovery rate begins its decline.
+In addition to known transport limitations \cite{West:2002ud}, we suggest that an additional constraint of lower body size stems from the dynamics of starvation.
 
 %Maximum mass bound
 Although there are upper bounds to the rate equations (e.g. when percent body fat becomes unity), they are not biologically feasible and we do not discuss them further.
-Instead, we investigate population invasibility with respect to a mutated subset of the population (identified by ${}^\prime$) where individuals have a modified proportion of body fat $M^\prime=M(1+\chi)$ where $\chi \in [-0.5,0.5]$, thus altering rates of starvation, recovery, and maintenance $\beta$.
-Although there is not an internal fixed point where both residents and invaders coexist (except for the trivial state $\chi=0$), we can assess invasibility as a function of organismal mass by determining which consumer steady state is larger across values of modified body fat.
+Instead, we examine a potential upper bound to body mass by assessing population invasibility with respect to a mutated subset of the population (denoted by ${}^\prime$) where individuals have a modified proportion of body fat $M^\prime=M(1+\chi)$ where $\chi \in [-0.5,0.5]$, thus altering rates of starvation, recovery, and maintenance $\beta$.
+Although there is not an internal fixed point where both residents and invaders coexist (except for the trivial state $\chi=0$), we can assess invasibility as a function of organismal mass by determining which consumer steady state is larger over $\chi$.
 We find that for $1\leq M<10^6$g, having additional body fat ($\chi > 0$) results in a higher steady state density for the invader population ($H^{\prime *}+F^{\prime *}>H^*+F^*$), such that it has an intrinsic advantage over the resident population.
-For $M>10^6$, however, there is an increasing range of $\chi < 0$ such that leaner individuals have the advantage, and this is due to the changing covariance between energetic rates as a function of modified body fat.
+For $M>10^6$, however, there is an increasing range of $\chi < 0$ such that leaner individuals have the advantage, and this is due to the changing covariance between energetic rates as a function of modified energetic reserves.
 
 The observed switch in invasibility as a function of $\chi$ at $M_{\rm opt}\approx10^6$ thus serves as an attractor, where over evolutionary time the NSM predicts organismal mass to increase if $M<M_{\rm opt}$ and decrease if $M>M_{\rm opt}$.
-Moreover, $M_{\rm opt}$, which is entirely determined by the population-level consequences of energetic constraints is within an order of magnitude as that boserved in the North American mammalian fossil record \cite{Alroy:1998p1594} and as that predicted from an evolutionary model of body size evolution \cite{Clauset:2009fh}.
-Of course, the state of the environment in combination with the realized competitive landscape will determine whether specific body size classes are selected for or not \cite{Saarinen:2014br}, however the internal dynamic that we examine with the NSM may supply the fundamental momentum fueling the evolution of larger body size among terrestrial mammals.
+Moreover, $M_{\rm opt}$, which is entirely determined by the population-level consequences of energetic constraints is within an order of magnitude as that observed in the North American mammalian fossil record \cite{Alroy:1998p1594} and as that predicted from an evolutionary model of body size evolution \cite{Clauset:2009fh}.
+While the state of the environment, as well as the competitive landscape, will determine whether specific body size sizes are selected for or against \cite{Saarinen:2014br}, we suggest that the starvation dynamic proposed here may supply the fundamental momentum fueling the evolution of larger body size among terrestrial mammals.
+%and we suggest that the starvation dynamics described here act in concert with these other factors is the only driver of body size evolution.
 
 %Closing
 The energetics associated with somatic maintenance, growth, and reproduction are important elements that influence the dynamics of all populations \cite{Stearns:1989ip}.
