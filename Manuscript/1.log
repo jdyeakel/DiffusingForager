@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/MacPorts 2016_0) (preloaded format=pdflatex 2016.7.13)  22 JUL 2016 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/MacPorts 2016_0) (preloaded format=pdflatex 2016.7.13)  22 JUL 2016 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,54 +436,55 @@ Package amsmath Warning: Cannot use `split' here;
 
 [1
 
-{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (2.00002pt too high) has occurred while \output is active []
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
+ []
 
-[2] [3] [4] (./1.bbl) [5]
+[3] (./1.bbl [4]) [5]
 <Growth-trajectory-diagram.pdf, id=37, 1027.84pt x 770.88pt>
 File: Growth-trajectory-diagram.pdf Graphic file (type pdf)
 
 <use Growth-trajectory-diagram.pdf>
-Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 645.
+Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 561.
 (pdftex.def)             Requested size: 255.0pt x 191.24919pt.
 
 <fig_GvS.pdf, id=38, 361.35pt x 235.88126pt>
 File: fig_GvS.pdf Graphic file (type pdf)
  <use fig_GvS.pdf>
-Package pdftex.def Info: fig_GvS.pdf used on input line 653.
+Package pdftex.def Info: fig_GvS.pdf used on input line 569.
 (pdftex.def)             Requested size: 255.0pt x 166.45827pt.
 
 <fig_FixedPoint.pdf, id=39, 271.0125pt x 412.54124pt>
 File: fig_FixedPoint.pdf Graphic file (type pdf)
  <use fig_FixedPoint.pdf>
-Package pdftex.def Info: fig_FixedPoint.pdf used on input line 661.
+Package pdftex.def Info: fig_FixedPoint.pdf used on input line 577.
 (pdftex.def)             Requested size: 255.0pt x 388.17911pt.
 
 <fig_DataHopf.pdf, id=40, 317.185pt x 169.63374pt>
 File: fig_DataHopf.pdf Graphic file (type pdf)
  <use fig_DataHopf.pdf>
-Package pdftex.def Info: fig_DataHopf.pdf used on input line 669.
+Package pdftex.def Info: fig_DataHopf.pdf used on input line 585.
 (pdftex.def)             Requested size: 255.0pt x 136.38014pt.
 
 <fig_ExtinctionAllometric.pdf, id=41, 433.62pt x 294.09875pt>
 File: fig_ExtinctionAllometric.pdf Graphic file (type pdf)
 
 <use fig_ExtinctionAllometric.pdf>
-Package pdftex.def Info: fig_ExtinctionAllometric.pdf used on input line 677.
+Package pdftex.def Info: fig_ExtinctionAllometric.pdf used on input line 593.
 (pdftex.def)             Requested size: 255.0pt x 172.95131pt.
 
 <fig_FPAllometric.pdf, id=42, 360.34625pt x 672.5125pt>
 File: fig_FPAllometric.pdf Graphic file (type pdf)
 
 <use fig_FPAllometric.pdf>
-Package pdftex.def Info: fig_FPAllometric.pdf used on input line 685.
+Package pdftex.def Info: fig_FPAllometric.pdf used on input line 601.
 (pdftex.def)             Requested size: 229.49844pt x 428.31314pt.
  <fig_Invasion.pdf, id=43, 301.125pt x 297.11pt>
 File: fig_Invasion.pdf Graphic file (type pdf)
 
 <use fig_Invasion.pdf>
-Package pdftex.def Info: fig_Invasion.pdf used on input line 693.
+Package pdftex.def Info: fig_Invasion.pdf used on input line 609.
 (pdftex.def)             Requested size: 510.0pt x 503.24876pt.
  [6 <./Growth-trajectory-diagram.pdf> <./fig_GvS.pdf>]
 [7 <./fig_FixedPoint.pdf> <./fig_DataHopf.pdf
@@ -496,15 +497,15 @@ pdfTeX warning: pdflatex (file ./fig_FPAllometric.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
 >] [9 <./fig_Invasion.pdf>]
 LaTeX Font Info:    Font shape `OT1/cmr10 /bx/n' in size <8> not available
-(Font)              Font shape `OT1/cmr10 /b/n' tried instead on input line 762
+(Font)              Font shape `OT1/cmr10 /b/n' tried instead on input line 678
 .
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--762
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
 []|\OT1/cmr10 /b/n/8 Unicellular Eu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--772
+Underfull \hbox (badness 10000) in paragraph at lines 688--688
 []|$\OT1/cmr/m/n/8 3\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 39 \OMS/cmsy/m/n/8 ^^B \OT1
 /cmr/m/n/8 10[]$ \OT1/cmr10 /m/n/8 (s$[]$
  []
@@ -519,7 +520,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  4459 strings out of 494114
  64928 string characters out of 6155601
- 170670 words of memory out of 5000000
+ 154671 words of memory out of 5000000
  7752 multiletter control sequences out of 15000+600000
  31244 words of font info for 72 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
@@ -545,7 +546,7 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/local/share/texmf-texlive/fonts
 helvetic/uhvbo8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/helvetic/u
 hvr8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb>
 
-Output written on 1.pdf (10 pages, 5332490 bytes).
+Output written on 1.pdf (10 pages, 5330551 bytes).
 PDF statistics:
  371 PDF objects out of 1000 (max. 8388607)
  254 compressed objects within 3 object streams
