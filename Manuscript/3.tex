@@ -287,6 +287,8 @@ the TC or the Hopf bifurcation (Fig.~\ref{fig:fp}).  If the recovery rate
 $\rho$ is sufficiently small, the TC bifurcation is reached and the resource
 eventually is eliminated.  If $\rho$ exceeds a threshold value, cyclic
 dynamics will develop as the Hopf bifurcation is approached.
+
+\sid{mention  and refer to the starving random walk model somewhere.}
 \\
 
 %In the case of the 2-stage consumer model, the Jacobian evaluated at the internal steady state (denoted by $|_*$) is written
@@ -343,7 +345,8 @@ partitioning of this metabolic rate between growth and maintenance purposes
 can be used to derive a general equation for the growth trajectories and
 growth rates of organisms ranging from bacteria to metazoans
 \cite{Kempes:2012hy,more}\sid{fix Ref}. More specifically, the interspecific
-\sid{what does this word mean?}  trends in growth rate can be approximated by
+\sid{what does interspecific mean?}  trends in growth rate can be
+approximated by
 \begin{eqnarray}
 \lambda = \lambda_0 M^{\eta-1}.
 \label{lambda}
@@ -360,10 +363,11 @@ because it can also be modified to understand the timescales of both
 starvation and recovery from starvation as we show below.
 
 To determine the starvation rate, $\sigma$, we are interested in the time
-required for an organism to go from its replete \sid{replete vs. adult} state
-to a reduced-size hungry state where reproduction is impossible.  This
-transition time can be inferred from the energy balance in Eq.~\ref{balance},
-where we make the basic assumption that an organism must meet its maintenance
+required for an organism to go from a mature adult that reproduces at rate
+$\lambda$ (henceforth we term this state as the ``replete'' state), to a
+reduced-size hungry state where reproduction is impossible.  This transition
+time can be inferred from the energy balance in Eq.~\ref{balance}, where we
+make the basic assumption that an organism must meet its maintenance
 requirements using the digestion of existing mass as the sole energy source.
 This assumption implies the simple metabolic balance \sid{don't understand
   this equation}
@@ -381,29 +385,29 @@ m\left(t\right)=Me^{-B_{m}t/E_{m}^{\prime}}.
 \end{eqnarray}
 Since only certain tissues can be digested for energy (for example the brain
 cannot be degraded to fuel metabolism), we define the rate for starvation and
-death by the timescales required to reach specific fractions of normal adult
-mass. We define $m_{\rm starve}=\epsilon M$, where $\epsilon<1$ is the
-fraction of adult mass where reproduction ceases.  This fraction will be
-modified if tissue composition systematically scales with adult mass.  For
-example, making use of the observation that body fat in mammals scales with
-overall body size according to $M_{f}=f_{0}M^{\gamma}$ and assuming that once
-this mass is fully digested the organism begins to starve, this would imply
-that $\epsilon=1-f_{0}M^{\gamma}/M$.  Using this criterion in Eq.~\ref{mt},
-the time scale for starvation is given by
+death by the timescales required to reach specific fractions of the
+replete-state mass.  We define $m_{\rm starve}=\epsilon M$, where
+$\epsilon<1$ is the fraction of replete-state mass where reproduction ceases.
+This fraction will be modified if tissue composition systematically scales
+with adult mass.  For example, making use of the observation that body fat in
+mammals scales with overall body size according to $M_{f}=f_{0}M^{\gamma}$
+and assuming that once this mass is fully digested the organism begins to
+starve, this would imply that $\epsilon=1-f_{0}M^{\gamma}/M$.  Using this
+criterion in Eq.~\ref{mt}, the time scale for starvation is given by
 \begin{equation}
 \label{eq:sigma}
 t_{\sigma}=-\frac{E_{m}\ln\left(\epsilon\right)}{B_{m}}.
 \end{equation}
-The starvation rate is then $\sigma=1/t_{\sigma}$, which scales with replete
-mass as $1/\ln\left(1-f_{0}M^{\gamma}/M\right)$.  An important feature is
-that $\sigma$ does not have a simple scaling dependence on $\lambda$
-(Eq.~\ref{lambda}), which is important for the dynamics that we later
-discuss.
+The starvation rate is then $\sigma=1/t_{\sigma}$, which scales with
+replete-state mass as $1/\ln\left(1-f_{0}M^{\gamma}/M\right)$.  An important
+feature is that $\sigma$ does not have a simple scaling dependence on
+$\lambda$ (Eq.~\ref{lambda}), which is important for the dynamics that we
+later discuss.
 
 The time to death should follow a similar relation, but defined by a lower
-fraction of adult mass, $m_{\rm death}=\epsilon^{\prime} M$.  Suppose, for
-example, that an organism dies once it has digested all fat and muscle
-tissues, and that muscle tissue scales with body mass according to
+fraction of replete-state mass, $m_{\rm death}=\epsilon^{\prime} M$.
+Suppose, for example, that an organism dies once it has digested all fat and
+muscle tissues, and that muscle tissue scales with body mass according to
 $M_{mm}=mm_{0}M^{\zeta}$ \sid{what is $mm_0$?}.  This gives
 $\epsilon^{\prime}=1-\left(f_{0}M^{\gamma}+mm_{0}M^{\zeta}\right)/M$. Muscle
 mass has been shown to be roughly proportional to body mass~\cite{muscle} in
@@ -420,8 +424,8 @@ and $\mu=1/t_{\mu}$.
 The rate of recovery $\rho = 1/t_\rho$ requires that an organism accrues
 sufficient tissue to transition from the starving \sid{starving vs.\ hungry}
 state to the full state.  We again use the balance given in Eq.~\ref{balance}
-to find the timescale to return to the replete mass from a given reduced
-starvation mass.  From the solution to Eq.~\ref{balance}
+to find the timescale to return to the replete-state mass from a given
+reduced starvation mass.  From the solution to Eq.~\ref{balance}
 \begin{eqnarray}
 m\left(t\right)\!=\!\left(\!\frac{B_{0}}{B_{m}}\!\right)^{1/(\eta-1)}\!\!
 \left[1\!-\!\left(1\!-\!\frac{B_{m}}{B_{0}}m_{0}^{1\!-\!\eta}\right)e^{-b\left(1\!-\!\eta\right)t}\right]^{1/\left(1-\eta\right)}%\left(\frac{a}{b}\right)^{1/\left(1-\eta\right)}\,,
@@ -500,22 +504,22 @@ ratio $\sigma/\rho$.  To this end, we computed the probability of extinction,
 where extinction is defined as the population trajectory going below
 $0.2~\times$ the allometrically constrained steady state for all times
 between $10^2$ and $\leq 10^6$.  This procedure is repeated for 1000
-replicates \sid{what is changing? isn't the system deterministic?} of the
-continuous-time system shown in Eq.~\ref{eq:system} for an organism of
-$M=100$ grams, assuming random initial conditions around the steady state
-(Eq.~\ref{eq:ss}). %random initial conditions within the interval $(R^*,H^*,F^*)\pm100\%$.
-By allowing the rate of starvation to vary, we assessed extinction risk
-across a range of values of the ratio $\sigma/\rho$ varying between $10^{-2}$
-to $2.5$, thus examining a horizontal cross-section of Fig.~\ref{fig:fp}.  As
-expected, higher rates of extinction correlated with both low and high values
-of $\sigma/\rho$.  For low values of $\sigma/\rho$, the increased extinction
-risk results from transient cycles with larger amplitudes as the system nears
-the Hopf bifurcation (Fig.~\ref{fig:ext}).  For large values of
-$\sigma/\rho$, higher extinction risk arises because of to the decrease in
-the steady state consumer population density.  This interplay creates an
-`extinction refuge' as shown in Fig.~\ref{fig:ext}, such that for a
-relatively constrained range of $\sigma/\rho$, extinction probabilities are
-minimized.
+replicates of the continuous-time system shown in Eq.~\ref{eq:system} for an
+organism of $M=100$ grams.  In each replicate the initial condition is
+distributed around the steady state (Eq.~\ref{eq:ss}).  Specifically the
+initial densities are chosen to be $A(F^*,H^*,R^*)$, with $A$ a random
+variable that is uniformly distribution in $[0,2]$.  By allowing the rate of
+starvation to vary, we assessed extinction risk across a range of values of
+the ratio $\sigma/\rho$ varying between $10^{-2}$ to $2.5$, thus examining a
+horizontal cross-section of Fig.~\ref{fig:fp}.  As expected, higher rates of
+extinction correlated with both low and high values of $\sigma/\rho$.  For
+low values of $\sigma/\rho$, the increased extinction risk results from
+transient cycles with larger amplitudes as the system nears the Hopf
+bifurcation (Fig.~\ref{fig:ext}).  For large values of $\sigma/\rho$, higher
+extinction risk arises because of to the decrease in the steady state
+consumer population density.  This interplay creates an `extinction refuge'
+as shown in Fig.~\ref{fig:ext}, such that for a relatively constrained range
+of $\sigma/\rho$, extinction probabilities are minimized.
 
 We find that the allometrically constrained values of $\sigma/\rho$ (with
 $\pm 20\%$ variability around energetic parameter means) fall within the

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/MacPorts 2016_0) (preloaded format=pdflatex 2016.7.13)  25 JUL 2016 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/MacPorts 2016_0) (preloaded format=pdflatex 2016.7.13)  25 JUL 2016 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,80 +437,80 @@ Package amsmath Warning: Cannot use `split' here;
 [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 279--291
+Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
 
 
-LaTeX Warning: Citation `more' on page 2 undefined on input line 345.
+LaTeX Warning: Citation `more' on page 2 undefined on input line 347.
 
 [2]
-Overfull \hbox (2.7003pt too wide) in alignment at lines 425--428
+Overfull \hbox (2.7003pt too wide) in alignment at lines 429--432
  [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--449
+Underfull \hbox (badness 10000) in paragraph at lines 439--453
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--488
+Underfull \hbox (badness 10000) in paragraph at lines 475--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 520--534
+Underfull \hbox (badness 10000) in paragraph at lines 524--538
 
  []
 
 [3]
 
-LaTeX Warning: Citation `kempes' on page 4 undefined on input line 595.
+LaTeX Warning: Citation `kempes' on page 4 undefined on input line 599.
 
 (./3.bbl [4]) [5] <Growth-trajectory-diagram.pdf, id=36, 1027.84pt x 770.88pt>
 File: Growth-trajectory-diagram.pdf Graphic file (type pdf)
 
 <use Growth-trajectory-diagram.pdf>
-Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 754.
+Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 758.
 (pdftex.def)             Requested size: 255.0pt x 191.24919pt.
 
 <fig_GvS.pdf, id=37, 361.35pt x 235.88126pt>
 File: fig_GvS.pdf Graphic file (type pdf)
  <use fig_GvS.pdf>
-Package pdftex.def Info: fig_GvS.pdf used on input line 762.
+Package pdftex.def Info: fig_GvS.pdf used on input line 766.
 (pdftex.def)             Requested size: 255.0pt x 166.45827pt.
 
 <fig_FixedPoint.pdf, id=38, 271.0125pt x 412.54124pt>
 File: fig_FixedPoint.pdf Graphic file (type pdf)
  <use fig_FixedPoint.pdf>
-Package pdftex.def Info: fig_FixedPoint.pdf used on input line 770.
+Package pdftex.def Info: fig_FixedPoint.pdf used on input line 774.
 (pdftex.def)             Requested size: 255.0pt x 388.17911pt.
 
 <fig_DataHopf.pdf, id=39, 317.185pt x 169.63374pt>
 File: fig_DataHopf.pdf Graphic file (type pdf)
  <use fig_DataHopf.pdf>
-Package pdftex.def Info: fig_DataHopf.pdf used on input line 778.
+Package pdftex.def Info: fig_DataHopf.pdf used on input line 782.
 (pdftex.def)             Requested size: 255.0pt x 136.38014pt.
 
 <fig_ExtinctionAllometric.pdf, id=40, 433.62pt x 294.09875pt>
 File: fig_ExtinctionAllometric.pdf Graphic file (type pdf)
 
 <use fig_ExtinctionAllometric.pdf>
-Package pdftex.def Info: fig_ExtinctionAllometric.pdf used on input line 786.
+Package pdftex.def Info: fig_ExtinctionAllometric.pdf used on input line 790.
 (pdftex.def)             Requested size: 255.0pt x 172.95131pt.
 
 <fig_FPAllometric.pdf, id=41, 360.34625pt x 672.5125pt>
 File: fig_FPAllometric.pdf Graphic file (type pdf)
 
 <use fig_FPAllometric.pdf>
-Package pdftex.def Info: fig_FPAllometric.pdf used on input line 794.
+Package pdftex.def Info: fig_FPAllometric.pdf used on input line 798.
 (pdftex.def)             Requested size: 229.49844pt x 428.31314pt.
  <fig_Invasion.pdf, id=42, 361.35pt x 236.885pt>
 File: fig_Invasion.pdf Graphic file (type pdf)
 
 <use fig_Invasion.pdf>
-Package pdftex.def Info: fig_Invasion.pdf used on input line 802.
+Package pdftex.def Info: fig_Invasion.pdf used on input line 806.
 (pdftex.def)             Requested size: 255.0pt x 167.1666pt.
  [6 <./Growth-trajectory-diagram.pdf> <./fig_GvS.pdf>]
 [7 <./fig_FixedPoint.pdf> <./fig_DataHopf.pdf
@@ -523,15 +523,15 @@ pdfTeX warning: pdflatex (file ./fig_FPAllometric.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
 >] [9 <./fig_Invasion.pdf>]
 LaTeX Font Info:    Font shape `OT1/cmr10 /bx/n' in size <8> not available
-(Font)              Font shape `OT1/cmr10 /b/n' tried instead on input line 871
+(Font)              Font shape `OT1/cmr10 /b/n' tried instead on input line 875
 .
 
-Underfull \hbox (badness 10000) in paragraph at lines 871--871
+Underfull \hbox (badness 10000) in paragraph at lines 875--875
 []|\OT1/cmr10 /b/n/8 Unicellular Eu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--881
+Underfull \hbox (badness 10000) in paragraph at lines 885--885
 []|$\OT1/cmr/m/n/8 3\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 39 \OMS/cmsy/m/n/8 ^^B \OT1
 /cmr/m/n/8 10[]$ \OT1/cmr10 /m/n/8 (s$[]$
  []
@@ -575,7 +575,7 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/local/share/texmf-texlive/fonts
 helvetic/uhvbo8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/helvetic/u
 hvr8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb>
 
-Output written on 3.pdf (10 pages, 4936161 bytes).
+Output written on 3.pdf (10 pages, 4936730 bytes).
 PDF statistics:
  365 PDF objects out of 1000 (max. 8388607)
  250 compressed objects within 3 object streams
