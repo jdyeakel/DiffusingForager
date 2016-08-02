@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
+The top-level auxiliary file: 6.aux
+The style file: pnas.bst
+Database file #1: aa_starving.bib
+You've used 53 entries,
+            1765 wiz_defined-function locations,
+            829 strings with 12622 characters,
+and the built_in function-call counts, 11914 in all, are:
+= -- 1189
+> -- 457
+< -- 1
++ -- 170
+- -- 117
+* -- 936
+:= -- 1933
+add.period$ -- 100
+call.type$ -- 53
+change.case$ -- 47
+chr.to.int$ -- 0
+cite$ -- 53
+duplicate$ -- 498
+empty$ -- 1074
+format.name$ -- 122
+if$ -- 2542
+int.to.chr$ -- 0
+int.to.str$ -- 53
+missing$ -- 57
+newline$ -- 267
+num.names$ -- 53
+pop$ -- 86
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 70
+stack$ -- 0
+substring$ -- 1149
+swap$ -- 120
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 135
+width$ -- 55
+write$ -- 575
