@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1212223,      21893]
-NotebookOptionsPosition[   1204929,      21668]
-NotebookOutlinePosition[   1205287,      21684]
-CellTagsIndexPosition[   1205244,      21681]
+NotebookDataLength[   1225572,      22139]
+NotebookOptionsPosition[   1217906,      21906]
+NotebookOutlinePosition[   1218264,      21922]
+CellTagsIndexPosition[   1218221,      21919]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -6483,7 +6483,7 @@ Cell[BoxData[{
           RowBox[{"10", "^", 
            RowBox[{"(", 
             RowBox[{"-", "7"}], ")"}]}]}], ",", "\[IndentingNewLine]", 
-         RowBox[{"(*", "ef", "*)"}], "0.00001", ",", "\[IndentingNewLine]", 
+         RowBox[{"(*", "ef", "*)"}], "0.001", ",", "\[IndentingNewLine]", 
          RowBox[{"(*", "\[Gamma]", "*)"}], "1.19", ",", "\[IndentingNewLine]", 
          RowBox[{"(*", "\[Zeta]", "*)"}], "1.01", ",", "\[IndentingNewLine]", 
          
@@ -6630,7 +6630,8 @@ Cell[BoxData[{
    3.678192743506068*^9, {3.678192869687873*^9, 3.6781928726795053`*^9}, {
    3.678193301620687*^9, 3.67819330697372*^9}, {3.678193360944634*^9, 
    3.678193400618866*^9}, {3.678193499962202*^9, 3.6781935321815147`*^9}, {
-   3.678193590917522*^9, 3.678193592235334*^9}}],
+   3.678193590917522*^9, 3.678193592235334*^9}, {3.679421572504032*^9, 
+   3.679421573893692*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -19508,48 +19509,48 @@ Cell[BoxData[
 
 Cell[BoxData[
  GraphicsBox[{{{}, GraphicsComplexBox[CompressedData["
-1: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
-tSbBRoxvmNynXvCHH/8PZeq7jQ==
+1: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
+RuH63KYd80E1Vn/68f//wr5Z
      "], {{{}, {}, {}, {}, {}, {}, 
        {RGBColor[0.368417, 0.506779, 0.709798], Opacity[0.25], EdgeForm[None],
          GraphicsGroupBox[
@@ -19817,7 +19818,7 @@ PrQdF9EvHZgl+eNDWtIhuaBqDt/9h+/2/wLXo3/j
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{323.2109375, Automatic},
+  ImageSize->{324.94921875, Automatic},
   Method->{},
   PlotRange->{{-0.3837641821656743, 18.420680743952367`}, {-1, 1}},
   PlotRangeClipping->True,
@@ -19903,7 +19904,8 @@ PrQdF9EvHZgl+eNDWtIhuaBqDt/9h+/2/wLXo3/j
    3.678193568870751*^9}, 3.678193684075029*^9, {3.67819372040983*^9, 
    3.6781937509493923`*^9}, {3.678193782389406*^9, 3.678193905711816*^9}, {
    3.678193943401803*^9, 3.678194030604927*^9}, 3.6781980644072933`*^9, 
-   3.678198117319483*^9, 3.678447228285961*^9}]
+   3.678198117319483*^9, 3.678447228285961*^9, {3.6794219270418367`*^9, 
+   3.679421946921946*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -19923,7 +19925,7 @@ DiffusingForager/Manuscript/fig_Invasion.pdf\"\>"], "Output",
  CellChangeTimes->{3.677523324807226*^9, 3.677523365120352*^9, 
   3.6775234367432327`*^9, 3.677599550203974*^9, 3.677852469526136*^9, 
   3.678189899081335*^9, 3.678190092291246*^9, 3.678194072728011*^9, 
-  3.678194207150371*^9, 3.678447238071095*^9}]
+  3.678194207150371*^9, 3.678447238071095*^9, 3.679421953779821*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -21634,7 +21636,243 @@ Opacity[0.3`], DiskBox[List[0, 0]]]]}\\)\\), \\(\\(ImageSize \[Rule] \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
 \\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.678198026113654*^9}]
+ CellChangeTimes->{3.678198026113654*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The first two levels of \
+\[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
+transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
+\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679421972752729*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679421972946939*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679421973017646*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679421973090651*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(ListPlot \
+:: lpn\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679421973125986*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The first two levels of \
+\[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
+transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
+\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6794219731331377`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
+\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.368417`, 0.506779`, 0.709798`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.24561133333333335`, 0.3378526666666667`, \
+0.4731986666666667`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.368417, 0.506779, 0.709798]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.368417`, \
+0.506779`, 0.709798`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.368417`, 0.506779`, \
+0.709798`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \
+\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.880722`, 0.611041`, 0.142051`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.587148`, 0.40736066666666665`, \
+0.09470066666666668`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.880722, 0.611041, 0.142051]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.880722`, \
+0.611041`, 0.142051`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.880722`, 0.611041`, \
+0.142051`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \\*GraphicsBox[List[GrayLevel[0.85`], \
+Opacity[0.3`], DiskBox[List[0, 0]]]]}\\)\\), \\(\\(ImageSize \[Rule] \
+300\\)\\), \\(\\(Frame \[Rule] True\\)\\), \\(\\(AspectRatio \[Rule] 1\\)\\), \
+\\(\\(FrameLabel \[Rule] \\(\\({\\\"Real part\\\", \\\"Imaginary part\\\"}\\)\
+\\)\\)\\)\\)\\)]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
+\\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679421973255809*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
+\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.368417`, 0.506779`, 0.709798`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.24561133333333335`, 0.3378526666666667`, \
+0.4731986666666667`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.368417, 0.506779, 0.709798]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.368417`, \
+0.506779`, 0.709798`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.368417`, 0.506779`, \
+0.709798`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \
+\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.880722`, 0.611041`, 0.142051`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.587148`, 0.40736066666666665`, \
+0.09470066666666668`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.880722, 0.611041, 0.142051]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.880722`, \
+0.611041`, 0.142051`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.880722`, 0.611041`, \
+0.142051`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \\*GraphicsBox[List[GrayLevel[0.85`], \
+Opacity[0.3`], DiskBox[List[0, 0]]]]}\\)\\), \\(\\(ImageSize \[Rule] \
+300\\)\\), \\(\\(Frame \[Rule] True\\)\\), \\(\\(AspectRatio \[Rule] 1\\)\\), \
+\\(\\(FrameLabel \[Rule] \\(\\({\\\"Real part\\\", \\\"Imaginary part\\\"}\\)\
+\\)\\)\\)\\)\\)]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
+\\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679421973472045*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -21683,7 +21921,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 9984, 269, 946, "Input"],
+Cell[558, 20, 9984, 269, 912, "Input"],
 Cell[10545, 291, 2006, 56, 131, "Input"],
 Cell[CellGroupData[{
 Cell[12576, 351, 976, 21, 46, "Input"],
@@ -21783,117 +22021,125 @@ Cell[335258, 6309, 2517, 48, 260, "Output"]
 Cell[337790, 6360, 115, 1, 30, "Text"],
 Cell[337908, 6363, 171, 2, 46, "Text"],
 Cell[338082, 6367, 2359, 68, 165, "Input"],
-Cell[340444, 6437, 9041, 195, 718, "Input"],
-Cell[349488, 6634, 2505, 68, 80, "Input"],
+Cell[340444, 6437, 9089, 196, 718, "Input"],
+Cell[349536, 6635, 2505, 68, 80, "Input"],
 Cell[CellGroupData[{
-Cell[352018, 6706, 4824, 95, 206, "Input"],
-Cell[356845, 6803, 749440, 12607, 315, 730211, 12293, "CachedBoxData", \
+Cell[352066, 6707, 4824, 95, 206, "Input"],
+Cell[356893, 6804, 749440, 12607, 315, 730211, 12293, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1106322, 19415, 3676, 91, 196, "Input"],
-Cell[1110001, 19508, 18893, 397, 232, "Output"]
+Cell[1106370, 19416, 3676, 91, 196, "Input"],
+Cell[1110049, 19509, 18942, 398, 233, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1128931, 19910, 404, 8, 46, "Input"],
-Cell[1129338, 19920, 390, 5, 28, "Output"]
+Cell[1129028, 19912, 404, 8, 46, "Input"],
+Cell[1129435, 19922, 412, 5, 86, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1129765, 19930, 299, 7, 28, "Input"],
-Cell[1130067, 19939, 155, 3, 28, "Output"]
+Cell[1129884, 19932, 299, 7, 28, "Input"],
+Cell[1130186, 19941, 155, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1130259, 19947, 242, 4, 28, "Input"],
-Cell[1130504, 19953, 187, 2, 32, "Output"]
+Cell[1130378, 19949, 242, 4, 28, "Input"],
+Cell[1130623, 19955, 187, 2, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1130728, 19960, 297, 8, 28, "Input"],
-Cell[1131028, 19970, 157, 3, 28, "Output"]
+Cell[1130847, 19962, 297, 8, 28, "Input"],
+Cell[1131147, 19972, 157, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1131222, 19978, 164, 4, 28, "Input"],
-Cell[1131389, 19984, 129, 2, 28, "Output"]
+Cell[1131341, 19980, 164, 4, 28, "Input"],
+Cell[1131508, 19986, 129, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1131555, 19991, 197, 4, 28, "Input"],
-Cell[1131755, 19997, 257, 4, 28, "Output"]
+Cell[1131674, 19993, 197, 4, 28, "Input"],
+Cell[1131874, 19999, 257, 4, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1132049, 20006, 104, 1, 28, "Input"],
-Cell[1132156, 20009, 1113, 18, 77, "Output"]
+Cell[1132168, 20008, 104, 1, 28, "Input"],
+Cell[1132275, 20011, 1113, 18, 77, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1133306, 20032, 344, 9, 28, "Input"],
-Cell[1133653, 20043, 152, 2, 46, "Output"]
+Cell[1133425, 20034, 344, 9, 28, "Input"],
+Cell[1133772, 20045, 152, 2, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1133842, 20050, 692, 14, 36, "Input"],
-Cell[1134537, 20066, 1858, 40, 57, "Output"]
+Cell[1133961, 20052, 692, 14, 36, "Input"],
+Cell[1134656, 20068, 1858, 40, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1136432, 20111, 150, 3, 28, "Input"],
-Cell[1136585, 20116, 102, 1, 46, "Output"]
+Cell[1136551, 20113, 150, 3, 28, "Input"],
+Cell[1136704, 20118, 102, 1, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1136724, 20122, 69, 1, 28, "Input"],
-Cell[1136796, 20125, 228, 8, 32, "Output"]
+Cell[1136843, 20124, 69, 1, 28, "Input"],
+Cell[1136915, 20127, 228, 8, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1137061, 20138, 104, 1, 28, "Input"],
-Cell[1137168, 20141, 458, 15, 28, "Output"]
+Cell[1137180, 20140, 104, 1, 28, "Input"],
+Cell[1137287, 20143, 458, 15, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1137663, 20161, 97, 1, 28, "Input"],
-Cell[1137763, 20164, 8544, 215, 437, "Output"]
+Cell[1137782, 20163, 97, 1, 28, "Input"],
+Cell[1137882, 20166, 8544, 215, 437, "Output"]
 }, Open  ]],
-Cell[1146322, 20382, 149, 2, 46, "Text"],
+Cell[1146441, 20384, 149, 2, 46, "Text"],
 Cell[CellGroupData[{
-Cell[1146496, 20388, 221, 5, 28, "Input"],
-Cell[1146720, 20395, 3110, 88, 95, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1149867, 20488, 2388, 68, 131, "Input"],
-Cell[1152258, 20558, 2163, 66, 46, "Output"]
-}, Open  ]],
-Cell[1154436, 20627, 438, 11, 46, "Input"],
-Cell[CellGroupData[{
-Cell[1154899, 20642, 10530, 242, 879, "Input"],
-Cell[1165432, 20886, 4489, 82, 316, "Output"],
-Cell[1169924, 20970, 619, 12, 40, "Message"],
-Cell[1170546, 20984, 622, 12, 40, "Message"],
-Cell[1171171, 20998, 622, 12, 40, "Message"],
-Cell[1171796, 21012, 530, 11, 24, "Message"],
-Cell[1172329, 21025, 575, 12, 24, "Message"],
-Cell[1172907, 21039, 582, 13, 24, "Message"],
-Cell[1173492, 21054, 582, 13, 24, "Message"],
-Cell[1174077, 21069, 582, 13, 24, "Message"],
-Cell[1174662, 21084, 530, 11, 24, "Message"],
-Cell[1175195, 21097, 575, 12, 24, "Message"],
-Cell[1175773, 21111, 4703, 73, 188, "Message"],
-Cell[1180479, 21186, 4703, 73, 188, "Message"],
-Cell[1185185, 21261, 619, 12, 40, "Message"],
-Cell[1185807, 21275, 624, 12, 40, "Message"],
-Cell[1186434, 21289, 622, 12, 40, "Message"],
-Cell[1187059, 21303, 528, 11, 24, "Message"],
-Cell[1187590, 21316, 575, 12, 24, "Message"],
-Cell[1188168, 21330, 582, 13, 24, "Message"],
-Cell[1188753, 21345, 582, 13, 24, "Message"],
-Cell[1189338, 21360, 582, 13, 24, "Message"],
-Cell[1189923, 21375, 530, 11, 24, "Message"],
-Cell[1190456, 21388, 575, 12, 24, "Message"],
-Cell[1191034, 21402, 4703, 73, 188, "Message"],
-Cell[1195740, 21477, 575, 12, 24, "Message"],
-Cell[1196318, 21491, 582, 13, 24, "Message"],
-Cell[1196903, 21506, 584, 13, 24, "Message"],
-Cell[1197490, 21521, 582, 13, 24, "Message"],
-Cell[1198075, 21536, 530, 11, 24, "Message"],
-Cell[1198608, 21549, 577, 12, 24, "Message"],
-Cell[1199188, 21563, 4703, 73, 188, "Message"]
+Cell[1146615, 20390, 221, 5, 28, "Input"],
+Cell[1146839, 20397, 3110, 88, 95, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1203928, 21641, 182, 2, 46, "Input"],
-Cell[1204113, 21645, 398, 9, 35, "Output"],
-Cell[1204514, 21656, 399, 9, 35, "Output"]
+Cell[1149986, 20490, 2388, 68, 131, "Input"],
+Cell[1152377, 20560, 2163, 66, 46, "Output"]
+}, Open  ]],
+Cell[1154555, 20629, 438, 11, 46, "Input"],
+Cell[CellGroupData[{
+Cell[1155018, 20644, 10530, 242, 879, "Input"],
+Cell[1165551, 20888, 4489, 82, 316, "Output"],
+Cell[1170043, 20972, 619, 12, 40, "Message"],
+Cell[1170665, 20986, 622, 12, 40, "Message"],
+Cell[1171290, 21000, 622, 12, 40, "Message"],
+Cell[1171915, 21014, 530, 11, 24, "Message"],
+Cell[1172448, 21027, 575, 12, 24, "Message"],
+Cell[1173026, 21041, 582, 13, 24, "Message"],
+Cell[1173611, 21056, 582, 13, 24, "Message"],
+Cell[1174196, 21071, 582, 13, 24, "Message"],
+Cell[1174781, 21086, 530, 11, 24, "Message"],
+Cell[1175314, 21099, 575, 12, 24, "Message"],
+Cell[1175892, 21113, 4703, 73, 188, "Message"],
+Cell[1180598, 21188, 4703, 73, 188, "Message"],
+Cell[1185304, 21263, 619, 12, 40, "Message"],
+Cell[1185926, 21277, 624, 12, 40, "Message"],
+Cell[1186553, 21291, 622, 12, 40, "Message"],
+Cell[1187178, 21305, 528, 11, 24, "Message"],
+Cell[1187709, 21318, 575, 12, 24, "Message"],
+Cell[1188287, 21332, 582, 13, 24, "Message"],
+Cell[1188872, 21347, 582, 13, 24, "Message"],
+Cell[1189457, 21362, 582, 13, 24, "Message"],
+Cell[1190042, 21377, 530, 11, 24, "Message"],
+Cell[1190575, 21390, 575, 12, 24, "Message"],
+Cell[1191153, 21404, 4703, 73, 188, "Message"],
+Cell[1195859, 21479, 575, 12, 24, "Message"],
+Cell[1196437, 21493, 582, 13, 24, "Message"],
+Cell[1197022, 21508, 584, 13, 24, "Message"],
+Cell[1197609, 21523, 582, 13, 24, "Message"],
+Cell[1198194, 21538, 530, 11, 24, "Message"],
+Cell[1198727, 21551, 577, 12, 24, "Message"],
+Cell[1199307, 21565, 4703, 73, 188, "Message"],
+Cell[1204013, 21640, 575, 12, 24, "Message"],
+Cell[1204591, 21654, 582, 13, 24, "Message"],
+Cell[1205176, 21669, 582, 13, 24, "Message"],
+Cell[1205761, 21684, 582, 13, 24, "Message"],
+Cell[1206346, 21699, 530, 11, 24, "Message"],
+Cell[1206879, 21712, 577, 12, 24, "Message"],
+Cell[1207459, 21726, 4703, 73, 188, "Message"],
+Cell[1212165, 21801, 4703, 73, 188, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1216905, 21879, 182, 2, 46, "Input"],
+Cell[1217090, 21883, 398, 9, 35, "Output"],
+Cell[1217491, 21894, 399, 9, 35, "Output"]
 }, Open  ]]
 }
 ]

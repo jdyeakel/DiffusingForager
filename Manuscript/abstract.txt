@@ -1,0 +1,22 @@
+We introduce a minimal foraging model that incorporates two classes of
+foragers: nutritionally replete foragers that can procreate, and
+undernourished and non-procreating foragers that are susceptible to
+mortality.  As a function of the transition rates between these replete and
+undernourished states that are determined by the presence or absence of
+resources, as well as the replenishment rate of the underlying resource, the
+forager populations can either undergo cyclic dynamics or reach a steady
+state.  By appplying basic allometric considerations, we obtain strong
+constraints on these transition rates and thereby find that the population
+dynamics that is subject to these constraints is typically driven to a steady
+state.  As a further consequence of this viewpoint, we find that
+allometrically constrained rates fall within a `refuge' in parameter space,
+where the probability of extinction of the consumer population is minimized.
+Thus our model provides a mechanism that may both drive and constrain natural
+animal populations.  We also find that our model provides a natural framework
+to determine a natural size for animal populations by examining the relative
+stability of a otherwise homoegeneous population to a mutant population of a
+different size.  For body masses $\lesssim 10^6$g, a more massive invader
+dominates over the resident population, and vice versa for body mass $\gtrsim
+10^6$g, thus providing a simple principled mechanism for Cope's rule.
+
+

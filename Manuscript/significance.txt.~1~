@@ -1,0 +1,11 @@
+We introduce a minimal population biology model of foragers that consume an
+underlying resource.  The foragers are partitioned into two classes: (i)
+well-nourished, immortal, and reproducing, and (ii) undernourished,
+non-reproducing, and mortal.  The transition rates between these two classes,
+as well as the birth and death rates, are constrained by
+allometry---systematic variations as a function of body mass.  With these
+constraints, the typical outcome of the dynamics is a stable steady state.
+We also examine the stability of a steady forager population with respect to
+a mutant of a different mass.  A more massive mutant dominates for body
+masses up to roughly $10^6$g, thereby providing a simple mechanism for the
+systematic trend of mammals towards larger body size.
