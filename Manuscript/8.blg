@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/8.aux
 The style file: pnas.bst
 Database file #1: aa_starving3.bib
-Warning--I didn't find a database entry for "muscle"
-You've used 55 entries,
+You've used 56 entries,
             1765 wiz_defined-function locations,
-            843 strings with 13501 characters,
-and the built_in function-call counts, 12474 in all, are:
-= -- 1249
-> -- 476
+            848 strings with 13656 characters,
+and the built_in function-call counts, 12715 in all, are:
+= -- 1273
+> -- 487
 < -- 1
-+ -- 177
-- -- 122
-* -- 988
-:= -- 2019
-add.period$ -- 104
-call.type$ -- 55
-change.case$ -- 49
++ -- 181
+- -- 125
+* -- 1008
+:= -- 2059
+add.period$ -- 106
+call.type$ -- 56
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 55
-duplicate$ -- 517
-empty$ -- 1123
-format.name$ -- 128
-if$ -- 2660
+cite$ -- 56
+duplicate$ -- 526
+empty$ -- 1143
+format.name$ -- 131
+if$ -- 2710
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 59
-newline$ -- 277
-num.names$ -- 55
-pop$ -- 87
+int.to.str$ -- 56
+missing$ -- 60
+newline$ -- 282
+num.names$ -- 56
+pop$ -- 88
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 71
+skip$ -- 72
 stack$ -- 0
-substring$ -- 1224
-swap$ -- 124
+substring$ -- 1249
+swap$ -- 126
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 142
-width$ -- 57
-write$ -- 598
-(There was 1 warning)
+while$ -- 145
+width$ -- 58
+write$ -- 609

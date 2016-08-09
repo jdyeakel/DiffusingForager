@@ -137,9 +137,7 @@ resource limitation on an organism's ability to maintain its nutritional
 stores may lead to repeated delays or shifts in reproduction over the course
 of an organism's life.
 
-The life history of most species is typically comprised of (a) somatic growth
-and maintenance, and (b) reproduction.  The balance between these two
-activities is often conditioned on resource
+The balance between (a) somatic growth and maintenance, and (b) reproduction is often conditioned on resource
 availability~\cite{Morris:1987eo}.  For example, reindeer invest less in
 calves born after harsh winters (when the mother's energetic state is
 depleted) than in calves born after moderate winters~\cite{Tveraa:2003fq}.
@@ -149,7 +147,7 @@ sometimes delaying or even foregoing reproduction for a breeding
 season~\cite{Martin:1987dl,Stearns:1989ip,Barboza:2002in}.  Even freshwater
 and marine zooplankton have been observed to avoid reproduction under
 nutritional stress~\cite{Threlkeld:1976ih}, and those that do reproduce have
-lower survival rates~\cite{Kirk:1997cc}.  Organisms may also separate
+lower survival rates~\cite{Kirk:1997cc}. Organisms may also separate
 maintenance and growth from reproduction over space and time: many salmonids,
 birds, and some mammals return to migratory breeding grounds to reproduce
 after one or multiple seasons in resource-rich environments where they
@@ -160,7 +158,7 @@ Physiological mechanisms also play an important role in regulating
 reproductive expenditures during periods of resource limitation.  The data
 collected thus far has shown that diverse mammals (47 species in 10 families)
 exhibit delayed implantation, whereby females postpone fetal development
-(blastocyst implantation) until times where nutritional reserves can be
+(blastocyst implantation) until nutritional reserves can be
 accumulated~\cite{Mead:1989dt,Sandell:1990kw}.  Many other many species
 (including humans) suffer irregular menstrual cycling and higher spontaneous
 abortion rates during periods of nutritional
@@ -194,13 +192,13 @@ resource density.  As we shall show, these constraints influence the ensuing
 population dynamics in dramatic ways.
 \\
 
-\noindent {\bf Nutritional-state-structured model (NSM)}\\
-We begin by defining a minimal Nutritional-State-structured population Model
+\noindent {\bf Nutritional state-structured model (NSM)}\\
+We begin by defining a minimal Nutritional State-structured population Model
 (NSM), where the consumer population is divided into two energetic states:
 (a) an energetically replete (full) state $F$, where the consumer reproduces
-at a constant rate $\lambda$ and has no mortality risk, and (b) an
+at a constant rate $\lambda$ and does not die from starvation, and (b) an
 energetically deficient (hungry) state $H$, where the consumer does not
-reproduce but dies at rate $\mu$.  The underlying resource $R$ evolves by
+reproduce but dies by starvation at rate $\mu$.  The underlying resource $R$ evolves by
 logistic growth with an intrinsic growth rate $\alpha$ and a carrying
 capacity equal to one.  Consumers transition from the full state $F$ to the
 hungry state $H$ at a rate $\sigma$---the starvation rate---and also in
@@ -208,8 +206,8 @@ proportion to the absence of resources $(1-R)$.  Conversely, consumers
 recover from state $H$ to state $F$ at rate $\rho$ and in proportion to $R$.
 Resources are also eaten by the consumers---at rate $\rho$ by hungry
 consumers and at rate $\beta<\rho$ by full consumers.  This inequality
-accounts for hungry consumers requiring more resources to rebuild body
-weight.
+accounts for hungry consumers requiring more resources to replace lost body
+tissue.
 
 In the mean-field approximation, in which the consumers and resources are
 perfectly mixed, their densities evolve according to the rate equations
@@ -345,13 +343,17 @@ with the key differences between the largest and smallest mammals.
 Nearly all of the rates described in the NSM are to some extent governed by
 consumer metabolism, which can be used to describe a variety of organismal
 features \cite{Brown:2004wq}.  The scaling relation between an organism's
-metabolic rate $B$ and its body size at reproductive maturity $M$ is well
+metabolic rate $B$ and its body size at reproductive maturity $m=M$ (where $m$ denotes body sizes during growth and prior to reproductive maturity) is well
 documented~\cite{West:2002it} and scales as $B = B_0 M^\eta$, where $\eta$ is
 the scaling exponent, generally assumed to vary around $2/3$ or $3/4$ for
 metazoans (e.g. \cite{Brown:2004wq}), and has taxonomic shifts for unicellular species
 between $\eta\approx 1$ in eukaryotes and $\eta\approx 1.76$ in bacteria
-\cite{DeLong:2010dy,Kempes:2012hy}. Several efforts have shown how a
-partitioning of this metabolic rate between growth and maintenance purposes
+\cite{DeLong:2010dy,Kempes:2012hy}. 
+%Justin adding an explanation for beta
+An organism's metabolic rate is proportional to the cost of tissue maintenance without growth (i.e. at $m=M$) such that $\beta = \xi B$, where $\xi$ is related to the conversion efficiency of resource to consumer tissue (Supporting Information, section XX).
+
+Several efforts have shown how a
+partitioning of $B$ between growth and maintenance purposes
 can be used to derive a general equation for the growth trajectories and
 growth rates of organisms ranging from bacteria to metazoans
 \cite{West:2001bv,moses2008rmo,gillooly2002esa,hou,Kempes:2012hy}. More specifically, the cross-species trends in growth rate can be
@@ -363,7 +365,7 @@ approximated by
 This relation is derived from the simple balance condition \cite{West:2001bv,moses2008rmo,gillooly2002esa,hou,Kempes:2012hy}
 \begin{eqnarray}
 \label{balance}
-B_{0}m^{\eta}=E_{m}\frac{dm}{dt}+B_{m}m\,,
+B_{0}m^{\eta}=E_{m}\dot{m}+B_{m}m\,,
 \end{eqnarray}
 where $E_{m}$ is the energy needed to synthesize a unit of mass, $B_{m}$ is
 the metabolic rate to support an existing unit of mass, and $m$ is the mass
@@ -371,14 +373,16 @@ at any point in development.  This balance has the general solution \cite{moses2
 \begin{eqnarray}
 m\left(t\right)\!=\left[1\!-\!\left(1\!-\!\frac{b}{a}m_{0}^{1\!-\!\eta}\right)e^{-b\left(1\!-\!\eta\right)t}\right]^{1/\left(1-\eta\right)}\!\left(\!\frac{a}{b}\!\right)^{1/(1-\eta)}
 \end{eqnarray}
-where, $a=B_{0}/E_{m}$ and $b=B_{m}/E_{m}$ , andwhich we use to define the timescale of recovery from starvation. The rate of recovery $\rho = 1/t_\rho$ requires that an organism accrues
+where, $a=B_{0}/E_{m}$, $b=B_{m}/E_{m}$, and $m_0$ is mass at birth, which we use to define the timescale of recovery from starvation. The rate of recovery $\rho = 1/t_\rho$ requires that an organism accrues
 sufficient tissue to transition from the hungry to the full state.  Since only certain tissues can be digested for energy (for example the brain
 cannot be degraded to fuel metabolism), we define the rate for starvation,
 death, and recovery by the timescales required to reach, or return from, specific fractions of the
-replete-state mass. We define $m_{\rm starve}=\epsilon M$, where
+replete-state mass. 
+Here and henceforth, see Supporting Information, sections XX-XX for details on parameterizations.
+We define $m_{\rm starve}=\epsilon M$, where
 $\epsilon<1$ is the fraction of replete-state mass where reproduction ceases. This fraction will be modified if tissue composition systematically scales
 with adult mass.  For example, making use of the observation that body fat in
-mammals scales with overall body size according to $M_{f}=f_{0}M^{\gamma}$
+mammals scales with overall body size according to $M_{\rm fat}=f_{0}M^{\gamma}$
 and assuming that once this mass is fully digested the organism starves, this
 would imply that $\epsilon=1-f_{0}M^{\gamma}/M$. It follows that the recovery timescale, $t_{\rho}=t_{2}-t_{1}$, is the time it takes
 to go from $m\left(t_{1}\right)=\epsilon M$ to $m\left(t_{2}\right)=M$, or
@@ -391,11 +395,11 @@ It should be noted that more complicated ontogenetic models explicitly handle st
 
 To determine the starvation rate, $\sigma$, we are interested in the time
 required for an organism to go from a mature adult that reproduces at rate
-$\lambda$ (henceforth we term this state as the ``replete'' state), to a
+$\lambda$, to a
 reduced-mass hungry state where reproduction is impossible.  For starving individuals we assume that an organism must meet its maintenance requirements using the digestion of existing mass as the sole energy source.
 This assumption implies the following simple metabolic balance 
 \begin{eqnarray}
-\frac{dm}{dt}E_{m}^{\prime}=-B_{m}m
+\dot{m}E_{m}^{\prime}=-B_{m}m
 \end{eqnarray}
 where $E_{m}^{\prime}$ is the amount of energy stored in a unit of existing
 body mass which differs from $E_{m}$, the energy required to
@@ -406,7 +410,7 @@ organism:
 \label{mt}
 m\left(t\right)=Me^{-b^{\prime}t}
 \end{eqnarray}
-where $b^{\prime}=E_{m}^{\prime}/B_{m}$. The time time scale for starvation is given by the time it takes this decay to reach $\epsilon M$, which is
+where $b^{\prime}=E_{m}^{\prime}/B_{m}$. The time scale for starvation is given by the time it takes this decay to reach $\epsilon M$, which is
 \begin{equation}
 \label{eq:sigma}
 t_{\sigma}=-b^{\prime}\ln\left(\epsilon\right).
@@ -421,13 +425,13 @@ The time to death should follow a similar relation, but defined by a lower
 fraction of replete-state mass, $m_{\rm death}=\epsilon^{\prime} M$.
 Suppose, for example, that an organism dies once it has digested all fat and
 muscle tissues, and that muscle tissue scales with body mass according to
-$M_{m}=u_{0}M^{\zeta}$.  This gives
+$M_{\rm musc}=u_{0}M^{\zeta}$.  This gives
 $\epsilon^{\prime}=1-\left(f_{0}M^{\gamma}+u_{0}M^{\zeta}\right)/M$. Muscle
-mass has been shown to be roughly proportional to body mass~\cite{muscle} in
+mass has been shown to be roughly proportional to body mass~\cite{Folland:2008ij} in
 mammals and thus $\epsilon^{\prime}$ is merely $\epsilon$ minus a constant.
 Thus
 \begin{eqnarray}
-t_{\mu}=-b^{\prime}\ln\left(\epsilon^{\prime}\right)
+t_{\mu}=-b^{\prime}\ln\left(\epsilon^{\prime}\right),
 \end{eqnarray}
 and $\mu=1/t_{\mu}$. 
 
@@ -449,8 +453,7 @@ variance associated with individual species.
 %, though this is beyond the current scope of our analysis. %, and we henceforth focus our examination on mammalian species.
 
 \noindent {\bf  Stabilizing effects of allometric constraints} \\
-As the allometric derivations of the NSM rate laws reveal, $\sigma$ and
-$\rho$ are not independent parameters, and the bifurcation space shown in
+As the allometric derivations of the NSM rate laws reveal, starvation and recovery rates are not independent parameters, and the bifurcation space shown in
 Fig.~\ref{fig:fp} is navigated via covarying parameters.  Given the
 parameters of terrestrial endotherms, we find that $\sigma$ and $\rho$ are
 constrained to lie within a small window of potential values
@@ -473,13 +476,11 @@ Previous studies have used allometric constraints to explain the periodicity
 of cyclic populations
 \cite{CalderIII:1983jd,Peterson:1984hj,Krukonis:1991fk}, suggesting a period
 $\propto M^{0.25}$, however this relation seems to hold only for some species
-\cite{Hendriks:2012fc} and competing explanations [related to ....\sid{???}]
-exist~\cite{Kendall:1999iy,Hogstedt:2005cr}.
+\cite{Hendriks:2012fc}, and potential drivers range from predator and/or prey lifespan to competitive dynamics~\cite{Kendall:1999iy,Hogstedt:2005cr}.
 %It is more difficult to ascertain whether a population is truly cycling according to an internal or external dynamic~\cite{Kendall:1999iy} or if fluctuations are due to stochasticity, and this is particularly true for longer-lived organisms.
 Statistically significant support for the existence of population cycles
 among mammals is predominantly based on time series for small
-mammals~\cite{Kendall:1998hl}, where we our model would predict much longer
-and more pronounced transient dynamics, given how close these points are to
+mammals~\cite{Kendall:1998hl}, where our model would predict more pronounced transient dynamics, given how close these points are to
 the Hopf bifurcation.  On the other hand, the longer gestational times and
 the increased difficulty in measurements, precludes obtaining similar-quality
 data for larger organisms.
@@ -497,17 +498,17 @@ recovery that determines the long-term dynamics of the system
 (Fig.~\ref{fig:fp}).  We now examine the competing effects of cyclic dynamics
 vs.\ changes in steady state density on extinction risk as a function of the
 ratio $\sigma/\rho$.  To this end, we computed the probability of extinction,
-where extinction is defined as the population trajectory going below
+where extinction is defined as the population trajectory falling below
 $0.2~\times$ the allometrically constrained steady state for all times
-between $10^2$ and $\leq 10^6$.  This procedure is repeated for 1000
+between $10^6$ and $\leq 10^8$.  This procedure is repeated for 1000
 replicates of the continuous-time system shown in Eq.~\ref{eq:system} for an
 organism of $M=100$ grams.  
-In each replicate the initial condition is
-distributed around the steady state (Eq.~\ref{eq:ss}).  Specifically the
+%the initial condition isdistributed around the steady state (Eq.~\ref{eq:ss}).  Specifically
+In each replicate the
 initial densities are chosen to be $A(F^*,H^*,R^*)$, with $A$ a random
-variable that is uniformly distribution in $[0,2]$.  By allowing the rate of
+variable that is uniformly distributed in $[0,2]$.  By allowing the rate of
 starvation to vary, we assessed extinction risk across a range of values of
-the ratio $\sigma/\rho$ varying between $10^{-2}$ to $2.5$, thus examining a
+the ratio $\sigma/\rho$ varying between ca. $10^{-3}$ to $5$, thus examining a
 horizontal cross-section of Fig.~\ref{fig:fp}.  
 As expected, higher rates of
 extinction correlated with both low and high values of $\sigma/\rho$.  For
@@ -520,13 +521,13 @@ as shown in Fig.~\ref{fig:ext}, such that for a relatively constrained range
 of $\sigma/\rho$, extinction probabilities are minimized.
 
 We find that the allometrically constrained values of $\sigma/\rho$ (with
-$\pm 20\%$ variability around energetic parameter means) fall within the
+$20\%$ variability around energetic parameter means) fall within the
 extinction refuge. These values are close enough to the Hopf bifurcation to
 avoid low steady state densities, and far enough away to avoid
 large-amplitude transient cycles. The fact that allometric values of $\sigma$
 and $\rho$ fall within this relatively small window supports the possibility
 that a selective mechanism has constrained the physiological conditions that
-drive observed starvation and recovery rates within populations.  Such a
+drive starvation and recovery rates within populations.  Such a
 mechanism would select for organism physiology that generates appropriate
 $\sigma$ and $\rho$ values that avoid extinction.  This selection could occur
 via the tuning of body fat percentages, metabolic rates, and biomass
@@ -570,35 +571,32 @@ ecological timescales, have not been explored.  We argue that the NSM
 provides a suitable framework to explore these issues.
 
 %Minimal mass bound
-A lower bound on mammalian body size is given by $\epsilon=1$, where mammals
-have no metabolic reserves and immediately starve; this occurs at a size of
-\sid{$M=value$}.  This calculation \sid{what calculation?} gives an extreme
-limit on size but does not account for the subtleties of starvation dynamics
-that may limit body size. The NSM correctly predicts that species with
-smaller masses have larger steady-state population densities.  However we
+%A theoretical lower bound on mammalian body size occurs when $\epsilon=0$ where mammals have no metabolic reserves and immediately starve; this occurs at a size of $M=0$, which is obviously infeasible. 
+%Such prediction gives an extreme limit on size but does not account for the subtleties of starvation dynamics
+%that may limit body size (among other factors). 
+The NSM correctly predicts that species with
+smaller masses have larger steady-state population densities (Fig.~\ref{fig:mass}a).  However we
 observe that there is a sharp change in the mass dependence of both the
 steady-state densities and $\sigma/\rho$ at $M \approx 0.3$ grams
-(Fig.~\ref{fig:mass}a,b).  The dependence of the rates of starvation and
+(Fig.~\ref{fig:mass}b,c).  The dependence of the rates of starvation and
 recovery explain this phenomenon.  As the mass decreases, the rate of
-starvation increases, while the rate of recovery declines super-exponentially
-\sid{how do we know this?}.  This decline in $\rho$ occurs when the
+starvation increases, while the rate of recovery declines super-exponentially.  This decline in $\rho$ occurs when the
 percentage of body fat is
 $1 - \big(a/b\big)^{-1/\left(\eta-1\right)}M^{-1} \approx
 2\%$,
-whereupon consumers have no eligible route \sid{what does this mean?} that avoids
-starvation.  Compellingly, this dynamic bound determined by the rate of
+whereupon consumers are unable to recover from the hungry state.  Compellingly, this dynamic bound determined by the rate of
 energetic recovery is close to the minimum observed mammalian body size of
 ca. 1.3-2.5 grams (Fig.~\ref{fig:mass}b,c), a range that occurs as the
 recovery rate begins its decline.  In addition to known transport
 limitations~\cite{West:2002ud}, we suggest that an additional constraint of
-lower body size stems from the dynamics of starvation.  This work \sid{which
-  work?} mirrors other efforts where coincident limitations seem to limit the
-smallest possibilities for life within a particular class or
+lower body size stems from the dynamics of starvation.  This result mirrors other efforts where coincident limitations seem to constrain the
+smallest possibilities for life within a particular class of
 organisms~\cite{Kempes:2012hy}.
 
 %Maximum mass bound
 %Although there are upper bounds to the rate equations (e.g. when percent body fat becomes unity), they are not biologically feasible and we do not discuss them further.
-We determine a potential upper bound to body mass by assessing the
+A theoretical upper bound on mammalian body size is given by $\epsilon=0$, where mammals are entirely composed of metabolic reserves, and this occurs at a size of $M=8.3\times 10^8$, or $4.5\times$ the mass of a blue whale.
+We determine a more realistic upper bound to body mass by assessing the
 susceptibility of an otherwise homogeneous population to invasion by a
 mutated subset of the population (denoted by ${}^\prime$) where individuals
 have a modified proportion of body fat $M^\prime=M(1+\chi)$ where
