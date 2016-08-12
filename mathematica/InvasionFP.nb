@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1443410,      26391]
-NotebookOptionsPosition[   1434821,      26130]
-NotebookOutlinePosition[   1435179,      26146]
-CellTagsIndexPosition[   1435136,      26143]
+NotebookDataLength[   1550442,      28701]
+NotebookOptionsPosition[   1533374,      28243]
+NotebookOutlinePosition[   1533732,      28259]
+CellTagsIndexPosition[   1533689,      28256]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -290,7 +290,9 @@ Cell[BoxData[
       "Growth", ",", "Starvation", ",", "Mortality", ",", "Recovery", ",", 
        "Maintenance", ",", "Resourcegrowth", ",", "InvaderStarvation", ",", 
        "InvaderRecovery", ",", "InvaderMaintenance"}], "}"}]}], 
-    "\[IndentingNewLine]", ")"}]}], ";"}]], "Input"],
+    "\[IndentingNewLine]", ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.679839346763116*^9, 3.67983935143351*^9}, {
+  3.679839646924608*^9, 3.679839647434353*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -485,7 +487,8 @@ Cell[BoxData[
    3.677348018164092*^9, 3.677348043194031*^9}, {3.6773482164062557`*^9, 
    3.6773482455188637`*^9}, {3.6773494817373667`*^9, 3.677349503877199*^9}, 
    3.677349626404508*^9, 3.67784517101199*^9, 3.677867371792017*^9, 
-   3.67976840239083*^9}],
+   3.67976840239083*^9, 3.679839087173069*^9, 3.679839357166781*^9, 
+   3.679843380009179*^9}],
 
 Cell[BoxData["4"], "Output",
  CellChangeTimes->{
@@ -496,7 +499,8 @@ Cell[BoxData["4"], "Output",
    3.677348018164092*^9, 3.677348043194031*^9}, {3.6773482164062557`*^9, 
    3.6773482455188637`*^9}, {3.6773494817373667`*^9, 3.677349503877199*^9}, 
    3.677349626404508*^9, 3.67784517101199*^9, 3.677867371792017*^9, 
-   3.67976840240271*^9}]
+   3.67976840239083*^9, 3.679839087173069*^9, 3.679839357166781*^9, 
+   3.67984338002001*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -641,17 +645,17 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i$$ = 4.486, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i$$ = 4.032, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`i$$], 0, 8, 0.001}}, Typeset`size$$ = {
     400., {123., 128.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`i$119729$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$1427543$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`i$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`i$$, $CellContext`i$119729$$, 0]}, 
+        Hold[$CellContext`i$$, $CellContext`i$1427543$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -695,7 +699,7 @@ $CellContext`InvaderMaintenance}]; $CellContext`SpSol =
 {$CellContext`chi, -1, 1}, PlotRange -> {0, All}, PlotStyle -> Dashed]}]), 
       "Specifications" :> {{$CellContext`i$$, 0, 8, 0.001}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{445., {181., 186.}},
+     ImageSizeCache->{445., {167., 172.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -706,7 +710,2218 @@ $CellContext`InvaderMaintenance}]; $CellContext`SpSol =
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.679768627643133*^9, 3.6797686676436377`*^9}}]
+ CellChangeTimes->{{3.679768627643133*^9, 3.6797686676436377`*^9}, 
+   3.679839087223296*^9, 3.6798393572512627`*^9, 3.679843386462657*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844369423093*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844369436282*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844369447541*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844369557057*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844369574918*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844470975851*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844470989645*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844471003809*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444711168423`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984447113052*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844471902912*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444719170322`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444719309893`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844472017455*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844472033091*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444741808367`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844474196045*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844474211069*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844474289362*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844474330274*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844475271977*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844475280148*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844475295208*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844475738084*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444757466297`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444774257193`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844477434718*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984447744382*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844478078415*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444780876417`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844487845191*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444878526077`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444878599777`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844487939129*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844487964665*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844488721714*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844488729343*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444887801733`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844488857286*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444888954*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444896907682`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844489699089*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444898158693`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844489888473*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844489935261*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844490604348*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844490612034*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984449061973*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984449069349*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444907280283`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444914098063`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844491446149*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844491453786*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444915274143`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844491563328*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844493711206*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844493750792*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984449375863*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844493826704*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444938628073`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444946105328`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844494618164*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844494627117*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844494712696*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984449473771*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844495463594*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844495471298*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844495481131*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844495552565*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844495577632*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844496277458*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444962852983`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444963321238`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844496423339*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444964485283`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844497144166*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984449715191*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844497202232*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844497294817*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844497320169*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498059128*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498066888*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498074477*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498150091*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498197163*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498918479*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498970112*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844498980076*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798444990628853`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844499090049*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844499876566*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844499884446*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844499936645*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984450001064*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844500046727*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445039533167`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844503962282*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844504018972*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844504111063*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844504136826*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844504893684*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844504901787*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844504913623*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844505000148*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844505074367*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844505847921*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844505856597*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844505902079*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445059809427`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445060080843`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445067924137`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984450680254*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984450688435*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844506983514*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984450701229*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844507850436*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984450785959*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844507868908*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445081524687`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844508182249*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844510563424*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445105732937`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844510583192*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445109279747`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844510937417*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844511793681*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445118031073`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844511812707*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844511923539*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844511965602*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844512844672*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844512904213*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844512914317*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844513013853*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844513103393*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844514112619*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844514171055*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445141816883`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844514276369*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445143096113`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844515172892*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984451524654*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844515257886*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445153612022`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844515421074*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445163639193`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844516420823*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844516432255*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445165283813`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984451656282*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844517630045*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844517688706*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844517699635*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67984451782104*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844517870682*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445191412687`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445191855717`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844519196312*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844519291284*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844519324255*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445202503557`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844520310485*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844520320407*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844520407846*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445204387608`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "take"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Cannot take positions \[NoBreak]\\!\\(3\\)\[NoBreak] \
+through \[NoBreak]\\!\\(4\\)\[NoBreak] in \[NoBreak]\\!\\(Solutions\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Part/take\\\", ButtonNote -> \
+\\\"Part::take\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844521294842*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844521337984*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679844521347748*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(Solutions \[LeftDoubleBracket] \\(\\(3 \
+;; 4\\)\\) \[RightDoubleBracket]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445214356956`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798445214660683`*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -717,6 +2932,87 @@ Cell[BoxData[""], "Input",
    3.6773502752271*^9, 3.6773502772854424`*^9}, {3.6773518588768377`*^9, 
    3.677351900114851*^9}, {3.677410507934821*^9, 3.677410508236622*^9}, {
    3.677522152157881*^9, 3.677522194127459*^9}, 3.679768573224855*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FI", "/.", "SpSol"}]], "Input",
+ CellChangeTimes->{{3.6798434052542467`*^9, 3.679843428185948*^9}, {
+  3.6798436811888723`*^9, 3.679843696216072*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"5.69294831263883`*^-15", " ", 
+      RowBox[{"(", 
+       RowBox[{"1.0812961423350698`*^-6", "+", 
+        FractionBox["5.726975222066387`*^-7", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "4.281629088563839`"}], "-", 
+            RowBox[{"3.141592653589793`", " ", "\[ImaginaryI]"}]}], ")"}], 
+          "+", 
+          RowBox[{"Log", "[", 
+           RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+            RowBox[{"87.07880959410228`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
+              RowBox[{"1", "/", "4"}]]}]}], "]"}]}]]}], ")"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"6.327006119987395`*^-8", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "+", "chi"}], ")"}], 
+          RowBox[{"3", "/", "4"}]]}], "+", 
+        FractionBox["6.0304245341299226`*^-15", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "4.281629088563839`"}], "-", 
+            RowBox[{"3.141592653589793`", " ", "\[ImaginaryI]"}]}], ")"}], 
+          "+", 
+          RowBox[{"Log", "[", 
+           RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+            RowBox[{"87.07880959410228`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
+              RowBox[{"1", "/", "4"}]]}]}], "]"}]}]]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox["2.477022485947566`*^-12", 
+          RowBox[{
+           RowBox[{"-", "0.6858359003096349`"}], "+", 
+           RowBox[{"Log", "[", 
+            FractionBox["1.`", 
+             RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}]], "]"}]}]]}], 
+        "+", 
+        FractionBox["6.0304245341299226`*^-15", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "4.281629088563839`"}], "-", 
+            RowBox[{"3.141592653589793`", " ", "\[ImaginaryI]"}]}], ")"}], 
+          "+", 
+          RowBox[{"Log", "[", 
+           RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+            RowBox[{"87.07880959410228`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
+              RowBox[{"1", "/", "4"}]]}]}], "]"}]}]]}], ")"}]}], ")"}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.679843407988556*^9, 3.679843428744789*^9}, {
+  3.679843681512809*^9, 3.679843696458932*^9}}]
+}, Open  ]],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.677410510297325*^9, 3.67741053582064*^9}, 
@@ -6307,6 +8603,8 @@ Cell[BoxData[{
        RowBox[{"F", ",", "H", ",", "FI", ",", "HI", ",", "R"}], "}"}]}], 
      "]"}], "]"}]}], ";"}]}], "Input"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{"MassValues", " ", "=", " ", 
@@ -6504,6 +8802,10 @@ Cell[BoxData[{
    3.678193400618866*^9}, {3.678193499962202*^9, 3.6781935321815147`*^9}, {
    3.678193590917522*^9, 3.678193592235334*^9}, {3.679421572504032*^9, 
    3.679421573893692*^9}}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.679839707161005*^9}]
+}, Open  ]],
 
 Cell[BoxData[{
  RowBox[{
@@ -19777,7 +22079,7 @@ PrQdF9EvHZgl+eNDWtIhuaBqDt/9h+/2/wLXo3/j
    3.6781937509493923`*^9}, {3.678193782389406*^9, 3.678193905711816*^9}, {
    3.678193943401803*^9, 3.678194030604927*^9}, 3.6781980644072933`*^9, 
    3.678198117319483*^9, 3.678447228285961*^9, {3.6794219270418367`*^9, 
-   3.679421946921946*^9}}]
+   3.679421946921946*^9}, 3.679839487081452*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -20019,68 +22321,36 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"{", 
      RowBox[{
-      RowBox[{
-       FractionBox[
-        RowBox[{"\[Alpha]", " ", "\[Lambda]", " ", "\[Mu]", " ", 
-         RowBox[{"(", 
-          RowBox[{"\[Mu]", "+", "\[Rho]"}], ")"}]}], 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
-           RowBox[{"\[Lambda]", " ", "\[Rho]"}]}], ")"}], " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Lambda]", " ", "\[Rho]"}], "+", 
-           RowBox[{"\[Mu]", " ", "\[Sigma]"}]}], ")"}]}]], "+", 
-       FractionBox[
-        RowBox[{"\[Alpha]", " ", 
-         SuperscriptBox["\[Lambda]", "2"], " ", 
-         RowBox[{"(", 
-          RowBox[{"\[Mu]", "+", "\[Rho]"}], ")"}]}], 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
-           RowBox[{"\[Lambda]", " ", "\[Rho]"}]}], ")"}], " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Lambda]", " ", "\[Rho]"}], "+", 
-           RowBox[{"\[Mu]", " ", "\[Sigma]"}]}], ")"}]}]]}], ",", 
-      RowBox[{
-       FractionBox[
-        RowBox[{"\[Alpha]", " ", "\[Lambda]", " ", "\[Mu]", " ", 
-         RowBox[{"(", 
-          RowBox[{"\[Mu]", "+", "\[Rho]2"}], ")"}]}], 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Beta]2", " ", "\[Mu]"}], "+", 
-           RowBox[{"\[Lambda]", " ", "\[Rho]2"}]}], ")"}], " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Lambda]", " ", "\[Rho]2"}], "+", 
-           RowBox[{"\[Mu]", " ", "\[Sigma]2"}]}], ")"}]}]], "+", 
-       FractionBox[
-        RowBox[{"\[Alpha]", " ", 
-         SuperscriptBox["\[Lambda]", "2"], " ", 
-         RowBox[{"(", 
-          RowBox[{"\[Mu]", "+", "\[Rho]2"}], ")"}]}], 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Beta]2", " ", "\[Mu]"}], "+", 
-           RowBox[{"\[Lambda]", " ", "\[Rho]2"}]}], ")"}], " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"\[Lambda]", " ", "\[Rho]2"}], "+", 
-           RowBox[{"\[Mu]", " ", "\[Sigma]2"}]}], ")"}]}]]}]}], "}"}], "/.", 
+      FractionBox[
+       RowBox[{"\[Alpha]", " ", "\[Lambda]", " ", "\[Mu]", " ", 
+        RowBox[{"(", 
+         RowBox[{"\[Mu]", "+", "\[Rho]"}], ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
+          RowBox[{"\[Lambda]", " ", "\[Rho]"}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Lambda]", " ", "\[Rho]"}], "+", 
+          RowBox[{"\[Mu]", " ", "\[Sigma]"}]}], ")"}]}]], ",", 
+      FractionBox[
+       RowBox[{"\[Alpha]", " ", "\[Lambda]", " ", "\[Mu]", " ", 
+        RowBox[{"(", 
+         RowBox[{"\[Mu]", "+", "\[Rho]2"}], ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Beta]2", " ", "\[Mu]"}], "+", 
+          RowBox[{"\[Lambda]", " ", "\[Rho]2"}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Lambda]", " ", "\[Rho]2"}], "+", 
+          RowBox[{"\[Mu]", " ", "\[Sigma]2"}]}], ")"}]}]]}], "}"}], "/.", 
     RowBox[{"{", 
      RowBox[{
       RowBox[{"\[Alpha]", "\[Rule]", 
-       RowBox[{
-        RowBox[{"Re", "[", "Resourcegrowth", "]"}], "*", 
-        RowBox[{"1", "/", "2"}]}]}], ",", 
+       RowBox[{"Re", "[", "Resourcegrowth", "]"}]}], ",", 
       RowBox[{"\[Lambda]", "\[Rule]", 
        RowBox[{"Re", "[", "Growth", "]"}]}], ",", 
       RowBox[{"\[Sigma]", "->", 
@@ -20100,647 +22370,38 @@ Cell[BoxData[
   ";"}]], "Input",
  CellChangeTimes->{{3.6797670070466957`*^9, 3.679767069349003*^9}, {
   3.679767882388295*^9, 3.679767883483683*^9}, {3.679767920763424*^9, 
-  3.679767920882196*^9}}],
+  3.679767920882196*^9}, {3.679839753881702*^9, 3.679839770291052*^9}}],
 
 Cell[CellGroupData[{
 
-Cell[BoxData["FPSolutions"], "Input",
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{"Recovery", "/", "InvaderRecovery"}], "]"}]], "Input",
  CellChangeTimes->{{3.6797669186691427`*^9, 3.679766920542521*^9}, {
-  3.6797671398988667`*^9, 3.679767141282749*^9}}],
+  3.6797671398988667`*^9, 3.679767141282749*^9}, {3.679839774938676*^9, 
+  3.679839784201789*^9}, {3.6798398243895187`*^9, 3.679839838108733*^9}, {
+  3.679839991758156*^9, 3.679840012560873*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
+ RowBox[{
+  RowBox[{"(", 
    RowBox[{
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{"5.738933204999999`*^-14", " ", 
-       SuperscriptBox[
-        RowBox[{"Re", "[", 
-         FractionBox["1", 
-          SuperscriptBox["Mass", "0.206`"]], "]"}], "2"], " ", 
+    RowBox[{"-", "40.634321970565026`"}], "-", 
+    RowBox[{"34.66251534602292`", " ", "\[ImaginaryI]"}]}], ")"}], "+", 
+  RowBox[{"11.033421314636454`", " ", 
+   RowBox[{"Log", "[", 
+    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+     RowBox[{"44.53100364397874`", " ", 
+      SuperscriptBox[
        RowBox[{"(", 
-        RowBox[{
-         RowBox[{"5.726975222066387`*^-7", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox["Mass", 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"2.290790088826555`*^-6", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}]}], ")"}], "/", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox["Mass", 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"4.3525011687704545`*^-11", " ", 
-          RowBox[{"Re", "[", 
-           SuperscriptBox["Mass", 
-            RowBox[{"3", "/", "4"}]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}], " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox["Mass", 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "+", 
-         RowBox[{"5.247719231065975`*^-12", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              RowBox[{"0.0202`", " ", 
-               SuperscriptBox["Mass", "0.18999999999999995`"]}]}], "]"}]], 
-           "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}]}], ")"}]}], "-", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{"3.880483870967742`*^-13", " ", 
-       RowBox[{"Re", "[", 
-        FractionBox["1", 
-         SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"5.726975222066387`*^-7", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox["Mass", 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"2.290790088826555`*^-6", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}], " ", 
-       RowBox[{"Re", "[", 
-        FractionBox["1", 
-         RowBox[{"Log", "[", 
-          RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-           FractionBox[
-            RowBox[{"1.`", " ", 
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{"0.324`", " ", 
-                SuperscriptBox["Mass", "1.01`"]}], "+", 
-               RowBox[{"0.0202`", " ", 
-                SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-          "]"}]], "]"}]}], ")"}], "/", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox["Mass", 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"4.3525011687704545`*^-11", " ", 
-          RowBox[{"Re", "[", 
-           SuperscriptBox["Mass", 
-            RowBox[{"3", "/", "4"}]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}], " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox["Mass", 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "+", 
-         RowBox[{"5.247719231065975`*^-12", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              RowBox[{"0.0202`", " ", 
-               SuperscriptBox["Mass", "0.18999999999999995`"]}]}], "]"}]], 
-           "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}]}], ")"}]}]}], ",", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{"5.738933204999999`*^-14", " ", 
-       SuperscriptBox[
-        RowBox[{"Re", "[", 
-         FractionBox["1", 
-          SuperscriptBox["Mass", "0.206`"]], "]"}], "2"], " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"5.726975222066387`*^-7", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox[
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
-                   " ", "Mass"}], ")"}], 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"2.290790088826555`*^-6", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}]}], ")"}], "/", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox[
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
-                   " ", "Mass"}], ")"}], 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"4.3525011687704545`*^-11", " ", 
-          RowBox[{"Re", "[", 
-           SuperscriptBox[
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"1", "+", "chi"}], ")"}], " ", "Mass"}], ")"}], 
-            RowBox[{"3", "/", "4"}]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}], " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox[
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
-                   " ", "Mass"}], ")"}], 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "+", 
-         RowBox[{"5.247719231065975`*^-12", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              FractionBox["1", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}]], "]"}], "+", 
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"0.0202`", " ", 
-                SuperscriptBox["Mass", "0.18999999999999995`"]}]}], "]"}]}]], 
-           "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}]}], ")"}]}], "-", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{"3.880483870967742`*^-13", " ", 
-       RowBox[{"Re", "[", 
-        FractionBox["1", 
-         SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"5.726975222066387`*^-7", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox[
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
-                   " ", "Mass"}], ")"}], 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"2.290790088826555`*^-6", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}], " ", 
-       RowBox[{"Re", "[", 
-        FractionBox["1", 
-         RowBox[{"Log", "[", 
-          RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-           FractionBox[
-            RowBox[{"1.`", " ", 
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{"0.324`", " ", 
-                SuperscriptBox["Mass", "1.01`"]}], "+", 
-               RowBox[{"0.0202`", " ", 
-                SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-          "]"}]], "]"}]}], ")"}], "/", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox[
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
-                   " ", "Mass"}], ")"}], 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "-", 
-         RowBox[{"4.3525011687704545`*^-11", " ", 
-          RowBox[{"Re", "[", 
-           SuperscriptBox[
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"1", "+", "chi"}], ")"}], " ", "Mass"}], ")"}], 
-            RowBox[{"3", "/", "4"}]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}], " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1.940241935483871`*^-13", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            SuperscriptBox["Mass", "0.206`"]], "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"1.2894736842105263`", " ", 
-                SuperscriptBox[
-                 RowBox[{"(", 
-                  RowBox[{
-                   RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
-                   " ", "Mass"}], ")"}], 
-                 RowBox[{"1", "/", "4"}]]}]}], "]"}], "-", 
-             RowBox[{"1.`", " ", 
-              RowBox[{"Log", "[", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                RowBox[{"1.2894736842105263`", " ", 
-                 SuperscriptBox[
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-                    RowBox[{"0.0202`", " ", 
-                    SuperscriptBox["Mass", "0.18999999999999995`"]}]}], ")"}],
-                     " ", "Mass"}], ")"}], 
-                  RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "]"}]}], "+", 
-         RowBox[{"5.247719231065975`*^-12", " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{
-             RowBox[{"Log", "[", 
-              FractionBox["1", 
-               RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}]], "]"}], "+", 
-             RowBox[{"Log", "[", 
-              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-               RowBox[{"0.0202`", " ", 
-                SuperscriptBox["Mass", "0.18999999999999995`"]}]}], "]"}]}]], 
-           "]"}], " ", 
-          RowBox[{"Re", "[", 
-           FractionBox["1", 
-            RowBox[{"Log", "[", 
-             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
-              FractionBox[
-               RowBox[{"1.`", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"0.324`", " ", 
-                   SuperscriptBox["Mass", "1.01`"]}], "+", 
-                  RowBox[{"0.0202`", " ", 
-                   SuperscriptBox["Mass", "1.19`"]}]}], ")"}]}], "Mass"]}], 
-             "]"}]], "]"}]}]}], ")"}]}], ")"}]}]}]}], "}"}]], "Output",
- CellChangeTimes->{3.679767141763587*^9}]
+        RowBox[{"1.`", "\[VeryThinSpace]", "+", "chi"}], ")"}], 
+       RowBox[{"1", "/", "4"}]]}]}], "]"}]}]}]], "Output",
+ CellChangeTimes->{3.679767141763587*^9, 3.6798400129063997`*^9}]
 }, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", "{"}]], "Input",
+ CellChangeTimes->{{3.679840051570236*^9, 3.679840057485629*^9}}],
 
 Cell[CellGroupData[{
 
@@ -23010,7 +24671,7 @@ pih/nRvHxmO8WRMeTfsWSi4vgonl2CL6pxKZKwYNGpDvcsG9QVERTPe3atHf
   BoxRatios->{1, 1, 0.4},
   DisplayFunction->Identity,
   FaceGridsStyle->Automatic,
-  ImageSize->{481.7876622043607, 389.5617359749209},
+  ImageSize->{471.7140975534597, 391.83772309682774`},
   Method->{"DefaultBoundaryStyle" -> Directive[
       GrayLevel[0.3]], "RotationControl" -> "Globe"},
   PlotRange->{{-1, 1}, {0, 10000000}, {0.0008760252468865612, 
@@ -23020,7 +24681,7 @@ pih/nRvHxmO8WRMeTfsWSi4vgonl2CL6pxKZKwYNGpDvcsG9QVERTPe3atHf
     Scaled[0.02], 
     Scaled[0.02]},
   Ticks->{Automatic, Automatic, Automatic},
-  ViewPoint->{-2.0635921092268252`, -1.4067754539623274`, 2.283105435337123},
+  ViewPoint->{-2.471727889145391, 1.0757174661979128`, 2.0453344897443184`},
   ViewVertical->{0., 0., 1.}]], "Output",
  CellChangeTimes->{
   3.6797675482260103`*^9, 3.679767890376808*^9, 3.6797681383310537`*^9, {
@@ -25118,7 +26779,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`chi$$], 0}, -1, 1, 0.001}}, Typeset`size$$ = {
-    886.30126953125, {194.642578125, 14.35205078125}}, Typeset`update$$ = 0, 
+    680., {184.642578125, 14.35205078125}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
     True, $CellContext`chi$81206$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -25178,7 +26839,7 @@ $CellContext`InvaderMaintenance}]]; $CellContext`REig1 =
          FrameLabel -> {"Real part", "Imaginary part"}]), 
       "Specifications" :> {{{$CellContext`chi$$, 0}, -1, 1, 0.001}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{932., {147., 152.}},
+     ImageSizeCache->{725., {142., 147.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -26096,7 +27757,459 @@ Opacity[0.3`], DiskBox[List[0, 0]]]]}\\)\\), \\(\\(ImageSize \[Rule] \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
 \\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679421973472045*^9}]
+ CellChangeTimes->{3.679421973472045*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\(2\\)\[NoBreak] of \
+\[NoBreak]\\!\\(Ratesfunc[\\(\\({0, 1, 10000000, 0.019`, 0.0245`, 10695.`, \
+3\\/4, \\(\\(-0.206`\\)\\), 3.3879`*^-7, 0.00001`, 1.19`, 1.01`, 0.0202`, \
+0.324`, 0.357`}\\)\\)]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839071651016*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\(3\\)\[NoBreak] of \
+\[NoBreak]\\!\\(Ratesfunc[\\(\\({0, 1, 10000000, 0.019`, 0.0245`, 10695.`, \
+3\\/4, \\(\\(-0.206`\\)\\), 3.3879`*^-7, 0.00001`, 1.19`, 1.01`, 0.0202`, \
+0.324`, 0.357`}\\)\\)]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798390716616163`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\(4\\)\[NoBreak] of \
+\[NoBreak]\\!\\(Ratesfunc[\\(\\({0, 1, 10000000, 0.019`, 0.0245`, 10695.`, \
+3\\/4, \\(\\(-0.206`\\)\\), 3.3879`*^-7, 0.00001`, 1.19`, 1.01`, 0.0202`, \
+0.324`, 0.357`}\\)\\)]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.67983907166889*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Part :: \
+partw\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839071676237*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The first two levels of \
+\[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
+transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
+\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839071683343*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839072048015*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839072112527*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798390721752*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(ListPlot \
+:: lpn\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839072214213*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The first two levels of \
+\[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
+transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
+\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839072225298*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
+\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.368417`, 0.506779`, 0.709798`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.24561133333333335`, 0.3378526666666667`, \
+0.4731986666666667`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.368417, 0.506779, 0.709798]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.368417`, \
+0.506779`, 0.709798`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.368417`, 0.506779`, \
+0.709798`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \
+\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.880722`, 0.611041`, 0.142051`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.587148`, 0.40736066666666665`, \
+0.09470066666666668`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.880722, 0.611041, 0.142051]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.880722`, \
+0.611041`, 0.142051`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.880722`, 0.611041`, \
+0.142051`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \\*GraphicsBox[List[GrayLevel[0.85`], \
+Opacity[0.3`], DiskBox[List[0, 0]]]]}\\)\\), \\(\\(ImageSize \[Rule] \
+300\\)\\), \\(\\(Frame \[Rule] True\\)\\), \\(\\(AspectRatio \[Rule] 1\\)\\), \
+\\(\\(FrameLabel \[Rule] \\(\\({\\\"Real part\\\", \\\"Imaginary part\\\"}\\)\
+\\)\\)\\)\\)\\)]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
+\\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6798390723197203`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
+\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.368417`, 0.506779`, 0.709798`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.24561133333333335`, 0.3378526666666667`, \
+0.4731986666666667`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.368417, 0.506779, 0.709798]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.368417`, \
+0.506779`, 0.709798`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.368417`, 0.506779`, \
+0.709798`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \
+\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.880722`, 0.611041`, 0.142051`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.587148`, 0.40736066666666665`, \
+0.09470066666666668`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.880722, 0.611041, 0.142051]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.880722`, \
+0.611041`, 0.142051`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.880722`, 0.611041`, \
+0.142051`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \\*GraphicsBox[List[GrayLevel[0.85`], \
+Opacity[0.3`], DiskBox[List[0, 0]]]]}\\)\\), \\(\\(ImageSize \[Rule] \
+300\\)\\), \\(\\(Frame \[Rule] True\\)\\), \\(\\(AspectRatio \[Rule] 1\\)\\), \
+\\(\\(FrameLabel \[Rule] \\(\\({\\\"Real part\\\", \\\"Imaginary part\\\"}\\)\
+\\)\\)\\)\\)\\)]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
+\\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679839072827984*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The first two levels of \
+\[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
+transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
+\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679843497907585*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679843498124524*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679843498265258*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\
+\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679843498376607*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(ListPlot \
+:: lpn\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679843498412402*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The first two levels of \
+\[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
+transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
+\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679843498458541*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
+\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol1]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.368417`, 0.506779`, 0.709798`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.24561133333333335`, 0.3378526666666667`, \
+0.4731986666666667`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.368417, 0.506779, 0.709798]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.368417`, \
+0.506779`, 0.709798`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.368417`, 0.506779`, \
+0.709798`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \
+\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol2]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol2]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
+\\(\\(PlotRange \[Rule] \\(\\({\\(\\({\\(\\(-1\\)\\), 1}\\)\\), \
+\\(\\({\\(\\(-1\\)\\), 1}\\)\\)}\\)\\)\\)\\), \\(\\(PlotStyle \[Rule] \
+\\*InterpretationBox[ButtonBox[TooltipBox[\\(\\*GraphicsBox[List[List[\
+GrayLevel[0], RectangleBox[List[0, 0]]], List[GrayLevel[0], \
+RectangleBox[List[1, -1]]], List[RGBColor[0.880722`, 0.611041`, 0.142051`], \
+RectangleBox[List[0, -1], List[2, 1]]]], Rule[AspectRatio, 1], Rule[Frame, \
+True], Rule[FrameStyle, RGBColor[0.587148`, 0.40736066666666665`, \
+0.09470066666666668`]], Rule[FrameTicks, None], Rule[PlotRangePadding, None], \
+Rule[ImageSize, Dynamic[List[Automatic, Times[1.35`, \
+CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]] \[InvisibleSpace]\\), \
+\\\"RGBColor[0.880722, 0.611041, 0.142051]\\\"], Rule[Appearance, None], \
+Rule[BaseStyle, List[]], Rule[BaselinePosition, Baseline], \
+Rule[DefaultBaseStyle, List[]], RuleDelayed[ButtonFunction, \
+With[List[Set[Typeset`box$, EvaluationBox[]]], If[Not[AbsoluteCurrentValue[\\\
+\"Deployed\\\"]], CompoundExpression[SelectionMove[Typeset`box$, All, \
+Expression], Set[FrontEnd`Private`$ColorSelectorInitialAlpha, 1], \
+Set[FrontEnd`Private`$ColorSelectorInitialColor, RGBColor[0.880722`, \
+0.611041`, 0.142051`]], Set[FrontEnd`Private`$ColorSelectorUseMakeBoxes, \
+True], MathLink`CallFrontEnd[FrontEnd`AttachCell[Typeset`box$, \
+FrontEndResource[\\\"RGBColorValueSelector\\\"], List[0, List[Left, Bottom]], \
+List[Left, Top], Rule[\\\"ClosingActions\\\", \
+List[\\\"SelectionDeparture\\\", \\\"ParentChanged\\\", \
+\\\"EvaluatorQuit\\\"]]]]]]]], Rule[BaseStyle, Inherited], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], RGBColor[0.880722`, 0.611041`, \
+0.142051`], Rule[Editable, False], Rule[Selectable, \
+False]]\\)\\)\\)\\)]\\)\\), \\*GraphicsBox[List[GrayLevel[0.85`], \
+Opacity[0.3`], DiskBox[List[0, 0]]]]}\\)\\), \\(\\(ImageSize \[Rule] \
+300\\)\\), \\(\\(Frame \[Rule] True\\)\\), \\(\\(AspectRatio \[Rule] 1\\)\\), \
+\\(\\(FrameLabel \[Rule] \\(\\({\\\"Real part\\\", \\\"Imaginary part\\\"}\\)\
+\\)\\)\\)\\)\\)]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
+\\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.679843498561198*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -26146,252 +28259,449 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 76, 1, 28, "Input"],
-Cell[637, 23, 9984, 269, 946, "Input"],
-Cell[10624, 294, 2006, 56, 131, "Input"],
+Cell[637, 23, 10098, 271, 946, "Input"],
+Cell[10738, 296, 2006, 56, 131, "Input"],
 Cell[CellGroupData[{
-Cell[12655, 354, 976, 21, 46, "Input"],
-Cell[13634, 377, 4107, 110, 124, "Output"],
-Cell[17744, 489, 589, 9, 28, "Output"]
+Cell[12769, 356, 976, 21, 46, "Input"],
+Cell[13748, 379, 4177, 111, 124, "Output"],
+Cell[17928, 492, 658, 10, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18370, 503, 6209, 135, 641, "Input"],
-Cell[24582, 640, 3607, 68, 418, "Output"]
+Cell[18623, 507, 6209, 135, 641, "Input"],
+Cell[24835, 644, 3681, 69, 356, "Output"],
+Cell[28519, 715, 509, 11, 24, "Message"],
+Cell[29031, 728, 605, 11, 24, "Message"],
+Cell[29639, 741, 605, 11, 24, "Message"],
+Cell[30247, 754, 605, 11, 24, "Message"],
+Cell[30855, 767, 533, 11, 24, "Message"],
+Cell[31391, 780, 509, 11, 24, "Message"],
+Cell[31903, 793, 605, 11, 24, "Message"],
+Cell[32511, 806, 605, 11, 24, "Message"],
+Cell[33119, 819, 607, 11, 24, "Message"],
+Cell[33729, 832, 532, 11, 24, "Message"],
+Cell[34264, 845, 509, 11, 24, "Message"],
+Cell[34776, 858, 607, 11, 24, "Message"],
+Cell[35386, 871, 607, 11, 24, "Message"],
+Cell[35996, 884, 605, 11, 24, "Message"],
+Cell[36604, 897, 533, 11, 24, "Message"],
+Cell[37140, 910, 511, 11, 24, "Message"],
+Cell[37654, 923, 605, 11, 24, "Message"],
+Cell[38262, 936, 605, 11, 24, "Message"],
+Cell[38870, 949, 605, 11, 24, "Message"],
+Cell[39478, 962, 533, 11, 24, "Message"],
+Cell[40014, 975, 509, 11, 24, "Message"],
+Cell[40526, 988, 605, 11, 24, "Message"],
+Cell[41134, 1001, 605, 11, 24, "Message"],
+Cell[41742, 1014, 605, 11, 24, "Message"],
+Cell[42350, 1027, 535, 11, 24, "Message"],
+Cell[42888, 1040, 511, 11, 24, "Message"],
+Cell[43402, 1053, 605, 11, 24, "Message"],
+Cell[44010, 1066, 604, 11, 24, "Message"],
+Cell[44617, 1079, 605, 11, 24, "Message"],
+Cell[45225, 1092, 535, 11, 24, "Message"],
+Cell[45763, 1105, 509, 11, 24, "Message"],
+Cell[46275, 1118, 607, 11, 24, "Message"],
+Cell[46885, 1131, 607, 11, 24, "Message"],
+Cell[47495, 1144, 605, 11, 24, "Message"],
+Cell[48103, 1157, 533, 11, 24, "Message"],
+Cell[48639, 1170, 509, 11, 24, "Message"],
+Cell[49151, 1183, 605, 11, 24, "Message"],
+Cell[49759, 1196, 607, 11, 24, "Message"],
+Cell[50369, 1209, 605, 11, 24, "Message"],
+Cell[50977, 1222, 531, 11, 24, "Message"],
+Cell[51511, 1235, 511, 11, 24, "Message"],
+Cell[52025, 1248, 605, 11, 24, "Message"],
+Cell[52633, 1261, 607, 11, 24, "Message"],
+Cell[53243, 1274, 605, 11, 24, "Message"],
+Cell[53851, 1287, 533, 11, 24, "Message"],
+Cell[54387, 1300, 509, 11, 24, "Message"],
+Cell[54899, 1313, 605, 11, 24, "Message"],
+Cell[55507, 1326, 604, 11, 24, "Message"],
+Cell[56114, 1339, 604, 11, 24, "Message"],
+Cell[56721, 1352, 535, 11, 24, "Message"],
+Cell[57259, 1365, 511, 11, 24, "Message"],
+Cell[57773, 1378, 605, 11, 24, "Message"],
+Cell[58381, 1391, 605, 11, 24, "Message"],
+Cell[58989, 1404, 607, 11, 24, "Message"],
+Cell[59599, 1417, 533, 11, 24, "Message"],
+Cell[60135, 1430, 509, 11, 24, "Message"],
+Cell[60647, 1443, 605, 11, 24, "Message"],
+Cell[61255, 1456, 604, 11, 24, "Message"],
+Cell[61862, 1469, 605, 11, 24, "Message"],
+Cell[62470, 1482, 535, 11, 24, "Message"],
+Cell[63008, 1495, 511, 11, 24, "Message"],
+Cell[63522, 1508, 605, 11, 24, "Message"],
+Cell[64130, 1521, 605, 11, 24, "Message"],
+Cell[64738, 1534, 605, 11, 24, "Message"],
+Cell[65346, 1547, 532, 11, 24, "Message"],
+Cell[65881, 1560, 509, 11, 24, "Message"],
+Cell[66393, 1573, 605, 11, 24, "Message"],
+Cell[67001, 1586, 605, 11, 24, "Message"],
+Cell[67609, 1599, 605, 11, 24, "Message"],
+Cell[68217, 1612, 533, 11, 24, "Message"],
+Cell[68753, 1625, 509, 11, 24, "Message"],
+Cell[69265, 1638, 607, 11, 24, "Message"],
+Cell[69875, 1651, 607, 11, 24, "Message"],
+Cell[70485, 1664, 605, 11, 24, "Message"],
+Cell[71093, 1677, 535, 11, 24, "Message"],
+Cell[71631, 1690, 509, 11, 24, "Message"],
+Cell[72143, 1703, 604, 11, 24, "Message"],
+Cell[72750, 1716, 605, 11, 24, "Message"],
+Cell[73358, 1729, 605, 11, 24, "Message"],
+Cell[73966, 1742, 533, 11, 24, "Message"],
+Cell[74502, 1755, 509, 11, 24, "Message"],
+Cell[75014, 1768, 605, 11, 24, "Message"],
+Cell[75622, 1781, 605, 11, 24, "Message"],
+Cell[76230, 1794, 605, 11, 24, "Message"],
+Cell[76838, 1807, 533, 11, 24, "Message"],
+Cell[77374, 1820, 509, 11, 24, "Message"],
+Cell[77886, 1833, 605, 11, 24, "Message"],
+Cell[78494, 1846, 605, 11, 24, "Message"],
+Cell[79102, 1859, 607, 11, 24, "Message"],
+Cell[79712, 1872, 533, 11, 24, "Message"],
+Cell[80248, 1885, 509, 11, 24, "Message"],
+Cell[80760, 1898, 605, 11, 24, "Message"],
+Cell[81368, 1911, 605, 11, 24, "Message"],
+Cell[81976, 1924, 604, 11, 24, "Message"],
+Cell[82583, 1937, 533, 11, 24, "Message"],
+Cell[83119, 1950, 511, 11, 24, "Message"],
+Cell[83633, 1963, 605, 11, 24, "Message"],
+Cell[84241, 1976, 605, 11, 24, "Message"],
+Cell[84849, 1989, 605, 11, 24, "Message"],
+Cell[85457, 2002, 533, 11, 24, "Message"],
+Cell[85993, 2015, 509, 11, 24, "Message"],
+Cell[86505, 2028, 605, 11, 24, "Message"],
+Cell[87113, 2041, 605, 11, 24, "Message"],
+Cell[87721, 2054, 605, 11, 24, "Message"],
+Cell[88329, 2067, 533, 11, 24, "Message"],
+Cell[88865, 2080, 509, 11, 24, "Message"],
+Cell[89377, 2093, 605, 11, 24, "Message"],
+Cell[89985, 2106, 605, 11, 24, "Message"],
+Cell[90593, 2119, 607, 11, 24, "Message"],
+Cell[91203, 2132, 535, 11, 24, "Message"],
+Cell[91741, 2145, 511, 11, 24, "Message"],
+Cell[92255, 2158, 604, 11, 24, "Message"],
+Cell[92862, 2171, 604, 11, 24, "Message"],
+Cell[93469, 2184, 605, 11, 24, "Message"],
+Cell[94077, 2197, 532, 11, 24, "Message"],
+Cell[94612, 2210, 509, 11, 24, "Message"],
+Cell[95124, 2223, 604, 11, 24, "Message"],
+Cell[95731, 2236, 605, 11, 24, "Message"],
+Cell[96339, 2249, 607, 11, 24, "Message"],
+Cell[96949, 2262, 533, 11, 24, "Message"],
+Cell[97485, 2275, 509, 11, 24, "Message"],
+Cell[97997, 2288, 607, 11, 24, "Message"],
+Cell[98607, 2301, 605, 11, 24, "Message"],
+Cell[99215, 2314, 607, 11, 24, "Message"],
+Cell[99825, 2327, 533, 11, 24, "Message"],
+Cell[100361, 2340, 509, 11, 24, "Message"],
+Cell[100873, 2353, 607, 11, 24, "Message"],
+Cell[101483, 2366, 605, 11, 24, "Message"],
+Cell[102091, 2379, 605, 11, 24, "Message"],
+Cell[102699, 2392, 533, 11, 24, "Message"],
+Cell[103235, 2405, 509, 11, 24, "Message"],
+Cell[103747, 2418, 605, 11, 24, "Message"],
+Cell[104355, 2431, 605, 11, 24, "Message"],
+Cell[104963, 2444, 605, 11, 24, "Message"],
+Cell[105571, 2457, 533, 11, 24, "Message"],
+Cell[106107, 2470, 509, 11, 24, "Message"],
+Cell[106619, 2483, 605, 11, 24, "Message"],
+Cell[107227, 2496, 607, 11, 24, "Message"],
+Cell[107837, 2509, 605, 11, 24, "Message"],
+Cell[108445, 2522, 535, 11, 24, "Message"],
+Cell[108983, 2535, 509, 11, 24, "Message"],
+Cell[109495, 2548, 604, 11, 24, "Message"],
+Cell[110102, 2561, 605, 11, 24, "Message"],
+Cell[110710, 2574, 607, 11, 24, "Message"],
+Cell[111320, 2587, 533, 11, 24, "Message"],
+Cell[111856, 2600, 511, 11, 24, "Message"],
+Cell[112370, 2613, 605, 11, 24, "Message"],
+Cell[112978, 2626, 605, 11, 24, "Message"],
+Cell[113586, 2639, 607, 11, 24, "Message"],
+Cell[114196, 2652, 532, 11, 24, "Message"],
+Cell[114731, 2665, 509, 11, 24, "Message"],
+Cell[115243, 2678, 605, 11, 24, "Message"],
+Cell[115851, 2691, 605, 11, 24, "Message"],
+Cell[116459, 2704, 604, 11, 24, "Message"],
+Cell[117066, 2717, 533, 11, 24, "Message"],
+Cell[117602, 2730, 511, 11, 24, "Message"],
+Cell[118116, 2743, 607, 11, 24, "Message"],
+Cell[118726, 2756, 605, 11, 24, "Message"],
+Cell[119334, 2769, 605, 11, 24, "Message"],
+Cell[119942, 2782, 533, 11, 24, "Message"],
+Cell[120478, 2795, 511, 11, 24, "Message"],
+Cell[120992, 2808, 605, 11, 24, "Message"],
+Cell[121600, 2821, 605, 11, 24, "Message"],
+Cell[122208, 2834, 605, 11, 24, "Message"],
+Cell[122816, 2847, 535, 11, 24, "Message"],
+Cell[123354, 2860, 509, 11, 24, "Message"],
+Cell[123866, 2873, 605, 11, 24, "Message"],
+Cell[124474, 2886, 605, 11, 24, "Message"],
+Cell[125082, 2899, 607, 11, 24, "Message"],
+Cell[125692, 2912, 535, 11, 24, "Message"]
 }, Open  ]],
-Cell[28204, 711, 538, 7, 28, "Input"],
-Cell[28745, 720, 117, 2, 28, "Input"],
+Cell[126242, 2926, 538, 7, 28, "Input"],
 Cell[CellGroupData[{
-Cell[28887, 726, 1745, 24, 28, "Input"],
-Cell[30635, 752, 43328, 892, 269, "Output"]
+Cell[126805, 2937, 174, 3, 28, "Input"],
+Cell[126982, 2942, 2693, 71, 163, "Output"]
+}, Open  ]],
+Cell[129690, 3016, 117, 2, 28, "Input"],
+Cell[CellGroupData[{
+Cell[129832, 3022, 1745, 24, 28, "Input"],
+Cell[131580, 3048, 43328, 892, 269, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74000, 1649, 429, 11, 28, "Input"],
-Cell[74432, 1662, 749, 15, 26, "Message"],
-Cell[75184, 1679, 195, 4, 28, "Output"]
+Cell[174945, 3945, 429, 11, 28, "Input"],
+Cell[175377, 3958, 749, 15, 26, "Message"],
+Cell[176129, 3975, 195, 4, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75416, 1688, 108, 1, 28, "Input"],
-Cell[75527, 1691, 302, 9, 59, "Output"]
+Cell[176361, 3984, 108, 1, 28, "Input"],
+Cell[176472, 3987, 302, 9, 59, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75866, 1705, 368, 9, 49, "Input"],
-Cell[76237, 1716, 253, 4, 28, "Output"]
+Cell[176811, 4001, 368, 9, 49, "Input"],
+Cell[177182, 4012, 253, 4, 28, "Output"]
 }, Open  ]],
-Cell[76505, 1723, 92, 1, 28, "Input"],
+Cell[177450, 4019, 92, 1, 28, "Input"],
 Cell[CellGroupData[{
-Cell[76622, 1728, 274, 7, 28, "Input"],
-Cell[76899, 1737, 7512, 135, 238, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[84448, 1877, 400, 9, 46, "Input"],
-Cell[84851, 1888, 2402, 62, 163, "Output"],
-Cell[87256, 1952, 312, 7, 28, "Output"]
+Cell[177567, 4024, 274, 7, 28, "Input"],
+Cell[177844, 4033, 7512, 135, 238, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[87605, 1964, 315, 8, 28, "Input"],
-Cell[87923, 1974, 180, 3, 28, "Output"]
+Cell[185393, 4173, 400, 9, 46, "Input"],
+Cell[185796, 4184, 2402, 62, 163, "Output"],
+Cell[188201, 4248, 312, 7, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[88140, 1982, 752, 22, 63, "Input"],
-Cell[88895, 2006, 410, 11, 35, "Output"]
+Cell[188550, 4260, 315, 8, 28, "Input"],
+Cell[188868, 4270, 180, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[89342, 2022, 195, 5, 28, "Input"],
-Cell[89540, 2029, 99, 1, 28, "Output"]
+Cell[189085, 4278, 752, 22, 63, "Input"],
+Cell[189840, 4302, 410, 11, 35, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[89676, 2035, 308, 8, 28, "Input"],
-Cell[89987, 2045, 131, 2, 28, "Output"]
+Cell[190287, 4318, 195, 5, 28, "Input"],
+Cell[190485, 4325, 99, 1, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[90155, 2052, 274, 6, 28, "Input"],
-Cell[90432, 2060, 225263, 3704, 252, "Output"]
-}, Open  ]],
-Cell[315710, 5767, 198, 5, 28, "Input"],
-Cell[CellGroupData[{
-Cell[315933, 5776, 297, 8, 28, "Input"],
-Cell[316233, 5786, 111, 1, 28, "Output"]
+Cell[190621, 4331, 308, 8, 28, "Input"],
+Cell[190932, 4341, 131, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[316381, 5792, 532, 11, 28, "Input"],
-Cell[316916, 5805, 7166, 166, 236, "Output"]
+Cell[191100, 4348, 274, 6, 28, "Input"],
+Cell[191377, 4356, 225263, 3704, 252, "Output"]
+}, Open  ]],
+Cell[416655, 8063, 198, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[416878, 8072, 297, 8, 28, "Input"],
+Cell[417178, 8082, 111, 1, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[324119, 5976, 262, 7, 28, "Input"],
-Cell[324384, 5985, 267, 7, 28, "Output"]
+Cell[417326, 8088, 532, 11, 28, "Input"],
+Cell[417861, 8101, 7166, 166, 236, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[324688, 5997, 206, 4, 28, "Input"],
-Cell[324897, 6003, 499, 10, 24, "Message"],
-Cell[325399, 6015, 158, 3, 28, "Output"]
+Cell[425064, 8272, 262, 7, 28, "Input"],
+Cell[425329, 8281, 267, 7, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[325594, 6023, 489, 13, 46, "Input"],
-Cell[326086, 6038, 216, 3, 28, "Output"],
-Cell[326305, 6043, 2076, 51, 93, "Output"]
+Cell[425633, 8293, 206, 4, 28, "Input"],
+Cell[425842, 8299, 499, 10, 24, "Message"],
+Cell[426344, 8311, 158, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[328418, 6099, 445, 9, 28, "Input"],
-Cell[328866, 6110, 523, 11, 24, "Message"],
-Cell[329392, 6123, 598, 15, 35, "Output"]
+Cell[426539, 8319, 489, 13, 46, "Input"],
+Cell[427031, 8334, 216, 3, 28, "Output"],
+Cell[427250, 8339, 2076, 51, 163, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[330027, 6143, 165, 3, 28, "Input"],
-Cell[330195, 6148, 87, 1, 28, "Output"]
+Cell[429363, 8395, 445, 9, 28, "Input"],
+Cell[429811, 8406, 523, 11, 41, "Message"],
+Cell[430337, 8419, 598, 15, 35, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[330319, 6154, 96, 1, 28, "Input"],
-Cell[330418, 6157, 87, 1, 28, "Output"]
+Cell[430972, 8439, 165, 3, 28, "Input"],
+Cell[431140, 8444, 87, 1, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[330542, 6163, 707, 16, 28, "Input"],
-Cell[331252, 6181, 2517, 48, 260, "Output"]
+Cell[431264, 8450, 96, 1, 28, "Input"],
+Cell[431363, 8453, 87, 1, 28, "Output"]
 }, Open  ]],
-Cell[333784, 6232, 115, 1, 30, "Text"],
-Cell[333902, 6235, 171, 2, 46, "Text"],
-Cell[334076, 6239, 2359, 68, 165, "Input"],
-Cell[336438, 6309, 9089, 196, 718, "Input"],
-Cell[345530, 6507, 2505, 68, 80, "Input"],
 Cell[CellGroupData[{
-Cell[348060, 6579, 4824, 95, 206, "Input"],
-Cell[352887, 6676, 749440, 12607, 315, 730211, 12293, "CachedBoxData", \
+Cell[431487, 8459, 707, 16, 28, "Input"],
+Cell[432197, 8477, 2517, 48, 260, "Output"]
+}, Open  ]],
+Cell[434729, 8528, 115, 1, 30, "Text"],
+Cell[434847, 8531, 171, 2, 46, "Text"],
+Cell[435021, 8535, 2359, 68, 165, "Input"],
+Cell[CellGroupData[{
+Cell[437405, 8607, 9089, 196, 735, "Input"],
+Cell[446497, 8805, 77, 1, 28, "Output"]
+}, Open  ]],
+Cell[446589, 8809, 2505, 68, 97, "Input"],
+Cell[CellGroupData[{
+Cell[449119, 8881, 4824, 95, 240, "Input"],
+Cell[453946, 8978, 749440, 12607, 315, 730211, 12293, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1102364, 19288, 3676, 91, 196, "Input"],
-Cell[1106043, 19381, 18942, 398, 233, "Output"]
+Cell[1203423, 21590, 3676, 91, 230, "Input"],
+Cell[1207102, 21683, 18964, 398, 233, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1125022, 19784, 404, 8, 46, "Input"],
-Cell[1125429, 19794, 412, 5, 28, "Output"]
+Cell[1226103, 22086, 404, 8, 46, "Input"],
+Cell[1226510, 22096, 412, 5, 46, "Output"]
 }, Open  ]],
-Cell[1125856, 19802, 1677, 36, 301, "Input"],
-Cell[1127536, 19840, 1285, 37, 165, "Input"],
+Cell[1226937, 22104, 1677, 36, 301, "Input"],
+Cell[1228617, 22142, 1285, 37, 165, "Input"],
 Cell[CellGroupData[{
-Cell[1128846, 19881, 100, 1, 28, "Input"],
-Cell[1128949, 19884, 3588, 102, 124, "Output"]
+Cell[1229927, 22183, 100, 1, 28, "Input"],
+Cell[1230030, 22186, 3588, 102, 124, "Output"]
 }, Open  ]],
-Cell[1132552, 19989, 986, 24, 46, "Input"],
-Cell[1133541, 20015, 3324, 87, 90, "Input"],
+Cell[1233633, 22291, 986, 24, 63, "Input"],
+Cell[1234622, 22317, 2213, 55, 104, "Input"],
 Cell[CellGroupData[{
-Cell[1136890, 20106, 156, 2, 28, "Input"],
-Cell[1137049, 20110, 25709, 631, 1790, "Output"]
+Cell[1236860, 22376, 370, 6, 28, "Input"],
+Cell[1237233, 22384, 554, 14, 34, "Output"]
 }, Open  ]],
+Cell[1237802, 22401, 118, 2, 28, "Input"],
 Cell[CellGroupData[{
-Cell[1162795, 20746, 1223, 33, 80, "Input"],
-Cell[1164021, 20781, 136298, 2246, 439, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1300356, 23032, 1405, 35, 80, "Input"],
-Cell[1301764, 23069, 19639, 480, 554, "Output"]
+Cell[1237945, 22407, 1223, 33, 80, "Input"],
+Cell[1239171, 22442, 136299, 2246, 407, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1321440, 23554, 219, 5, 28, "Input"],
-Cell[1321662, 23561, 25100, 590, 1823, "Output"]
+Cell[1375507, 24693, 1405, 35, 80, "Input"],
+Cell[1376915, 24730, 19639, 480, 554, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1346799, 24156, 299, 7, 28, "Input"],
-Cell[1347101, 24165, 155, 3, 28, "Output"]
+Cell[1396591, 25215, 219, 5, 28, "Input"],
+Cell[1396813, 25222, 25100, 590, 1948, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1347293, 24173, 242, 4, 28, "Input"],
-Cell[1347538, 24179, 187, 2, 32, "Output"]
+Cell[1421950, 25817, 299, 7, 28, "Input"],
+Cell[1422252, 25826, 155, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1347762, 24186, 297, 8, 28, "Input"],
-Cell[1348062, 24196, 157, 3, 28, "Output"]
+Cell[1422444, 25834, 242, 4, 28, "Input"],
+Cell[1422689, 25840, 187, 2, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1348256, 24204, 164, 4, 28, "Input"],
-Cell[1348423, 24210, 129, 2, 28, "Output"]
+Cell[1422913, 25847, 297, 8, 28, "Input"],
+Cell[1423213, 25857, 157, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1348589, 24217, 197, 4, 28, "Input"],
-Cell[1348789, 24223, 257, 4, 28, "Output"]
+Cell[1423407, 25865, 164, 4, 28, "Input"],
+Cell[1423574, 25871, 129, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1349083, 24232, 104, 1, 28, "Input"],
-Cell[1349190, 24235, 1113, 18, 77, "Output"]
+Cell[1423740, 25878, 197, 4, 28, "Input"],
+Cell[1423940, 25884, 257, 4, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1350340, 24258, 344, 9, 28, "Input"],
-Cell[1350687, 24269, 152, 2, 46, "Output"]
+Cell[1424234, 25893, 104, 1, 28, "Input"],
+Cell[1424341, 25896, 1113, 18, 93, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1350876, 24276, 692, 14, 36, "Input"],
-Cell[1351571, 24292, 1858, 40, 57, "Output"]
+Cell[1425491, 25919, 344, 9, 28, "Input"],
+Cell[1425838, 25930, 152, 2, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1353466, 24337, 150, 3, 28, "Input"],
-Cell[1353619, 24342, 102, 1, 46, "Output"]
+Cell[1426027, 25937, 692, 14, 36, "Input"],
+Cell[1426722, 25953, 1858, 40, 77, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1353758, 24348, 69, 1, 28, "Input"],
-Cell[1353830, 24351, 228, 8, 32, "Output"]
+Cell[1428617, 25998, 150, 3, 28, "Input"],
+Cell[1428770, 26003, 102, 1, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1354095, 24364, 104, 1, 28, "Input"],
-Cell[1354202, 24367, 458, 15, 28, "Output"]
+Cell[1428909, 26009, 69, 1, 28, "Input"],
+Cell[1428981, 26012, 228, 8, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1354697, 24387, 97, 1, 28, "Input"],
-Cell[1354797, 24390, 8544, 215, 437, "Output"]
-}, Open  ]],
-Cell[1363356, 24608, 149, 2, 46, "Text"],
-Cell[CellGroupData[{
-Cell[1363530, 24614, 221, 5, 28, "Input"],
-Cell[1363754, 24621, 3110, 88, 95, "Output"]
+Cell[1429246, 26025, 104, 1, 28, "Input"],
+Cell[1429353, 26028, 458, 15, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1366901, 24714, 2388, 68, 131, "Input"],
-Cell[1369292, 24784, 2163, 66, 46, "Output"]
+Cell[1429848, 26048, 97, 1, 28, "Input"],
+Cell[1429948, 26051, 8544, 215, 638, "Output"]
 }, Open  ]],
-Cell[1371470, 24853, 438, 11, 46, "Input"],
+Cell[1438507, 26269, 149, 2, 46, "Text"],
 Cell[CellGroupData[{
-Cell[1371933, 24868, 10530, 242, 879, "Input"],
-Cell[1382466, 25112, 4489, 82, 316, "Output"],
-Cell[1386958, 25196, 619, 12, 40, "Message"],
-Cell[1387580, 25210, 622, 12, 40, "Message"],
-Cell[1388205, 25224, 622, 12, 40, "Message"],
-Cell[1388830, 25238, 530, 11, 24, "Message"],
-Cell[1389363, 25251, 575, 12, 24, "Message"],
-Cell[1389941, 25265, 582, 13, 24, "Message"],
-Cell[1390526, 25280, 582, 13, 24, "Message"],
-Cell[1391111, 25295, 582, 13, 24, "Message"],
-Cell[1391696, 25310, 530, 11, 24, "Message"],
-Cell[1392229, 25323, 575, 12, 24, "Message"],
-Cell[1392807, 25337, 4703, 73, 188, "Message"],
-Cell[1397513, 25412, 4703, 73, 188, "Message"],
-Cell[1402219, 25487, 619, 12, 40, "Message"],
-Cell[1402841, 25501, 624, 12, 40, "Message"],
-Cell[1403468, 25515, 622, 12, 40, "Message"],
-Cell[1404093, 25529, 528, 11, 24, "Message"],
-Cell[1404624, 25542, 575, 12, 24, "Message"],
-Cell[1405202, 25556, 582, 13, 24, "Message"],
-Cell[1405787, 25571, 582, 13, 24, "Message"],
-Cell[1406372, 25586, 582, 13, 24, "Message"],
-Cell[1406957, 25601, 530, 11, 24, "Message"],
-Cell[1407490, 25614, 575, 12, 24, "Message"],
-Cell[1408068, 25628, 4703, 73, 188, "Message"],
-Cell[1412774, 25703, 575, 12, 24, "Message"],
-Cell[1413352, 25717, 582, 13, 24, "Message"],
-Cell[1413937, 25732, 584, 13, 24, "Message"],
-Cell[1414524, 25747, 582, 13, 24, "Message"],
-Cell[1415109, 25762, 530, 11, 24, "Message"],
-Cell[1415642, 25775, 577, 12, 24, "Message"],
-Cell[1416222, 25789, 4703, 73, 188, "Message"],
-Cell[1420928, 25864, 575, 12, 24, "Message"],
-Cell[1421506, 25878, 582, 13, 24, "Message"],
-Cell[1422091, 25893, 582, 13, 24, "Message"],
-Cell[1422676, 25908, 582, 13, 24, "Message"],
-Cell[1423261, 25923, 530, 11, 24, "Message"],
-Cell[1423794, 25936, 577, 12, 24, "Message"],
-Cell[1424374, 25950, 4703, 73, 188, "Message"],
-Cell[1429080, 26025, 4703, 73, 188, "Message"]
+Cell[1438681, 26275, 221, 5, 28, "Input"],
+Cell[1438905, 26282, 3110, 88, 95, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1433820, 26103, 182, 2, 46, "Input"],
-Cell[1434005, 26107, 398, 9, 35, "Output"],
-Cell[1434406, 26118, 399, 9, 35, "Output"]
+Cell[1442052, 26375, 2388, 68, 131, "Input"],
+Cell[1444443, 26445, 2163, 66, 63, "Output"]
+}, Open  ]],
+Cell[1446621, 26514, 438, 11, 46, "Input"],
+Cell[CellGroupData[{
+Cell[1447084, 26529, 10530, 242, 913, "Input"],
+Cell[1457617, 26773, 4478, 82, 306, "Output"],
+Cell[1462098, 26857, 619, 12, 58, "Message"],
+Cell[1462720, 26871, 622, 12, 58, "Message"],
+Cell[1463345, 26885, 622, 12, 58, "Message"],
+Cell[1463970, 26899, 530, 11, 24, "Message"],
+Cell[1464503, 26912, 575, 12, 24, "Message"],
+Cell[1465081, 26926, 582, 13, 24, "Message"],
+Cell[1465666, 26941, 582, 13, 24, "Message"],
+Cell[1466251, 26956, 582, 13, 24, "Message"],
+Cell[1466836, 26971, 530, 11, 24, "Message"],
+Cell[1467369, 26984, 575, 12, 24, "Message"],
+Cell[1467947, 26998, 4703, 73, 156, "Message"],
+Cell[1472653, 27073, 4703, 73, 156, "Message"],
+Cell[1477359, 27148, 619, 12, 58, "Message"],
+Cell[1477981, 27162, 624, 12, 58, "Message"],
+Cell[1478608, 27176, 622, 12, 58, "Message"],
+Cell[1479233, 27190, 528, 11, 24, "Message"],
+Cell[1479764, 27203, 575, 12, 24, "Message"],
+Cell[1480342, 27217, 582, 13, 24, "Message"],
+Cell[1480927, 27232, 582, 13, 24, "Message"],
+Cell[1481512, 27247, 582, 13, 24, "Message"],
+Cell[1482097, 27262, 530, 11, 24, "Message"],
+Cell[1482630, 27275, 575, 12, 24, "Message"],
+Cell[1483208, 27289, 4703, 73, 156, "Message"],
+Cell[1487914, 27364, 575, 12, 24, "Message"],
+Cell[1488492, 27378, 582, 13, 24, "Message"],
+Cell[1489077, 27393, 584, 13, 24, "Message"],
+Cell[1489664, 27408, 582, 13, 24, "Message"],
+Cell[1490249, 27423, 530, 11, 24, "Message"],
+Cell[1490782, 27436, 577, 12, 24, "Message"],
+Cell[1491362, 27450, 4703, 73, 156, "Message"],
+Cell[1496068, 27525, 575, 12, 24, "Message"],
+Cell[1496646, 27539, 582, 13, 24, "Message"],
+Cell[1497231, 27554, 582, 13, 24, "Message"],
+Cell[1497816, 27569, 582, 13, 24, "Message"],
+Cell[1498401, 27584, 530, 11, 24, "Message"],
+Cell[1498934, 27597, 577, 12, 24, "Message"],
+Cell[1499514, 27611, 4703, 73, 156, "Message"],
+Cell[1504220, 27686, 4703, 73, 156, "Message"],
+Cell[1508926, 27761, 622, 12, 58, "Message"],
+Cell[1509551, 27775, 624, 12, 58, "Message"],
+Cell[1510178, 27789, 621, 12, 58, "Message"],
+Cell[1510802, 27803, 528, 11, 24, "Message"],
+Cell[1511333, 27816, 575, 12, 24, "Message"],
+Cell[1511911, 27830, 582, 13, 24, "Message"],
+Cell[1512496, 27845, 582, 13, 24, "Message"],
+Cell[1513081, 27860, 580, 13, 24, "Message"],
+Cell[1513664, 27875, 530, 11, 24, "Message"],
+Cell[1514197, 27888, 575, 12, 24, "Message"],
+Cell[1514775, 27902, 4705, 73, 156, "Message"],
+Cell[1519483, 27977, 4703, 73, 156, "Message"],
+Cell[1524189, 28052, 575, 12, 24, "Message"],
+Cell[1524767, 28066, 582, 13, 24, "Message"],
+Cell[1525352, 28081, 582, 13, 24, "Message"],
+Cell[1525937, 28096, 582, 13, 24, "Message"],
+Cell[1526522, 28111, 530, 11, 24, "Message"],
+Cell[1527055, 28124, 575, 12, 24, "Message"],
+Cell[1527633, 28138, 4703, 73, 156, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1532373, 28216, 182, 2, 46, "Input"],
+Cell[1532558, 28220, 398, 9, 35, "Output"],
+Cell[1532959, 28231, 399, 9, 35, "Output"]
 }, Open  ]]
 }
 ]

@@ -1,0 +1,193 @@
+%\usepackage{scicite}
+%\usepackage{times}
+%\usepackage{graphicx}
+%\usepackage{verbatim}
+%\usepackage{subfigure}
+%\usepackage{tikz}
+%\usepackage{array}
+%\usepackage{tabularx}
+%\usepackage{multirow}
+%\usepackage{multicol}
+%\usepackage{multibox}
+%\usepackage{rotating}
+%\usepackage{layout}
+%\usepackage{epstopdf}
+%\usepackage{afterpage}
+%\usepackage[left]{lineno}
+
+%% PNAStmpl.tex
+%% Template file to use for PNAS articles prepared in LaTeX
+%% Version: Apr 14, 2008
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BASIC CLASS FILE 
+
+\documentclass{pnastwo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL GRAPHICS STYLE FILE
+
+\usepackage[pdftex]{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL POSTSCRIPT FONT FILES
+
+\usepackage{pnastwof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ADDITIONAL OPTIONAL STYLE FILES
+
+%\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[font=large]{caption}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{color}
+%\usepackage{multibox}
+\usepackage{rotating}
+\usepackage{color}
+%\usepackage{lineno}
+\usepackage[left]{lineno}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL MACRO FILES
+
+\bibliographystyle{pnas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\sid}[1]{\textcolor{red}{\bf [#1]}}
+
+
+%% Don't type in anything in the following section:
+%%%%%%%%%%%%
+%% For PNAS Only:
+\contributor{Submitted to Proceedings
+of the National Academy of Sciences of the United States of America}
+\url{www.pnas.org/cgi/doi/10.1073/pnas.0709640104}
+\copyrightyear{2011}
+\issuedate{Issue Date}
+\volume{Volume}
+\issuenumber{Issue Number}
+%%%%%%%%%%%%
+
+\begin{document} 
+
+\linenumbers
+\setlength\linenumbersep{3pt}
+
+
+%\title{Ecological and evolutionary implications of starvation and body size} 
+
+%\title{Survival of the Stable: Dynamic Consequences of Starvation and Reproduction}
+
+%\title{Size Constraints on Starvation \& Reproduction Dynamics}
+
+%\title{Eco-evolutionary Consequences of Starvation and Reproduction: Survival
+%of the Stable}
+
+\title{Supporting Information for ``The dynamics of starvation and recovery''}%: Eco-evolutionary feedbacks}
+
+\author
+{Justin D. Yeakel\affil{1}{School of Natural Science, University of California Merced, Merced, CA} \affil{2}{The Santa Fe Institute, Santa Fe, NM}\affil{4}{To whom correspondence should be addressed: jdyeakel@gmail.com}, Christopher P. Kempes \affil{2}{The Santa Fe Institute, Santa Fe, NM}, \and Sidney Redner \affil{2}{The Santa Fe Institute, Santa Fe, NM}\affil{3}{Department of Physics, Boston University, Boston MA}
+}
+
+\contributor{Submitted to Proceedings of the National Academy of Sciences
+of the United States of America}
+
+\maketitle
+
+\begin{article}
+
+\section*{Parameter Values and Estimates}
+
+Many of the parameter values employed in our model have either been directly measured in previous studies or can be estimated from combining several previous studies. Here we outline previous measurements and simple estimates of the parameters. 
+
+\subsection*{Standard synthesis and metabolic parameters}
+
+Metabolic rate has been often reported to follow an exponent close to $0.75$ (e.g. \cite{West:2001bv,moses2008rmo} and the supplement of \cite{hou}). We make this assumption in the current paper, although alternate exponents, which are know to vary between roughly $0.25$ and $1.5$ for single species \cite{moses2008rmo}, could be easily incorporated into our framework, and this variation is effectively handled by the $20\%$ variations that we consider around all parameter values. It is important to note the exponent, because it defines the value of the metabolic normalization constant, $B_{0}$, given a set of data.  For mammals the metabolic normalization constant has been reported to vary between $0.018$ (W g$^{-0.75}$) and $0.047$ (W g$^{-0.75}$) \cite{hou,West:2001bv}, where the former value represents basal metabolic rate and the latter represents the field metabolic rate. We employ the field metabolic rate for our NSM model which is appropriate for active mammals.
+
+The energy to synthesize a unit of biomass, $E_{m}$, has been reported to vary between $1800$ to $9500$ (J g$^{-1}$) (e.g. \cite{West:2001bv,moses2008rmo,hou}) in mammals with a mean value across many taxonomic groups of $5,774$ (J g$^{-1}$) \cite{moses2008rmo}. The unit energy available during starvation, $E^{\prime}$, can be considered in several ways. The first is to assume that the total energy stored during ontogeny is returned during starvation which would give a value of $7000$ (J g$^{-1}$) \cite{hou}. However, since our model considers the consumption of all body fat as defining the transition to starving, it is more appropriate to consider the energetics of fat metabolism where we would expect $E^{\prime}=36,000$ (J g$^{-1}$) for palmitate\cite{stryer,hou}.
+
+The energy required for maintaining an existing unit of mass is reported to be 
+
+\onecolumn
+
+\begin{table}[h]
+\caption{Parameter Values For Various Classes of Organisms}
+\label{param}
+    \begin{center}
+    \small
+     \begin{tabular}{| p{1.2cm}| p{4.2cm} | }
+     \hline
+     & {\bf Mammals}  \\
+     \hline
+   $\eta$ & $3/4$  \quad \quad  (e.g. \cite{West:2001bv,moses2008rmo,hou}) \\ 
+   $E_{m}$ & $5774$ (J gram$^{-1}$)  \quad \quad  \cite{moses2008rmo,West:2001bv,hou} \\ 
+   $E_{m}^{\prime}$ & $36,000$  \quad \quad \cite{stryer,hou} \\ 
+   $B_{0}$ & $0.047$ (W g$^{-0.75}$)    \quad \quad \cite{hou}  \\
+   $B_{m}$ & $0.025$ (W gram$^{-1}$) \quad \quad \\
+   $a$ & $1.78\times10^{-6}$  \quad \quad \\ 
+   $b$ & $2.29\times10^{-6}$  \quad \quad \\  
+   $\eta-1$ & $-0.21$  \quad \quad \\ 
+   $\lambda_{0}$ & $3.39\times10^{-7}$ (s$^{-1}$ gram$^{1-\eta}$) \quad \quad \\ 
+   $\gamma$ & $1.19$ \quad \quad \\ 
+   $f_{0}$ & $0.02$ \quad \quad \\ 
+   $\zeta$ & $1.01$  \quad \quad \\ 
+   $mm_{0}$ & $0.32$  \quad \quad \\ 
+   
+      
+   \hline
+    \end{tabular}
+    \end{center}
+   \end{table}
+
+
+\bibliography{aa_starving_supplement}
+
+
+
+%\let\cleardoublepage\clearpage
+
+%FIGURE 1
+
+
+
+
+\end{article}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
