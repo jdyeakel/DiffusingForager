@@ -1,0 +1,546 @@
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.28)  20 AUG 2016 10:55
+entering extended mode
+\write18 enabled.
+ %&-line parsing enabled.
+**10.tex
+(./10.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
+tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
+omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
+sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(./pnastwo.cls
+
+
+ Two Column Journal Style for the
+ Proceedings of the National Academy of Science 
+ Written by Amy Hendrickson, TeXnology, Inc., 9/04
+ 
+ This version is dated April 15, 2008
+
+
+Document Class: pnastwo 
+\affilcount=\count79
+\saveaffilcount=\count80
+\c@fnaffilcount=\count81
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+\bibskip=\skip43
+\footnum=\count90
+\savefootnum=\count91
+\abovefigcaptionskip=\skip44
+\abovetabcaptionskip=\skip45
+\abovetableskip=\skip46
+\belowtabcaptionskip=\dimen103
+\saveparskip=\dimen104
+\captionskip=\dimen105
+\PushOneColTopFig=\dimen106
+\PushOneColBotFig=\dimen107
+\PushOneColTopTab=\dimen108
+\PushOneColBotTab=\dimen109
+\PushTwoColTopFig=\dimen110
+\PushTwoColBotFig=\dimen111
+\PushTwoColTopTab=\dimen112
+\PushTwoColBotTab=\dimen113
+\intextfloatskip=\skip47
+\c@appfigure=\count92
+\c@apptable=\count93
+\c@appplate=\count94
+\checkforspace=\dimen114
+\savetopinsert=\box26
+\savebotinsert=\box27
+\secondsavetopinsert=\box28
+\secondsavebotinsert=\box29
+\firstcolbox=\box30
+\secondcolbox=\box31
+\thefirstbox=\box32
+\thesecondbox=\box33
+\firstcol=\dimen115
+\secondcol=\dimen116
+\checkheight=\dimen117
+\loopnum=\count95
+\firstcolsavefignum=\count96
+\footnotebox=\box34
+\ColUsed=\dimen118
+\FigSpace=\dimen119
+\testdblbotins=\box35
+\pageloopnum=\count97
+\endcolsavetopinsert=\box36
+\endcolsavebotinsert=\box37
+\testpagesize=\box38
+\savelastskip=\dimen120
+\partialpage=\box39
+\figandtabnumber=\count98
+\figandtabbox=\box40
+\pagefloatnumber=\count99
+\sizeoffloat=\box41
+\bogus=\count100
+\figinsert=\insert233
+\herebox=\box42
+\endfigbox=\box43
+\spanbox=\box44
+\dbltopins=\box45
+\dblbotins=\box46
+\dblbotskip=\skip48
+\dblfigandtabnumber=\count101
+\dblfigandtabbox=\box47
+\dblloopnum=\count102
+\savedblfigandtabnumber=\count103
+\dblspanherebox=\box48
+\captionwidth=\dimen121
+\widecaptionwidth=\dimen122
+\tablenoteloopnum=\count104
+\tablenotenum=\count105
+\c@theorem=\count106
+\c@lemma=\count107
+\c@definition=\count108
+\c@claim=\count109
+\c@alemma=\count110
+\c@remark=\count111
+\tablewide=\box49
+) (/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2008/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2008/09/08 v0.04l Graphics/color for pdfTeX
+\Gread@gobject=\count112
+))
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
+)
+(./pnastwof.sty
+
+
+ -------------------------------------------
+ PostScript Fonts for PNAS One Column Journal Style
+ April 8b, 2008
+
+ IMPORTANT: If you use font encoding, as in \usepackage{T1enc},
+ please use it BEFORE \usepackage{pnasfont}, ie:
+ \documentclass{pnasone}
+ \usepackage{T1enc}
+ \usepackage[driver name]{color}
+
+ \usepackage{pnas}
+ -------------------------------------------
+ 
+ 
+) (/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen125
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen126
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count113
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count114
+\leftroot@=\count115
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count116
+\DOTSCASE@=\count117
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen127
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count118
+\c@MaxMatrixCols=\count119
+\dotsspace@=\muskip10
+\c@parentequation=\count120
+\dspbrk@lvl=\count121
+\tag@help=\toks16
+\row@=\count122
+\column@=\count123
+\maxfields@=\count124
+\andhelp@=\toks17
+\eqnshift@=\dimen128
+\alignsep@=\dimen129
+\tagshift@=\dimen130
+\tagwidth@=\dimen131
+\totwidth@=\dimen132
+\lineht@=\dimen133
+\@envbody=\toks18
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2008/08/24 v3.1j Customizing captions (AR)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2008/08/24 v3.1j caption3 kernel (AR)
+\captionmargin=\dimen134
+\captionmargin@=\dimen135
+\captionwidth=\dimen136
+\caption@indent=\dimen137
+\caption@parindent=\dimen138
+\caption@hangindent=\dimen139
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used on input line 1027.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \xtable 
+\let \currtabcaption \relax \gdef \currtabcaption { \tabnumfont \relax #1. \tab
+textfont \relax #2\par \vskip \belowcaptionskip } \else \vskip \abovecaptionski
+p \sbox \@tempboxa {\fignumfont #1.\figtextfont \hskip .5em\relax #2}\ifdim \wd
+ \@tempboxa >\hsize \fignumfont \relax #1.\figtextfont \hskip .5em\relax #2\par
+ \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi
+ \fi .
+\c@ContinuedFloat=\count125
+) (/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip52
+\subfigcapskip=\skip53
+\subfigcaptopadj=\dimen140
+\subfigbottomskip=\skip54
+\subfigcapmargin=\dimen141
+\subfiglabelskip=\skip55
+\c@subfigure=\count126
+\c@lofdepth=\count127
+\c@subtable=\count128
+\c@lotdepth=\count129
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip56
+\subfig@bottom=\skip57
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2008/05/06 v1.7 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2007/10/18 v3.0 Keyval support for LaTeX options (HO)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2007/12/12 v0.3 LuaTeX support for pdfTeX utility functions
+ (HO)
+Package pdftexcmds Info: LuaTeX not detected on input line 139.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 323.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/array.sty
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen142
+\extrarowheight=\dimen143
+\NC@list=\toks22
+\extratabsurround=\skip58
+\backup@length=\skip59
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+\TX@col@width=\dimen144
+\TX@old@table=\dimen145
+\TX@old@col=\dimen146
+\TX@target=\dimen147
+\TX@delta=\dimen148
+\TX@cols=\count130
+\TX@ftn=\toks23
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen149
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2008/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2008/10/05 v2.15c rotated objects in LaTeX
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count131
+\rotFPtop=\skip60
+\rotFPbot=\skip61
+\rot@float@box=\box52
+\rot@mess@toks=\toks24
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count132
+\output=\toks25
+\linenoprevgraf=\count133
+\linenumbersep=\dimen150
+\linenumberwidth=\dimen151
+\c@linenumber=\count134
+\c@pagewiselinenumber=\count135
+\c@LN@truepage=\count136
+\c@internallinenumber=\count137
+\c@internallinenumbers=\count138
+\quotelinenumbersep=\dimen152
+\bframerule=\dimen153
+\bframesep=\dimen154
+\bframebox=\box53
+LaTeX Info: Redefining \\ on input line 3056.
+) (./10.aux)
+\openout1 = `10.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+
+(/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count139
+\scratchdimen=\dimen155
+\scratchbox=\box54
+\nofMPsegments=\count140
+\nofMParguments=\count141
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen156
+\MPnumerator=\count143
+\everyMPtoPDFconversion=\toks27
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: rotating package is loaded.
+Package caption Info: subfigure package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OT1+phvr on input line 106
+.
+LaTeX Font Info:    No file OT1phvr.fd. on input line 106.
+
+
+LaTeX Font Warning: Font shape `OT1/phvr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 106.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 106.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 106.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Font shape `OT1/cmr10 /bx/n' in size <9> not available
+(Font)              Font shape `OT1/cmr10 /b/n' tried instead on input line 139
+.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--206
+
+ []
+
+
+LaTeX Warning: Citation `PhysRevLett.113.238101' on page 1 undefined on input l
+ine 225.
+
+
+LaTeX Warning: Citation `2016arXiv160500892B' on page 1 undefined on input line
+ 225.
+
+
+LaTeX Warning: Citation `PhysRevE.93.032403' on page 1 undefined on input line 
+225.
+
+[1
+
+{/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Murray:2002' on page 2 undefined on input line 239.
+
+
+LaTeX Warning: Citation `Strogatz:2014' on page 2 undefined on input line 271.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--316
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 472--483
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 555--569
+
+ []
+
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 612.
+
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 612.
+
+[4] (./10.bbl [5]) [6]
+<Growth-trajectory-diagram.pdf, id=41, 1027.84pt x 770.88pt>
+File: Growth-trajectory-diagram.pdf Graphic file (type pdf)
+
+<use Growth-trajectory-diagram.pdf>
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./fig_Rates.pdf): PDF inclusion: fou
+nd PDF version <1.5>, but at most version <1.4> allowed
+<fig_Rates.pdf, id=42, 361.35pt x 184.69pt>
+File: fig_Rates.pdf Graphic file (type pdf)
+ <use fig_Rates.pdf>
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./fig_FixedPoint.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.4> allowed
+<fig_FixedPoint.pdf, id=44, 361.35pt x 125.46875pt>
+File: fig_FixedPoint.pdf Graphic file (type pdf)
+ <use fig_FixedPoint.pdf>
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./fig_DataHopf.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<fig_DataHopf.pdf, id=46, 260.975pt x 167.62625pt>
+File: fig_DataHopf.pdf Graphic file (type pdf)
+ <use fig_DataHopf.pdf>
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./fig_ExtinctionAllometric.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<fig_ExtinctionAllometric.pdf, id=48, 261.97874pt x 210.7875pt>
+File: fig_ExtinctionAllometric.pdf Graphic file (type pdf)
+
+<use fig_ExtinctionAllometric.pdf>
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./fig_FPAllometric.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.4> allowed
+<fig_FPAllometric.pdf, id=50, 241.90375pt x 376.40625pt>
+File: fig_FPAllometric.pdf Graphic file (type pdf)
+
+<use fig_FPAllometric.pdf>
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./fig_Invasion.pdf): PDF inclusion: 
+found PDF version <1.5>, but at most version <1.4> allowed
+<fig_Invasion.pdf, id=51, 361.35pt x 232.87pt>
+File: fig_Invasion.pdf Graphic file (type pdf)
+ <use fig_Invasion.pdf> [7 <./Growth-trajectory-diagram.pdf> <./fig_Rates.pdf> 
+<./fig_FixedPoint.pdf>] [8 <./fig_DataHopf.pdf> <./fig_ExtinctionAllometric.pdf
+>] [9 <./fig_FPAllometric.pdf> <./fig_Invasion.pdf>] (./10.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4199 strings out of 493876
+ 58742 string characters out of 1150567
+ 148500 words of memory out of 3000000
+ 7392 multiletter control sequences out of 10000+50000
+ 34805 words of font info for 87 fonts, out of 3000000 for 5000
+ 714 hyphenation exceptions out of 8191
+ 36i,15n,38p,1491b,349s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmbx9.pfb></usr/local/texlive/2008/texmf-d
+ist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texlive/2008/texmf-dist/fonts
+/type1/bluesky/cm/cmmi5.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
+esky/cm/cmmi6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
+mi8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi9.pfb></
+usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/
+texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/2008/texmf-di
+st/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
+pe1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky
+/cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.
+pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy5.pfb></usr/
+local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/texl
+ive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2008/t
+exmf-dist/fonts/type1/bluesky/cm/cmsy9.pfb></usr/local/texlive/2008/texmf-dist/
+fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
+e1/public/cmex/fmex9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesk
+y/ams/msam10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/ams/ms
+am7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
+></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr
+/local/texlive/2008/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/
+texlive/2008/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on 10.pdf (9 pages, 7613085 bytes).
+PDF statistics:
+ 19577 PDF objects out of 22161 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

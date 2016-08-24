@@ -113,37 +113,39 @@ Many of the parameter values employed in our model have either been directly mea
 
 \subsection*{Standard synthesis and metabolic parameters}
 
-Metabolic rate has been often reported to follow an exponent close to $0.75$ (e.g. \cite{West:2001bv,moses2008rmo} and the supplement of \cite{hou}). We make this assumption in the current paper, although alternate exponents, which are know to vary between roughly $0.25$ and $1.5$ for single species \cite{moses2008rmo}, could be easily incorporated into our framework, and this variation is effectively handled by the $20\%$ variations that we consider around all parameter values. It is important to note the exponent, because it defines the value of the metabolic normalization constant, $B_{0}$, given a set of data.  For mammals the metabolic normalization constant has been reported to vary between $0.018$ (W g$^{-0.75}$) and $0.047$ (W g$^{-0.75}$) \cite{hou,West:2001bv}, where the former value represents basal metabolic rate and the latter represents the field metabolic rate. We employ the field metabolic rate for our NSM model which is appropriate for active mammals.
+Metabolic rate has been generally reported to follow an exponent close to $\eta=0.75$ (e.g. \cite{West:2001bv,moses2008rmo} and the supplement of \cite{hou}). We make this assumption in the current paper, although alternate exponents, which are know to vary between roughly $0.25$ and $1.5$ for single species \cite{moses2008rmo}, could be easily incorporated into our framework, and this variation is effectively handled by the $20\%$ variations that we consider around mean trends. It is important to note the exponent, because it not only defines several scalings in our framework but also the value of the metabolic normalization constant, $B_{0}$, given a set of data.  For mammals the metabolic normalization constant has been reported to vary between $0.018$ (W g$^{-0.75}$) and $0.047$ (W g$^{-0.75}$) \cite{hou,West:2001bv}, where the former value represents basal metabolic rate and the latter represents the field metabolic rate. We employ the field metabolic rate for our NSM model which is appropriate for active mammals (Table 1).
 
-The energy to synthesize a unit of biomass, $E_{m}$, has been reported to vary between $1800$ to $9500$ (J g$^{-1}$) (e.g. \cite{West:2001bv,moses2008rmo,hou}) in mammals with a mean value across many taxonomic groups of $5,774$ (J g$^{-1}$) \cite{moses2008rmo}. The unit energy available during starvation, $E^{\prime}$, can be considered in several ways. The first is to assume that the total energy stored during ontogeny is returned during starvation which would give a value of $7000$ (J g$^{-1}$) \cite{hou}. However, since our model considers the consumption of all body fat as defining the transition to starving, it is more appropriate to consider the energetics of fat metabolism where we would expect $E^{\prime}=36,000$ (J g$^{-1}$) for palmitate\cite{stryer,hou}.
+The energy to synthesize a unit of biomass, $E_{m}$, has been reported to vary between $1800$ to $9500$ (J g$^{-1}$) (e.g. \cite{West:2001bv,moses2008rmo,hou}) in mammals with a mean value across many taxonomic groups of $5,774$ (J g$^{-1}$) \cite{moses2008rmo}. The unit energy available during starvation, $E^{\prime}$, could range between $7000$ (J g$^{-1}$), the return of the total energy stored during ontogeny \cite{hou} to a biochemical upper bound of $E^{\prime}=36,000$ (J g$^{-1}$) for the energetics of palmitate \cite{stryer,hou}. For our calculations we use the measured value for bulk tissues of $7000$ which assumes that the energy stored during ontogeny is returned during starvation \cite{hou}. 
 
-The energy required for maintaining an existing unit of mass is reported to be 
+For the scaling of body composition it has been shown that fat mass follows $M_{\rm fat}=f_{0}M^{\gamma}$, with measured  relationships following  $0.018M^{1.25}$ \cite{Dunbrack:1993ec}, $0.02M^{1.19}$ \cite{Lindstedt:1985hm}, and $0.026M^{1.14}$ \cite{Lindstedt:2002td}. We use the values from \cite{Lindstedt:1985hm} which falls in the middle of this range. Similarly, the muscle mass follows $M_{\rm musc}=u_{0}M^{\zeta}$ with $u_{0}=0.383$ and $\zeta=1.00$ \cite{Lindstedt:2002td}.
 
-\onecolumn
+The final parameters that we must consider connect the resource growth rate to the total metabolic rate of an organism. That is, we are interested in the relative rates of resource recovery and consumption by the total population. From \cite{allen2002global} the total resource use of a population with an individual body size of $M$ is given by $B_{pop}=0.00061x^{-0.03}$ (W m$^{-2}$). Considering an energy density of $18200$ (J g$^{-1}$) of grass \cite{estermann} and an NPP between and $1.59\times10^{-6}$ and $7.92\times10^{-5}$ (g s$^{-1}$ m$^{-2}$) would give a range of resource rates between  $0.029$ and $1.44$ (W m$^{-2}$). This gives a ratio of total resource consumption to supply rates between $0.00042$ and $0.021$, and we used a value of $0.002$ in our calculations and simulations.
 
-\begin{table}[h]
-\caption{Parameter Values For Various Classes of Organisms}
+%For the growth rate $\lambda$ we consider the standard model of $\ln\left(\upsilon\right)/t_{\lambda}$
+
+%More complicated models of fecundity (which, for example, account for the average length of adulthood and the number of individuals produced over this span) could be employed. However, the scaling of population growth rate has been studied in detail before and follows a relationship of $$ which matches the theory well for $\phi=.95$ and $=$.
+
+%In our calculations we include $20\%$ variation around this value which could account for differences in efficiency during 
+
+ \begin{table}[h]
+\caption{Parameter values for mammals}
 \label{param}
     \begin{center}
     \small
-     \begin{tabular}{| p{1.2cm}| p{4.2cm} | }
+     \begin{tabular}{ p{1.2cm} p{3.2cm} l p{2.2cm}|}
      \hline
-     & {\bf Mammals}  \\
+     Parameter & Value & References  \\
      \hline
-   $\eta$ & $3/4$  \quad \quad  (e.g. \cite{West:2001bv,moses2008rmo,hou}) \\ 
-   $E_{m}$ & $5774$ (J gram$^{-1}$)  \quad \quad  \cite{moses2008rmo,West:2001bv,hou} \\ 
-   $E_{m}^{\prime}$ & $36,000$  \quad \quad \cite{stryer,hou} \\ 
-   $B_{0}$ & $0.047$ (W g$^{-0.75}$)    \quad \quad \cite{hou}  \\
-   $B_{m}$ & $0.025$ (W gram$^{-1}$) \quad \quad \\
-   $a$ & $1.78\times10^{-6}$  \quad \quad \\ 
-   $b$ & $2.29\times10^{-6}$  \quad \quad \\  
-   $\eta-1$ & $-0.21$  \quad \quad \\ 
-   $\lambda_{0}$ & $3.39\times10^{-7}$ (s$^{-1}$ gram$^{1-\eta}$) \quad \quad \\ 
-   $\gamma$ & $1.19$ \quad \quad \\ 
-   $f_{0}$ & $0.02$ \quad \quad \\ 
-   $\zeta$ & $1.01$  \quad \quad \\ 
-   $mm_{0}$ & $0.32$  \quad \quad \\ 
-   
+   $\eta$ & $3/4$  &  (e.g. \cite{West:2001bv,moses2008rmo,hou}) \\ 
+   $E_{m}$ & $5774$ (J gram$^{-1}$)  &  \cite{moses2008rmo,West:2001bv,hou} \\ 
+   $E_{m}^{\prime}$ & $36,000$  & \cite{stryer,hou} \\ 
+   $B_{0}$ & $0.047$ (W g$^{-0.75}$)    & \cite{hou}  \\
+%   $a$ & $1.78\times10^{-6}$  \quad \quad \\ 
+%   $\lambda_{0}$ & $3.39\times10^{-7}$ (s$^{-1}$ gram$^{1-\eta}$) \quad \quad \\ 
+   $\gamma$ & $1.19$ & \cite{Lindstedt:1985hm} \\ 
+   $f_{0}$ & $0.02$ & \cite{Lindstedt:1985hm}\\ 
+   $\zeta$ & $1.00$  & \cite{Lindstedt:2002td} \\ 
+   $u_{0}$ & $0.38$  & \cite{Lindstedt:2002td} \\ 
       
    \hline
     \end{tabular}
@@ -151,7 +153,25 @@ The energy required for maintaining an existing unit of mass is reported to be
    \end{table}
 
 
+\subsection*{Rate equations for invaders with modified body mass}
+If an invading subset of the resident population of mass $M$ has an altered mass $M^\prime = M(1+\chi)$ where $\chi$ varies between $[-1,1]$ ($\chi<0$ denotes a leaner invader; $\chi > 0$ denotes an invader with more endogenous reserves), the invading population will have the following modified rates: $\sigma^\prime = \sigma(M^\prime)$, $\rho^\prime = \rho(M^\prime)$, $\beta^\prime = \beta(M^\prime)$.
+Because we are assuming that the invading population is only modifying its endogenous energetic stores, we assume that the proportion of body mass that is non-adipose tissue remains the same as the resident population.
+This assumption leads to the following modified timescales:
+
+\begin{align}
+t_{\sigma^\prime} &= \frac{-M^{1/4}}{B_0/E_m^\prime}\log \left(\frac{\epsilon_\sigma}{\chi +1}\right), \\ \nonumber
+t_{\rho^\prime} &= \frac{-4 M^{1/4} }{B_0/E_m^\prime}\log \left(\frac{1-( \epsilon_\lambda(\chi +1))^{1/4}}{1-(\epsilon_\lambda \epsilon_\sigma)^{1/4}}\right), \\ \nonumber
+t_{\beta^\prime} &= \xi B_0\left(M(\chi + 1)\right)^{3/4}.
+\end{align}
+
+
+
+
 \bibliography{aa_starving_supplement}
+
+
+
+
 
 
 

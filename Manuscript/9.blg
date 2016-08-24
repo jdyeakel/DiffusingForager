@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/MacPorts 2016_1)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 9.aux
+The style file: pnas.bst
+Database file #1: aa_starving3.bib
+You've used 61 entries,
+            1765 wiz_defined-function locations,
+            881 strings with 14271 characters,
+and the built_in function-call counts, 13733 in all, are:
+= -- 1367
+> -- 527
+< -- 1
++ -- 196
+- -- 135
+* -- 1080
+:= -- 2222
+add.period$ -- 114
+call.type$ -- 61
+change.case$ -- 53
+chr.to.int$ -- 0
+cite$ -- 61
+duplicate$ -- 575
+empty$ -- 1249
+format.name$ -- 141
+if$ -- 2940
+int.to.chr$ -- 0
+int.to.str$ -- 61
+missing$ -- 67
+newline$ -- 307
+num.names$ -- 61
+pop$ -- 103
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 77
+stack$ -- 0
+substring$ -- 1316
+swap$ -- 138
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 154
+width$ -- 63
+write$ -- 662

@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/10-checkedout.aux
+The style file: pnas.bst
+Database file #1: aa_starving3.bib
+Warning--I didn't find a database entry for "PhysRevLett.113.238101"
+Warning--I didn't find a database entry for "2016arXiv160500892B"
+Warning--I didn't find a database entry for "PhysRevE.93.032403"
+Warning--I didn't find a database entry for "Murray:2002"
+Warning--I didn't find a database entry for "Strogatz:2014"
+You've used 65 entries,
+            1765 wiz_defined-function locations,
+            913 strings with 15345 characters,
+and the built_in function-call counts, 14991 in all, are:
+= -- 1495
+> -- 595
+< -- 1
++ -- 220
+- -- 155
+* -- 1202
+:= -- 2436
+add.period$ -- 124
+call.type$ -- 65
+change.case$ -- 59
+chr.to.int$ -- 0
+cite$ -- 65
+duplicate$ -- 607
+empty$ -- 1331
+format.name$ -- 161
+if$ -- 3180
+int.to.chr$ -- 0
+int.to.str$ -- 65
+missing$ -- 69
+newline$ -- 327
+num.names$ -- 65
+pop$ -- 97
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 81
+stack$ -- 0
+substring$ -- 1498
+swap$ -- 144
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 172
+width$ -- 67
+write$ -- 708
+(There were 5 warnings)
