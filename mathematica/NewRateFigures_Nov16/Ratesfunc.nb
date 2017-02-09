@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     37913,        957]
-NotebookOptionsPosition[     37092,        924]
-NotebookOutlinePosition[     37456,        940]
-CellTagsIndexPosition[     37413,        937]
+NotebookDataLength[     41994,       1055]
+NotebookOptionsPosition[     41154,       1021]
+NotebookOutlinePosition[     41535,       1038]
+CellTagsIndexPosition[     41492,       1035]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -539,71 +539,143 @@ Cell[BoxData[
        FractionBox["c", "k"], "*", 
        RowBox[{"(", 
         RowBox[{"1", "/", "\[Tau]RhoInvade"}], ")"}]}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"StarveMaintenance", " ", "=", " ", 
-      RowBox[{"ts", "*", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"B0", "*", 
-           SuperscriptBox["M", "\[Eta]"], "*", "YH"}], ")"}], "/", 
-         RowBox[{"(", 
-          RowBox[{
-           FractionBox["c", "k"], "*", "M", "*", "Ed"}], ")"}]}], ")"}]}]}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"YF", "=", 
+      RowBox[{"M", "*", 
+       RowBox[{"Ed", "/", "BLam"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"YH", "=", 
+      RowBox[{"M", "*", 
+       RowBox[{"Ed", "/", "BRho"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"PF", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"B0", "*", 
+          SuperscriptBox["M", "\[Eta]"]}], ")"}], "/", "M"}], "/", "Ed"}]}], 
      ";", "\[IndentingNewLine]", 
-     RowBox[{"FullMaintenance", " ", "=", " ", 
-      RowBox[{"ts", "*", 
-       RowBox[{"(", 
-        RowBox[{"YH", "*", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            FractionBox["ConsumerGrowth", "YF"], "+", 
-            RowBox[{"(", 
-             RowBox[{"B0", "*", 
-              SuperscriptBox["M", "\[Eta]"]}], ")"}]}], ")"}], "/", 
-          RowBox[{"(", 
-           FractionBox["c", "k"], ")"}]}]}], ")"}]}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"InvaderStarveMaintenance", " ", "=", " ", 
-      RowBox[{"ts", "*", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"B0", "*", 
-           SuperscriptBox[
-            RowBox[{"(", 
-             RowBox[{"M", "*", 
-              RowBox[{"(", 
-               RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}], "\[Eta]"], "*", 
-           "YH"}], ")"}], "/", 
-         RowBox[{"(", 
-          RowBox[{
-           FractionBox["c", "k"], "*", 
+     RowBox[{"PH", "=", "PF"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"PFInvader", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"B0", "*", 
+          SuperscriptBox[
            RowBox[{"(", 
             RowBox[{"M", "*", 
              RowBox[{"(", 
-              RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}], "*", "Ed"}], 
-          ")"}]}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}], "\[Eta]"]}], 
+         ")"}], "/", 
+        RowBox[{"(", 
+         RowBox[{"M", "*", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}]}], "/", "Ed"}]}], ";",
+      "\[IndentingNewLine]", 
+     RowBox[{"PHInvader", "=", "PFInvader"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"StarveMaintenance", " ", "=", " ", 
+      RowBox[{"ts", "*", "PH", "*", 
+       RowBox[{"(", 
+        RowBox[{"YH", "/", 
+         RowBox[{"(", 
+          RowBox[{"c", "/", "k"}], ")"}]}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"FullMaintenance", " ", "=", " ", 
+      RowBox[{"ts", "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox["ConsumerGrowth", "YF"], "+", "PF"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"YH", "/", 
+           RowBox[{"(", 
+            RowBox[{"c", "/", "k"}], ")"}]}], ")"}]}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"InvaderStarveMaintenance", " ", "=", " ", 
+      RowBox[{"ts", "*", "PH", "*", 
+       RowBox[{"(", 
+        RowBox[{"YH", "/", 
+         RowBox[{"(", 
+          RowBox[{"c", "/", "k"}], ")"}]}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
      RowBox[{"InvaderFullMaintenance", " ", "=", " ", 
       RowBox[{"ts", "*", 
        RowBox[{"(", 
-        RowBox[{"YH", "*", 
-         RowBox[{
-          RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox["ConsumerGrowth", "YF"], "+", "PF"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"YH", "/", 
+           RowBox[{"(", 
+            RowBox[{"c", "/", "k"}], ")"}]}], ")"}]}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StarveMaintenance", " ", "=", " ", 
+        RowBox[{"ts", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"B0", "*", 
+             SuperscriptBox["M", "\[Eta]"], "*", "YH"}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["c", "k"], "*", "M", "*", "Ed"}], ")"}]}], ")"}]}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"FullMaintenance", " ", "=", " ", 
+        RowBox[{"ts", "*", 
+         RowBox[{"(", 
+          RowBox[{"YH", "*", 
            RowBox[{
-            FractionBox["ConsumerGrowth", "YF"], "+", 
             RowBox[{"(", 
-             RowBox[{"B0", "*", 
-              SuperscriptBox[
+             RowBox[{
+              FractionBox["ConsumerGrowth", "YF"], "+", 
+              RowBox[{"(", 
+               RowBox[{"B0", "*", 
+                SuperscriptBox["M", "\[Eta]"]}], ")"}]}], ")"}], "/", 
+            RowBox[{"(", 
+             FractionBox["c", "k"], ")"}]}]}], ")"}]}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"InvaderStarveMaintenance", " ", "=", " ", 
+        RowBox[{"ts", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"B0", "*", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"M", "*", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}], "\[Eta]"], "*",
+              "YH"}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox["c", "k"], "*", 
+             RowBox[{"(", 
+              RowBox[{"M", "*", 
                RowBox[{"(", 
-                RowBox[{"M", "*", 
+                RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}], "*", "Ed"}], 
+            ")"}]}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"InvaderFullMaintenance", " ", "=", " ", 
+        RowBox[{"ts", "*", 
+         RowBox[{"(", 
+          RowBox[{"YH", "*", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              FractionBox["ConsumerGrowth", "YF"], "+", 
+              RowBox[{"(", 
+               RowBox[{"B0", "*", 
+                SuperscriptBox[
                  RowBox[{"(", 
-                  RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}], "\[Eta]"]}], 
-             ")"}]}], ")"}], "/", 
-          RowBox[{"(", 
-           FractionBox["c", "k"], ")"}]}]}], ")"}]}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                  RowBox[{"M", "*", 
+                   RowBox[{"(", 
+                    RowBox[{"1", "+", "\[Chi]"}], ")"}]}], ")"}], "\[Eta]"]}],
+                ")"}]}], ")"}], "/", 
+            RowBox[{"(", 
+             FractionBox["c", "k"], ")"}]}]}], ")"}]}]}], ";"}], 
+      "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
      RowBox[{"ResourceGrowth", " ", "=", " ", 
       RowBox[{"ts", "*", "alpha"}]}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -661,7 +733,8 @@ Cell[BoxData[
    3.693928687717146*^9}, {3.693928725563581*^9, 3.693928758329874*^9}, {
    3.693928806665717*^9, 3.693928934948057*^9}, {3.693929003121758*^9, 
    3.693929064632884*^9}, {3.6939292282922573`*^9, 3.6939292867890663`*^9}, {
-   3.693929318798374*^9, 3.693929341228422*^9}}],
+   3.693929318798374*^9, 3.693929341228422*^9}, {3.695654868382454*^9, 
+   3.6956548947395573`*^9}, {3.695654926449615*^9, 3.695655011358446*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -828,7 +901,8 @@ Cell[BoxData[
    3.688763749909169*^9, 3.688770540528648*^9, 3.688829228099442*^9, 
    3.694132091752802*^9, 3.694190165795622*^9, 3.6942053651854563`*^9, 
    3.6943676483650227`*^9, 3.694367867043188*^9, {3.6943692049156103`*^9, 
-   3.694369218620088*^9}, 3.694373610086069*^9}],
+   3.694369218620088*^9}, 3.694373610086069*^9, 3.695654578708572*^9, 
+   3.6956550543447237`*^9, {3.6956552427608833`*^9, 3.695655261666211*^9}}],
 
 Cell[BoxData[
  RowBox[{"-", 
@@ -868,7 +942,8 @@ Cell[BoxData[
    3.688763749909169*^9, 3.688770540528648*^9, 3.688829228099442*^9, 
    3.694132091752802*^9, 3.694190165795622*^9, 3.6942053651854563`*^9, 
    3.6943676483650227`*^9, 3.694367867043188*^9, {3.6943692049156103`*^9, 
-   3.694369218620088*^9}, 3.694373610088243*^9}],
+   3.694369218620088*^9}, 3.694373610086069*^9, 3.695654578708572*^9, 
+   3.6956550543447237`*^9, {3.6956552427608833`*^9, 3.695655261685335*^9}}],
 
 Cell[BoxData[
  FractionBox[
@@ -885,7 +960,8 @@ Cell[BoxData[
    3.688763749909169*^9, 3.688770540528648*^9, 3.688829228099442*^9, 
    3.694132091752802*^9, 3.694190165795622*^9, 3.6942053651854563`*^9, 
    3.6943676483650227`*^9, 3.694367867043188*^9, {3.6943692049156103`*^9, 
-   3.694369218620088*^9}, 3.694373610089388*^9}]
+   3.694369218620088*^9}, 3.694373610086069*^9, 3.695654578708572*^9, 
+   3.6956550543447237`*^9, {3.6956552427608833`*^9, 3.695655261699193*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -895,37 +971,59 @@ Cell[BoxData[
   RowBox[{
    RowBox[{
     RowBox[{"{", 
-     RowBox[{"Starvation", ",", "Recovery"}], "}"}], "/.", 
+     RowBox[{
+     "ConsumerGrowth", ",", "Starvation", ",", "Mortality", ",", "Recovery", 
+      ",", "StarveMaintenance", ",", "FullMaintenance", ",", "ResourceGrowth",
+       ",", "InvaderStarvation", ",", "InvaderRecovery", ",", 
+      "InvaderStarveMaintenance", ",", "InvaderFullMaintenance"}], "}"}], "/.", 
     RowBox[{"{", 
      RowBox[{"M", "\[Rule]", "mass"}], "}"}]}], ",", 
    RowBox[{"{", 
     RowBox[{"mass", ",", 
-     RowBox[{"{", 
-      RowBox[{"1", ",", 
-       RowBox[{"10", "^", "7"}]}], "}"}]}], "}"}]}], "]"}]], "Input",
+     RowBox[{"{", "1", "}"}]}], "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6943682375147333`*^9, 3.6943682876008053`*^9}, {
   3.694369087064048*^9, 3.6943691323725767`*^9}, {3.6943691865204287`*^9, 
-  3.6943691933626003`*^9}, {3.694369224608404*^9, 3.6943692249197807`*^9}}],
+  3.6943691933626003`*^9}, {3.694369224608404*^9, 3.6943692249197807`*^9}, {
+  3.6956545908957644`*^9, 3.6956545947293997`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"0.0003290218210214906`", ",", "2.5250191925367556`*^-6"}], "}"}],
+  RowBox[{"{", 
+   RowBox[{
+   "3.2765111605878316`*^-7", ",", "0.0003290218210214906`", ",", 
+    "0.000013543244235905755`", ",", "2.5250191925367556`*^-6", ",", 
+    "6.116389922752092`*^-7", ",", "5.493795692209397`*^-6", ",", "2.1`*^-9", 
     ",", 
-   RowBox[{"{", 
-    RowBox[{"2.1117495220256112`*^-7", ",", "6.174631332786813`*^-9"}], 
-    "}"}]}], "}"}]], "Output",
+    RowBox[{"-", 
+     FractionBox["6.714285714285714`*^-6", 
+      RowBox[{"Log", "[", 
+       FractionBox["0.9798`", 
+        RowBox[{"1", "+", "chi"}]], "]"}]]}], ",", 
+    RowBox[{"-", 
+     FractionBox["8.392857142857143`*^-7", 
+      RowBox[{"Log", "[", 
+       RowBox[{"56.28941827470018`", " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"0.9872585449014338`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "+", "chi"}], ")"}], 
+            RowBox[{"1", "/", "4"}]]}]}], ")"}]}], "]"}]]}], ",", 
+    "6.116389922752092`*^-7", ",", "5.493795692209397`*^-6"}], "}"}], 
+  "}"}]], "Output",
  CellChangeTimes->{
   3.6943682752972317`*^9, 3.694369091830755*^9, {3.694369126701694*^9, 
    3.6943691328396997`*^9}, {3.694369177175565*^9, 3.694369225214738*^9}, 
-   3.694373610117216*^9}]
+   3.694373610117216*^9, {3.695654578814849*^9, 3.695654595215818*^9}, 
+   3.695655054499832*^9, {3.6956552428872223`*^9, 3.695655261785655*^9}}]
 }, Open  ]]
 },
-WindowSize->{1280, 1724},
-WindowMargins->{{Automatic, 304}, {-28, Automatic}},
+WindowSize->{628, 1724},
+WindowMargins->{{105, Automatic}, {Automatic, 0}},
 Magnification->1.25,
-FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -939,18 +1037,18 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[400, 13, 26503, 650, 3568, "Input"],
-Cell[26906, 665, 2588, 51, 552, "Input"],
-Cell[29497, 718, 600, 14, 132, "Input"],
+Cell[400, 13, 29223, 723, 4214, "Input"],
+Cell[29626, 738, 2588, 51, 482, "Input"],
+Cell[32217, 791, 600, 14, 170, "Input"],
 Cell[CellGroupData[{
-Cell[30122, 736, 2102, 54, 397, "Input"],
-Cell[32227, 792, 1511, 38, 69, "Output"],
-Cell[33741, 832, 1511, 38, 100, "Output"],
-Cell[35255, 872, 733, 15, 63, "Output"]
+Cell[32842, 809, 2102, 54, 352, "Input"],
+Cell[34947, 865, 1609, 39, 59, "Output"],
+Cell[36559, 906, 1609, 39, 59, "Output"],
+Cell[38171, 947, 831, 16, 55, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36025, 892, 589, 15, 43, "Input"],
-Cell[36617, 909, 459, 12, 47, "Output"]
+Cell[39039, 968, 841, 18, 196, "Input"],
+Cell[39883, 988, 1255, 30, 224, "Output"]
 }, Open  ]]
 }
 ]
