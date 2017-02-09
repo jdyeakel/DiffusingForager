@@ -1,0 +1,113 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/arxiv_version/YKR_arxiv.aux
+The style file: ieeetr.bst
+I found no \bibdata command---while reading file /Users/justinyeakel/Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/Manuscript/arxiv_version/YKR_arxiv.aux
+Warning--I didn't find a database entry for "Martin:1987dl"
+Warning--I didn't find a database entry for "Kirk:1997cc"
+Warning--I didn't find a database entry for "Kempes:2012hy"
+Warning--I didn't find a database entry for "Mangel:1988uaa"
+Warning--I didn't find a database entry for "Mangel:2014kz"
+Warning--I didn't find a database entry for "Yeakel:2013hi"
+Warning--I didn't find a database entry for "Morris:1987eo"
+Warning--I didn't find a database entry for "Tveraa:2003fq"
+Warning--I didn't find a database entry for "Daan:1988va"
+Warning--I didn't find a database entry for "Jacot:2009dv"
+Warning--I didn't find a database entry for "Stearns:1989ip"
+Warning--I didn't find a database entry for "Barboza:2002in"
+Warning--I didn't find a database entry for "Threlkeld:1976ih"
+Warning--I didn't find a database entry for "Weber:1998jg"
+Warning--I didn't find a database entry for "Mduma:1999cp"
+Warning--I didn't find a database entry for "Moore:2014hi"
+Warning--I didn't find a database entry for "Mead:1989dt"
+Warning--I didn't find a database entry for "Sandell:1990kw"
+Warning--I didn't find a database entry for "Bulik:1999eo"
+Warning--I didn't find a database entry for "Trites:2003cc"
+Warning--I didn't find a database entry for "Glazier:2009hq"
+Warning--I didn't find a database entry for "Kooi2000"
+Warning--I didn't find a database entry for "Sousa:2010ez"
+Warning--I didn't find a database entry for "Diekmann:2010da"
+Warning--I didn't find a database entry for "murdoch:2003"
+Warning--I didn't find a database entry for "Benichou:2014wu"
+Warning--I didn't find a database entry for "Benichou:2016wl"
+Warning--I didn't find a database entry for "Chupeau:2016jf"
+Warning--I didn't find a database entry for "murray2011mathematical"
+Warning--I didn't find a database entry for "Strogatz:2008wo"
+Warning--I didn't find a database entry for "GuckHolmes"
+Warning--I didn't find a database entry for "Gross:2004p2428"
+Warning--I didn't find a database entry for "Hastings:2001jh"
+Warning--I didn't find a database entry for "Neubert:1997wk"
+Warning--I didn't find a database entry for "Caswell:2005eo"
+Warning--I didn't find a database entry for "Neubert:2009td"
+Warning--I didn't find a database entry for "Yodzis:1992hg"
+Warning--I didn't find a database entry for "Brown:2004wq"
+Warning--I didn't find a database entry for "West:2002it"
+Warning--I didn't find a database entry for "DeLong:2010dy"
+Warning--I didn't find a database entry for "West:2001bv"
+Warning--I didn't find a database entry for "moses2008rmo"
+Warning--I didn't find a database entry for "gillooly2002esa"
+Warning--I didn't find a database entry for "hou"
+Warning--I didn't find a database entry for "bettencourt"
+Warning--I didn't find a database entry for "Folland:2008ij"
+Warning--I didn't find a database entry for "CalderIII:1983jd"
+Warning--I didn't find a database entry for "Peterson:1984hj"
+Warning--I didn't find a database entry for "Krukonis:1991fk"
+Warning--I didn't find a database entry for "Hendriks:2012fc"
+Warning--I didn't find a database entry for "Kendall:1999iy"
+Warning--I didn't find a database entry for "Hogstedt:2005cr"
+Warning--I didn't find a database entry for "Kendall:1998hl"
+Warning--I didn't find a database entry for "Brown:1993p708"
+Warning--I didn't find a database entry for "West:1997cg"
+Warning--I didn't find a database entry for "West:2002ud"
+Warning--I didn't find a database entry for "Millar:1990p923"
+Warning--I didn't find a database entry for "Alroy:1998p1594"
+Warning--I didn't find a database entry for "Clauset:2009fh"
+Warning--I didn't find a database entry for "Smith:2010p3442"
+Warning--I didn't find a database entry for "Saarinen:2014br"
+Warning--I didn't find a database entry for "allen2002"
+Warning--I didn't find a database entry for "enquist1998"
+Warning--I didn't find a database entry for "tilman1981"
+Warning--I didn't find a database entry for "dutkiewicz2009"
+Warning--I didn't find a database entry for "barton2010"
+You've used 0 entries,
+            1876 wiz_defined-function locations,
+            597 strings with 5265 characters,
+and the built_in function-call counts, 20 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 9
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)

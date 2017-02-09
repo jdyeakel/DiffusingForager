@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    153548,       3682]
-NotebookOptionsPosition[    146214,       3485]
-NotebookOutlinePosition[    146574,       3501]
-CellTagsIndexPosition[    146531,       3498]
+NotebookDataLength[    120405,       2507]
+NotebookOptionsPosition[    117412,       2414]
+NotebookOutlinePosition[    117772,       2430]
+CellTagsIndexPosition[    117729,       2427]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,7 +35,8 @@ DiffusingForager/mathematica/NewRateFigures/Ratesfunc.nb\>\"", "]"}]}],
  RowBox[{
   RowBox[{"SelectionEvaluate", "[", "nb1", "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.680015412865893*^9, 3.6800154413779583`*^9}, {
-  3.680015727742853*^9, 3.680015735815099*^9}}],
+  3.680015727742853*^9, 3.680015735815099*^9}, {3.6857406376729794`*^9, 
+  3.6857406714269447`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -43,9 +44,9 @@ Cell[BoxData[{
    RowBox[{"MetapopDyn", "[", 
     RowBox[{
     "\[Alpha]_", ",", "\[Lambda]_", ",", "\[Sigma]_", ",", "\[Rho]_", ",", 
-     "\[Beta]_", ",", "\[Mu]_", ",", "T_", ",", "F0_", ",", "H0_", ",", 
-     "R0_"}], "]"}], " ", ":=", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   
+     "\[Beta]_", ",", "\[Mu]_", ",", "\[Delta]_", ",", "T_", ",", "F0_", ",", 
+     "H0_", ",", "R0_"}], "]"}], " ", ":=", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{"NDSolve", "[", 
     RowBox[{
      RowBox[{"{", "\[IndentingNewLine]", 
@@ -87,7 +88,7 @@ Cell[BoxData[{
           RowBox[{"(", 
            RowBox[{"1", "-", 
             RowBox[{"R", "[", "t", "]"}]}], ")"}]}], " ", "-", 
-         RowBox[{
+         RowBox[{"\[Delta]", "*", 
           RowBox[{"(", 
            RowBox[{
             RowBox[{"\[Rho]", "*", 
@@ -161,7 +162,8 @@ Cell[BoxData[{
    3.678456748100997*^9, 3.678456756257968*^9}, 3.6784568552873697`*^9, {
    3.678456988260934*^9, 3.678457018542647*^9}, {3.678457329518458*^9, 
    3.678457329956113*^9}, {3.6784613171548433`*^9, 3.678461333081821*^9}, {
-   3.680280835645568*^9, 3.680280846333198*^9}, 3.680280890408567*^9}],
+   3.680280835645568*^9, 3.680280846333198*^9}, 3.680280890408567*^9, {
+   3.685740575552487*^9, 3.685740598162943*^9}, 3.685741142314208*^9}],
 
 Cell[CellGroupData[{
 
@@ -228,7 +230,7 @@ Cell[BoxData[{
          RowBox[{"\[Alpha]", " ", "\[Lambda]", " ", "\[Mu]", " ", 
           RowBox[{"(", 
            RowBox[{"\[Mu]", "+", "\[Rho]"}], ")"}]}], 
-         RowBox[{
+         RowBox[{"\[Delta]", " ", 
           RowBox[{"(", 
            RowBox[{
             RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
@@ -242,7 +244,7 @@ Cell[BoxData[{
           SuperscriptBox["\[Lambda]", "2"], " ", 
           RowBox[{"(", 
            RowBox[{"\[Mu]", "+", "\[Rho]"}], ")"}]}], 
-         RowBox[{
+         RowBox[{"\[Delta]", " ", 
           RowBox[{"(", 
            RowBox[{
             RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
@@ -258,15 +260,16 @@ Cell[BoxData[{
         RowBox[{"\[Sigma]", "->", "Starvation"}], ",", 
         RowBox[{"\[Rho]", "->", "Recovery"}], ",", 
         RowBox[{"\[Beta]", "->", "Maintenance"}], "\[VeryThinSpace]", ",", 
-        RowBox[{"\[Mu]", "->", "Mortality"}]}], "}"}]}], ")"}], "*", "0.1"}], 
-   "/.", 
+        RowBox[{"\[Mu]", "->", "Mortality"}], ",", 
+        RowBox[{"\[Delta]", "\[Rule]", "ConsumerEfficiency"}]}], "}"}]}], 
+     ")"}], "*", "0.1"}], "/.", 
    RowBox[{"M", "\[Rule]", "Mass"}]}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"ExtinctionSigma", " ", "=", " ", 
    RowBox[{"ParallelTable", "[", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{
-      RowBox[{"Reps", " ", "=", " ", "1000"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Reps", " ", "=", " ", "50"}], ";", "\[IndentingNewLine]", 
       RowBox[{"ProportionExtinct", "=", 
        RowBox[{"With", "[", 
         RowBox[{
@@ -278,6 +281,7 @@ Cell[BoxData[{
            RowBox[{"\[Rho]", "=", "rho"}], ",", 
            RowBox[{"\[Beta]", "=", "Maintenance"}], "\[VeryThinSpace]", ",", 
            RowBox[{"\[Mu]", "=", "Mortality"}], ",", 
+           RowBox[{"\[Delta]", "=", "ConsumerEfficiency"}], ",", 
            RowBox[{"T", "=", "100000000"}], ",", 
            RowBox[{"PercentPerturbed", "=", "1"}]}], "}"}], ",", 
          "\[IndentingNewLine]", 
@@ -293,7 +297,7 @@ Cell[BoxData[{
                  RowBox[{"\[Alpha]", " ", "\[Lambda]", " ", "\[Mu]", " ", 
                   RowBox[{"(", 
                    RowBox[{"\[Mu]", "+", "\[Rho]"}], ")"}]}], 
-                 RowBox[{
+                 RowBox[{"\[Delta]", " ", 
                   RowBox[{"(", 
                    RowBox[{
                     RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
@@ -317,7 +321,7 @@ Cell[BoxData[{
                   SuperscriptBox["\[Lambda]", "2"], " ", 
                   RowBox[{"(", 
                    RowBox[{"\[Mu]", "+", "\[Rho]"}], ")"}]}], 
-                 RowBox[{
+                 RowBox[{"\[Delta]", " ", 
                   RowBox[{"(", 
                    RowBox[{
                     RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
@@ -334,7 +338,7 @@ Cell[BoxData[{
                     RowBox[{"-", "PercentPerturbed"}], ",", 
                     "PercentPerturbed"}], "}"}], "]"}]}], ")"}]}]}], ";", 
               "\[IndentingNewLine]", 
-              RowBox[{"R0", "=", " ", 
+              RowBox[{"R0", "=", 
                RowBox[{
                 FractionBox[
                  RowBox[{"\[Mu]", " ", 
@@ -407,8 +411,9 @@ Cell[BoxData[{
                    RowBox[{"MetapopDyn", "[", 
                     RowBox[{
                     "\[Alpha]", ",", "\[Lambda]", ",", "\[Sigma]", ",", 
-                    "\[Rho]", ",", "\[Beta]", ",", "\[Mu]", ",", "T", ",", 
-                    "F0", ",", "H0", ",", "R0"}], "]"}]}], "]"}], ",", 
+                    "\[Rho]", ",", "\[Beta]", ",", "\[Mu]", ",", "\[Delta]", 
+                    ",", "T", ",", "F0", ",", "H0", ",", "R0"}], "]"}]}], 
+                  "]"}], ",", 
                  RowBox[{"{", 
                   RowBox[{"t", ",", "0", ",", "100000000", ",", "100000"}], 
                   "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
@@ -467,1513 +472,437 @@ Cell[BoxData[{
    3.680285848217484*^9}, {3.680286173478568*^9, 3.68028617673836*^9}, {
    3.680287382212467*^9, 3.6802874069560204`*^9}, {3.6802874864792356`*^9, 
    3.680287498815062*^9}, 3.6802880883536777`*^9, {3.680291954701685*^9, 
-   3.680291955955578*^9}, 3.680812749155032*^9}],
+   3.680291955955578*^9}, 3.680812749155032*^9, {3.685740606613957*^9, 
+   3.685740612340396*^9}, {3.685740663306407*^9, 3.685740699462717*^9}, {
+   3.6857407874619703`*^9, 3.685740787528696*^9}, {3.685740861066366*^9, 
+   3.685740862262994*^9}, {3.685741063298437*^9, 3.6857411035132008`*^9}}],
 
 Cell[BoxData["1.6383186129451528`"], "Output",
  CellChangeTimes->{
   3.680287522447794*^9, {3.6802878311701*^9, 3.680287852140586*^9}, 
-   3.680288089549859*^9, 3.680291969934269*^9, 3.680812766468807*^9}],
+   3.680288089549859*^9, 3.680291969934269*^9, 3.680812766468807*^9, 
+   3.6857407955118647`*^9, 3.685740867216919*^9, 3.685741220752146*^9, 
+   3.685741286470684*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(17096.693837486415`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+4.`*^-6, 4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, \
+100000000, 10.20314417419881`, 6.610055797803519`, 1.3766865972301923`\\)\\)]\
+\\)}\\) is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680812973084033*^9}],
+ CellChangeTimes->{3.685741286480463*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00001220703125`, 4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, \
+1, 100000000, 36.549204931318926`, 2.8126530811636323`, 0.499566555827988`\\)\
+\\)]\\)}\\) is neither a list of replacement rules nor a valid dispatch \
+table, and so cannot be used for replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.68081297313908*^9}],
+ CellChangeTimes->{3.6857412865763493`*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00003725290298461914`, 4.`*^-6, 0.0014862705002791385`, \
+4.122742832476783`*^-6, 1, 100000000, 11.930190751327217`, \
+0.2625914661082009`, 0.8462039785864776`\\)\\)]\\)}\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680812973188196*^9}],
+ CellChangeTimes->{3.685741286677988*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00009094947017729282`, 4.`*^-6, 0.0014862705002791385`, \
+4.122742832476783`*^-6, 1, 100000000, 5.180333141912605`, \
+0.3812187015376635`, 0.4535990369584066`\\)\\)]\\)}\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680812973238635*^9}],
+ CellChangeTimes->{3.685741286774433*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+4.`*^-6, 4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, \
+100000000, 10.20314417419881`, 6.610055797803519`, 1.3766865972301923`\\)\\)]\
+\\)}\\) is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680812973287725*^9}],
+ CellChangeTimes->{3.685741286876952*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(154112.6821060553`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00001220703125`, 4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, \
+1, 100000000, 36.549204931318926`, 2.8126530811636323`, 0.499566555827988`\\)\
+\\)]\\)}\\) is neither a list of replacement rules nor a valid dispatch \
+table, and so cannot be used for replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.6808129739835052`*^9}],
+ CellChangeTimes->{3.6857412869773483`*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(173402.30283783292`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00003725290298461914`, 4.`*^-6, 0.0014862705002791385`, \
+4.122742832476783`*^-6, 1, 100000000, 11.930190751327217`, \
+0.2625914661082009`, 0.8462039785864776`\\)\\)]\\)}\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680812974238371*^9}],
+ CellChangeTimes->{3.685741287074606*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00009094947017729282`, 4.`*^-6, 0.0014862705002791385`, \
+4.122742832476783`*^-6, 1, 100000000, 5.180333141912605`, \
+0.3812187015376635`, 0.4535990369584066`\\)\\)]\\)}\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680812974270082*^9}],
+ CellChangeTimes->{3.6857412871765547`*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(6281.963594904913`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+4.`*^-6, 4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, \
+100000000, 10.20314417419881`, 6.610055797803519`, 1.3766865972301923`\\)\\)]\
+\\)}\\) is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680813060147668*^9}],
+ CellChangeTimes->{3.685741287297282*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00001220703125`, 4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, \
+1, 100000000, 36.549204931318926`, 2.8126530811636323`, 0.499566555827988`\\)\
+\\)]\\)}\\) is neither a list of replacement rules nor a valid dispatch \
+table, and so cannot be used for replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.68081306018071*^9}],
+ CellChangeTimes->{3.685741287425893*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00003725290298461914`, 4.`*^-6, 0.0014862705002791385`, \
+4.122742832476783`*^-6, 1, 100000000, 11.930190751327217`, \
+0.2625914661082009`, 0.8462039785864776`\\)\\)]\\)}\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680813060229535*^9}],
+ CellChangeTimes->{3.6857412875603867`*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
+  ":", " "}], "\<\"\\!\\({\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, \
+0.00009094947017729282`, 4.`*^-6, 0.0014862705002791385`, \
+4.122742832476783`*^-6, 1, 100000000, 5.180333141912605`, \
+0.3812187015376635`, 0.4535990369584066`\\)\\)]\\)}\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.6808130602747803`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813060323947*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(5186.205767271513`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813060819138*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(5348.746163012029`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808130631125813`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808130631723347`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(4309.574171694574`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808131809351177`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808131809877872`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813181039036*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813181091188*^9}],
+ CellChangeTimes->{3.685741287674541*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
    RowBox[{"General", "::", "stop"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813181155191*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(4833.4879023813755`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.68081318120518*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(8730.471190964363`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808131814327602`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808131814744263`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(10298.479930483618`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813255830213*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813255866005*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813255914765*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.68081325596616*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813256018373*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(7652.799974749495`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680813256920577*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(7078.485277520239`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.68081325890637*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808132589428053`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(6.550527488507687`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680813986237184*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(5.893277147247026`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680814069586948*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(5.849359148552204`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680814076137322*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-nderr\\), \\\"MessageName\\\"]\\) will be suppressed during this calculation.\
-\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680814076342579*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(5.144897624917196`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680814076885303*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(5.865826533276991`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.6808140776384172`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(4.8807169333324045`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808140794389544`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-nderr\\), \\\"MessageName\\\"]\\) will be suppressed during this calculation.\
-\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680814079683654*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(5.348434463457801`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680814139243698*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(5.171043615592158`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.6808141520835876`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(5.692945053918308`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680814159936583*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-nderr\\), \\\"MessageName\\\"]\\) will be suppressed during this calculation.\
-\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680814160190812*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(42812.533374019775`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680817925661501*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680817925715127*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680817925763813*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.68081792581497*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680817925855543*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(35729.49703360284`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680817926314596*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(40243.7464367301`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680817926507*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808179265411987`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(138659.1908905655`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808182340410957`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({200000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680818234075574*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({200000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680818234108945*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({200000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680818234142658*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808182341758223`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(140762.9887559435`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680818234451468*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(148489.93205932816`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680818235606635*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680818235639806*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(91345.86375622118`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808201420053*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820142044839*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.68082014207981*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820142115452*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820142149316*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(96197.30294248121`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808201421903667`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(68602.86073959131`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.68082014222361*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808201422579613`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(95917.85095260004`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820376601651*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808203766378927`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808203766720552`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820376708582*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808203767443647`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(79515.44878653497`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820376893565*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(92170.94852234585`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820377900456*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680820377933672*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(134174.65393013717`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822510141477*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({200000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822510184211*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({200000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808225102205887`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({200000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822510255083*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822510289806*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(99041.43715302876`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808225103677483`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(62537.25031772977`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822510690544*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822510724896*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(95993.26426020212`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822723468755*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808227235050287`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808227235453157`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822723586891*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822723624682*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(11180.610549018573`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808227300121202`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(17224.789283807702`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822731697031*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822731731587*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(7.14537987601567`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680822745707774*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(7.095652067691901`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680822804825797*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(8.705138641915122`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680822875125937*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(8.175082757133488`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.6808230042650623`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(7.942528626558946`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.68082370443069*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(7.438837168527742`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680823772239933*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(7.895454585402295`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680823786272875*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-nderr\\), \\\"MessageName\\\"]\\) will be suppressed during this calculation.\
-\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680823786307087*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(7.944642181698306`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.6808237878641167`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-nderr\\), \\\"MessageName\\\"]\\) will be suppressed during this calculation.\
-\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680823787902424*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(8.341974406422827`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680823791819681*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(66649.85667704715`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824484554551*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824484591094*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824484630087*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808244846647873`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824484701563*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(9226.956147974435`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824484736582*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(91373.80620615713`\\), step size is \
-effectively zero; singularity or stiff system suspected.\"\>"}]], "Message", \
-"MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824489028379*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808244890618753`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(252.58109302800864`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824564106579*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824564143239*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824564178301*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"InterpolatingFunction", "::", "dmval"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Input value \\!\\({100000}\\) lies outside the range of \
-data in the interpolating function. Extrapolation will be used.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824564212119*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\\!\\(\\*StyleBox[\\(InterpolatingFunction :: dmval\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808245642486*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(182.66163647208623`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824565345504*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndsz"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"At \\!\\(t\\) == \\!\\(203.50793081172284`\\), step size \
-is effectively zero; singularity or stiff system suspected.\"\>"}]], "Message",\
- "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824568329941*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndsz\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808245683657827`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(9.239037248249239`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680824675393467*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndcf"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Repeated convergence test failure at \\!\\(t\\) == \
-\\!\\(1.0031883118516661`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824676683124*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndcf"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Repeated convergence test failure at \\!\\(t\\) == \
-\\!\\(7.885458115561365`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680824683135891*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "singls"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Encountered a singular linear system at \\!\\(t\\) = \
-\\!\\(1.3581965343164832`*^6\\). Unable to continue.\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824699055632*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndcf"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Repeated convergence test failure at \\!\\(t\\) == \
-\\!\\(5.623866521603982`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680824703958057*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: ndcf\\), \
-\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
-"Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824703992989*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "singls"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Encountered a singular linear system at \\!\\(t\\) = \
-\\!\\(1.408184623060321`*^6\\). Unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680824724959391*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "singls"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Encountered a singular linear system at \\!\\(t\\) = \
-\\!\\(1.8111463600390193`*^6\\). Unable to continue.\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680824738301543*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-singls\\), \\\"MessageName\\\"]\\) will be suppressed during this \
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(ReplaceAll :: \
+reps\\), \\\"MessageName\\\"]\\) will be suppressed during this \
 calculation.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680824738342245*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "nderr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error test failure at \\!\\(t\\) == \
-\\!\\(7.54838037390012`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.68082476985602*^9}],
+ CellChangeTimes->{3.6857412877937927`*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
    RowBox[{"General", "::", "stop"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-nderr\\), \\\"MessageName\\\"]\\) will be suppressed during this calculation.\
-\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.6808247698918667`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "singls"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Encountered a singular linear system at \\!\\(t\\) = \
-\\!\\(8.799016179564302`*^7\\). Unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.68082624500383*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndcf"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Repeated convergence test failure at \\!\\(t\\) == \
-\\!\\(6.424773985279855`*^6\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.68082626191537*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "singls"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Encountered a singular linear system at \\!\\(t\\) = \
-\\!\\(4.821713022115255`*^6\\). Unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680826264576808*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "ndcf"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Repeated convergence test failure at \\!\\(t\\) == \
-\\!\\(6.161092011646213`*^7\\); unable to continue.\"\>"}]], "Message", "MSG",
- 
- ShowCellLabel->True,
- CellChangeTimes->{3.680826346125161*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "singls"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Encountered a singular linear system at \\!\\(t\\) = \
-\\!\\(1.0118198144126086`*^7\\). Unable to continue.\"\>"}]], "Message", "MSG",
- ShowCellLabel->True,
- CellChangeTimes->{3.680826349723974*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(NDSolve :: \
-singls\\), \\\"MessageName\\\"]\\) will be suppressed during this \
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(ReplaceAll :: \
+reps\\), \\\"MessageName\\\"]\\) will be suppressed during this \
 calculation.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
- CellChangeTimes->{3.680826349752431*^9}]
+ CellChangeTimes->{3.685741287910657*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(ReplaceAll :: \
+reps\\), \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741288027646*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(ReplaceAll :: \
+reps\\), \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.6857412881445227`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 4.`*^-6, 4.`*^-6, \
+0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+10.20314417419881`, 6.610055797803519`, 1.3766865972301923`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.68574128826066*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00001220703125`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+36.549204931318926`, 2.8126530811636323`, 0.499566555827988`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741288376851*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00003725290298461914`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+11.930190751327217`, 0.2625914661082009`, 0.8462039785864776`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741288494472*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00009094947017729282`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+5.180333141912605`, 0.3812187015376635`, 0.4535990369584066`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741288611602*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 4.`*^-6, 4.`*^-6, \
+0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+3.492095851912028`, 10.016981059828728`, 0.5634819302274523`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741288747304*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00001220703125`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+27.453819630489548`, 2.8284146390665468`, 1.409389419564247`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741288877249*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00003725290298461914`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+8.334702152230896`, 0.4363775569674519`, 1.7140221867458512`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741289093679*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00009094947017729282`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+4.965385615192434`, 0.2360071960021655`, 0.2364259271116219`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741289325013*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 4.`*^-6, 4.`*^-6, \
+0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+92.18500512356103`, 8.554188194463011`, 0.029104336480979175`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741289447596*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00001220703125`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+20.7474065249486`, 3.0714976587499274`, 1.8440588238186808`\\)\\)]\\)\\)\\) \
+does not exist.\"\>"}]], "Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741289557995*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00003725290298461914`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+0.6830015647975116`, 0.34847714716601813`, \
+1.8103626856678305`\\)\\)]\\)\\)\\) does not exist.\"\>"}]], "Message", "MSG",
+ 
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741289678184*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \\!\\(3\\) of \\!\\(\\(\\({\\(\\(F[100000000]\\)\\), \
+\\(\\(H[100000000]\\)\\), \\(\\(R[100000000]\\)\\)}\\)\\)/.\[VeryThinSpace] \
+\\(\\(MetapopDyn[\\(\\(0.5`, 3.686375826288047`*^-7, 0.00009094947017729282`, \
+4.`*^-6, 0.0014862705002791385`, 4.122742832476783`*^-6, 1, 100000000, \
+1.6677481394261349`, 0.18937871846553792`, \
+0.3175678073276909`\\)\\)]\\)\\)\\) does not exist.\"\>"}]], "Message", "MSG",
+ 
+ ShowCellLabel->True,
+ CellChangeTimes->{3.6857412897943497`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(Part :: partw\\), \
+\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
+"Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741289911065*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(Part :: partw\\), \
+\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
+"Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.685741290028241*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(Part :: partw\\), \
+\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
+"Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.6857412901605673`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(Part :: partw\\), \
+\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
+"Message", "MSG",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.6857412902937937`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3483,7 +2412,7 @@ Cell[BoxData[
  CellChangeTimes->{3.680812543457222*^9}]
 }, Open  ]]
 },
-WindowSize->{1855, 1215},
+WindowSize->{1625, 1215},
 WindowMargins->{{33, Automatic}, {Automatic, 21}},
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
 2014)",
@@ -3501,188 +2430,84 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 76, 1, 28, "Input"],
-Cell[637, 23, 550, 14, 63, "Input"],
-Cell[1190, 39, 6257, 124, 148, "Input"],
+Cell[637, 23, 603, 15, 63, "Input"],
+Cell[1243, 40, 6364, 125, 148, "Input"],
 Cell[CellGroupData[{
-Cell[7472, 167, 12839, 302, 621, "Input"],
-Cell[20314, 471, 205, 3, 28, "Output"],
-Cell[20522, 476, 332, 9, 24, "Message"],
-Cell[20857, 487, 349, 9, 24, "Message"],
-Cell[21209, 498, 350, 9, 24, "Message"],
-Cell[21562, 509, 350, 9, 24, "Message"],
-Cell[21915, 520, 359, 10, 24, "Message"],
-Cell[22277, 532, 333, 9, 24, "Message"],
-Cell[22613, 543, 332, 9, 24, "Message"],
-Cell[22948, 554, 342, 9, 24, "Message"],
-Cell[23293, 565, 331, 9, 24, "Message"],
-Cell[23627, 576, 349, 9, 24, "Message"],
-Cell[23979, 587, 350, 9, 24, "Message"],
-Cell[24332, 598, 352, 9, 24, "Message"],
-Cell[24687, 609, 359, 10, 24, "Message"],
-Cell[25049, 621, 331, 9, 24, "Message"],
-Cell[25383, 632, 333, 9, 24, "Message"],
-Cell[25719, 643, 344, 9, 24, "Message"],
-Cell[26066, 654, 333, 9, 24, "Message"],
-Cell[26402, 665, 352, 9, 24, "Message"],
-Cell[26757, 676, 350, 9, 24, "Message"],
-Cell[27110, 687, 350, 9, 24, "Message"],
-Cell[27463, 698, 359, 10, 24, "Message"],
-Cell[27825, 710, 331, 9, 24, "Message"],
-Cell[28159, 721, 333, 9, 24, "Message"],
-Cell[28495, 732, 344, 9, 24, "Message"],
-Cell[28842, 743, 332, 9, 24, "Message"],
-Cell[29177, 754, 350, 9, 24, "Message"],
-Cell[29530, 765, 350, 9, 24, "Message"],
-Cell[29883, 776, 349, 9, 24, "Message"],
-Cell[30235, 787, 359, 10, 24, "Message"],
-Cell[30597, 799, 331, 9, 24, "Message"],
-Cell[30931, 810, 330, 9, 24, "Message"],
-Cell[31264, 821, 344, 9, 24, "Message"],
-Cell[31611, 832, 304, 9, 21, "Message"],
-Cell[31918, 843, 304, 9, 21, "Message"],
-Cell[32225, 854, 304, 9, 21, "Message"],
-Cell[32532, 865, 343, 9, 24, "Message"],
-Cell[32878, 876, 304, 9, 21, "Message"],
-Cell[33185, 887, 306, 9, 21, "Message"],
-Cell[33494, 898, 305, 8, 21, "Message"],
-Cell[33802, 908, 343, 9, 24, "Message"],
-Cell[34148, 919, 304, 9, 21, "Message"],
-Cell[34455, 930, 306, 9, 21, "Message"],
-Cell[34764, 941, 304, 9, 21, "Message"],
-Cell[35071, 952, 343, 9, 24, "Message"],
-Cell[35417, 963, 332, 9, 24, "Message"],
-Cell[35752, 974, 350, 9, 24, "Message"],
-Cell[36105, 985, 350, 9, 24, "Message"],
-Cell[36458, 996, 349, 9, 24, "Message"],
-Cell[36810, 1007, 359, 10, 24, "Message"],
-Cell[37172, 1019, 331, 9, 24, "Message"],
-Cell[37506, 1030, 327, 9, 24, "Message"],
-Cell[37836, 1041, 344, 9, 24, "Message"],
-Cell[38183, 1052, 333, 9, 24, "Message"],
-Cell[38519, 1063, 350, 9, 24, "Message"],
-Cell[38872, 1074, 350, 9, 24, "Message"],
-Cell[39225, 1085, 350, 9, 24, "Message"],
-Cell[39578, 1096, 361, 10, 24, "Message"],
-Cell[39942, 1108, 331, 9, 24, "Message"],
-Cell[40276, 1119, 332, 9, 24, "Message"],
-Cell[40611, 1130, 342, 9, 24, "Message"],
-Cell[40956, 1141, 329, 9, 24, "Message"],
-Cell[41288, 1152, 350, 9, 24, "Message"],
-Cell[41641, 1163, 349, 9, 24, "Message"],
-Cell[41993, 1174, 350, 9, 24, "Message"],
-Cell[42346, 1185, 359, 10, 24, "Message"],
-Cell[42708, 1197, 333, 9, 24, "Message"],
-Cell[43044, 1208, 330, 9, 24, "Message"],
-Cell[43377, 1219, 344, 9, 24, "Message"],
-Cell[43724, 1230, 331, 9, 24, "Message"],
-Cell[44058, 1241, 352, 9, 24, "Message"],
-Cell[44413, 1252, 352, 9, 24, "Message"],
-Cell[44768, 1263, 350, 9, 24, "Message"],
-Cell[45121, 1274, 361, 10, 24, "Message"],
-Cell[45485, 1286, 331, 9, 24, "Message"],
-Cell[45819, 1297, 331, 9, 24, "Message"],
-Cell[46153, 1308, 342, 9, 24, "Message"],
-Cell[46498, 1319, 332, 9, 24, "Message"],
-Cell[46833, 1330, 350, 9, 24, "Message"],
-Cell[47186, 1341, 352, 9, 24, "Message"],
-Cell[47541, 1352, 350, 9, 24, "Message"],
-Cell[47894, 1363, 359, 10, 24, "Message"],
-Cell[48256, 1375, 333, 9, 24, "Message"],
-Cell[48592, 1386, 331, 9, 24, "Message"],
-Cell[48926, 1397, 342, 9, 24, "Message"],
-Cell[49271, 1408, 331, 9, 24, "Message"],
-Cell[49605, 1419, 352, 9, 24, "Message"],
-Cell[49960, 1430, 352, 9, 24, "Message"],
-Cell[50315, 1441, 350, 9, 24, "Message"],
-Cell[50668, 1452, 359, 10, 24, "Message"],
-Cell[51030, 1464, 334, 9, 24, "Message"],
-Cell[51367, 1475, 332, 9, 24, "Message"],
-Cell[51702, 1486, 342, 9, 24, "Message"],
-Cell[52047, 1497, 301, 8, 21, "Message"],
-Cell[52351, 1507, 304, 9, 21, "Message"],
-Cell[52658, 1518, 304, 9, 21, "Message"],
-Cell[52965, 1529, 306, 9, 21, "Message"],
-Cell[53274, 1540, 303, 9, 21, "Message"],
-Cell[53580, 1551, 304, 9, 21, "Message"],
-Cell[53887, 1562, 304, 9, 21, "Message"],
-Cell[54194, 1573, 343, 9, 24, "Message"],
-Cell[54540, 1584, 306, 9, 21, "Message"],
-Cell[54849, 1595, 343, 9, 24, "Message"],
-Cell[55195, 1606, 304, 9, 21, "Message"],
-Cell[55502, 1617, 331, 9, 24, "Message"],
-Cell[55836, 1628, 350, 9, 24, "Message"],
-Cell[56189, 1639, 350, 9, 24, "Message"],
-Cell[56542, 1650, 352, 9, 24, "Message"],
-Cell[56897, 1661, 359, 10, 24, "Message"],
-Cell[57259, 1673, 331, 9, 24, "Message"],
-Cell[57593, 1684, 331, 9, 24, "Message"],
-Cell[57927, 1695, 344, 9, 24, "Message"],
-Cell[58274, 1706, 332, 9, 24, "Message"],
-Cell[58609, 1717, 350, 9, 24, "Message"],
-Cell[58962, 1728, 350, 9, 24, "Message"],
-Cell[59315, 1739, 350, 9, 24, "Message"],
-Cell[59668, 1750, 357, 10, 24, "Message"],
-Cell[60028, 1762, 332, 9, 24, "Message"],
-Cell[60363, 1773, 332, 9, 24, "Message"],
-Cell[60698, 1784, 344, 9, 24, "Message"],
-Cell[61045, 1795, 304, 9, 21, "Message"],
-Cell[61352, 1806, 317, 8, 24, "Message"],
-Cell[61672, 1816, 318, 9, 24, "Message"],
-Cell[61993, 1827, 321, 8, 24, "Message"],
-Cell[62317, 1837, 318, 9, 24, "Message"],
-Cell[62638, 1848, 342, 9, 24, "Message"],
-Cell[62983, 1859, 322, 9, 24, "Message"],
-Cell[63308, 1870, 321, 8, 24, "Message"],
-Cell[63632, 1880, 344, 9, 24, "Message"],
-Cell[63979, 1891, 300, 8, 21, "Message"],
-Cell[64282, 1901, 345, 9, 24, "Message"],
-Cell[64630, 1912, 321, 9, 24, "Message"],
-Cell[64954, 1923, 317, 9, 24, "Message"],
-Cell[65274, 1934, 322, 9, 24, "Message"],
-Cell[65599, 1945, 318, 9, 24, "Message"],
-Cell[65920, 1956, 321, 8, 24, "Message"],
-Cell[66244, 1966, 344, 9, 24, "Message"]
+Cell[7632, 169, 13319, 308, 621, "Input"],
+Cell[20954, 479, 303, 5, 28, "Output"],
+Cell[21260, 486, 537, 11, 30, "Message"],
+Cell[21800, 499, 550, 11, 30, "Message"],
+Cell[22353, 512, 557, 12, 30, "Message"],
+Cell[22913, 526, 556, 12, 30, "Message"],
+Cell[23472, 540, 537, 11, 30, "Message"],
+Cell[24012, 553, 550, 11, 30, "Message"],
+Cell[24565, 566, 557, 12, 30, "Message"],
+Cell[25125, 580, 558, 12, 30, "Message"],
+Cell[25686, 594, 537, 11, 30, "Message"],
+Cell[26226, 607, 548, 11, 30, "Message"],
+Cell[26777, 620, 559, 12, 30, "Message"],
+Cell[27339, 634, 556, 12, 30, "Message"],
+Cell[27898, 648, 347, 9, 24, "Message"],
+Cell[28248, 659, 345, 9, 24, "Message"],
+Cell[28596, 670, 345, 9, 24, "Message"],
+Cell[28944, 681, 347, 9, 24, "Message"],
+Cell[29294, 692, 577, 12, 30, "Message"],
+Cell[29874, 706, 589, 12, 30, "Message"],
+Cell[30466, 720, 596, 12, 30, "Message"],
+Cell[31065, 734, 595, 12, 30, "Message"],
+Cell[31663, 748, 579, 12, 30, "Message"],
+Cell[32245, 762, 589, 12, 30, "Message"],
+Cell[32837, 776, 595, 12, 30, "Message"],
+Cell[33435, 790, 595, 12, 30, "Message"],
+Cell[34033, 804, 580, 12, 30, "Message"],
+Cell[34616, 818, 588, 12, 30, "Message"],
+Cell[35207, 832, 599, 13, 30, "Message"],
+Cell[35809, 847, 601, 13, 30, "Message"],
+Cell[36413, 862, 340, 9, 24, "Message"],
+Cell[36756, 873, 340, 9, 24, "Message"],
+Cell[37099, 884, 342, 9, 24, "Message"],
+Cell[37444, 895, 342, 9, 24, "Message"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[66625, 1980, 4101, 101, 131, "Input"],
-Cell[70729, 2083, 67363, 1159, 308, "Output"]
+Cell[37823, 909, 4101, 101, 131, "Input"],
+Cell[41927, 1012, 67363, 1159, 308, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[138129, 3247, 316, 10, 28, "Input"],
-Cell[138448, 3259, 1049, 31, 69, "Output"]
+Cell[109327, 2176, 316, 10, 28, "Input"],
+Cell[109646, 2188, 1049, 31, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[139534, 3295, 104, 1, 28, "Input"],
-Cell[139641, 3298, 74, 1, 28, "Output"]
+Cell[110732, 2224, 104, 1, 28, "Input"],
+Cell[110839, 2227, 74, 1, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[139752, 3304, 306, 6, 28, "Input"],
-Cell[140061, 3312, 310, 4, 28, "Output"]
+Cell[110950, 2233, 306, 6, 28, "Input"],
+Cell[111259, 2241, 310, 4, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[140408, 3321, 1994, 50, 91, "Input"],
-Cell[142405, 3373, 87, 1, 28, "Output"]
+Cell[111606, 2250, 1994, 50, 91, "Input"],
+Cell[113603, 2302, 87, 1, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[142529, 3379, 98, 1, 28, "Input"],
-Cell[142630, 3382, 71, 1, 28, "Output"]
+Cell[113727, 2308, 98, 1, 28, "Input"],
+Cell[113828, 2311, 71, 1, 28, "Output"]
 }, Open  ]],
-Cell[142716, 3386, 282, 8, 28, "Input"],
+Cell[113914, 2315, 282, 8, 28, "Input"],
 Cell[CellGroupData[{
-Cell[143023, 3398, 146, 3, 28, "Input"],
-Cell[143172, 3403, 77, 1, 28, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[143286, 3409, 149, 3, 28, "Input"],
-Cell[143438, 3414, 80, 1, 28, "Output"]
+Cell[114221, 2327, 146, 3, 28, "Input"],
+Cell[114370, 2332, 77, 1, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[143555, 3420, 141, 3, 28, "Input"],
-Cell[143699, 3425, 77, 1, 28, "Output"]
+Cell[114484, 2338, 149, 3, 28, "Input"],
+Cell[114636, 2343, 80, 1, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[143813, 3431, 736, 22, 28, "Input"],
-Cell[144552, 3455, 1646, 27, 74, "Output"]
+Cell[114753, 2349, 141, 3, 28, "Input"],
+Cell[114897, 2354, 77, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[115011, 2360, 736, 22, 28, "Input"],
+Cell[115750, 2384, 1646, 27, 91, "Output"]
 }, Open  ]]
 }
 ]

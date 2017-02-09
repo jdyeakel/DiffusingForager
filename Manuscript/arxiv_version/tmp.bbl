@@ -1,0 +1,93 @@
+\begin{thebibliography}{9}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{West et~al.}(2001)\citenamefont{West, Brown, and
+  Enquist}}]{West:2001bv}
+\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.~J.} \bibnamefont{Enquist}}, ``{A general
+  model for ontogenetic growth},'' \bibinfo{journal}{Nature}
+  \textbf{\bibinfo{volume}{413}}, \bibinfo{pages}{628} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Moses et~al.}(2008)\citenamefont{Moses, Hou, Woodruff,
+  West, Nekola, Zuo, and Brown}}]{moses2008rmo}
+\bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{Moses}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Hou}},
+  \bibinfo{author}{\bibfnamefont{W.~H.} \bibnamefont{Woodruff}},
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{J.~C.} \bibnamefont{Nekola}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Zuo}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}}, ``{Revisiting a
+  Model of Ontogenetic Growth: Estimating Model Parameters from Theory and
+  Data},'' \bibinfo{journal}{http://dx.doi.org.proxy.lib.sfu.ca/10.1086/679735}
+  \textbf{\bibinfo{volume}{171}}, \bibinfo{pages}{632} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Hou et~al.}(2008)\citenamefont{Hou, Zuo, Moses,
+  Woodruff, Brown, and West}}]{hou}
+\bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Hou}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Zuo}},
+  \bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{Moses}},
+  \bibinfo{author}{\bibfnamefont{W.~H.} \bibnamefont{Woodruff}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}}, ``{Energy Uptake
+  and Allocation During Ontogeny},'' \bibinfo{journal}{Science}
+  \textbf{\bibinfo{volume}{322}}, \bibinfo{pages}{736} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Stryer}(1995)}]{stryer}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Stryer}},
+  \emph{\bibinfo{title}{{Biochemistry, Fourth Edition}}}
+  (\bibinfo{publisher}{W.H. Freeman and Company}, \bibinfo{address}{New York},
+  \bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Dunbrack and Ramsay}(1993)}]{Dunbrack:1993ec}
+\bibinfo{author}{\bibfnamefont{R.~L.} \bibnamefont{Dunbrack}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Ramsay}}, ``{The Allometry
+  of Mammalian Adaptations to Seasonal Environments: A Critique of the Fasting
+  Endurance Hypothesis},'' \bibinfo{journal}{Oikos}
+  \textbf{\bibinfo{volume}{66}}, \bibinfo{pages}{336} (\bibinfo{year}{1993}).
+
+\bibitem[{\citenamefont{Lindstedt and Boyce}(1985)}]{Lindstedt:1985hm}
+\bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Lindstedt}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Boyce}},
+  ``{Seasonality, Fasting Endurance, and Body Size in Mammals},''
+  \bibinfo{journal}{Am. Nat.} \textbf{\bibinfo{volume}{125}},
+  \bibinfo{pages}{873} (\bibinfo{year}{1985}).
+
+\bibitem[{\citenamefont{Lindstedt and Schaeffer}(2002)}]{Lindstedt:2002td}
+\bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Lindstedt}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.~J.}
+  \bibnamefont{Schaeffer}}, ``{Use of allometry in predicting anatomical and
+  physiological parameters of mammals.},'' \bibinfo{journal}{Lab. Anim.}
+  \textbf{\bibinfo{volume}{36}}, \bibinfo{pages}{1} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Allen et~al.}(2002)\citenamefont{Allen, Brown, and
+  Gillooly}}]{allen2002global}
+\bibinfo{author}{\bibfnamefont{A.~P.} \bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Gillooly}}, ``Global
+  biodiversity, biochemical kinetics, and the energetic-equivalence rule,''
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{297}},
+  \bibinfo{pages}{1545} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Estermann et~al.}(2001)\citenamefont{Estermann,
+  Wettstein, Sutter, and Kreuzer}}]{estermann}
+\bibinfo{author}{\bibfnamefont{B.~L.} \bibnamefont{Estermann}},
+  \bibinfo{author}{\bibfnamefont{H.-R.} \bibnamefont{Wettstein}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Sutter}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kreuzer}}, ``Nutrient and
+  energy conversion of grass-fed dairy and suckler beef cattle kept indoors and
+  on high altitude pasture,'' \bibinfo{journal}{Animal Research}
+  \textbf{\bibinfo{volume}{50}}, \bibinfo{pages}{477} (\bibinfo{year}{2001}).
+
+\end{thebibliography}

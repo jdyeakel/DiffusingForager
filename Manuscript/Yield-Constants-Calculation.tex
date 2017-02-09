@@ -1,0 +1,260 @@
+%\usepackage{scicite}
+%\usepackage{times}
+%\usepackage{graphicx}
+%\usepackage{verbatim}
+%\usepackage{subfigure}
+%\usepackage{tikz}
+%\usepackage{array}
+%\usepackage{tabularx}
+%\usepackage{multirow}
+%\usepackage{multicol}
+%\usepackage{multibox}
+%\usepackage{rotating}
+%\usepackage{layout}
+%\usepackage{epstopdf}
+%\usepackage{afterpage}
+%\usepackage[left]{lineno}
+
+%% PNAStmpl.tex
+%% Template file to use for PNAS articles prepared in LaTeX
+%% Version: Apr 14, 2008
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BASIC CLASS FILE 
+
+\documentclass{pnastwo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL GRAPHICS STYLE FILE
+
+\usepackage[pdftex]{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL POSTSCRIPT FONT FILES
+
+\usepackage{pnastwof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ADDITIONAL OPTIONAL STYLE FILES
+
+%\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[font=large]{caption}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{color}
+%\usepackage{multibox}
+\usepackage{rotating}
+\usepackage{color}
+%\usepackage{lineno}
+\usepackage[left]{lineno}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL MACRO FILES
+
+\bibliographystyle{pnas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\sid}[1]{\textcolor{red}{\bf [#1]}}
+
+
+%% Don't type in anything in the following section:
+%%%%%%%%%%%%
+%% For PNAS Only:
+\contributor{Submitted to Proceedings
+of the National Academy of Sciences of the United States of America}
+\url{www.pnas.org/cgi/doi/10.1073/pnas.0709640104}
+\copyrightyear{2011}
+\issuedate{Issue Date}
+\volume{Volume}
+\issuenumber{Issue Number}
+%%%%%%%%%%%%
+
+\begin{document} 
+
+\linenumbers
+\setlength\linenumbersep{3pt}
+
+
+%\title{Ecological and evolutionary implications of starvation and body size} 
+
+%\title{Survival of the Stable: Dynamic Consequences of Starvation and Reproduction}
+
+%\title{Size Constraints on Starvation \& Reproduction Dynamics}
+
+%\title{Eco-evolutionary Consequences of Starvation and Reproduction: Survival
+%of the Stable}
+
+\title{Supporting Information for ``The dynamics of starvation and recovery''}%: Eco-evolutionary feedbacks}
+
+\author
+{Justin D. Yeakel\affil{1}{School of Natural Science, University of California Merced, Merced, CA} \affil{2}{The Santa Fe Institute, Santa Fe, NM}\affil{4}{To whom correspondence should be addressed: jdyeakel@gmail.com}, Christopher P. Kempes \affil{2}{The Santa Fe Institute, Santa Fe, NM}, \and Sidney Redner \affil{2}{The Santa Fe Institute, Santa Fe, NM}\affil{3}{Department of Physics, Boston University, Boston MA}
+}
+
+\contributor{Submitted to Proceedings of the National Academy of Sciences
+of the United States of America}
+
+\maketitle
+
+\begin{article}
+
+\section*{Explicit Consumption Derivation}
+If I were to write out an explicit mass balance for our system in a dimensional system it would be:
+\begin{align} 
+\begin{split}
+\dot{F} &= \lambda_{max}\frac{R}{k_{F}+R} F + \rho_{max}\frac{R}{k_{H}+R}H - \sigma (1-R)F,  \\
+\dot{H} &= \sigma (1-R)F - \rho_{max}\frac{R}{k_{H}+R}H - \mu H,  \\
+\dot{R} &= \alpha R\left(1-\frac{R}{C}\right) -\left(\frac{\rho_{max}}{Y}\frac{R}{k_{H}+R}H+\frac{\lambda_{max}}{Y}\frac{R}{k_{F}+R}F\right).
+\end{split}
+\end{align}
+(note this is not fully explicit because I don't know how to deal with the response of $\sigma$ to resources, although I have an idea for a derivation which may be necessary given the following approximations), where the $\lambda_{max}$ and $\rho_{max}$ terms scale with size and represent the maximum rate under infinite resources, and the $k$ terms are define how fast rates saturate to the maximum. In these equations $Y$ represents the quantity of resources required to build a unit of organism (e.g. gram of mammal produced per gram of grass consumed) such that if we pick $F$ and $H$ to have units of (g organisms $\cdot$ m$^{-2}$), then terms like $\frac{\rho_{max}}{Y}\frac{R}{k_{H}+R}H$ have units of (g R $\cdot$ m$^{-2}$ $\cdot$ s$^{-1}$ $\cdot$ number of individuals) which is just the net primary productivity (NPP), a natural unit for $\dot{R}$, and this also gives us the units of $R$ as (g $\cdot$ m$^{-2}$) which is also a natural unit and is just the biomass density. In this system of units $\alpha$ is the growth rate of $R$. (Note: these equations ignore a constant maintenance rate which is easy to add in.) First, before diving into the constant values and a general nondimensionalization, let's look at the limits of the above equations in relationship to our two-state model: for starving individuals $R<<k$ and the $\rho_{max}\frac{R}{k_{H}+R}H$ term reduces to $\rho_{max}/k_{H}RH$ which is what we had before except that $\rho_{max}$ has an extra constant in it. For full individuals,  $R>>k$ and the $\lambda_{max}\frac{R}{k_{F}+R} F$ term becomes simply $\lambda_{max}F$ which differs from our previous version of the last term in the third equation. We are justified in taking both of these limits at the same time because of how we are binning and defining nutritional state (Note: we can simulate the full dynamics with the $\frac{R}{k+R}$ terms and see how different things are). 
+
+Now consider the following nondimensionalization (ignoring the $\sigma (1-R)F$ terms which I don't have a dimensional form for yet),: $F^{*}=fF$, $H^{*}=fH$, $R^{*}=qR$, $t^{*}=st$ then we would have:
+\begin{align} 
+\begin{split}
+\frac{\partial F^{*}}{\partial t^{*}} &= \frac{1}{s}\left(\lambda_{max}\frac{R^{*}}{k_{F}q+R^{*}} F^{*} + \rho_{max}\frac{R^{*}}{k_{H}q+R^{*}}H^{*}\right),  \\
+\frac{\partial H^{*}}{\partial t^{*}} &=  \frac{1}{s}\left(- \rho_{max}\frac{R^{*}}{k_{H}q+R^{*}}H^{*} - \mu H^{*}\right),  \\
+\frac{\partial R^{*}}{\partial t^{*}} &=  \frac{1}{s}\left[\alpha R^{*}\left(1-\frac{R^{*}}{qC}\right) -\frac{q}{f}\left(\frac{\rho_{max}}{Y}\frac{R^{*}}{k_{H}q+R^{*}}H^{*}+\frac{\lambda_{max}}{Y}\frac{R^{*}}{k_{F}q+R^{*}}F^{*}\right)\right].
+\end{split}
+\end{align}
+Now there is a choice of factors that provides us with our original set of equations: if we pick $s=1$, $q=1/c$, and $f=q/Y$, then we are left with 
+\begin{align} 
+\begin{split}
+\frac{\partial F^{*}}{\partial t^{*}} &=\lambda_{max}\frac{R^{*}}{k_{F}/C+R^{*}} F^{*} + \rho_{max}\frac{R^{*}}{k_{H}/C+R^{*}}H^{*},  \\
+\frac{\partial H^{*}}{\partial t^{*}} &=  - \rho_{max}\frac{R^{*}}{k_{H}/C+R^{*}}H^{*} - \mu H^{*},  \\
+\frac{\partial R^{*}}{\partial t^{*}} &=  \alpha R^{*}\left(1-R^{*}\right) -\left(\rho_{max}\frac{R^{*}}{k_{H}/C+R^{*}}H^{*}+\lambda_{max}\frac{R^{*}}{k_{F}/C+R^{*}}F^{*}\right).
+\end{split}
+\end{align}
+and taking the above limits we have 
+\begin{align} 
+\begin{split}
+\frac{\partial F^{*}}{\partial t^{*}} &=\lambda_{max}F^{*} + \frac{\rho_{max}C}{k_{H}}R^{*}H^{*},  \\
+\frac{\partial H^{*}}{\partial t^{*}} &=  - \frac{\rho_{max}C}{k_{H}}R^{*}H^{*} - \mu H^{*},  \\
+\frac{\partial R^{*}}{\partial t^{*}} &=  \alpha R^{*}\left(1-R^{*}\right) -\left(\frac{\rho_{max}C}{k_{H}}R^{*}H^{*}+\lambda_{max}F^{*}\right).
+\end{split}
+\end{align}
+In summary, this is exactly our original system of equations (again with a $\lambda F$ instead of a $\lambda RF$ term in the last equation; and without dealing with the $\sigma (1-R)F$ term) and the only modification is that $\rho$ is adjusted by a factor of $C/k_{H}$ which should just be equal to $2$, and $F^{*}$, $H^{*}$, and $R^{*}$ are unites. 
+
+%Now let us return to the third equation which is the last place where we need to define constants slightly more mechanistically. In the dimensional version we would have the following:
+%\begin{equation}
+%\label{Rprime}
+%\dot{R^{\prime}} = \alpha^{\prime} R^{\prime}\left(1-\frac{R^{\prime}}{C}\right) - \delta^{\prime} \left(\frac{\rho_{max}}{Y}\frac{R^{\prime}}{k_{H}^{\prime}+R^{\prime}}H+\frac{\lambda_{max}}{Y}\frac{R^{\prime}}{k_{F}^{\prime}+R^{\prime}}F\right).
+%\end{equation}
+%If we pick $R^{\prime}$ to have units of (g $\cdot$ m$^{-2}$) then $C$ is the maximum biomass density (g $\cdot$ m$^{-2}$), and $\alpha^{\prime}$ will have units of s$^{-1}$. Nondimensionalizing 
+%as $R=R^{\prime}/C$ then leads to $\alpha=\alpha^{\prime}C$ with units of (g $\cdot$ m$^{-2}$ s$^{-1}$) such that the $\alpha$ in our system of equations can simply be treated as the net primary productivity (NPP). The second term of Equation \ref{Rprime} is mostly unaffected by the nondimensionalization except that the $k\equiv k^{\prime}/C$. Now $\alpha$ in our model is just the externally provided NPP values ranging between $1.59\times10^{-6}$ and $7.92\times10^{-5}$ (g s$^{-1}$ m$^{-2}$) where we can take $3\times10^{-5}$ (g s$^{-1}$ m$^{-2}$) as a typical value. 
+
+%Now $\rho_{max}/Y$ and $\lambda_{max}/Y$ both have units of (g R $\cdot$ s$^{-1}$ $\cdot$ g Organism $^{-1}$) and thus the unit of $\delta^{\prime}$ must be (g organism $\cdot$ Individuals $^{-1}$ $\cdot$ m$^{-2}$) 
+
+\section*{Parameter Values and Estimates}
+
+Many of the parameter values employed in our model have either been directly measured in previous studies or can be estimated from combining several previous studies. Here we outline previous measurements and simple estimates of the parameters. 
+
+\subsection*{Standard synthesis and metabolic parameters}
+
+Metabolic rate has been generally reported to follow an exponent close to $\eta=0.75$ (e.g. \cite{West:2001bv,moses2008rmo} and the supplement of \cite{hou}). We make this assumption in the current paper, although alternate exponents, which are know to vary between roughly $0.25$ and $1.5$ for single species \cite{moses2008rmo}, could be easily incorporated into our framework, and this variation is effectively handled by the $20\%$ variations that we consider around mean trends. It is important to note the exponent, because it not only defines several scalings in our framework but also the value of the metabolic normalization constant, $B_{0}$, given a set of data.  For mammals the metabolic normalization constant has been reported to vary between $0.018$ (W g$^{-0.75}$) and $0.047$ (W g$^{-0.75}$) \cite{hou,West:2001bv}, where the former value represents basal metabolic rate and the latter represents the field metabolic rate. We employ the field metabolic rate for our NSM model which is appropriate for active mammals (Table 1).
+
+The energy to synthesize a unit of biomass, $E_{m}$, has been reported to vary between $1800$ to $9500$ (J g$^{-1}$) (e.g. \cite{West:2001bv,moses2008rmo,hou}) in mammals with a mean value across many taxonomic groups of $5,774$ (J g$^{-1}$) \cite{moses2008rmo}. The unit energy available during starvation, $E^{\prime}$, could range between $7000$ (J g$^{-1}$), the return of the total energy stored during ontogeny \cite{hou} to a biochemical upper bound of $E^{\prime}=36,000$ (J g$^{-1}$) for the energetics of palmitate \cite{stryer,hou}. For our calculations we use the measured value for bulk tissues of $7000$ which assumes that the energy stored during ontogeny is returned during starvation \cite{hou}. 
+
+For the scaling of body composition it has been shown that fat mass follows $M_{\rm fat}=f_{0}M^{\gamma}$, with measured  relationships following  $0.018M^{1.25}$ \cite{Dunbrack:1993ec}, $0.02M^{1.19}$ \cite{Lindstedt:1985hm}, and $0.026M^{1.14}$ \cite{Lindstedt:2002td}. We use the values from \cite{Lindstedt:1985hm} which falls in the middle of this range. Similarly, the muscle mass follows $M_{\rm musc}=u_{0}M^{\zeta}$ with $u_{0}=0.383$ and $\zeta=1.00$ \cite{Lindstedt:2002td}.
+
+The final parameters that we must consider connect the resource growth rate to the total metabolic rate of an organism. That is, we are interested in the relative rates of resource recovery and consumption by the total population. From \cite{allen2002global} the total resource use of a population with an individual body size of $M$ is given by $B_{pop}=0.00061x^{-0.03}$ (W m$^{-2}$). Considering an energy density of $18200$ (J g$^{-1}$) of grass \cite{estermann} and an NPP between and $1.59\times10^{-6}$ and $7.92\times10^{-5}$ (g s$^{-1}$ m$^{-2}$) would give a range of resource rates between  $0.029$ and $1.44$ (W m$^{-2}$). This gives a ratio of total resource consumption to supply rates between $0.00042$ and $0.021$, and we used a value of $0.002$ in our calculations and simulations.
+
+%For the growth rate $\lambda$ we consider the standard model of $\ln\left(\upsilon\right)/t_{\lambda}$
+
+%More complicated models of fecundity (which, for example, account for the average length of adulthood and the number of individuals produced over this span) could be employed. However, the scaling of population growth rate has been studied in detail before and follows a relationship of $$ which matches the theory well for $\phi=.95$ and $=$.
+
+%In our calculations we include $20\%$ variation around this value which could account for differences in efficiency during 
+
+ \begin{table}[h]
+\caption{Parameter values for mammals}
+\label{param}
+    \begin{center}
+    \small
+     \begin{tabular}{ p{1.2cm} p{3.2cm} l p{2.2cm}|}
+     \hline
+     Parameter & Value & References  \\
+     \hline
+   $\eta$ & $3/4$  &  (e.g. \cite{West:2001bv,moses2008rmo,hou}) \\ 
+   $E_{m}$ & $5774$ (J gram$^{-1}$)  &  \cite{moses2008rmo,West:2001bv,hou} \\ 
+   $E_{m}^{\prime}$ & $36,000$  & \cite{stryer,hou} \\ 
+   $B_{0}$ & $0.047$ (W g$^{-0.75}$)    & \cite{hou}  \\
+%   $a$ & $1.78\times10^{-6}$  \quad \quad \\ 
+%   $\lambda_{0}$ & $3.39\times10^{-7}$ (s$^{-1}$ gram$^{1-\eta}$) \quad \quad \\ 
+   $\gamma$ & $1.19$ & \cite{Lindstedt:1985hm} \\ 
+   $f_{0}$ & $0.02$ & \cite{Lindstedt:1985hm}\\ 
+   $\zeta$ & $1.00$  & \cite{Lindstedt:2002td} \\ 
+   $u_{0}$ & $0.38$  & \cite{Lindstedt:2002td} \\ 
+      
+   \hline
+    \end{tabular}
+    \end{center}
+   \end{table}
+
+
+\subsection*{Rate equations for invaders with modified body mass}
+If an invading subset of the resident population of mass $M$ has an altered mass $M^\prime = M(1+\chi)$ where $\chi$ varies between $[-1,1]$ ($\chi<0$ denotes a leaner invader; $\chi > 0$ denotes an invader with more endogenous reserves), the invading population will have the following modified rates: $\sigma^\prime = \sigma(M^\prime)$, $\rho^\prime = \rho(M^\prime)$, $\beta^\prime = \beta(M^\prime)$.
+Because we are assuming that the invading population is only modifying its endogenous energetic stores, we assume that the proportion of body mass that is non-adipose tissue remains the same as the resident population.
+This assumption leads to the following modified timescales:
+
+\begin{align}
+t_{\sigma^\prime} &= \frac{-M^{1/4}}{B_0/E_m^\prime}\log \left(\frac{\epsilon_\sigma}{\chi +1}\right), \\ \nonumber
+t_{\rho^\prime} &= \frac{-4 M^{1/4} }{B_0/E_m^\prime}\log \left(\frac{1-( \epsilon_\lambda(\chi +1))^{1/4}}{1-(\epsilon_\lambda \epsilon_\sigma)^{1/4}}\right), \\ \nonumber
+t_{\beta^\prime} &= \xi B_0\left(M(\chi + 1)\right)^{3/4}.
+\end{align}
+
+
+
+
+\bibliography{aa_starving_supplement}
+
+
+
+
+
+
+
+%\let\cleardoublepage\clearpage
+
+%FIGURE 1
+
+
+
+
+\end{article}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

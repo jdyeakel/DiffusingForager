@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     13256,        335]
-NotebookOptionsPosition[     12798,        313]
-NotebookOutlinePosition[     13156,        329]
-CellTagsIndexPosition[     13113,        326]
+NotebookDataLength[     13379,        334]
+NotebookOptionsPosition[     12921,        312]
+NotebookOutlinePosition[     13279,        328]
+CellTagsIndexPosition[     13236,        325]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -209,18 +209,16 @@ Cell[BoxData[
      "\[IndentingNewLine]", 
      RowBox[{"Resourcegrowth", " ", "=", " ", 
       RowBox[{"ts", "*", "0.5"}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
+     RowBox[{"ConsumerEfficiency", " ", "=", " ", "1"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"(*", "INVADERS", "*)"}], "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
      RowBox[{"{", 
       RowBox[{
       "Growth", ",", "Starvation", ",", "Mortality", ",", "Recovery", ",", 
-       "Maintenance", ",", "Resourcegrowth"}], 
-      RowBox[{"(*", 
-       RowBox[{
-       ",", "InvaderStarvation", ",", "InvaderRecovery", ",", 
-        "InvaderMaintenance"}], "*)"}], "}"}]}], "\[IndentingNewLine]", 
-    ")"}]}], ";"}]], "Input",
+       "Maintenance", ",", "Resourcegrowth", ",", "InvaderStarvation", ",", 
+       "InvaderRecovery", ",", "InvaderMaintenance"}], "}"}]}], 
+    "\[IndentingNewLine]", ")"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.6800078828349943`*^9, 3.6800078849420633`*^9}, 
    3.680008005081164*^9, {3.680008899507368*^9, 3.68000890901729*^9}, {
    3.6800089723361673`*^9, 3.680009095199892*^9}, {3.680009181367654*^9, 
@@ -245,7 +243,8 @@ Cell[BoxData[
    3.680274866611525*^9}, 3.680274923380657*^9, {3.6802753483811693`*^9, 
    3.6802753915686703`*^9}, {3.6802758237307043`*^9, 3.680275824390295*^9}, {
    3.6802899531665287`*^9, 3.6802899767015142`*^9}, {3.6802900221637907`*^9, 
-   3.680290032723241*^9}}],
+   3.680290032723241*^9}, {3.685740649951754*^9, 3.68574065803755*^9}, 
+   3.685740756775432*^9, 3.685741272511938*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -328,8 +327,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[400, 13, 9606, 234, 1081, "Input"],
-Cell[10009, 249, 2785, 62, 369, "Input"]
+Cell[400, 13, 9729, 233, 1098, "Input"],
+Cell[10132, 248, 2785, 62, 369, "Input"]
 }
 ]
 *)
