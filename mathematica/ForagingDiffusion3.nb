@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    768528,      14642]
-NotebookOptionsPosition[    762244,      14448]
-NotebookOutlinePosition[    762601,      14464]
-CellTagsIndexPosition[    762558,      14461]
+NotebookDataLength[    772155,      14696]
+NotebookOptionsPosition[    765686,      14498]
+NotebookOutlinePosition[    766045,      14514]
+CellTagsIndexPosition[    766002,      14511]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2814,9 +2814,9 @@ pSKm
                     0.4731986666666667], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.368417, 0.506779, 0.709798]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -2860,9 +2860,9 @@ pSKm
                     0.587148, 0.40736066666666665`, 0.09470066666666668], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.880722, 0.611041, 0.142051]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -2906,9 +2906,9 @@ pSKm
                     0.37345400000000006`, 0.461046, 0.12992333333333334`], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.560181, 0.691569, 0.194885]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -2953,9 +2953,9 @@ pSKm
                     0.13945266666666667`], FrameTicks -> None, 
                     PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.922526, 0.385626, 0.209179]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3857,7 +3857,7 @@ $CellContext`\[Sigma]))}}, {$CellContext`\[Alpha] ->
           PlotLabel -> $CellContext`MaxEig]}), 
       "Specifications" :> {{{$CellContext`sigma$$, 0.5}, 0, 1, 0.001}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{963., {190., 195.}},
+     ImageSizeCache->{963., {191., 197.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -3879,9 +3879,8 @@ $CellContext`\[Sigma]))}}, {$CellContext`\[Alpha] ->
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], ":", 
+  " ", "\<\"The first two levels of \
 \[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
 transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
@@ -3893,37 +3892,34 @@ ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.676980064991561*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.67698006506033*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Could not combine the graphics objects in \
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], ":", 
+  " ", "\<\"Could not combine the graphics objects in \
 \[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
 \\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
@@ -3944,9 +3940,8 @@ ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], ":", 
+  " ", "\<\"The first two levels of \
 \[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
 transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
@@ -3958,37 +3953,34 @@ ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.6769807037283*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.6769807038695917`*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Could not combine the graphics objects in \
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], ":", 
+  " ", "\<\"Could not combine the graphics objects in \
 \[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
 \\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
@@ -4009,9 +4001,8 @@ ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], ":", 
+  " ", "\<\"The first two levels of \
 \[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
 transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
@@ -4023,37 +4014,34 @@ ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.676988932672546*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.6769889327708*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Could not combine the graphics objects in \
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], ":", 
+  " ", "\<\"Could not combine the graphics objects in \
 \[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
 \\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
@@ -4074,9 +4062,8 @@ ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], ":", 
+  " ", "\<\"The first two levels of \
 \[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
 transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
@@ -4088,37 +4075,34 @@ ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.676988983545485*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\\
-)\\)]\\)\\), \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\
-\[NoBreak] is not a list of numbers or pairs of numbers. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
-\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], ":", 
+  " ", "\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[\
+JacSpecSol]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.676988983662108*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Could not combine the graphics objects in \
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], ":", 
+  " ", "\<\"Could not combine the graphics objects in \
 \[NoBreak]\\!\\(Show[\\(\\(\\(\\({\\(\\(ListPlot[\\(\\(\\(\\(Transpose[\\(\\({\
 \\(\\(Re[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\), \
 \\(\\(Im[\\(\\(Eigenvalues[JacSpecSol]\\)\\)]\\)\\)}\\)\\)]\\)\\), \
@@ -4134,7 +4118,75 @@ True\\)\\), \\(\\(AspectRatio \[Rule] 1\\)\\), \\(\\(FrameLabel \[Rule] \
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", ButtonNote -> \
 \\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.676988983693698*^9}]
+ CellChangeTimes->{3.676988983693698*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Transpose","nmtx",
+   "\"The first two levels of \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"Re\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \
+\\\"[\\\", \\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Im\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \\\"[\\\", \
+\\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]\\) cannot be \
+transposed.\"",2,223,134,19289688621076036531,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6961818404944677`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","lpn",
+   "\"\\!\\(\\*RowBox[{\\\"Transpose\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"Re\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \
+\\\"[\\\", \\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Im\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \\\"[\\\", \
+\\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]\\) \
+is not a list of numbers or pairs of numbers.\"",2,223,135,
+   19289688621076036531,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696181840570978*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ListPlot","lpn",
+   "\"\\!\\(\\*RowBox[{\\\"Transpose\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"Re\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \
+\\\"[\\\", \\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Im\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \\\"[\\\", \
+\\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]\\) \
+is not a list of numbers or pairs of numbers.\"",2,223,136,
+   19289688621076036531,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696181840646109*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Show","gcomb",
+   "\"Could not combine the graphics objects in \
+\\!\\(\\*RowBox[{\\\"Show\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"ListPlot\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"Transpose\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"Re\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \
+\\\"[\\\", \\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Im\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \\\"[\\\", \
+\\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"PlotRange\\\", \\\"\[Rule]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"-\\\", \\\"1\\\"}], \\\",\\\", \
+\\\"1\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"-\
+\\\", \\\"1\\\"}], \\\",\\\", \\\"1\\\"}], \\\"}\\\"}]}], \\\"}\\\"}]}]}], \\\
+\"]\\\"}], \\\",\\\", GraphicsBox[List[GrayLevel[0.85`], Opacity[0.3`], \
+DiskBox[List[0, 0]]]]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"ImageSize\\\", \
+\\\"\[Rule]\\\", \\\"300\\\"}], \\\",\\\", RowBox[{\\\"Frame\\\", \\\"\[Rule]\
+\\\", \\\"True\\\"}], \\\",\\\", RowBox[{\\\"AspectRatio\\\", \
+\\\"\[Rule]\\\", \\\"1\\\"}], \\\",\\\", RowBox[{\\\"FrameLabel\\\", \\\"\
+\[Rule]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"Real part\\\\\\\"\\\", \\\
+\",\\\", \\\"\\\\\\\"Imaginary part\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\",\\\", \
+RowBox[{\\\"PlotLabel\\\", \\\"\[Rule]\\\", RowBox[{\\\"Round\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"Re\\\", \\\"[\\\", RowBox[{\\\"Eigenvalues\\\", \
+\\\"[\\\", \\\"JacSpecSol\\\", \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"1.`*^-6\\\"}], \\\"]\\\"}]}]}], \\\"]\\\"}]\\).\"",2,223,137,
+   19289688621076036531,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.696181840663763*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -4671,7 +4723,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
                 StandardForm],
-               ImageSizeCache->{49., {0., 8.}}],
+               ImageSizeCache->{50., {0., 8.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -4701,7 +4753,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
                 StandardForm],
-               ImageSizeCache->{54., {0., 8.}}],
+               ImageSizeCache->{56., {0., 8.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -4732,7 +4784,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
                 StandardForm],
-               ImageSizeCache->{40., {0., 8.}}],
+               ImageSizeCache->{42., {0., 8.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -4763,7 +4815,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
                 StandardForm],
-               ImageSizeCache->{72., {0., 8.}}],
+               ImageSizeCache->{74., {0., 8.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -4841,24 +4893,26 @@ Try Solving numerically with a = 1\
  CellChangeTimes->{{3.636737525783757*^9, 3.636737558522097*^9}, {
   3.636744978724807*^9, 3.636744979061075*^9}}],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{"Hsp", " ", "=", " ", 
-   RowBox[{"HopfAnalytic", "/.", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"\[Alpha]", "\[Rule]", "0.5"}], ",", 
-      RowBox[{"\[Mu]", "\[Rule]", "0.1"}], ",", 
-      RowBox[{"m", "\[Rule]", "MR"}], ",", 
-      RowBox[{"\[Lambda]", "\[Rule]", "0.2"}]}], "}"}]}]}], ";", " ", 
+  RowBox[{
+   RowBox[{"Hsp", " ", "=", " ", 
+    RowBox[{"HopfAnalytic", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\[Alpha]", "\[Rule]", "0.5"}], ",", 
+       RowBox[{"\[Mu]", "\[Rule]", "0.1"}], ",", 
+       RowBox[{"m", "\[Rule]", "MR"}], ",", 
+       RowBox[{"\[Lambda]", "\[Rule]", "0.2"}]}], "}"}]}]}], ";"}], " ", 
   RowBox[{"(*", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"\[Alpha]", "\[Rule]", "0.5"}], ",", 
      RowBox[{"\[Mu]", "\[Rule]", "0.2"}], ",", 
      RowBox[{"m", "\[Rule]", "MR"}], ",", 
-     RowBox[{"\[Lambda]", "\[Rule]", "0.2"}]}], "}"}], "*)"}], 
-  "\[IndentingNewLine]", 
+     RowBox[{"\[Lambda]", "\[Rule]", "0.2"}]}], "}"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"curves", " ", "=", " ", 
    RowBox[{"Table", "[", 
     RowBox[{
@@ -4867,7 +4921,7 @@ Cell[BoxData[
        RowBox[{"[", "4", "]"}], "]"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"MR", ",", "0.1", ",", "1", ",", "0.1"}], "}"}]}], "]"}]}], 
-  ";"}]], "Input",
+  ";"}]}], "Input",
  CellChangeTimes->{{3.646400690908239*^9, 3.646400783799788*^9}, {
    3.6464008170780478`*^9, 3.646400863708932*^9}, {3.646401262660769*^9, 
    3.646401282964713*^9}, {3.646401386010373*^9, 3.64640140294523*^9}, {
@@ -5773,11 +5827,12 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     RGBColor[0.11194000000000001`, 0., 0.20111400000000001`], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], "RGBColor[0.16791, 0., 0.301671]"],
-                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
-                    Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
+                    "RGBColor[0.16791, 0., 0.301671]"], Appearance -> None, 
+                    BaseStyle -> {}, BaselinePosition -> Baseline, 
+                    DefaultBaseStyle -> {}, ButtonFunction :> 
                     With[{Typeset`box$ = EvaluationBox[]}, 
                     If[
                     Not[
@@ -5818,9 +5873,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.1487144, 0.016203253333333334`, 0.28118786666666673`], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.22307159999999998, 0.02430488, \
 0.42178180000000004]"], Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -5867,9 +5922,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.3612617333333334], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.27823319999999996, 0.04860976, \
 0.5418926000000001]"], Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -5914,9 +5969,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.1944916, 0.07609317333333335, 0.43214440000000004`], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.2917374, 0.11413976, 0.6482166]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -5959,9 +6014,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.1757228, 0.14726325333333334`, 0.4938358666666667], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.2635842, 0.22089488000000002, 0.7407538]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -6004,9 +6059,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.156954, 0.21843333333333334`, 0.5555273333333334], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.235431, 0.32765, 0.833291]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -6050,9 +6105,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.5928049333333334], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.2541886, 0.4613372, 0.8892074]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -6096,9 +6151,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.6300825333333333], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.2729462, 0.5950244, 0.9451238]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -6142,9 +6197,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.6521374666666667], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.3802722, 0.7144184, 0.9782062]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -6188,9 +6243,9 @@ sRfeP7hh1t3sK+8/SWhvJGjj3j8AAAAAAADwP3Z3F0s=
                     0.6589697333333333], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.5761666, 0.8195192, 0.9884546]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -6310,8 +6365,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.803921568627451, 0.30980392156862746, 0.07058823529411765]"],
      Appearance->None,
@@ -6355,8 +6411,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[1., 0.7254901960784313, 0.09411764705882353]"],
      Appearance->None,
@@ -6400,8 +6457,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.9568627450980393, 0.796078431372549, 0.13725490196078433]"],
      
@@ -6447,8 +6505,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.9529411764705882, 0.9803921568627451, 0.5725490196078431]"],
      
@@ -6492,8 +6551,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.4117647058823529, 0.592156862745098, 0.4]"],
      Appearance->None,
@@ -6537,8 +6597,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.30980392156862746, 0.47058823529411764, \
 0.34509803921568627]"],
@@ -6584,8 +6645,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.2980392156862745, 0.28627450980392155, 0.5490196078431373]"],
      Appearance->None,
@@ -6630,8 +6692,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.27058823529411763, 0.1843137254901961, 0.3764705882352941]"],
      Appearance->None,
@@ -6676,8 +6739,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.8784313725490196, 0.10196078431372549, \
 0.20784313725490197]"],
@@ -6722,8 +6786,9 @@ Cell[BoxData[
         FrameTicks->None,
         ImageSize->
          Dynamic[{
-          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-           Magnification]}],
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
         PlotRangePadding->None], "\[InvisibleSpace]"}],
       "RGBColor[0.8, 0.058823529411764705, 0.07450980392156863]"],
      Appearance->None,
@@ -9943,9 +10008,8 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Power", "::", "infy"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Infinite expression \\!\\(1\\/0.`\\^\\(1/3\\)\\) \
+   RowBox[{"Power", "::", "infy"}], "MessageName"], ":", 
+  " ", "\<\"Infinite expression \\!\\(1\\/0.`\\^\\(1/3\\)\\) \
 encountered.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
  CellChangeTimes->{3.6663737714298677`*^9}],
@@ -9953,9 +10017,8 @@ encountered.\"\>"}]], "Message", "MSG",
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Power", "::", "infy"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Infinite expression \\!\\(1\\/0.`\\^\\(1/3\\)\\) \
+   RowBox[{"Power", "::", "infy"}], "MessageName"], ":", 
+  " ", "\<\"Infinite expression \\!\\(1\\/0.`\\^\\(1/3\\)\\) \
 encountered.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
  CellChangeTimes->{3.666373771454132*^9}],
@@ -9963,9 +10026,8 @@ encountered.\"\>"}]], "Message", "MSG",
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Power", "::", "infy"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Infinite expression \\!\\(1\\/0.`\\^\\(1/3\\)\\) \
+   RowBox[{"Power", "::", "infy"}], "MessageName"], ":", 
+  " ", "\<\"Infinite expression \\!\\(1\\/0.`\\^\\(1/3\\)\\) \
 encountered.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
  CellChangeTimes->{3.6663737714940434`*^9}],
@@ -9973,9 +10035,8 @@ encountered.\"\>"}]], "Message", "MSG",
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(Power :: infy\\), \
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \\!\\(\\*StyleBox[\\(Power :: infy\\), \
 \\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
 "Message", "MSG",
  ShowCellLabel->True,
@@ -9984,44 +10045,37 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \
-\\!\\(\\(\\(-0.0666666535714308`\\)\\) + ComplexInfinity + ComplexInfinity\\) \
-encountered.\"\>"}]], "Message", "MSG",
+   RowBox[{"Infinity", "::", "indet"}], "MessageName"], ":", 
+  " ", "\<\"Indeterminate expression \\!\\(\\(\\(-0.0666666535714308`\\)\\) + \
+ComplexInfinity + ComplexInfinity\\) encountered.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
  CellChangeTimes->{3.666373771593655*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \
-\\!\\(\\(\\(-0.0666666535714308`\\)\\) + ComplexInfinity + ComplexInfinity\\) \
-encountered.\"\>"}]], "Message", "MSG",
+   RowBox[{"Infinity", "::", "indet"}], "MessageName"], ":", 
+  " ", "\<\"Indeterminate expression \\!\\(\\(\\(-0.0666666535714308`\\)\\) + \
+ComplexInfinity + ComplexInfinity\\) encountered.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
  CellChangeTimes->{3.666373771644224*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \
-\\!\\(\\(\\(-0.0666666535714308`\\)\\) + ComplexInfinity + ComplexInfinity\\) \
-encountered.\"\>"}]], "Message", "MSG",
+   RowBox[{"Infinity", "::", "indet"}], "MessageName"], ":", 
+  " ", "\<\"Indeterminate expression \\!\\(\\(\\(-0.0666666535714308`\\)\\) + \
+ComplexInfinity + ComplexInfinity\\) encountered.\"\>"}]], "Message", "MSG",
  ShowCellLabel->True,
  CellChangeTimes->{3.666373771693255*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \\!\\(\\*StyleBox[\\(Infinity :: \
-indet\\), \\\"MessageName\\\"]\\) will be suppressed during this calculation.\
-\"\>"}]], "Message", "MSG",
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \\!\\(\\*StyleBox[\\(Infinity :: indet\\), \
+\\\"MessageName\\\"]\\) will be suppressed during this calculation.\"\>"}]], \
+"Message", "MSG",
  ShowCellLabel->True,
  CellChangeTimes->{3.666373771744637*^9}],
 
@@ -12836,13 +12890,13 @@ Aj058HyhSuZVjXahfhTV0LvU+s8clOO0fMufXpRkjCtvx7jyZRhXvrOyuEJF
 gQ5IxzKMJsoEiQfZbKinom3TclA+WA5qCHtvyE/svSH92HtDTEcf5joQBRBY
 vszVRDQD8B6x3Xe/vfu7bz2M7VvTsH3rbsxf6pjmL/0fXVOhDw==
     "]],
-  AutomaticImageSize->True,
   Axes->True,
   AxesLabel->{None, None, None},
   BoxRatios->{1, 1, 0.4},
   DisplayFunction->Identity,
   FaceGridsStyle->Automatic,
   ImageSize->{371.6394593472259, 294.92084931008867`},
+  ImageSizeRaw->Automatic,
   Method->{"DefaultBoundaryStyle" -> Directive[
       GrayLevel[0.3]], "RotationControl" -> "Globe"},
   PlotRange->{{0, 1}, {0, 2}, {-0.1361725839726618, 7.362134777752165}},
@@ -12919,27 +12973,23 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Part", "::", "partd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part specification \[NoBreak]\\!\\(Hsp2 \
-\[LeftDoubleBracket] 4 \[RightDoubleBracket]\\)\[NoBreak] is longer than \
-depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\
-\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
-\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"Part", "::", "partd"}], "MessageName"], ":", 
+  " ", "\<\"Part specification \[NoBreak]\\!\\(Hsp2 \[LeftDoubleBracket] 4 \
+\[RightDoubleBracket]\\)\[NoBreak] is longer than depth of object. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/partd\\\", \
+ButtonNote -> \\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.669661213689587*^9, 3.674818959548636*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Part", "::", "partd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part specification \[NoBreak]\\!\\(Hsp2 \
-\[LeftDoubleBracket] 4 \[RightDoubleBracket]\\)\[NoBreak] is longer than \
-depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\
-\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
-\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"Part", "::", "partd"}], "MessageName"], ":", 
+  " ", "\<\"Part specification \[NoBreak]\\!\\(Hsp2 \[LeftDoubleBracket] 4 \
+\[RightDoubleBracket]\\)\[NoBreak] is longer than depth of object. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/partd\\\", \
+ButtonNote -> \\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.669661213689587*^9, 3.674818959602809*^9}]
 }, Open  ]],
 
@@ -14215,12 +14265,12 @@ jYMWB3dFYWECGN4IrKDy45C+ugo7p5LqOKAutrTRi5LB3/iPa0c=
                     RectangleBox[{0, -1}, {2, 1}]}}, AspectRatio -> 1, Frame -> 
                     True, FrameStyle -> GrayLevel[0.], FrameTicks -> None, 
                     PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], "GrayLevel[0]"], Appearance -> 
-                    None, BaseStyle -> {}, BaselinePosition -> Baseline, 
-                    DefaultBaseStyle -> {}, ButtonFunction :> 
-                    With[{Typeset`box$ = EvaluationBox[]}, 
+                    Dynamic[{Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
+                    "GrayLevel[0]"], Appearance -> None, BaseStyle -> {}, 
+                    BaselinePosition -> Baseline, DefaultBaseStyle -> {}, 
+                    ButtonFunction :> With[{Typeset`box$ = EvaluationBox[]}, 
                     If[
                     Not[
                     AbsoluteCurrentValue["Deployed"]], 
@@ -14259,12 +14309,12 @@ jYMWB3dFYWECGN4IrKDy45C+ugo7p5LqOKAutrTRi5LB3/iPa0c=
                     RectangleBox[{0, -1}, {2, 1}]}}, AspectRatio -> 1, Frame -> 
                     True, FrameStyle -> GrayLevel[0.], FrameTicks -> None, 
                     PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], "GrayLevel[0]"], Appearance -> 
-                    None, BaseStyle -> {}, BaselinePosition -> Baseline, 
-                    DefaultBaseStyle -> {}, ButtonFunction :> 
-                    With[{Typeset`box$ = EvaluationBox[]}, 
+                    Dynamic[{Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
+                    "GrayLevel[0]"], Appearance -> None, BaseStyle -> {}, 
+                    BaselinePosition -> Baseline, DefaultBaseStyle -> {}, 
+                    ButtonFunction :> With[{Typeset`box$ = EvaluationBox[]}, 
                     If[
                     Not[
                     AbsoluteCurrentValue["Deployed"]], 
@@ -14303,12 +14353,12 @@ jYMWB3dFYWECGN4IrKDy45C+ugo7p5LqOKAutrTRi5LB3/iPa0c=
                     RectangleBox[{0, -1}, {2, 1}]}}, AspectRatio -> 1, Frame -> 
                     True, FrameStyle -> GrayLevel[0.], FrameTicks -> None, 
                     PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], "GrayLevel[0]"], Appearance -> 
-                    None, BaseStyle -> {}, BaselinePosition -> Baseline, 
-                    DefaultBaseStyle -> {}, ButtonFunction :> 
-                    With[{Typeset`box$ = EvaluationBox[]}, 
+                    Dynamic[{Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
+                    "GrayLevel[0]"], Appearance -> None, BaseStyle -> {}, 
+                    BaselinePosition -> Baseline, DefaultBaseStyle -> {}, 
+                    ButtonFunction :> With[{Typeset`box$ = EvaluationBox[]}, 
                     If[
                     Not[
                     AbsoluteCurrentValue["Deployed"]], 
@@ -14347,12 +14397,12 @@ jYMWB3dFYWECGN4IrKDy45C+ugo7p5LqOKAutrTRi5LB3/iPa0c=
                     RectangleBox[{0, -1}, {2, 1}]}}, AspectRatio -> 1, Frame -> 
                     True, FrameStyle -> GrayLevel[0.], FrameTicks -> None, 
                     PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], "GrayLevel[0]"], Appearance -> 
-                    None, BaseStyle -> {}, BaselinePosition -> Baseline, 
-                    DefaultBaseStyle -> {}, ButtonFunction :> 
-                    With[{Typeset`box$ = EvaluationBox[]}, 
+                    Dynamic[{Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
+                    "GrayLevel[0]"], Appearance -> None, BaseStyle -> {}, 
+                    BaselinePosition -> Baseline, DefaultBaseStyle -> {}, 
+                    ButtonFunction :> With[{Typeset`box$ = EvaluationBox[]}, 
                     If[
                     Not[
                     AbsoluteCurrentValue["Deployed"]], 
@@ -14391,12 +14441,12 @@ jYMWB3dFYWECGN4IrKDy45C+ugo7p5LqOKAutrTRi5LB3/iPa0c=
                     RectangleBox[{0, -1}, {2, 1}]}}, AspectRatio -> 1, Frame -> 
                     True, FrameStyle -> GrayLevel[0.], FrameTicks -> None, 
                     PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], "GrayLevel[0]"], Appearance -> 
-                    None, BaseStyle -> {}, BaselinePosition -> Baseline, 
-                    DefaultBaseStyle -> {}, ButtonFunction :> 
-                    With[{Typeset`box$ = EvaluationBox[]}, 
+                    Dynamic[{Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], "\[InvisibleSpace]"}], 
+                    "GrayLevel[0]"], Appearance -> None, BaseStyle -> {}, 
+                    BaselinePosition -> Baseline, DefaultBaseStyle -> {}, 
+                    ButtonFunction :> With[{Typeset`box$ = EvaluationBox[]}, 
                     If[
                     Not[
                     AbsoluteCurrentValue["Deployed"]], 
@@ -14447,9 +14497,9 @@ jYMWB3dFYWECGN4IrKDy45C+ugo7p5LqOKAutrTRi5LB3/iPa0c=
 }, Open  ]]
 },
 WindowSize->{1091, 855},
-WindowMargins->{{Automatic, 6}, {Automatic, 0}},
-FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
-2014)",
+WindowMargins->{{72, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -14463,20 +14513,20 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 76, 1, 28, "Input"],
+Cell[558, 20, 76, 1, 32, "Input"],
 Cell[CellGroupData[{
-Cell[659, 25, 6626, 141, 233, "Input"],
+Cell[659, 25, 6626, 141, 285, "Input"],
 Cell[7288, 168, 113964, 1879, 219, "Output"]
 }, Open  ]],
 Cell[121267, 2050, 124, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[121416, 2055, 2212, 51, 97, "Input"],
-Cell[123631, 2108, 2793, 68, 52, "Output"]
+Cell[121416, 2055, 2212, 51, 117, "Input"],
+Cell[123631, 2108, 2793, 68, 50, "Output"]
 }, Open  ]],
-Cell[126439, 2179, 551, 13, 46, "Input"],
+Cell[126439, 2179, 551, 13, 54, "Input"],
 Cell[CellGroupData[{
-Cell[127015, 2196, 1036, 19, 28, "Input"],
-Cell[128054, 2217, 1166, 20, 28, "Output"]
+Cell[127015, 2196, 1036, 19, 32, "Input"],
+Cell[128054, 2217, 1166, 20, 32, "Output"]
 }, Open  ]],
 Cell[129235, 2240, 153, 3, 30, "Text"],
 Cell[129391, 2245, 382, 6, 28, "Input"],
@@ -14493,159 +14543,162 @@ Cell[134737, 2371, 362, 10, 49, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[135136, 2386, 6747, 140, 250, "Input"],
-Cell[141886, 2528, 25907, 507, 218, "Output"]
+Cell[141886, 2528, 25915, 507, 218, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[167830, 3040, 294, 6, 28, "Input"],
-Cell[168127, 3048, 250, 3, 28, "Output"]
+Cell[167838, 3040, 294, 6, 28, "Input"],
+Cell[168135, 3048, 250, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[168414, 3056, 302, 7, 28, "Input"],
-Cell[168719, 3065, 301, 5, 28, "Output"]
+Cell[168422, 3056, 302, 7, 28, "Input"],
+Cell[168727, 3065, 301, 5, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[169057, 3075, 2543, 66, 148, "Input"],
-Cell[171603, 3143, 1792, 48, 28, "Output"]
+Cell[169065, 3075, 2543, 66, 148, "Input"],
+Cell[171611, 3143, 1792, 48, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[173432, 3196, 131, 2, 28, "Input"],
-Cell[173566, 3200, 2228, 59, 63, "Output"]
+Cell[173440, 3196, 131, 2, 28, "Input"],
+Cell[173574, 3200, 2228, 59, 63, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[175831, 3264, 719, 19, 46, "Input"],
-Cell[176553, 3285, 124, 2, 28, "Output"]
+Cell[175839, 3264, 719, 19, 46, "Input"],
+Cell[176561, 3285, 124, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[176714, 3292, 102, 1, 28, "Input"],
-Cell[176819, 3295, 6454, 180, 138, "Output"]
+Cell[176722, 3292, 102, 1, 28, "Input"],
+Cell[176827, 3295, 6454, 180, 138, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[183310, 3480, 176, 4, 28, "Input"],
-Cell[183489, 3486, 3075, 86, 97, "Output"]
+Cell[183318, 3480, 176, 4, 28, "Input"],
+Cell[183497, 3486, 3075, 86, 97, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[186601, 3577, 652, 16, 28, "Input"],
-Cell[187256, 3595, 1603, 48, 81, "Output"]
+Cell[186609, 3577, 652, 16, 28, "Input"],
+Cell[187264, 3595, 1603, 48, 81, "Output"]
 }, Open  ]],
-Cell[188874, 3646, 173, 4, 30, "Text"],
+Cell[188882, 3646, 173, 4, 30, "Text"],
 Cell[CellGroupData[{
-Cell[189072, 3654, 521, 14, 28, "Input"],
-Cell[189596, 3670, 863, 22, 50, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[190496, 3697, 4640, 111, 318, "Input"],
-Cell[195139, 3810, 3439, 66, 402, "Output"],
-Cell[198581, 3878, 573, 12, 24, "Message"],
-Cell[199157, 3892, 578, 12, 24, "Message"],
-Cell[199738, 3906, 577, 12, 24, "Message"],
-Cell[200318, 3920, 1178, 21, 160, "Message"],
-Cell[201499, 3943, 572, 12, 24, "Message"],
-Cell[202074, 3957, 576, 12, 24, "Message"],
-Cell[202653, 3971, 580, 12, 24, "Message"],
-Cell[203236, 3985, 1176, 21, 160, "Message"],
-Cell[204415, 4008, 573, 12, 24, "Message"],
-Cell[204991, 4022, 578, 12, 24, "Message"],
-Cell[205572, 4036, 576, 12, 24, "Message"],
-Cell[206151, 4050, 1176, 21, 160, "Message"],
-Cell[207330, 4073, 573, 12, 24, "Message"],
-Cell[207906, 4087, 578, 12, 24, "Message"],
-Cell[208487, 4101, 578, 12, 24, "Message"],
-Cell[209068, 4115, 1176, 21, 160, "Message"]
-}, Open  ]],
-Cell[210259, 4139, 231, 4, 30, "Text"],
-Cell[CellGroupData[{
-Cell[210515, 4147, 97, 1, 28, "Input"],
-Cell[210615, 4150, 490, 11, 28, "Output"]
-}, Open  ]],
-Cell[211120, 4164, 5981, 135, 318, "Input"],
-Cell[CellGroupData[{
-Cell[217126, 4303, 93, 1, 28, "Input"],
-Cell[217222, 4306, 349, 10, 28, "Output"]
-}, Open  ]],
-Cell[217586, 4319, 105, 1, 30, "Text"],
-Cell[CellGroupData[{
-Cell[217716, 4324, 1548, 37, 97, "Input"],
-Cell[219267, 4363, 527, 10, 28, "Output"],
-Cell[219797, 4375, 628, 14, 28, "Output"],
-Cell[220428, 4391, 519, 10, 28, "Output"],
-Cell[220950, 4403, 541, 11, 28, "Output"],
-Cell[221494, 4416, 615, 13, 28, "Output"]
-}, Open  ]],
-Cell[222124, 4432, 4102, 110, 266, "Input"],
-Cell[CellGroupData[{
-Cell[226251, 4546, 495, 15, 62, "Input"],
-Cell[226749, 4563, 128, 2, 28, "Output"]
-}, Open  ]],
-Cell[226892, 4568, 580, 13, 63, "Input"],
-Cell[227475, 4583, 620, 19, 28, "Input"],
-Cell[228098, 4604, 484, 11, 28, "Input"],
-Cell[CellGroupData[{
-Cell[228607, 4619, 104, 1, 28, "Input"],
-Cell[228714, 4622, 7701, 200, 90, "Output"]
+Cell[189080, 3654, 521, 14, 28, "Input"],
+Cell[189604, 3670, 863, 22, 50, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[236452, 4827, 144, 2, 28, "Input"],
-Cell[236599, 4831, 101, 1, 28, "Output"]
+Cell[190504, 3697, 4640, 111, 353, "Input"],
+Cell[195147, 3810, 3439, 66, 405, "Output"],
+Cell[198589, 3878, 560, 11, 24, "Message"],
+Cell[199152, 3891, 565, 11, 24, "Message"],
+Cell[199720, 3904, 564, 11, 24, "Message"],
+Cell[200287, 3917, 1165, 20, 160, "Message"],
+Cell[201455, 3939, 559, 11, 24, "Message"],
+Cell[202017, 3952, 563, 11, 24, "Message"],
+Cell[202583, 3965, 567, 11, 24, "Message"],
+Cell[203153, 3978, 1163, 20, 160, "Message"],
+Cell[204319, 4000, 560, 11, 24, "Message"],
+Cell[204882, 4013, 565, 11, 24, "Message"],
+Cell[205450, 4026, 563, 11, 24, "Message"],
+Cell[206016, 4039, 1163, 20, 160, "Message"],
+Cell[207182, 4061, 560, 11, 24, "Message"],
+Cell[207745, 4074, 565, 11, 24, "Message"],
+Cell[208313, 4087, 565, 11, 24, "Message"],
+Cell[208881, 4100, 1163, 20, 160, "Message"],
+Cell[210047, 4122, 539, 10, 24, "Message"],
+Cell[210589, 4134, 590, 11, 24, "Message"],
+Cell[211182, 4147, 590, 11, 24, "Message"],
+Cell[211775, 4160, 1815, 28, 161, "Message"]
 }, Open  ]],
-Cell[236715, 4835, 254, 6, 49, "Text"],
-Cell[236972, 4843, 2290, 45, 46, "Input"],
+Cell[213605, 4191, 231, 4, 30, "Text"],
 Cell[CellGroupData[{
-Cell[239287, 4892, 3273, 73, 148, "Input"],
-Cell[242563, 4967, 70450, 1295, 275, "Output"]
+Cell[213861, 4199, 97, 1, 28, "Input"],
+Cell[213961, 4202, 490, 11, 28, "Output"]
 }, Open  ]],
+Cell[214466, 4216, 5981, 135, 318, "Input"],
 Cell[CellGroupData[{
-Cell[313050, 6267, 398, 8, 46, "Input"],
-Cell[313451, 6277, 356, 5, 28, "Output"]
+Cell[220472, 4355, 93, 1, 28, "Input"],
+Cell[220568, 4358, 349, 10, 28, "Output"]
 }, Open  ]],
+Cell[220932, 4371, 105, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[313844, 6287, 168, 3, 28, "Input"],
-Cell[314015, 6292, 17878, 460, 31, "Output"]
+Cell[221062, 4376, 1548, 37, 97, "Input"],
+Cell[222613, 4415, 527, 10, 28, "Output"],
+Cell[223143, 4427, 628, 14, 28, "Output"],
+Cell[223774, 4443, 519, 10, 28, "Output"],
+Cell[224296, 4455, 541, 11, 28, "Output"],
+Cell[224840, 4468, 615, 13, 28, "Output"]
 }, Open  ]],
+Cell[225470, 4484, 4102, 110, 266, "Input"],
 Cell[CellGroupData[{
-Cell[331930, 6757, 97, 1, 28, "Input"],
-Cell[332030, 6760, 8080, 205, 233, "Output"]
+Cell[229597, 4598, 495, 15, 62, "Input"],
+Cell[230095, 4615, 128, 2, 28, "Output"]
 }, Open  ]],
+Cell[230238, 4620, 580, 13, 63, "Input"],
+Cell[230821, 4635, 620, 19, 28, "Input"],
+Cell[231444, 4656, 484, 11, 28, "Input"],
 Cell[CellGroupData[{
-Cell[340147, 6970, 7765, 156, 233, "Input"],
-Cell[347915, 7128, 165204, 2719, 295, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[513156, 9852, 4234, 88, 148, "Input"],
-Cell[517393, 9942, 275, 8, 43, "Message"],
-Cell[517671, 9952, 273, 8, 43, "Message"],
-Cell[517947, 9962, 275, 8, 43, "Message"],
-Cell[518225, 9972, 339, 9, 24, "Message"],
-Cell[518567, 9983, 333, 9, 21, "Message"],
-Cell[518903, 9994, 333, 9, 21, "Message"],
-Cell[519239, 10005, 333, 9, 21, "Message"],
-Cell[519575, 10016, 344, 9, 24, "Message"],
-Cell[519922, 10027, 57199, 959, 379, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[577158, 10991, 749, 20, 46, "Input"],
-Cell[577910, 11013, 113047, 1844, 310, "Output"]
-}, Open  ]],
-Cell[690972, 12860, 1941, 45, 80, "Input"],
-Cell[CellGroupData[{
-Cell[692938, 12909, 276, 7, 28, "Input"],
-Cell[693217, 12918, 532, 11, 24, "Message"],
-Cell[693752, 12931, 532, 11, 24, "Message"]
-}, Open  ]],
-Cell[694299, 12945, 11530, 275, 828, "Input"],
-Cell[CellGroupData[{
-Cell[705854, 13224, 14814, 332, 811, "Input"],
-Cell[720671, 13558, 522, 7, 28, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[721230, 13570, 509, 9, 46, "Input"],
-Cell[721742, 13581, 514, 7, 28, "Output"]
+Cell[231953, 4671, 104, 1, 28, "Input"],
+Cell[232060, 4674, 7701, 200, 90, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[722293, 13593, 8634, 221, 766, "Input"],
-Cell[730930, 13816, 31298, 629, 360, "Output"]
+Cell[239798, 4879, 144, 2, 28, "Input"],
+Cell[239945, 4883, 101, 1, 28, "Output"]
+}, Open  ]],
+Cell[240061, 4887, 254, 6, 49, "Text"],
+Cell[240318, 4895, 2326, 47, 46, "Input"],
+Cell[CellGroupData[{
+Cell[242669, 4946, 3273, 73, 148, "Input"],
+Cell[245945, 5021, 70491, 1296, 275, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[316473, 6322, 398, 8, 46, "Input"],
+Cell[316874, 6332, 356, 5, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[317267, 6342, 168, 3, 28, "Input"],
+Cell[317438, 6347, 18028, 470, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[335503, 6822, 97, 1, 28, "Input"],
+Cell[335603, 6825, 8080, 205, 233, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[343720, 7035, 7765, 156, 233, "Input"],
+Cell[351488, 7193, 165204, 2719, 295, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[516729, 9917, 4234, 88, 148, "Input"],
+Cell[520966, 10007, 262, 7, 43, "Message"],
+Cell[521231, 10016, 260, 7, 43, "Message"],
+Cell[521494, 10025, 262, 7, 43, "Message"],
+Cell[521759, 10034, 326, 8, 24, "Message"],
+Cell[522088, 10044, 318, 7, 21, "Message"],
+Cell[522409, 10053, 318, 7, 21, "Message"],
+Cell[522730, 10062, 318, 7, 21, "Message"],
+Cell[523051, 10071, 331, 8, 24, "Message"],
+Cell[523385, 10081, 57199, 959, 379, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[580621, 11045, 749, 20, 46, "Input"],
+Cell[581373, 11067, 113046, 1844, 310, "Output"]
+}, Open  ]],
+Cell[694434, 12914, 1941, 45, 80, "Input"],
+Cell[CellGroupData[{
+Cell[696400, 12963, 276, 7, 28, "Input"],
+Cell[696679, 12972, 517, 9, 24, "Message"],
+Cell[697199, 12983, 517, 9, 24, "Message"]
+}, Open  ]],
+Cell[697731, 12995, 11530, 275, 828, "Input"],
+Cell[CellGroupData[{
+Cell[709286, 13274, 14814, 332, 811, "Input"],
+Cell[724103, 13608, 522, 7, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[724662, 13620, 509, 9, 46, "Input"],
+Cell[725174, 13631, 514, 7, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[725725, 13643, 8634, 221, 766, "Input"],
+Cell[734362, 13866, 31308, 629, 360, "Output"]
 }, Open  ]]
 }
 ]
 *)
 
-(* End of internal cache information *)

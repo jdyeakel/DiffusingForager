@@ -1,0 +1,404 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15164,        396]
+NotebookOptionsPosition[     14372,        365]
+NotebookOutlinePosition[     14731,        381]
+CellTagsIndexPosition[     14688,        378]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Need", " ", "to", " ", "build", " ", "\[Tau]RhoStartInvade", " ", "and", 
+     " ", "the", " ", "associated", " ", "BLamInvade", " ", "and", " ", 
+     "BRho", " ", "invade"}], " ", "+", " ", 
+    RowBox[{"YFInvade", " ", "and", " ", "YHInvade"}]}], "*)"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.696377849893927*^9, 3.6963779049250183`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nb1", "=", 
+   RowBox[{"NotebookOpen", "[", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$HomeDirectory", ",", 
+       "\"\</Dropbox/PostDoc/2014_DiffusingForager/DiffusingForager/\
+mathematica/NewRateFigures_Final/Ratesfunc.nb\>\""}], "}"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SelectionMove", "[", 
+   RowBox[{"nb1", ",", "All", ",", "Notebook"}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"SelectionEvaluate", "[", "nb1", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.680015412865893*^9, 3.6800154413779583`*^9}, {
+   3.680015727742853*^9, 3.680015735815099*^9}, 3.696377284524022*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Fstar", " ", "=", " ", "FSS"}], "\[IndentingNewLine]", 
+ RowBox[{"HStar", " ", "=", "HSS"}], "\[IndentingNewLine]", 
+ RowBox[{"FIStar", " ", "=", " ", 
+  RowBox[{"FSS", "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Sigma]", "\[Rule]", "\[Sigma]2"}], ",", 
+     RowBox[{"\[Rho]", "\[Rule]", "\[Rho]2"}], ",", 
+     RowBox[{"\[Beta]", "\[Rule]", "\[Beta]2"}], ",", 
+     RowBox[{"\[Delta]", "\[Rule]", "\[Delta]2"}]}], 
+    "}"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"HIStar", "=", 
+  RowBox[{"HSS", "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Sigma]", "\[Rule]", "\[Sigma]2"}], ",", 
+     RowBox[{"\[Rho]", "\[Rule]", "\[Rho]2"}], ",", 
+     RowBox[{"\[Beta]", "\[Rule]", "\[Beta]2"}], ",", 
+     RowBox[{"\[Delta]", "\[Rule]", "\[Delta]2"}]}], "}"}]}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"4535", " ", "\[Alpha]", " ", "\[Lambda]", " ", 
+    SuperscriptBox["\[Mu]", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4535", " ", "\[Mu]"}], "+", 
+      RowBox[{"9071", " ", "\[Rho]"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "-", "\[Sigma]"}], ")"}]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"9071", " ", "\[Lambda]", " ", "\[Rho]"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", "\[Sigma]"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Lambda]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"9071", " ", "\[Delta]", " ", "\[Lambda]"}], "+", 
+         RowBox[{"9071", " ", "\[Beta]", " ", "\[Mu]"}], "-", 
+         RowBox[{"4535", " ", "\[Lambda]", " ", "\[Mu]"}]}], ")"}], " ", 
+       "\[Rho]"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
+         RowBox[{"\[Lambda]", " ", 
+          RowBox[{"(", 
+           RowBox[{"\[Delta]", "+", "\[Rho]"}], ")"}]}]}], ")"}], " ", 
+       "\[Sigma]"}]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{3.6963773182453957`*^9, 3.696377705988762*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"4535", " ", "\[Alpha]", " ", 
+    SuperscriptBox["\[Lambda]", "2"], " ", "\[Mu]", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4535", " ", "\[Mu]"}], "+", 
+      RowBox[{"9071", " ", "\[Rho]"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "-", "\[Sigma]"}], ")"}]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"9071", " ", "\[Lambda]", " ", "\[Rho]"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", "\[Sigma]"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Lambda]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"9071", " ", "\[Delta]", " ", "\[Lambda]"}], "+", 
+         RowBox[{"9071", " ", "\[Beta]", " ", "\[Mu]"}], "-", 
+         RowBox[{"4535", " ", "\[Lambda]", " ", "\[Mu]"}]}], ")"}], " ", 
+       "\[Rho]"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
+         RowBox[{"\[Lambda]", " ", 
+          RowBox[{"(", 
+           RowBox[{"\[Delta]", "+", "\[Rho]"}], ")"}]}]}], ")"}], " ", 
+       "\[Sigma]"}]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{3.6963773182453957`*^9, 3.6963777059993134`*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"4535", " ", "\[Alpha]", " ", "\[Lambda]", " ", 
+    SuperscriptBox["\[Mu]", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4535", " ", "\[Mu]"}], "+", 
+      RowBox[{"9071", " ", "\[Rho]2"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "-", "\[Sigma]2"}], ")"}]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"9071", " ", "\[Lambda]", " ", "\[Rho]2"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", "\[Sigma]2"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Lambda]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"9071", " ", "\[Delta]2", " ", "\[Lambda]"}], "+", 
+         RowBox[{"9071", " ", "\[Beta]2", " ", "\[Mu]"}], "-", 
+         RowBox[{"4535", " ", "\[Lambda]", " ", "\[Mu]"}]}], ")"}], " ", 
+       "\[Rho]2"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Beta]2", " ", "\[Mu]"}], "+", 
+         RowBox[{"\[Lambda]", " ", 
+          RowBox[{"(", 
+           RowBox[{"\[Delta]2", "+", "\[Rho]2"}], ")"}]}]}], ")"}], " ", 
+       "\[Sigma]2"}]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{3.6963773182453957`*^9, 3.696377706006648*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"4535", " ", "\[Alpha]", " ", 
+    SuperscriptBox["\[Lambda]", "2"], " ", "\[Mu]", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4535", " ", "\[Mu]"}], "+", 
+      RowBox[{"9071", " ", "\[Rho]2"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "-", "\[Sigma]2"}], ")"}]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"9071", " ", "\[Lambda]", " ", "\[Rho]2"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", "\[Sigma]2"}]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Lambda]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"9071", " ", "\[Delta]2", " ", "\[Lambda]"}], "+", 
+         RowBox[{"9071", " ", "\[Beta]2", " ", "\[Mu]"}], "-", 
+         RowBox[{"4535", " ", "\[Lambda]", " ", "\[Mu]"}]}], ")"}], " ", 
+       "\[Rho]2"}], "+", 
+      RowBox[{"4535", " ", "\[Mu]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Beta]2", " ", "\[Mu]"}], "+", 
+         RowBox[{"\[Lambda]", " ", 
+          RowBox[{"(", 
+           RowBox[{"\[Delta]2", "+", "\[Rho]2"}], ")"}]}]}], ")"}], " ", 
+       "\[Sigma]2"}]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{3.6963773182453957`*^9, 3.696377706013687*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"M", "=", 
+      RowBox[{"10", "^", "i"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"values", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[Alpha]", "\[Rule]", "ResourceGrowth"}], ",", 
+        RowBox[{"\[Lambda]", "\[Rule]", "ConsumerGrowth"}], ",", 
+        RowBox[{"\[Sigma]", "->", "Starvation"}], ",", 
+        RowBox[{"\[Rho]", "\[Rule]", "Recovery"}], ",", 
+        RowBox[{"\[Beta]", "\[Rule]", "FullMaintenance"}], ",", 
+        RowBox[{"\[Delta]", "\[Rule]", "StarveMaintenance"}], ",", 
+        RowBox[{"\[Mu]", "\[Rule]", "Mortality"}], ",", 
+        RowBox[{"\[Sigma]2", "\[Rule]", "InvaderStarvation"}], ",", 
+        RowBox[{"\[Rho]2", "\[Rule]", "InvaderRecovery"}], ",", 
+        RowBox[{"\[Beta]2", "\[Rule]", "InvaderFullMaintenance"}], ",", 
+        RowBox[{"\[Delta]2", "\[Rule]", "InvaderStarveMaintenance"}]}], 
+       "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"FSol", " ", "=", " ", 
+      RowBox[{"Fstar", "/.", "values"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"HSol", " ", "=", " ", 
+      RowBox[{"HStar", "/.", "values"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"FISol", " ", "=", " ", 
+      RowBox[{"FIStar", "/.", "values"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"HISol", " ", "=", " ", 
+      RowBox[{"HIStar", "/.", "values"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Show", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"LogPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Re", "[", "FSol", "]"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"chi", ",", 
+            RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+          RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+          RowBox[{"AxesOrigin", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", "400"}], ",", 
+          RowBox[{"PlotLabel", "\[Rule]", "InvaderStarvation"}]}], "]"}], ",",
+         "\[IndentingNewLine]", 
+        RowBox[{"LogPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Re", "[", "FISol", "]"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"chi", ",", 
+            RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", "Dashed"}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "0", ",", "10", ",", "0.001"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6798444006819687`*^9, 3.67984446519359*^9}, {
+   3.680289323479271*^9, 3.6802893692983418`*^9}, {3.680289399537128*^9, 
+   3.680289412800892*^9}, {3.6802895020468607`*^9, 3.6802895114549637`*^9}, {
+   3.680290238651743*^9, 3.680290244700026*^9}, {3.680290476611833*^9, 
+   3.680290483168899*^9}, {3.6803537658379593`*^9, 3.680353878515191*^9}, {
+   3.680354371770352*^9, 3.680354373144038*^9}, 3.696377053759478*^9, {
+   3.696377087202293*^9, 3.6963772526937113`*^9}, {3.6963772908062057`*^9, 
+   3.696377418708456*^9}, {3.6963775158880672`*^9, 3.696377516444916*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 5.1690000000000005`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 0, 10, 0.001}}, Typeset`size$$ = {
+    400., {143., 147.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$215575$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`i$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`i$$, $CellContext`i$215575$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`M = 
+        10^$CellContext`i$$; $CellContext`values = {$CellContext`\[Alpha] -> \
+$CellContext`ResourceGrowth, $CellContext`\[Lambda] -> \
+$CellContext`ConsumerGrowth, $CellContext`\[Sigma] -> \
+$CellContext`Starvation, $CellContext`\[Rho] -> $CellContext`Recovery, \
+$CellContext`\[Beta] -> $CellContext`FullMaintenance, $CellContext`\[Delta] -> \
+$CellContext`StarveMaintenance, $CellContext`\[Mu] -> $CellContext`Mortality, \
+$CellContext`\[Sigma]2 -> $CellContext`InvaderStarvation, \
+$CellContext`\[Rho]2 -> $CellContext`InvaderRecovery, $CellContext`\[Beta]2 -> \
+$CellContext`InvaderFullMaintenance, $CellContext`\[Delta]2 -> \
+$CellContext`InvaderStarveMaintenance}; $CellContext`FSol = 
+        ReplaceAll[$CellContext`Fstar, $CellContext`values]; \
+$CellContext`HSol = 
+        ReplaceAll[$CellContext`HStar, $CellContext`values]; \
+$CellContext`FISol = 
+        ReplaceAll[$CellContext`FIStar, $CellContext`values]; \
+$CellContext`HISol = ReplaceAll[$CellContext`HIStar, $CellContext`values]; 
+       Show[{
+          LogPlot[{
+            Re[$CellContext`FSol]}, {$CellContext`chi, -1, 1}, PlotRange -> 
+           All, Frame -> True, AxesOrigin -> {0, 0}, ImageSize -> 400, 
+           PlotLabel -> $CellContext`InvaderStarvation], 
+          LogPlot[{
+            Re[$CellContext`FISol]}, {$CellContext`chi, -1, 1}, PlotRange -> 
+           All, PlotStyle -> Dashed]}]), 
+      "Specifications" :> {{$CellContext`i$$, 0, 10, 0.001}}, "Options" :> {},
+       "DefaultOptions" :> {}],
+     ImageSizeCache->{445., {201., 207.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.696377296539957*^9, 3.696377426287265*^9, 
+  3.69637751695405*^9, 3.69637771107226*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["InvaderStarvation"], "Input",
+ CellChangeTimes->{{3.6802904058468313`*^9, 3.680290408155354*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox["1.6720521473115019`*^-6", 
+   RowBox[{"Log", "[", 
+    FractionBox["0.9418966236836169`", 
+     RowBox[{"1", "+", "chi"}]], "]"}]]}]], "Output",
+ CellChangeTimes->{3.680290408945632*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{236, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 434, 10, 75, "Input"],
+Cell[995, 32, 76, 1, 32, "Input"],
+Cell[1074, 35, 688, 17, 180, "Input"],
+Cell[CellGroupData[{
+Cell[1787, 56, 807, 19, 96, "Input"],
+Cell[2597, 77, 1230, 33, 50, "Output"],
+Cell[3830, 112, 1232, 33, 50, "Output"],
+Cell[5065, 147, 1241, 33, 50, "Output"],
+Cell[6309, 182, 1241, 33, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7587, 220, 3349, 68, 348, "Input"],
+Cell[10939, 290, 3036, 58, 459, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14012, 353, 111, 1, 32, "Input"],
+Cell[14126, 356, 230, 6, 55, "Output"]
+}, Open  ]]
+}
+]
+*)
+
