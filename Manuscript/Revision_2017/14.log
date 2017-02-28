@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 FEB 2017 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  26 FEB 2017 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,7 +385,28 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen155
 \bframebox=\box53
 LaTeX Info: Redefining \\ on input line 3056.
-) (./14.aux)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip62
+\bibsep=\skip63
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count139
+) (./14.aux
+
+! Package natbib Error: Bibliography not compatible with author-year citations.
+
+(natbib)                Press <return> to continue in numerical citation style.
+
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 ...and\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+? 
+)
 \openout1 = `14.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -400,19 +421,18 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
-
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
+\scratchcounter=\count140
 \scratchdimen=\dimen156
 \scratchbox=\box54
-\nofMPsegments=\count140
-\nofMParguments=\count141
+\nofMPsegments=\count141
+\nofMParguments=\count142
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count142
+\MPscratchCnt=\count143
 \MPscratchDim=\dimen157
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
 \everyMPtoPDFconversion=\toks27
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -450,7 +470,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--159
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 212--218
+Underfull \hbox (badness 10000) in paragraph at lines 211--217
 
  []
 
@@ -460,78 +480,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 375--386
  []
 
 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 397--405
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 421--428
 
  []
 
-[4] [5] [6] <fig_FixedPoint.pdf, id=41, 281.05pt x 443.6575pt>
+[4] (./14.bbl
+LaTeX Font Info:    Font shape `OT1/cmr10 /bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/cmr10 /b/n' tried instead on input line 1.
+ [5]) [6] [7] <fig_FixedPoint.pdf, id=44, 281.05pt x 443.6575pt>
 File: fig_FixedPoint.pdf Graphic file (type pdf)
 
 <use fig_FixedPoint.pdf>
-Package pdftex.def Info: fig_FixedPoint.pdf used on input line 989.
-(pdftex.def)             Requested size: 382.5pt x 603.84007pt.
+Package pdftex.def Info: fig_FixedPoint.pdf used on input line 991.
+(pdftex.def)             Requested size: 255.0pt x 402.53749pt.
 
-
-LaTeX Warning: Float too large for page by 15.84007pt on input line 999.
-
-<Growth-trajectory-diagram.pdf, id=42, 1027.84pt x 770.88pt>
+<Growth-trajectory-diagram.pdf, id=45, 1027.84pt x 770.88pt>
 File: Growth-trajectory-diagram.pdf Graphic file (type pdf)
 
 <use Growth-trajectory-diagram.pdf>
-Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 1004.
+Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 1006.
 
 (pdftex.def)             Requested size: 255.0pt x 191.24919pt.
 
-<fig_Rates.pdf, id=43, 361.35pt x 184.69pt>
+<fig_Rates.pdf, id=46, 361.35pt x 238.8925pt>
 File: fig_Rates.pdf Graphic file (type pdf)
  <use fig_Rates.pdf>
-Package pdftex.def Info: fig_Rates.pdf used on input line 1015.
-(pdftex.def)             Requested size: 255.0pt x 130.33327pt.
+Package pdftex.def Info: fig_Rates.pdf used on input line 1017.
+(pdftex.def)             Requested size: 255.0pt x 168.58325pt.
 
-
-pdfTeX warning: pdflatex (file ./fig_DataHopf.pdf): PDF inclusion: found PDF ve
-rsion <1.7>, but at most version <1.5> allowed
-<fig_DataHopf.pdf, id=44, 260.975pt x 162.6075pt>
+<fig_DataHopf.pdf, id=47, 260.975pt x 165.61874pt>
 File: fig_DataHopf.pdf Graphic file (type pdf)
  <use fig_DataHopf.pdf>
-Package pdftex.def Info: fig_DataHopf.pdf used on input line 1027.
-(pdftex.def)             Requested size: 255.0pt x 158.88779pt.
+Package pdftex.def Info: fig_DataHopf.pdf used on input line 1029.
+(pdftex.def)             Requested size: 255.0pt x 161.83015pt.
 
-<fig_ExtinctionAllometric2.png, id=45, 1092.08pt x 878.28125pt>
+<fig_ExtinctionAllometric2.png, id=48, 1092.08pt x 878.28125pt>
 File: fig_ExtinctionAllometric2.png Graphic file (type png)
 
 <use fig_ExtinctionAllometric2.png>
-Package pdftex.def Info: fig_ExtinctionAllometric2.png used on input line 1039.
+Package pdftex.def Info: fig_ExtinctionAllometric2.png used on input line 1041.
 
 (pdftex.def)             Requested size: 255.0pt x 205.06937pt.
 
-<fig_FPAllometric.pdf, id=47, 241.90375pt x 433.62pt>
+<fig_FPAllometric.pdf, id=50, 241.90375pt x 433.62pt>
 File: fig_FPAllometric.pdf Graphic file (type pdf)
 
 <use fig_FPAllometric.pdf>
-Package pdftex.def Info: fig_FPAllometric.pdf used on input line 1049.
+Package pdftex.def Info: fig_FPAllometric.pdf used on input line 1051.
 (pdftex.def)             Requested size: 229.49844pt x 411.40073pt.
- <fig_Invasion.pdf, id=48, 361.35pt x 231.86626pt>
+ <fig_Invasion.pdf, id=51, 361.35pt x 231.86626pt>
 File: fig_Invasion.pdf Graphic file (type pdf)
 
 <use fig_Invasion.pdf>
-Package pdftex.def Info: fig_Invasion.pdf used on input line 1059.
+Package pdftex.def Info: fig_Invasion.pdf used on input line 1061.
 (pdftex.def)             Requested size: 382.5pt x 245.44093pt.
- [7 <./fig_FixedPoint.pdf>] [8 <./Growth-trajectory-diagram.pdf> <./fig_Rates.p
-df>] [9 <./fig_DataHopf.pdf> <./fig_ExtinctionAllometric2.png>] [10 <./fig_FPAl
-lometric.pdf>] [11 <./fig_Invasion.pdf>] (./14.aux)
+ [8 <./fig_FixedPoint.pdf>] [9 <./Growth-trajectory-diagram.pdf> <./fig_Rates.p
+df>] [10 <./fig_DataHopf.pdf> <./fig_ExtinctionAllometric2.png>] [11 <./fig_FPA
+llometric.pdf>] [12 <./fig_Invasion.pdf>] (./14.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 4772 strings out of 493014
- 68851 string characters out of 6133351
- 160829 words of memory out of 5000000
- 8215 multiletter control sequences out of 15000+600000
- 35095 words of font info for 88 fonts, out of 8000000 for 9000
+ 5241 strings out of 493014
+ 76081 string characters out of 6133351
+ 164278 words of memory out of 5000000
+ 8679 multiletter control sequences out of 15000+600000
+ 33446 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,15n,39p,707b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,15n,43p,738b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texl
@@ -555,13 +577,12 @@ e1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
-/helvetic/uhvbo8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helve
-tic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhv
-ro8a.pfb>
-Output written on 14.pdf (11 pages, 7101417 bytes).
+/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvet
+ic/uhvro8a.pfb>
+Output written on 14.pdf (12 pages, 7124876 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
+ 437 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

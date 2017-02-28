@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17185,        510]
-NotebookOptionsPosition[     16325,        475]
-NotebookOutlinePosition[     16685,        491]
-CellTagsIndexPosition[     16642,        488]
+NotebookDataLength[     17174,        509]
+NotebookOptionsPosition[     16313,        474]
+NotebookOutlinePosition[     16674,        490]
+CellTagsIndexPosition[     16631,        487]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,8 +31,7 @@ Cell[BoxData[{
     RowBox[{"\[Sigma]", "*", 
      RowBox[{"(", 
       RowBox[{"1", "-", "R"}], ")"}], "*", "F"}], " ", "+", 
-    RowBox[{"\[Rho]", "*", 
-     FractionBox["c", "k"], "*", " ", "R", " ", "*", " ", "H"}]}]}], 
+    RowBox[{"\[Rho]", "*", "\[Xi]", "*", " ", "R", " ", "*", " ", "H"}]}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dH", " ", "=", 
@@ -40,8 +39,8 @@ Cell[BoxData[{
     RowBox[{"\[Sigma]", "*", 
      RowBox[{"(", 
       RowBox[{"1", "-", "R"}], ")"}], "*", "F"}], " ", "-", " ", 
-    RowBox[{"\[Rho]", "*", 
-     FractionBox["c", "k"], "*", " ", "R", "*", "H"}], " ", "-", " ", 
+    RowBox[{"\[Rho]", "*", "\[Xi]", "*", " ", "R", "*", "H"}], " ", "-", " ", 
+    
     RowBox[{"\[Mu]", "*", "H"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dR", " ", "=", 
@@ -64,7 +63,8 @@ Cell[BoxData[{
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"F", ",", "H", ",", "R"}], "}"}]}], "]"}], 
-   "\[IndentingNewLine]", "]"}]}]}], "Input"],
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.697059816688698*^9, 3.6970598443067417`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -84,29 +84,29 @@ Cell[BoxData[
      RowBox[{"F", "\[Rule]", 
       RowBox[{"-", 
        FractionBox[
-        RowBox[{"k", " ", "\[Alpha]", " ", "\[Lambda]", " ", 
+        RowBox[{"\[Alpha]", " ", "\[Lambda]", " ", 
          SuperscriptBox["\[Mu]", "2"], " ", 
          RowBox[{"(", 
-          RowBox[{
-           RowBox[{"k", " ", "\[Mu]"}], "+", 
-           RowBox[{"c", " ", "\[Rho]"}]}], ")"}], " ", 
+          RowBox[{"\[Mu]", "+", 
+           RowBox[{"\[Xi]", " ", "\[Rho]"}]}], ")"}], " ", 
          RowBox[{"(", 
           RowBox[{"\[Lambda]", "-", "\[Sigma]"}], ")"}]}], 
         RowBox[{
          RowBox[{"(", 
           RowBox[{
-           RowBox[{"c", " ", "\[Lambda]", " ", "\[Rho]"}], "+", 
-           RowBox[{"k", " ", "\[Mu]", " ", "\[Sigma]"}]}], ")"}], " ", 
+           RowBox[{"\[Lambda]", " ", "\[Xi]", " ", "\[Rho]"}], "+", 
+           RowBox[{"\[Mu]", " ", "\[Sigma]"}]}], ")"}], " ", 
          RowBox[{"(", 
           RowBox[{
            RowBox[{"\[Lambda]", " ", 
             RowBox[{"(", 
              RowBox[{
-              RowBox[{"c", " ", "\[Delta]", " ", "\[Lambda]"}], "+", 
-              RowBox[{"c", " ", "\[Beta]", " ", "\[Mu]"}], "-", 
-              RowBox[{"k", " ", "\[Lambda]", " ", "\[Mu]"}]}], ")"}], " ", 
+              RowBox[{
+               RowBox[{"-", "\[Lambda]"}], " ", "\[Mu]"}], "+", 
+              RowBox[{"\[Delta]", " ", "\[Lambda]", " ", "\[Xi]"}], "+", 
+              RowBox[{"\[Beta]", " ", "\[Mu]", " ", "\[Xi]"}]}], ")"}], " ", 
             "\[Rho]"}], "+", 
-           RowBox[{"k", " ", "\[Mu]", " ", 
+           RowBox[{"\[Mu]", " ", 
             RowBox[{"(", 
              RowBox[{
               RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
@@ -117,29 +117,29 @@ Cell[BoxData[
      RowBox[{"H", "\[Rule]", 
       RowBox[{"-", 
        FractionBox[
-        RowBox[{"k", " ", "\[Alpha]", " ", 
+        RowBox[{"\[Alpha]", " ", 
          SuperscriptBox["\[Lambda]", "2"], " ", "\[Mu]", " ", 
          RowBox[{"(", 
-          RowBox[{
-           RowBox[{"k", " ", "\[Mu]"}], "+", 
-           RowBox[{"c", " ", "\[Rho]"}]}], ")"}], " ", 
+          RowBox[{"\[Mu]", "+", 
+           RowBox[{"\[Xi]", " ", "\[Rho]"}]}], ")"}], " ", 
          RowBox[{"(", 
           RowBox[{"\[Lambda]", "-", "\[Sigma]"}], ")"}]}], 
         RowBox[{
          RowBox[{"(", 
           RowBox[{
-           RowBox[{"c", " ", "\[Lambda]", " ", "\[Rho]"}], "+", 
-           RowBox[{"k", " ", "\[Mu]", " ", "\[Sigma]"}]}], ")"}], " ", 
+           RowBox[{"\[Lambda]", " ", "\[Xi]", " ", "\[Rho]"}], "+", 
+           RowBox[{"\[Mu]", " ", "\[Sigma]"}]}], ")"}], " ", 
          RowBox[{"(", 
           RowBox[{
            RowBox[{"\[Lambda]", " ", 
             RowBox[{"(", 
              RowBox[{
-              RowBox[{"c", " ", "\[Delta]", " ", "\[Lambda]"}], "+", 
-              RowBox[{"c", " ", "\[Beta]", " ", "\[Mu]"}], "-", 
-              RowBox[{"k", " ", "\[Lambda]", " ", "\[Mu]"}]}], ")"}], " ", 
+              RowBox[{
+               RowBox[{"-", "\[Lambda]"}], " ", "\[Mu]"}], "+", 
+              RowBox[{"\[Delta]", " ", "\[Lambda]", " ", "\[Xi]"}], "+", 
+              RowBox[{"\[Beta]", " ", "\[Mu]", " ", "\[Xi]"}]}], ")"}], " ", 
             "\[Rho]"}], "+", 
-           RowBox[{"k", " ", "\[Mu]", " ", 
+           RowBox[{"\[Mu]", " ", 
             RowBox[{"(", 
              RowBox[{
               RowBox[{"\[Beta]", " ", "\[Mu]"}], "+", 
@@ -149,15 +149,14 @@ Cell[BoxData[
             "\[Sigma]"}]}], ")"}]}]]}]}], ",", 
      RowBox[{"R", "\[Rule]", 
       FractionBox[
-       RowBox[{"k", " ", "\[Mu]", " ", 
+       RowBox[{"\[Mu]", " ", 
         RowBox[{"(", 
          RowBox[{
           RowBox[{"-", "\[Lambda]"}], "+", "\[Sigma]"}], ")"}]}], 
        RowBox[{
-        RowBox[{"c", " ", "\[Lambda]", " ", "\[Rho]"}], "+", 
-        RowBox[{"k", " ", "\[Mu]", " ", "\[Sigma]"}]}]]}]}], "}"}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{3.696972012399756*^9}]
+        RowBox[{"\[Lambda]", " ", "\[Xi]", " ", "\[Rho]"}], "+", 
+        RowBox[{"\[Mu]", " ", "\[Sigma]"}]}]]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.696972012399756*^9, 3.6970598458900137`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -474,7 +473,7 @@ Cell[BoxData[
   3.696972553197006*^9, {3.696972624742874*^9, 3.696972657029649*^9}}]
 },
 WindowSize->{808, 852},
-WindowMargins->{{Automatic, 371}, {Automatic, 67}},
+WindowMargins->{{Automatic, 271}, {-76, Automatic}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -492,26 +491,26 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 76, 1, 32, "Input"],
 Cell[CellGroupData[{
-Cell[659, 25, 1564, 41, 252, "Input"],
-Cell[2226, 68, 3428, 91, 119, "Output"]
+Cell[659, 25, 1597, 41, 222, "Input"],
+Cell[2259, 68, 3383, 90, 119, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5691, 164, 2409, 66, 99, "Input"],
-Cell[8103, 232, 2406, 67, 90, "Output"]
+Cell[5679, 163, 2409, 66, 99, "Input"],
+Cell[8091, 231, 2406, 67, 90, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10546, 304, 127, 2, 32, "Input"],
-Cell[10676, 308, 125, 2, 32, "Output"]
+Cell[10534, 303, 127, 2, 32, "Input"],
+Cell[10664, 307, 125, 2, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10838, 315, 2402, 66, 99, "Input"],
-Cell[13243, 383, 2430, 67, 90, "Output"]
+Cell[10826, 314, 2402, 66, 99, "Input"],
+Cell[13231, 382, 2430, 67, 90, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15710, 455, 125, 2, 32, "Input"],
-Cell[15838, 459, 119, 2, 32, "Output"]
+Cell[15698, 454, 125, 2, 32, "Input"],
+Cell[15826, 458, 119, 2, 32, "Output"]
 }, Open  ]],
-Cell[15972, 464, 349, 9, 52, "Input"]
+Cell[15960, 463, 349, 9, 52, "Input"]
 }
 ]
 *)
