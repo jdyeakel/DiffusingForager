@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 FEB 2017 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 FEB 2017 17:08
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **Revised-Supplement-1.tex
 (./Revised-Supplement-1.tex
@@ -386,7 +386,28 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box53
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(./Revised-Supplement-1.aux)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip62
+\bibsep=\skip63
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count139
+)
+(./Revised-Supplement-1.aux
+
+! Package natbib Error: Bibliography not compatible with author-year citations.
+
+(natbib)                Press <return> to continue in numerical citation style.
+
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 ...mand\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+? 
+)
 \openout1 = `Revised-Supplement-1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -401,19 +422,18 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
-
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
+\scratchcounter=\count140
 \scratchdimen=\dimen156
 \scratchbox=\box54
-\nofMPsegments=\count140
-\nofMParguments=\count141
+\nofMPsegments=\count141
+\nofMParguments=\count142
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count142
+\MPscratchCnt=\count143
 \MPscratchDim=\dimen157
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
 \everyMPtoPDFconversion=\toks27
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -445,16 +465,20 @@ LaTeX Font Info:    Font shape `OT1/cmr10 /bx/n' in size <9> not available
 .
 
 
-LaTeX Warning: Citation `kempes' on page 1 undefined on input line 111.
+Package natbib Warning: Citation `kempes' on page 1 undefined on input line 111
+.
 
 
-LaTeX Warning: Citation `kempes2' on page 1 undefined on input line 111.
+Package natbib Warning: Citation `kempes2' on page 1 undefined on input line 11
+1.
 
 
-LaTeX Warning: Citation `kempes' on page 1 undefined on input line 111.
+Package natbib Warning: Citation `kempes' on page 1 undefined on input line 111
+.
 
 
-LaTeX Warning: Citation `ALLOGM' on page 1 undefined on input line 111.
+Package natbib Warning: Citation `ALLOGM' on page 1 undefined on input line 111
+.
 
 
 Overfull \hbox (42.10532pt too wide) in paragraph at lines 145--145
@@ -485,22 +509,23 @@ Overfull \hbox (2.23465pt too wide) in paragraph at lines 195--195
 LaTeX Font Info:    Font shape `OT1/cmr10 /bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmr10 /b/n' tried instead on input line 215
 .
-(./Revised-Supplement-1.bbl [2]) [3] (./Revised-Supplement-1.aux)
+[2] (./Revised-Supplement-1.bbl) [3]
+
+Package natbib Warning: There were undefined citations.
+
+(./Revised-Supplement-1.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 4647 strings out of 493014
- 67006 string characters out of 6133351
- 173493 words of memory out of 5000000
- 8103 multiletter control sequences out of 15000+600000
- 31921 words of font info for 77 fonts, out of 8000000 for 9000
+ 4995 strings out of 493014
+ 71343 string characters out of 6133351
+ 164241 words of memory out of 5000000
+ 8448 multiletter control sequences out of 15000+600000
+ 30010 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,40p,1825b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,40p,1825b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local
@@ -516,11 +541,11 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf
 st/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
-helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helveti
-c/uhvro8a.pfb>
-Output written on Revised-Supplement-1.pdf (3 pages, 205105 bytes).
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/he
+lvetic/uhvro8a.pfb>
+Output written on Revised-Supplement-1.pdf (3 pages, 213121 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream

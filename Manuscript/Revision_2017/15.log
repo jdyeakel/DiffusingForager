@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 FEB 2017 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 FEB 2017 17:08
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **15.tex
 (./15.tex
@@ -499,33 +499,34 @@ LaTeX Font Info:    Font shape `OT1/cmr10 /bx/n' in size <14.4> not available
 File: fig_FixedPoint.pdf Graphic file (type pdf)
 
 <use fig_FixedPoint.pdf>
-Package pdftex.def Info: fig_FixedPoint.pdf used on input line 984.
+Package pdftex.def Info: fig_FixedPoint.pdf used on input line 985.
 (pdftex.def)             Requested size: 255.0pt x 408.37292pt.
 
 <Growth-trajectory-diagram.pdf, id=45, 1027.84pt x 770.88pt>
 File: Growth-trajectory-diagram.pdf Graphic file (type pdf)
 
 <use Growth-trajectory-diagram.pdf>
-Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 999.
+Package pdftex.def Info: Growth-trajectory-diagram.pdf used on input line 1000.
+
 (pdftex.def)             Requested size: 255.0pt x 191.24919pt.
 
 <fig_Rates.pdf, id=46, 361.35pt x 238.8925pt>
 File: fig_Rates.pdf Graphic file (type pdf)
  <use fig_Rates.pdf>
-Package pdftex.def Info: fig_Rates.pdf used on input line 1010.
+Package pdftex.def Info: fig_Rates.pdf used on input line 1011.
 (pdftex.def)             Requested size: 255.0pt x 168.58325pt.
 
 <fig_DataHopf.pdf, id=47, 260.975pt x 165.61874pt>
 File: fig_DataHopf.pdf Graphic file (type pdf)
  <use fig_DataHopf.pdf>
-Package pdftex.def Info: fig_DataHopf.pdf used on input line 1022.
+Package pdftex.def Info: fig_DataHopf.pdf used on input line 1023.
 (pdftex.def)             Requested size: 255.0pt x 161.83015pt.
 
 <fig_ExtinctionAllometric2.png, id=48, 1092.08pt x 878.28125pt>
 File: fig_ExtinctionAllometric2.png Graphic file (type png)
 
 <use fig_ExtinctionAllometric2.png>
-Package pdftex.def Info: fig_ExtinctionAllometric2.png used on input line 1034.
+Package pdftex.def Info: fig_ExtinctionAllometric2.png used on input line 1035.
 
 (pdftex.def)             Requested size: 255.0pt x 205.06937pt.
 
@@ -533,13 +534,13 @@ Package pdftex.def Info: fig_ExtinctionAllometric2.png used on input line 1034.
 File: fig_FPAllometric.pdf Graphic file (type pdf)
 
 <use fig_FPAllometric.pdf>
-Package pdftex.def Info: fig_FPAllometric.pdf used on input line 1044.
+Package pdftex.def Info: fig_FPAllometric.pdf used on input line 1045.
 (pdftex.def)             Requested size: 229.49844pt x 411.40073pt.
  <fig_Invasion.pdf, id=51, 361.35pt x 231.86626pt>
 File: fig_Invasion.pdf Graphic file (type pdf)
 
 <use fig_Invasion.pdf>
-Package pdftex.def Info: fig_Invasion.pdf used on input line 1054.
+Package pdftex.def Info: fig_Invasion.pdf used on input line 1055.
 (pdftex.def)             Requested size: 382.5pt x 245.44093pt.
  [8 <./fig_FixedPoint.pdf>] [9 <./Growth-trajectory-diagram.pdf> <./fig_Rates.p
 df>] [10 <./fig_DataHopf.pdf> <./fig_ExtinctionAllometric2.png>] [11 <./fig_FPA
@@ -551,11 +552,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  5244 strings out of 493014
  76138 string characters out of 6133351
- 163293 words of memory out of 5000000
+ 164294 words of memory out of 5000000
  8682 multiletter control sequences out of 15000+600000
  33446 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,15n,43p,1099b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,15n,43p,1083b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texl
@@ -581,7 +582,7 @@ public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
 /helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvet
 ic/uhvro8a.pfb>
-Output written on 15.pdf (12 pages, 5275767 bytes).
+Output written on 15.pdf (12 pages, 5275565 bytes).
 PDF statistics:
  477 PDF objects out of 1000 (max. 8388607)
  325 compressed objects within 4 object streams
