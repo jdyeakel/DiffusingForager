@@ -41,6 +41,17 @@ Heijnen J, Roels J
   relationships in aerobic fermentation processes.
 \newblock \emph{Biotechnology and Bioengineering} 23:739--763.
 
+\bibitem{peters1986ecological}
+Peters RH
+\newblock (1986) \emph{The ecological implications of body size}
+\newblock (Cambridge University Press) Vol.{}~2.
+
+\bibitem{blueweiss1978relationships}
+Blueweiss L, {et~al.}
+\newblock (1978) Relationships between body size and some life history
+  parameters.
+\newblock \emph{Oecologia} 37:257--272.
+
 \bibitem{stryer}
 Stryer L
 \newblock (1995) \emph{{Biochemistry, Fourth Edition}}
@@ -63,17 +74,17 @@ Lindstedt SL, Schaeffer PJ
   parameters of mammals.}
 \newblock \emph{Lab. Anim.} 36:1--19.
 
-\bibitem{allen2002global}
-Allen AP, Brown JH, Gillooly JF
-\newblock (2002) Global biodiversity, biochemical kinetics, and the
-  energetic-equivalence rule.
-\newblock \emph{Science} 297:1545--1548.
-
 \bibitem{estermann}
 Estermann BL, Wettstein HR, Sutter F, Kreuzer M
 \newblock (2001) Nutrient and energy conversion of grass-fed dairy and suckler
   beef cattle kept indoors and on high altitude pasture.
 \newblock \emph{Animal Research} 50:477--493.
+
+\bibitem{michaletz2014convergence}
+Michaletz ST, Cheng D, Kerkhoff AJ, Enquist BJ
+\newblock (2014) Convergence of terrestrial plant production across global
+  climate gradients.
+\newblock \emph{Nature} 512:39--43.
 
 \bibitem{damuth1987interspecific}
 Damuth J
