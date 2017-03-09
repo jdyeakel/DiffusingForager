@@ -116,7 +116,7 @@ We obtain strong constraints on starvation and recovery rates by deriving allome
 Moreover, we find that these rates fall within a `refuge' in parameter space, where the probability of extinction of the consumer population is minimized.
 Thus we identify a potential mechanism that may both drive and constrain the dynamics of animal populations.
 Our model provides a natural framework that predicts maximum body size for mammals by determining the relative stability of an otherwise homogeneous population to a mutant population with altered percentage of body fat.
-For body masses $\lesssim 10^7$g, individuals with increased energetic reserves can invade resident populations, and vice versa for body mass $\gtrsim 10^7$g, thus providing a principled mechanism for a within-lineage driver of Cope's rule.
+For body masses $< 1.75\times10^7$g, individuals with increased energetic reserves can invade resident populations, and vice versa for body mass $> 1.75\times10^7$g, thus providing a principled mechanism for a within-lineage driver of Cope's rule.
 \end{abstract}
 \keywords{foraging | starvation|reproduction}
 
@@ -160,8 +160,8 @@ As we shall show, these constraints influence the ensuing population dynamics in
 \noindent {\bf Nutritional state-structured model (NSM)}\\
 We begin by defining a minimal Nutritional State-structured population Model (NSM), where the consumer population is partitioned into two states: (a) an energetically replete (full) state $F$, where the consumer reproduces at a constant rate $\lambda$ and does not die from starvation, and (b) an energetically deficient (hungry) state $H$, where the consumer does not reproduce but dies by starvation at rate $\mu$. The underlying resource $R$ evolves by logistic growth with an intrinsic growth rate $\alpha$ and a carrying capacity $C$. The rate at which consumers transition between states and consume resources is dependent on their overall abundance, the abundance of resources, the efficiency of converting resources into metabolism, and how that metabolism is partitioned between maintenance and growth purposes. In the supplementary information (SI) we provide a fully mechanistic model for each of these dynamics and constants, and show that the system produces a simple non-dimensional form which we describe below.
 
-{\color{red} Consumers transition from the full state $F$ to the hungry state $H$ at a rate $\sigma$---the starvation rate---and also in proportion to the absence of resources $(1-R)$  (see SI for detailed a description and derivation of all rates and dependencies).  Conversely, consumers recover from state $H$ to state $F$ at rate $\xi \rho$ and in proportion to $R$, where $\xi$ represents a ratio between maximal resource consumption and the carrying capacity of the resource. %and $\approx 2$.
-Resources are eaten by the hungry consumers at rate $\rho R + \delta$, that accounts for their somatic growth ($\rho R$) and  maintenance ($\delta$). Full consumers eat resources at a constant rate $\beta$ that accounts for maximal maintenance and somatic growth (please see SI for a mechanistic derivation of these terms from resource energetics).}
+Consumers transition from the full state $F$ to the hungry state $H$ at a rate $\sigma$---the starvation rate---and also in proportion to the absence of resources $(1-R)$.  Conversely, consumers recover from state $H$ to state $F$ at rate $\xi \rho$ and in proportion to $R$, where $\xi$ represents a ratio between maximal resource consumption and the carrying capacity of the resource. %and $\approx 2$.
+Resources are eaten by the hungry consumers at rate $\rho R + \delta$, that accounts for their somatic growth ($\rho R$) and  maintenance ($\delta$). Full consumers eat resources at a constant rate $\beta$ that accounts for maximal maintenance and somatic growth (see SI for mechanistic derivations of these rates from resource energetics).
 %This inequality accounts for hungry consumers requiring more resources to replace lost body tissue.
 The NSM represents an ecologically motivated fundamental extension of the idealized starving random walk model of foraging, which focuses on resource depletion, to include reproduction and resource replenishment~\cite{Benichou:2014wu,Benichou:2016wl,Chupeau:2016jf}, and is a more general formulation than previous models incorporating starvation~\cite{Persson:1998hz}.
 
@@ -171,7 +171,7 @@ In the mean-field approximation, in which the consumers and resources are perfec
 \begin{split}
 \frac{dF}{dt} &= \lambda F + \xi \rho RH - \sigma \left(1-R\right)F,  \\
 \frac{dH}{dt} &= \sigma \left(1-R\right)F - \xi \rho RH - \mu H,  \\
-\frac{dR}{dt} &= \alpha R\left(1-R\right) -\left(\rho R+\delta\right)H-\beta F
+\frac{dR}{dt} &= \alpha \left(1-R\right)R -\left(\rho R+\delta\right)H-\beta F
 \end{split}
 \end{align}
 This system of nondimensional equations follows from a set of first-principle relationships for resource consumption and growth (see SI for a full derivation and the dimensional form).
@@ -183,8 +183,8 @@ Equation~\eqref{eq:system} has three fixed points: two trivial fixed points at $
 \begin{align}
 \label{eq:ss}
 \begin{split}
-F^* &= \frac{(\sigma-\lambda) \alpha  \lambda  \mu ^2  (\mu +\xi  \rho )}{A (\lambda  \rho  B+\mu  \sigma  (\beta  \mu +\lambda  (\delta +\rho )))}, \\
-H^* &= \frac{(\sigma-\lambda) \alpha  \lambda ^2 \mu  (\mu +\xi  \rho )}{A (\lambda  \rho  B+\mu  \sigma  (\beta  \mu +\lambda  (\delta +\rho )))}, \\
+F^* &= (\sigma-\lambda)\frac{ \alpha  \lambda  \mu ^2  (\mu +\xi  \rho )}{A (\lambda  \rho  B+\mu  \sigma  (\beta  \mu +\lambda  (\delta +\rho )))}, \\
+H^* &= (\sigma-\lambda)\frac{ \alpha  \lambda ^2 \mu  (\mu +\xi  \rho )}{A (\lambda  \rho  B+\mu  \sigma  (\beta  \mu +\lambda  (\delta +\rho )))}, \\
 R^* &= (\sigma - \lambda)\frac{\mu  }{A}.
 \end{split}
 \end{align}
@@ -192,51 +192,31 @@ where $A=(\lambda  \xi  \rho +\mu  \sigma )$ and $B=(\beta  \mu  \xi +\delta  \l
 The parameters in Eq.~\eqref{eq:system} are such that the real part of the largest eigenvalue of $\mathbf{J}$ is negative, so that the system is stable with respect to small perturbations from the fixed point.
 Because this fixed point is unique, it is the global attractor for all population trajectories for any initial condition where the resource and consumer densities are both nonzero.
 
-From Eq.~\eqref{eq:ss}, an obvious constraint on the NSM is that the reproduction rate $\lambda$ must be less than the starvation rate $\sigma$, so that $R^*$ is positive.  In fact, when the resource density $R=0$, the rate equation for $F$ gives exponential growth of $F$ for $\lambda>\sigma$.
-The condition $\sigma = \lambda$ represents a transcritical (TC) bifurcation~\cite{Strogatz:2008wo} that demarcates a physical  from an unphysical regime where all densities become less than zero.
+From Eq.~\eqref{eq:ss}, an obvious constraint on the NSM is that the reproduction rate $\lambda$ must be less than the starvation rate $\sigma$, so that the consumer and resource densities are positive.
+%In fact, when the resource density $R=0$, the rate equation for $F$ gives exponential growth of $F$ for $\lambda>\sigma$.
+The condition $\sigma = \lambda$ thus represents a transcritical (TC) bifurcation~\cite{Strogatz:2008wo} that demarcates a physical from an unphysical regime where all steady-state densities become negative after intersecting the trivial fixed point $(F^*,H^*,R^*)=(0,0,0)$.
 The biological implication of the constraint $\lambda<\sigma$ has a simple interpretation---the rate at which a macroscopic organism loses mass due to lack of resources is generally much faster than the rate of reproduction.
 As we will discuss below, this inequality is a natural consequence of allometric constraints~\cite{Kempes:2012hy} for organisms within empirically observed body size ranges. %(Fig.~\ref{fig:gvs})
 
 In the physical regime of $\lambda<\sigma$, the fixed point \eqref{eq:ss} may either be a stable node or a limit cycle (Fig.~\ref{fig:fp}).
 In continuous-time systems, a limit cycle arises when a pair of complex conjugate eigenvalues crosses the imaginary axis to attain positive real parts~\cite{GuckHolmes}.
 This Hopf bifurcation is defined by ${\rm Det}({\bf S}) = 0$, with $\bf S$ the Sylvester matrix, which is composed of the coefficients of the characteristic polynomial of the Jacobian matrix~\cite{Gross:2004p2428}.
-As the system parameters are tuned to be within the stable regime, but close to the Hopf bifurcation, the amplitude of the transient cycles become large.
+As the system parameters are tuned to be within the stable regime, but close to the Hopf bifurcation, the amplitude of the transient cycles becomes large.
 Given that ecological systems are constantly being perturbed~\cite{Hastings:2001jh}, the onset of transient cycles, even though they decay with time in the mean-field description, can increase the extinction risk~\cite{Neubert:1997wk,Caswell:2005eo,Neubert:2009td}.
 %Thus the distance of a system from the Hopf bifurcation provides a measure of its persistence.
 
 When the starvation rate $\sigma\gg\lambda$, a substantial fraction of the consumers are driven to the hungry non-reproducing state.
 Because reproduction is inhibited, there is a low steady-state consumer density and a high steady-state resource density.
-However, if $\sigma/\lambda\to 1$ from above, the population is overloaded with energetically-replete (reproducing) individuals, thereby promoting oscillations between the consumer and resource densities (Fig.~\ref{fig:fp}).
-
-Whereas the relation between consumer growth rate $\lambda$ and the starvation rate $\sigma$ defines an absolute bound of biological feasibility---the TC bifurcation---$\sigma$ also determines the sensitivity of the consumer population to changes in resource density.
-When $\sigma\gg\lambda$, the steady-state population density is small, thereby increasing the risk of stochastic extinction.
-On the other hand, as $\sigma$ decreases, the system will ultimately be poised either near the TC or the Hopf bifurcation (Fig.~\ref{fig:fp}).
-If the recovery rate $\rho$ is sufficiently small, the TC bifurcation is reached and the resource eventually is eliminated.
-If $\rho$ exceeds a threshold value, cyclic dynamics will develop as the Hopf bifurcation is approached.
+However, if $\sigma/\lambda\to 1$ from above, the population is overloaded with energetically-replete (reproducing) individuals, thereby promoting transient oscillations between the consumer and resource densities (Fig.~\ref{fig:fp}).
+If the starvation rate is low enough that the Hopf bifurcation is crossed, these oscillations become stable over time.
+This threshold occurs at higher values of the starvation rate as the recovery rate $\rho$ increases, such that the range of parameter space giving rise to cyclic dynamics also increases with higher recovery rates.
 \\
+% Whereas the relation between consumer growth rate $\lambda$ and the starvation rate $\sigma$ defines an absolute bound of biological feasibility---the TC bifurcation---$\sigma$ also determines the sensitivity of the consumer population to changes in resource density.
+% When $\sigma\gg\lambda$, the steady-state population density is small, thereby increasing the risk of stochastic extinction.
+% On the other hand, as $\sigma$ decreases, the system will ultimately be poised either near the TC or the Hopf bifurcation (Fig.~\ref{fig:fp}).
+% If the recovery rate $\rho$ is sufficiently small, the TC bifurcation is reached and the resource eventually is eliminated.
+% If $\rho$ exceeds a threshold value, cyclic dynamics will develop as the Hopf bifurcation is approached.
 
-%In the case of the 2-stage consumer model, the Jacobian evaluated at the internal steady state (denoted by $|_*$) is written
-%
-%\begin{equation}
-%\mathbf{J}|_* =
-%%\left(
-%%\begin{array}{ccc}
-%% -F^* m+(1-R^*) a -R^* a -H^* \rho  & -R^* \rho  & -m R^* \\
-%% -H^* \rho -F^* \sigma  & -\mu -R^* \rho  & (1-R^*) \sigma  \\
-%% H^* \rho +F^* \sigma  & R^* \rho  & \lambda -(1-R^*) \sigma  \\
-%%\end{array}
-%%\right).
-%\left(
-%\begin{array}{ccc}
-% -\frac{\lambda  \rho  (\sigma - \lambda )}{\lambda  \rho +\mu  \sigma } & \frac{\mu  \rho  (\sigma -\lambda )}{\lambda  \rho +\mu  \sigma } & \frac{\alpha  \lambda  (\mu +\rho )}{m \mu +\lambda  \rho } \\
-% \frac{\lambda  (\mu +\rho ) \sigma }{\lambda  \rho +\mu  \sigma } & -\frac{\mu  (\mu +\rho ) \sigma }{\lambda  \rho +\mu  \sigma } & -\frac{\alpha  \lambda  (\mu +\rho )}{m \mu +\lambda  \rho } \\
-% -\frac{m \mu  (\sigma - \lambda)}{\lambda  \rho +\mu  \sigma } & -\frac{\mu  \rho  (\sigma - \lambda )}{\lambda  \rho +\mu  \sigma } & -\frac{\alpha  \mu  (\sigma - \lambda)}{\lambda  \rho +\mu  \sigma } \\
-%\end{array}
-%\right).
-%\end{equation}
-
-
-%CHRIS - we need to define beta in this section...
 
 \noindent {\bf Role of allometry} \\
 %[Link Allometry stuff to our model - what does it provide to the story]
@@ -251,7 +231,7 @@ highlight common constraints and average trends across large ranges in body
 size and species diversity. Many of these relations can be derived from a
 small set of assumptions and below we describe our framework to determine the
 covariation of timescales and rates across the range of mammals for each of
-the key parameters of our model (cf.~\cite{Yodzis:1992hg}).  We are thereby
+the key parameters of our model (cf. ref.~\citenum{Yodzis:1992hg}).  We are thereby
 able to define the regime of dynamics occupied by the entire class of mammals, along with the key differences between the largest and smallest mammals.
 
 
@@ -260,7 +240,7 @@ metabolism, which can be used to describe a variety of organismal features
 \cite{Brown:2004wq}.  The scaling relation between an organism's metabolic
 rate $B$ and its body mass $M$ at reproductive maturity is known to scale as
 $B = B_0 M^\eta$~\cite{West:2002it}, where the scaling exponent $\eta$ is
-typically close to $2/3$ or $3/4$ for metazoans (e.g., \cite{Brown:2004wq}),
+typically close to $2/3$ or $3/4$ for metazoans (e.g., ref. \citenum{Brown:2004wq}),
 and has taxonomic shifts for unicellular species between $\eta\approx 1$ in
 eukaryotes and $\eta\approx 1.76$ in bacteria
 \cite{DeLong:2010dy,Kempes:2012hy}.
@@ -288,7 +268,7 @@ where, for $\eta<1$, $M=(B_{0}/B_{m})^{1/(1-\eta)}$ is the asymptotic mass, $a=B
 \label{t1}
 \tau\left(\epsilon\right) = \ln\left[\frac{1-\left(m_{0}/M\right)^{1-\eta}}{1-\epsilon^{1-\eta}}\right]\frac{M^{1-\eta}}{a\left(1-\eta\right)},
 \end{equation}
-where we will define values of $\epsilon$ to describe a set of rates within our model. For the time to reproduce, $t_{\lambda}=\tau\left(\epsilon_{\lambda}\right)$, where $\epsilon_{\lambda}$ is the fraction of the asymptotic mass where an organism is reproductively mature and should be close to one (typically $\epsilon_{\lambda}\approx0.95$ \cite{West:2001bv}). The growth rate is then given by $\lambda=\ln\left(\upsilon\right)/t_{\lambda}$ where $\upsilon$ is the number of offspring produced, and for any constant value of $\epsilon_{\lambda}$, this rate will scale as $\lambda\propto M^{\eta-1}$ for $M\gg m_{0}$ \cite{West:2001bv,moses2008rmo,gillooly2002esa,hou,Kempes:2012hy}.
+where we will define values of $\epsilon$ to describe a set of rates within our model. For the time to reproduce, $t_{\lambda}=\tau\left(\epsilon_{\lambda}\right)$, where $\epsilon_{\lambda}$ is the fraction of the asymptotic mass where an organism is reproductively mature and should be close to one (typically $\epsilon_{\lambda}\approx0.95$; \citenum{West:2001bv}). The growth rate is then given by $\lambda=\ln\left(\upsilon\right)/t_{\lambda}$ where $\upsilon$ is the number of offspring produced, and for any constant value of $\epsilon_{\lambda}$, this rate will scale as $\lambda\propto M^{\eta-1}$ for $M\gg m_{0}$ \cite{West:2001bv,moses2008rmo,gillooly2002esa,hou,Kempes:2012hy}.
 
 
 The rate of recovery $\rho = 1/t_\rho$ requires that an organism accrues
@@ -308,7 +288,7 @@ recovery timescale, $t_{\rho}$, is the time to go from
 $m=\epsilon_{\sigma} \epsilon_{\lambda} M$ to $m=\epsilon_{\lambda}M$ (Fig. \ref{fig:growth}). Using Eqs.~\eqref{m1} and \eqref{t1} this timescale is given by simply considering an adjusted starting mass of $m_{0}^{\prime}=\epsilon_{\sigma}\epsilon_{\lambda}M$, in which case
 \begin{eqnarray}
 \label{rhotimescale}
-t_{\rho}=\ln\left[\frac{1-\left(\epsilon_{\sigma}\epsilon_{\lambda}\right)^{1-\eta}}{1-\epsilon^{1-\eta}}\right]\frac{M^{1-\eta}}{a^{\prime}\left(1-\eta\right)}
+t_{\rho}=\ln\left[\frac{1-\left(\epsilon_{\sigma}\epsilon_{\lambda}\right)^{1-\eta}}{1-\epsilon_\lambda^{1-\eta}}\right]\frac{M^{1-\eta}}{a^{\prime}\left(1-\eta\right)}
 \end{eqnarray}
 where $a^{\prime}=B_{0}/E_{m}^{\prime}$ accounts for possible deviations in the biosynthetic energetics during recovery (see SI). It should be noted that more complicated ontogenetic models explicitly handle
 storage \cite{hou}, whereas this feature is implicitly covered by the body
@@ -366,15 +346,8 @@ and $\mu=1/t_{\mu}$.
 
 %\left(\frac{a}{b}\right)^{\frac{1}{\eta -1}}
 %where $c=(a/b)^{1/(\eta-1)}$.
-Although the rate equations \eqref{eq:system} are general, here we focus on
-parameterizations for terrestrial-bound endotherms, specifically mammals,
-which range from a minimum of $M\approx1$g (the Etruscan shrew
-\emph{Suncus etruscus}) to a maximum of $M\approx10^7$g (the late Eocene
-to early Miocene Indricotheriinae).  Investigating other classes of organisms
-would simply involve altering the metabolic exponents and scalings associate
-with $\epsilon$. Moreover, we emphasize that our allometric equations
-describe mean relationships, and do not account for the (sometimes
-considerable) variance associated with individual species.
+Although the rate equations \eqref{eq:system} are general, here we focus on parameterizations for terrestrial-bound endotherms, specifically mammals, which range from a minimum of $M\approx1$g (the Etruscan shrew \emph{Suncus etruscus}) to a maximum of $M\approx10^7$g (the early Oligocene Indricotheriinae and the Miocene Deinotheriinae).  
+Investigating other classes of organisms would simply involve altering the metabolic exponents and scalings associate with $\epsilon$. Moreover, we emphasize that our allometric equations describe mean relationships, and do not account for the (sometimes considerable) variance associated with individual species.
 \\
 %, though this is beyond the current scope of our analysis. %, and we henceforth focus our examination on mammalian species.
 
@@ -450,7 +423,11 @@ This relationship implies that $B_{\rm tot}=N^*B(M)=Q$, where $Q$ is a constant,
 Figure \ref{fig:mass}\emph{A} shows that both $F^{*}$ and $H^{*}$ scale as $M^{-\eta}$ over a wide range of organism sizes and Figure \ref{fig:mass}\emph{B} shows that $F^{*}B$ is nearly constant over this same range.
 This result is remarkable because it illustrates that the steady state values of the NSM combined with the derived timescales naturally give rise to energy equivalence.
 Our model shows that the equivalence breaks down at the maximum observed body sizes for mammals, suggesting that this maximum is a hard limit where deviations outside of this range are energetically suboptimal. %, violating the energy equivalence. % set by deviations from constant efficiency obeyed by other populations.
-In the framework of our model, the total metabolic rate of $F$ and $H$ becomes infinite at a finite mass, and occur at the same scale where the steady state resources vanish (Fig.~\ref{fig:mass}). {\color{red} This asymptotic behavior is governed by body sizes at which $\epsilon_{\mu}$ and $\epsilon_{\lambda}$ equal zero causing the timescales to become infinite (see Equation \ref{mutimescale}) and the rates $\mu$ and $\lambda$ to equal zero. The $\mu=0$ asymptote occurs first when $f_{0}M^{\gamma-1}+u_{0}M^{\zeta-1}=1$, and corresponds to $(F^*,H^*,R^*)=(0,0,0)$. This point predicts an upper bound on mammalian body size and occurs at $M_{\rm max}=6.54\times10^7$.} Moreover, $M_{\rm max}$, which is entirely determined by the population-level consequences of energetic constraints, is remarkably close to the maximum body size observed in the North American mammalian fossil record~\cite{Alroy:1998p1594}, as well as the mass predicted from an evolutionary model of body size evolution~\cite{Clauset:2009fh}. {\color{red} It should be noted that the asymptotic behavior and predicted upper bound depend only on the scaling of body composition and are independent of the resource parameters}. We also note that the prediction of an asymptotic limit on mammalian size parallels work on microbial life where an upper and lower bound on bacterial size, and an upper bound on single cell eukaryotic size, is predicted from similar growth and energetic scaling relationships~\cite{Kempes:2012hy,Kempes:2016}. % reasons or from dissimilar scaling of cellular composition which is analogous to the body fat composition employed here
+In the framework of our model, the total metabolic rate of $F$ and $H$ becomes infinite at a finite mass, and occur at the same scale where the steady state resources vanish (Fig.~\ref{fig:mass}). This asymptotic behavior is governed by body sizes at which $\epsilon_{\mu}$ and $\epsilon_{\lambda}$ equal zero causing the timescales to become infinite (see Equation \ref{mutimescale}) and the rates $\mu$ and $\lambda$ to equal zero.
+The $\mu=0$ asymptote occurs first when $f_{0}M^{\gamma-1}+u_{0}M^{\zeta-1}=1$, and corresponds to $(F^*,H^*,R^*)=(0,0,0)$. This point predicts a strong upper bound on mammalian body size and occurs at $M_{\rm max}=6.54\times10^7$.
+Moreover, $M_{\rm max}$, which is entirely determined by the population-level consequences of energetic constraints, is close to the maximum body size observed in the North American mammalian fossil record~\cite{Alroy:1998p1594}, as well as the mass predicted from an evolutionary model of body size evolution~\cite{Clauset:2009fh}.
+It should be noted that the asymptotic behavior and predicted upper bound depend only on the scaling of body composition and are independent of the resource parameters.
+We also note that the prediction of an asymptotic limit on mammalian size parallels work on microbial life where an upper and lower bound on bacterial size, and an upper bound on single cell eukaryotic size, is predicted from similar growth and energetic scaling relationships~\cite{Kempes:2012hy,Kempes:2016}. % reasons or from dissimilar scaling of cellular composition which is analogous to the body fat composition employed here
 
 
 %Significant deviations from constant energy use occur at $M \lesssim 1$ at the small end of the mammalian range and $M\approx 6.5*10^7$ at the large end.
@@ -465,25 +442,28 @@ We contend that the NSM provides a mechanistic understanding of the energetic dy
 The NSM predicts that the steady state resource density $R^{*}$ decreases with increasing body size of the consumer population (Fig. \ref{fig:mass}\emph{C}), and classic resource competition theory predicts that the species surviving on the lowest resource abundance will outcompete others \cite{tilman1981,dutkiewicz2009,barton2010}. Thus, the combined NSM steady-state dynamics and allometric timescales predict that larger mammals have an intrinsic competitive advantage given a common resource, but does not offer a within-lineage mechanism by which larger body sizes are selected for.
 
 To examine whether the NSM could provide such a mechanism, we begin by noting that a theoretical upper bound on mammalian body size is given by $\epsilon_\sigma=0$, where mammals are entirely composed of metabolic reserves, and this occurs at $M=8.3\times 10^8$, or $120$ times the mass of a male African elephant.
-Next we examine to what extent a more realistic upper bound to body mass may serve as an evolutionary attractor, thus providing a suitable within-lineage mechanism for Cope's rule.{\color{red}
-We directly assess the susceptibility of an otherwise homogeneous population to invasion by a mutated subset of the population (denoted by $^\prime$) where individuals have a modified proportion of body fat $M^\prime=M(1+\chi)$. For the allowable values of $\chi$ the adjusted mass should exceed the amount of body fat, $1+\chi>\epsilon_{\sigma}$, and the adjusted time to reproduce must be positive, which given Equation \ref{t1}, implies that $1-\epsilon_{\lambda}^{1-\eta}\left(1+\chi\right)^{1-\eta}>0$. Together these conditions imply that  $\chi\in(-f_0M^{\gamma-1},1/\epsilon_{\lambda}-1)$ where the upper bound approximately equals $0.05$. }The modified mass adjusts our model via the altered rates of starvation $\sigma(M^\prime)$, recovery $\rho(M^\prime)$, and the maintenance of both starving $\delta(M^\prime)$ and full consumers $\beta(M^\prime)$.
+Next we examine to what extent a more realistic upper bound to body mass may serve as an evolutionary attractor, thus providing a suitable within-lineage mechanism for Cope's rule.
+We directly assess the susceptibility of an otherwise homogeneous population to invasion by a mutated subset of the population (denoted by $^\prime$) where individuals have a modified proportion of body fat $M^\prime=M(1+\chi)$.
+For the allowable values of $\chi$ the adjusted mass should exceed the amount of body fat, $1+\chi>\epsilon_{\sigma}$, and the adjusted time to reproduce must be positive, which given Equation \ref{t1}, implies that $1-\epsilon_{\lambda}^{1-\eta}\left(1+\chi\right)^{1-\eta}>0$.
+Together these conditions imply that  $\chi\in(-f_0M^{\gamma-1},1/\epsilon_{\lambda}-1)$ where the upper bound approximately equals $0.05$.
+The modified mass adjusts our model via the altered rates of starvation $\sigma(M^\prime)$, recovery $\rho(M^\prime)$, and the maintenance of both starving $\delta(M^\prime)$ and full consumers $\beta(M^\prime)$.
 Importantly, $\epsilon_\sigma$, which determines the point along the growth curve that defines the state of starved foragers, is assumed to remain unchanged for the invader population (see SI for detailed derivations of invader rates).
 %There is no internal fixed point corresponding to a state where both original residents and invaders coexist (except for the trivial state $\chi=0$).
 
 To assess the susceptibility of the resident population to invasion, we determine which consumer has a lower steady-state resource density for a given value of $\chi$, again with the expectation that populations able to survive on lower resource densities have a competitive advantage \cite{tilman1981}.
-We find that for $M\leq 1.73\times10^7$g, having additional body fat ($\chi > 0$) results in lower steady state resource density ($R^{\prime *}<R^*$), such that the invader has an intrinsic competitive advantage over the resident population.
-However, for $M> 1.73\times10^7$g, leaner individuals ($\chi < 0$) have lower resource steady state densities, switching the advantage for higher values of $M$.
+We find that for $M\leq 1.75\times10^7$g, having additional body fat ($\chi > 0$) results in lower steady state resource density ($R^{\prime *}<R^*$), such that the invader has an intrinsic competitive advantage over the resident population.
+However, for $M> 1.75\times10^7$g, leaner individuals ($\chi < 0$) have lower resource steady state densities, switching the advantage for higher values of $M$.
 
 %, and this is due to the changing
 %covariance between energetic rates as a function of modified energetic
 %reserves \sid{I don't understand the phrase after the comma AND STILL DON'T}.
 
-The observed switch in susceptibility as a function of $\chi$ at $M_{\rm opt}= 1.73\times10^7$g thus serves as an attractor, such that the NSM predicts organismal mass to increase if $M<M_{\rm opt}$ and decrease if $M>M_{\rm opt}$.
-This value is close to but smaller than the asymptotic upper bound for terrestrial mammal body size predicted by the NSM, however it is remarkably close to independent estimates of the largest land mammals, the early Oligocene \emph{Indricotherium} at ca. $1.3\times10^7$g and the late Miocene \emph{Deinotherium} at ca. $1.74\times10^7$g ~\cite{Smith:2010p3442}.
+The observed switch in susceptibility as a function of $\chi$ at $M_{\rm opt}= 1.75\times10^7$g thus serves as an attractor, such that the NSM predicts organismal mass to increase if $M<M_{\rm opt}$ and decrease if $M>M_{\rm opt}$.
+This value is close to but smaller than the asymptotic upper bound for terrestrial mammal body size predicted by the NSM, however it is remarkably close to independent estimates of the largest land mammals, the early Oligocene \emph{Indricotherium} at ca. $1.5\times10^7$g and the late Miocene \emph{Deinotherium} at ca. $1.74\times10^7$g ~\cite{Smith:2010p3442}.
 Additionally, our calculation of $M_{\rm opt}$ as a function of mass-dependent physiological rates is similar to theoretical estimates of maximum body size \cite{Clauset:2009fh}, and provides independent theoretical support for the observation of a `maximum body size attractor' for North American mammals outlined by Alroy~\cite{Alroy:1998p1594}.
 %as well as  \cite{Alroy:1998p1594,Clauset:2009fh}.
 %This value is only XX\% the estimated size of Indricotheriinae, a group that includes the largest known terrestrial mammal.
-While the state of the environment, as well as the competitive landscape, will determine whether specific body sizes are selected for or against~\cite{Saarinen:2014br}, we propose that the dynamics of starvation and recovery described in the NSM may provide a general within-linneage mechanism for the evolution of larger body size among terrestrial mammals.
+While the state of the environment, as well as the competitive landscape, will determine whether specific body sizes are selected for or against~\cite{Saarinen:2014br}, we propose that the dynamics of starvation and recovery described in the NSM provide a general within-lineage mechanism for the evolution of larger body size among terrestrial mammals.
 
 
 %and we suggest that the starvation dynamics described here act in concert with these other factors is the only driver of body size evolution.
@@ -1011,7 +991,7 @@ Future efforts will involve exploring the consequences of these dynamics in a sp
 \caption{
 Allometrically constrained starvation rate $\sigma=1/t_{\sigma}$ (red), mortality $\mu=1/t_{\mu}$ (red) and recovery rate $\rho=1/t_{\rho}$ (green) relative to the reproductive rate $\lambda=1/t_{\lambda}$ (black) as a function of body mass (see Equations \ref{t1}, \ref{rhotimescale}, \ref{eq:sigma}, and \ref{mutimescale}).
 The rate of starvation is greater than the rate of reproduction for all realized terrestrial endotherm body sizes.
-Mean values $\pm 20\%$ variation are shown by the shaded region for each rate.
+Mean values $\pm 25\%$ variation are shown by the shaded region for each rate.
 }
 \label{fig:gvs}
 \end{figure*}
@@ -1032,9 +1012,7 @@ Mean values $\pm 20\%$ variation are shown by the shaded region for each rate.
 \begin{figure*}
 \centering
 \includegraphics[width=1\textwidth]{fig_ExtinctionAllometricComb3.png}
-\caption{ Probability of extinction for a 100g consumer as a function of the starvation rate $\sigma$ and recovery rate $\rho$, where the initial density is given as $(XF^*,XH^*,R^*)$, with $X$ being a random uniform variable in $[0,2]$.  Extinction is defined as the
-  population trajectory falling below $0.1$ times the allometrically
-  constrained steady state. The white point denotes the allometrically constrained starvation and recovery rate.}
+\caption{ Probability of extinction for a consumer with (from left to right) $M=10^2,~10^4,~10^6$g as a function of the starvation rate $\sigma$ and recovery rate $\rho$, where the initial density is given as $(XF^*,XH^*,R^*)$, where $X$ is a random uniform variable in $[0,2]$. Note the change in scale for $M=10^4,~10^6$g.  Extinction is defined as the population trajectory falling below $0.2\times$ the allometrically constrained steady state. The white points denote the allometrically constrained starvation and recovery rate.}
 \label{fig:ext}
 \end{figure*}
 
@@ -1056,7 +1034,7 @@ Mean values $\pm 20\%$ variation are shown by the shaded region for each rate.
   region denotes proportions of modified mass $\chi$ resulting in successful invasion.  The
   red region denotes values of $\chi$ that result in a mass that is below the
   starvation threshold and is thus infeasible.
-  Arrows point to the predicted optimal mass $M_{\rm opt}=1.73\times 10^7$, which serves as an evolutionary attractor for body mass.
+  Arrows point to the predicted optimal mass $M_{\rm opt}=1.75\times 10^7$, which serves as an evolutionary attractor for body mass.
   The black wedge points to the largest body mass known for terrestrial mammals at $7.74\times10^7$g~\cite{Smith:2010p3442}.}
 \label{fig:invasion}
 \end{figure*}
