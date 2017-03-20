@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: YKR_Arxiv.aux
+The style file: apsrev.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: aa_starving_supplement.bib
+Warning--I didn't find a database entry for "Yeakel:2013hi"
+Warning--I didn't find a database entry for "Benichou:2016wl"
+Warning--I didn't find a database entry for "Chupeau:2016jf"
+Warning--I didn't find a database entry for "Persson:1998hz"
+Warning--I didn't find a database entry for "murray2011mathematical"
+Warning--I didn't find a database entry for "Strogatz:2008wo"
+Warning--I didn't find a database entry for "bettencourt"
+Warning--I didn't find a database entry for "Damuth:1987kr"
+Warning--I didn't find a database entry for "allen2002"
+Warning--I didn't find a database entry for "enquist1998"
+Warning--I didn't find a database entry for "Kempes:2016"
+Warning--I didn't find a database entry for "tilman1981"
+Warning--I didn't find a database entry for "dutkiewicz2009"
+Warning--I didn't find a database entry for "barton2010"
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--missing publisher in Kooi2000
+You've used 67 entries,
+            3411 wiz_defined-function locations,
+            1625 strings with 21855 characters,
+and the built_in function-call counts, 45883 in all, are:
+= -- 2560
+> -- 1560
+< -- 226
++ -- 1267
+- -- 382
+* -- 6238
+:= -- 4961
+add.period$ -- 67
+call.type$ -- 67
+change.case$ -- 268
+chr.to.int$ -- 66
+cite$ -- 68
+duplicate$ -- 4221
+empty$ -- 3904
+format.name$ -- 969
+if$ -- 8641
+int.to.chr$ -- 2
+int.to.str$ -- 68
+missing$ -- 663
+newline$ -- 216
+num.names$ -- 201
+pop$ -- 1176
+preamble$ -- 1
+purify$ -- 268
+quote$ -- 0
+skip$ -- 1678
+stack$ -- 0
+substring$ -- 1368
+swap$ -- 3326
+text.length$ -- 190
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 390
+warning$ -- 1
+while$ -- 193
+width$ -- 0
+write$ -- 677
+(There were 15 warnings)

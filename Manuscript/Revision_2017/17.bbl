@@ -2,21 +2,21 @@
 
 \bibitem{Martin:1987dl}
 Martin TE
-\newblock (1987) {Food as a Limit on Breeding Birds: A Life-History
-  Perspective}.
+\newblock (1987) {Food as a limit on breeding birds: A life-history
+  perspective}.
 \newblock \emph{Annu. Rev. Ecol. Syst.} 18:453--487.
 
 \bibitem{Kirk:1997cc}
 Kirk KL
-\newblock (1997) {Life-History Responses to Variable Environments: Starvation
-  and Reproduction in Planktonic Rotifers}.
+\newblock (1997) {Life-history responses to variable environments: Starvation
+  and reproduction in planktonic rotifers}.
 \newblock \emph{Ecology} 78:434--441.
 
 \bibitem{Kempes:2012hy}
 Kempes CP, Dutkiewicz S, Follows MJ
 \newblock (2012) {Growth, metabolic partitioning, and the size of
-  microorganisms.}
-\newblock \emph{PNAS} 109:495--500.
+  microorganisms}.
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 109:495--500.
 
 \bibitem{Mangel:1988uaa}
 Mangel M, Clark CW
@@ -37,8 +37,8 @@ Yeakel JD, Dominy NJ, Koch PL, Mangel M
 
 \bibitem{Morris:1987eo}
 Morris DW
-\newblock (1987) {Optimal Allocation of Parental Investment}.
-\newblock \emph{Oikos} 49:332.
+\newblock (1987) {Optimal allocation of parental investment}.
+\newblock \emph{Oikos} 49:332--339.
 
 \bibitem{Tveraa:2003fq}
 Tveraa T, Fauchald P, Henaug C, Yoccoz NG
@@ -48,8 +48,11 @@ Tveraa T, Fauchald P, Henaug C, Yoccoz NG
 
 \bibitem{Daan:1988va}
 Daan S, Dijkstra C, Drent R, Meijer T
-\newblock (1988) \emph{{Food supply and the annual timing of avian
-  reproduction}}.
+\newblock (1989) in \emph{Acta XIX Congressus Internationalis Ornithologici,
+  Volume I: Proceedings XIX International Ornithological Congress, 1986,
+  Ottawa}, ed{} Ouellet H
+\newblock (Proceedings XIX International Ornithological Congress, Ottawa), pp
+  392--407.
 
 \bibitem{Jacot:2009dv}
 Jacot A, Valcu M, van Oers K, Kempenaers B
@@ -59,7 +62,7 @@ Jacot A, Valcu M, van Oers K, Kempenaers B
 
 \bibitem{Stearns:1989ip}
 Stearns SC
-\newblock (1989) {Trade-Offs in Life-History Evolution}.
+\newblock (1989) {Trade-offs in life-history evolution}.
 \newblock \emph{Funct. Ecol.} 3:259.
 
 \bibitem{Barboza:2002in}
@@ -94,24 +97,25 @@ Moore JW, Yeakel JD, Peard D, Lough J, Beere M
 
 \bibitem{Mead:1989dt}
 Mead RA
-\newblock (1989) in \emph{Carnivore Behavior, Ecology, and Evolution}
-\newblock (Springer US, Boston, MA), pp 437--464.
+\newblock (1989) in \emph{Carnivore Behavior, Ecology, and Evolution}, ed{}
+  Gittleman JL
+\newblock (Springer US, Ithaca), pp 437--464.
 
 \bibitem{Sandell:1990kw}
 Sandell M
-\newblock (1990) {The Evolution of Seasonal Delayed Implantation}.
-\newblock \emph{The Quarterly Review of Biology} 65:23--42.
+\newblock (1990) {The evolution of seasonal delayed implantation}.
+\newblock \emph{Q Rev Biol} 65:23--42.
 
 \bibitem{Bulik:1999eo}
 Bulik CM, {et~al.}
-\newblock (1999) {Fertility and Reproduction in Women With Anorexia Nervosa}.
-\newblock \emph{J. Clin. Psychiatry} 60:130--135.
+\newblock (1999) {Fertility and reproduction in women with anorexia nervosa}.
+\newblock \emph{J. Clin. Psychiat.} 60:130--135.
 
 \bibitem{Trites:2003cc}
 Trites AW, Donnelly CP
 \newblock (2003) {The decline of Steller sea lions Eumetopias jubatus in
   Alaska: a review of the nutritional stress hypothesis}.
-\newblock \emph{Mammal Review} 33:3--28.
+\newblock \emph{Mammal Rev.} 33:3--28.
 
 \bibitem{Glazier:2009hq}
 Glazier DS
@@ -139,16 +143,17 @@ Diekmann O, Metz JAJ
 Murdoch WW, Briggs CJ, Nisbet RM
 \newblock (2003) \emph{{Consumer-resource Dynamics}}, Monographs in population
   biology
-\newblock (Princeton University Press).
+\newblock (Princeton University Press, Princeton) Vol.{}~36.
 
 \bibitem{Benichou:2014wu}
 Benichou O, Redner S
 \newblock (2014) {Depletion-Controlled Starvation of a Diffusing Forager}.
-\newblock \emph{arXiv}.
+\newblock \emph{arXiv} pp 1--5.
 
 \bibitem{Benichou:2016wl}
 B{\'e}nichou O, Chupeau M, Redner S
-\newblock (2016) {Role of Depletion on the Dynamics of a Diffusing Forager}.
+\newblock (2016) {Role of depletion on the dynamics of a diffusing forager}.
+\newblock \emph{Journal of Physics A: {\ldots}}.
 
 \bibitem{Chupeau:2016jf}
 Chupeau M, B{\'e}nichou O, Redner S
@@ -157,9 +162,9 @@ Chupeau M, B{\'e}nichou O, Redner S
 
 \bibitem{Persson:1998hz}
 Persson L, Leonardsson K, De~Roos AM, Gyllenberg M, Christensen B
-\newblock (1998) {Ontogenetic Scaling of Foraging Rates and the Dynamics of a
-  Size-Structured Consumer-Resource Model}.
-\newblock \emph{Theoretical Population Biology} 54:270--293.
+\newblock (1998) {Ontogenetic scaling of foraging rates and the dynamics of a
+  size-structured consumer-resource model}.
+\newblock \emph{Theor Popul Biol} 54:270--293.
 
 \bibitem{murray2011mathematical}
 Murray JD
@@ -169,14 +174,14 @@ Murray JD
 
 \bibitem{Strogatz:2008wo}
 Strogatz SH
-\newblock (2008) \emph{{Nonlinear Dynamics and Chaos}}, With Applications to
-  Physics, Biology, Chemistry, and Engineering
-\newblock (Westview Press).
+\newblock (2008) \emph{{Nonlinear Dynamics and Chaos: With Applications to
+  Physics, Biology, Chemistry, and Engineering}}, Studies in nonlinearity
+\newblock (Westview Press, Boulder).
 
 \bibitem{GuckHolmes}
 Guckenheimer J, Holmes P
-\newblock (1983) \emph{{Nonlinear oscillations, dynamical systems, and
-  bifurcations of vector fields}}
+\newblock (1983) \emph{{Nonlinear Oscillations, Dynamical Systems, and
+  Bifurcations of Vector Fields}}
 \newblock (Springer, New York).
 
 \bibitem{Gross:2004p2428}
@@ -200,16 +205,16 @@ Neubert M, Caswell H
 Caswell H, Neubert MG
 \newblock (2005) {Reactivity and transient dynamics of discrete-time ecological
   systems}.
-\newblock \emph{Journal of Difference Equations and Applications} 11:295--310.
+\newblock \emph{J Differ Equ Appl} 11:295--310.
 
 \bibitem{Neubert:2009td}
 Neubert M, Caswell H
 \newblock (2009) {Detecting reactivity}.
-\newblock \emph{Ecology}.
+\newblock \emph{Ecology} 90:2683--2688.
 
 \bibitem{Yodzis:1992hg}
 Yodzis P, Innes S
-\newblock (1992) {Body Size and Consumer-Resource Dynamics}.
+\newblock (1992) {Body size and consumer-resource dynamics}.
 \newblock \emph{Am. Nat.} 139:1151--1175.
 
 \bibitem{Brown:2004wq}
@@ -226,8 +231,8 @@ West GB, Woodruff WH, Brown JH
 \bibitem{DeLong:2010dy}
 DeLong JP, Okie JG, Moses ME, Sibly RM, Brown JH
 \newblock (2010) {Shifts in metabolic scaling, production, and efficiency
-  across major evolutionary transitions of life.}
-\newblock \emph{PNAS} 107:12941--12945.
+  across major evolutionary transitions of life}.
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 107:12941--12945.
 
 \bibitem{West:2001bv}
 West GB, Brown JH, Enquist BJ
@@ -237,9 +242,8 @@ West GB, Brown JH, Enquist BJ
 \bibitem{moses2008rmo}
 Moses ME, {et~al.}
 \newblock (2008) {Revisiting a Model of Ontogenetic Growth: Estimating Model
-  Parameters from Theory and Data}.
-\newblock \emph{http://dx.doi.org.proxy.lib.sfu.ca/10.1086/679735}
-  171:632--645.
+  Parameters from Theory and Data.}
+\newblock \emph{Am. Nat.} 171:632--645.
 
 \bibitem{gillooly2002esa}
 Gillooly JF, Charnov EL, West GB, Savage VM, Brown JH
@@ -248,7 +252,7 @@ Gillooly JF, Charnov EL, West GB, Savage VM, Brown JH
 
 \bibitem{hou}
 Hou C, {et~al.}
-\newblock (2008) {Energy Uptake and Allocation During Ontogeny}.
+\newblock (2008) {Energy uptake and allocation during ontogeny}.
 \newblock \emph{Science} 322:736--739.
 
 \bibitem{bettencourt}
@@ -268,7 +272,7 @@ Calder~III WA
 
 \bibitem{Peterson:1984hj}
 Peterson RO, Page RE, Dodge KM
-\newblock (1984) {Wolves, Moose, and the Allometry of Population Cycles}.
+\newblock (1984) {Wolves, moose, and the allometry of population cycles}.
 \newblock \emph{Science} 224:1350--1352.
 
 \bibitem{Krukonis:1991fk}
@@ -282,7 +286,7 @@ Hendriks AJ, Mulder C
 \newblock (2012) {Delayed logistic and Rosenzweig{\textendash}MacArthur models
   with allometric parameter setting estimate population cycles at lower trophic
   levels well}.
-\newblock \emph{Ecological Complexity} 9:43--54.
+\newblock \emph{Ecol Complex} 9:43--54.
 
 \bibitem{Kendall:1999iy}
 Kendall BE, {et~al.}
@@ -309,59 +313,59 @@ Brown J, Marquet P, Taper M
 
 \bibitem{West:1997cg}
 West GB, Brown JH, Enquist BJ
-\newblock (1997) {A General Model for the Origin of Allometric Scaling Laws in
-  Biology}.
+\newblock (1997) {A general model for the origin of allometric scaling laws in
+  biology}.
 \newblock \emph{Science} 276:122--126.
 
 \bibitem{West:2002ud}
 West GB, Woodruff WH, Brown JH
 \newblock (2002) {Allometric scaling of metabolic rate from molecules and
-  mitochondria to cells and mammals}.
-\newblock \emph{Proc. Natl. Acad. Sci. USA} 99:2473--2478.
+  mitochondria to cells and mammals.}
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 99 Suppl 1:2473--2478.
 
 \bibitem{Millar:1990p923}
 Millar J, Hickling G
-\newblock (1990) { Fasting Endurance and the Evolution of Mammalian Body Size}.
+\newblock (1990) {Fasting endurance and the evolution of mammalian body size}.
 \newblock \emph{Funct. Ecol.} 4:5--12.
 
 \bibitem{Alroy:1998p1594}
 Alroy J
 \newblock (1998) {Cope's rule and the dynamics of body mass evolution in North
   American fossil mammals}.
-\newblock \emph{Science} 280:731.
+\newblock \emph{Science} 280:731--734.
 
 \bibitem{Clauset:2009fh}
 Clauset A, Redner S
-\newblock (2009) {Evolutionary Model of Species Body Mass Diversification}.
+\newblock (2009) {Evolutionary model of species body mass diversification}.
 \newblock \emph{Phys. Rev. Lett.} 102:038103.
 
 \bibitem{Smith:2010p3442}
 Smith FA, {et~al.}
-\newblock (2010) {The Evolution of Maximum Body Size of Terrestrial Mammals}.
+\newblock (2010) {The evolution of maximum body size of terrestrial mammals}.
 \newblock \emph{Science} 330:1216--1219.
 
 \bibitem{Saarinen:2014br}
 Saarinen JJ, {et~al.}
 \newblock (2014) {Patterns of maximum body size evolution in Cenozoic land
-  mammals: eco-evolutionary processes and abiotic forcing}.
-\newblock \emph{Proc Biol Sci} 281:20132049--20132049.
+  mammals: Eco-evolutionary processes and abiotic forcing}.
+\newblock \emph{Proc Biol Sci} 281:20132049.
 
-\bibitem{damuth1987interspecific}
+\bibitem{Damuth:1987kr}
 Damuth J
-\newblock (1987) Interspecific allometry of population density in mammals and
-  other animals: the independence of body mass and population energy-use.
-\newblock \emph{Biological Journal of the Linnean Society} 31:193--246.
+\newblock (1987) {Interspecific allometry of population density in mammals and
+  other animals: the independence of body mass and population energy-use}.
+\newblock \emph{Biol. J. Linn. Soc.} 31:193--246.
 
 \bibitem{allen2002}
 Allen AP, Brown JH, Gillooly JF
-\newblock (2002) {Global Biodiversity, Biochemical Kinetics, and the
-  Energetic-Equivalence Rule}.
+\newblock (2002) {Global biodiversity, biochemical kinetics, and the
+  energetic-equivalence rule}.
 \newblock \emph{Science} 297:1545--1548.
 
 \bibitem{enquist1998}
 Enquist BJ, Brown JH, West GB
-\newblock (1998) {Allometric scaling of plant energetics and population density
-  : Abstract : Nature}.
+\newblock (1998) {Allometric scaling of plant energetics and population
+  density}.
 \newblock \emph{Nature} 395:163--165.
 
 \bibitem{Kempes:2016}
@@ -372,8 +376,8 @@ Kempes CP, Wang L, Amend JP, Doyle J, Hoehler T
 
 \bibitem{tilman1981}
 Tilman D
-\newblock (1981) {Tests of Resource Competition Theory Using Four Species of
-  Lake Michigan Algae}.
+\newblock (1981) {Tests of resource competition theory using four species of
+  lake michigan algae}.
 \newblock \emph{Ecology} 62:802--815.
 
 \bibitem{dutkiewicz2009}
@@ -383,7 +387,7 @@ Dutkiewicz S, Follows MJ, Bragg JG
 
 \bibitem{barton2010}
 Barton AD, Dutkiewicz S, Flierl G, Bragg J, Follows MJ
-\newblock (2010) {Patterns of Diversity in Marine Phytoplankton}.
+\newblock (2010) {Patterns of diversity in marine phytoplankton}.
 \newblock \emph{Science} 327:1509--1511.
 
 \end{thebibliography}

@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bu1.aux
+The style file: unsrt.bst
+Database file #1: aa_starving3.bib
+Warning--empty publisher in Kooi2000
+You've used 69 entries,
+            1791 wiz_defined-function locations,
+            920 strings with 15631 characters,
+and the built_in function-call counts, 17690 in all, are:
+= -- 1611
+> -- 807
+< -- 5
++ -- 297
+- -- 228
+* -- 1549
+:= -- 2811
+add.period$ -- 210
+call.type$ -- 69
+change.case$ -- 63
+chr.to.int$ -- 0
+cite$ -- 70
+duplicate$ -- 659
+empty$ -- 1664
+format.name$ -- 228
+if$ -- 3776
+int.to.chr$ -- 0
+int.to.str$ -- 69
+missing$ -- 75
+newline$ -- 348
+num.names$ -- 73
+pop$ -- 109
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 243
+stack$ -- 0
+substring$ -- 1593
+swap$ -- 96
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 194
+width$ -- 71
+write$ -- 765
+(There was 1 warning)

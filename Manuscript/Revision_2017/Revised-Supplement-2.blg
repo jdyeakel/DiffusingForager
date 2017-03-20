@@ -5,14 +5,14 @@ The style file: pnas.bst
 Database file #1: aa_starving_supplement.bib
 You've used 16 entries,
             1765 wiz_defined-function locations,
-            587 strings with 6693 characters,
-and the built_in function-call counts, 3713 in all, are:
+            588 strings with 6702 characters,
+and the built_in function-call counts, 3715 in all, are:
 = -- 383
 > -- 125
 < -- 2
 + -- 47
 - -- 31
-* -- 292
+* -- 294
 := -- 590
 add.period$ -- 30
 call.type$ -- 16

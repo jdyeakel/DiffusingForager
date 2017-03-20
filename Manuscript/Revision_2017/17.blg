@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: 17.aux
 The style file: pnas.bst
 Database file #1: aa_starving3.bib
-Warning--empty journal in Benichou:2016wl
 You've used 69 entries,
             1765 wiz_defined-function locations,
-            929 strings with 15770 characters,
-and the built_in function-call counts, 15669 in all, are:
-= -- 1553
-> -- 621
-< -- 2
-+ -- 230
-- -- 161
-* -- 1246
-:= -- 2544
+            936 strings with 15696 characters,
+and the built_in function-call counts, 16182 in all, are:
+= -- 1625
+> -- 631
+< -- 5
++ -- 232
+- -- 163
+* -- 1292
+:= -- 2609
 add.period$ -- 130
 call.type$ -- 69
 change.case$ -- 61
 chr.to.int$ -- 0
-cite$ -- 70
-duplicate$ -- 647
-empty$ -- 1406
-format.name$ -- 167
-if$ -- 3336
+cite$ -- 69
+duplicate$ -- 663
+empty$ -- 1442
+format.name$ -- 169
+if$ -- 3463
 int.to.chr$ -- 0
 int.to.str$ -- 69
 missing$ -- 75
-newline$ -- 346
-num.names$ -- 69
-pop$ -- 114
+newline$ -- 348
+num.names$ -- 73
+pop$ -- 105
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 86
+skip$ -- 102
 stack$ -- 0
-substring$ -- 1513
-swap$ -- 154
-text.length$ -- 2
+substring$ -- 1593
+swap$ -- 171
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 177
+warning$ -- 0
+while$ -- 188
 width$ -- 71
-write$ -- 748
-(There was 1 warning)
+write$ -- 758

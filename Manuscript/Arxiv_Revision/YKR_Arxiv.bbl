@@ -1,0 +1,510 @@
+\begin{thebibliography}{67}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Martin}(1987)}]{Martin:1987dl}
+\bibinfo{author}{\bibfnamefont{T.~E.} \bibnamefont{Martin}},
+  \bibinfo{journal}{Annu. Rev. Ecol. Syst.} \textbf{\bibinfo{volume}{18}},
+  \bibinfo{pages}{453} (\bibinfo{year}{1987}).
+
+\bibitem[{\citenamefont{Kirk}(1997)}]{Kirk:1997cc}
+\bibinfo{author}{\bibfnamefont{K.~L.} \bibnamefont{Kirk}},
+  \bibinfo{journal}{Ecology} \textbf{\bibinfo{volume}{78}},
+  \bibinfo{pages}{434} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Kempes et~al.}(2012)\citenamefont{Kempes, Dutkiewicz,
+  and Follows}}]{Kempes:2012hy}
+\bibinfo{author}{\bibfnamefont{C.~P.} \bibnamefont{Kempes}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dutkiewicz}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~J.}
+  \bibnamefont{Follows}}, \bibinfo{journal}{PNAS}
+  \textbf{\bibinfo{volume}{109}}, \bibinfo{pages}{495} (\bibinfo{year}{2012}).
+
+\bibitem[{\citenamefont{Mangel and Clark}(1988)}]{Mangel:1988uaa}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Mangel}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Clark}},
+  \emph{\bibinfo{title}{{Dynamic Modeling in Behavioral Ecology}}}
+  (\bibinfo{publisher}{Princeton University Press},
+  \bibinfo{address}{Princeton}, \bibinfo{year}{1988}).
+
+\bibitem[{\citenamefont{Mangel}(2014)}]{Mangel:2014kz}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Mangel}}, \bibinfo{journal}{B.
+  Math. Biol.} \textbf{\bibinfo{volume}{77}}, \bibinfo{pages}{857}
+  (\bibinfo{year}{2014}).
+
+\bibitem[{\citenamefont{Morris}(1987)}]{Morris:1987eo}
+\bibinfo{author}{\bibfnamefont{D.~W.} \bibnamefont{Morris}},
+  \bibinfo{journal}{Oikos} \textbf{\bibinfo{volume}{49}}, \bibinfo{pages}{332}
+  (\bibinfo{year}{1987}).
+
+\bibitem[{\citenamefont{Tveraa et~al.}(2003)\citenamefont{Tveraa, Fauchald,
+  Henaug, and Yoccoz}}]{Tveraa:2003fq}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Tveraa}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fauchald}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Henaug}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{N.~G.} \bibnamefont{Yoccoz}},
+  \bibinfo{journal}{Oecologia} \textbf{\bibinfo{volume}{137}},
+  \bibinfo{pages}{370} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Daan et~al.}(1988)\citenamefont{Daan, Dijkstra, Drent,
+  and Meijer}}]{Daan:1988va}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Daan}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Dijkstra}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Drent}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Meijer}}, in
+  \emph{\bibinfo{booktitle}{Proceedings of the International {\ldots}}}
+  (\bibinfo{year}{1988}).
+
+\bibitem[{\citenamefont{Jacot et~al.}(2009)\citenamefont{Jacot, Valcu, van
+  Oers, and Kempenaers}}]{Jacot:2009dv}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Jacot}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Valcu}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{van Oers}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Kempenaers}},
+  \bibinfo{journal}{Animal Behaviour} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{1075} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Stearns}(1989)}]{Stearns:1989ip}
+\bibinfo{author}{\bibfnamefont{S.~C.} \bibnamefont{Stearns}},
+  \bibinfo{journal}{Funct. Ecol.} \textbf{\bibinfo{volume}{3}},
+  \bibinfo{pages}{259} (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Barboza and Jorde}(2002)}]{Barboza:2002in}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Barboza}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Jorde}}, \bibinfo{journal}{J
+  Comp Physiol B} \textbf{\bibinfo{volume}{172}}, \bibinfo{pages}{419}
+  (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Threlkeld}(1976)}]{Threlkeld:1976ih}
+\bibinfo{author}{\bibfnamefont{S.~T.} \bibnamefont{Threlkeld}},
+  \bibinfo{journal}{Freshwater Biol.} \textbf{\bibinfo{volume}{6}},
+  \bibinfo{pages}{489} (\bibinfo{year}{1976}).
+
+\bibitem[{\citenamefont{Weber et~al.}(1998)\citenamefont{Weber, Ens, and
+  Houston}}]{Weber:1998jg}
+\bibinfo{author}{\bibfnamefont{T.~P.} \bibnamefont{Weber}},
+  \bibinfo{author}{\bibfnamefont{B.~J.} \bibnamefont{Ens}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.~I.} \bibnamefont{Houston}},
+  \bibinfo{journal}{Evolutionary Ecology} \textbf{\bibinfo{volume}{12}},
+  \bibinfo{pages}{377} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Mduma et~al.}(1999)\citenamefont{Mduma, Sinclair, and
+  Hilborn}}]{Mduma:1999cp}
+\bibinfo{author}{\bibfnamefont{S.~A.~R.} \bibnamefont{Mduma}},
+  \bibinfo{author}{\bibfnamefont{A.~R.~E.} \bibnamefont{Sinclair}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Hilborn}},
+  \bibinfo{journal}{J. Anim. Ecol.} \textbf{\bibinfo{volume}{68}},
+  \bibinfo{pages}{1101} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Moore et~al.}(2014)\citenamefont{Moore, Yeakel, Peard,
+  Lough, and Beere}}]{Moore:2014hi}
+\bibinfo{author}{\bibfnamefont{J.~W.} \bibnamefont{Moore}},
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Yeakel}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Peard}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Lough}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Beere}}, \bibinfo{journal}{J.
+  Anim. Ecol.} \textbf{\bibinfo{volume}{83}}, \bibinfo{pages}{1035}
+  (\bibinfo{year}{2014}).
+
+\bibitem[{\citenamefont{Mead}(1989)}]{Mead:1989dt}
+\bibinfo{author}{\bibfnamefont{R.~A.} \bibnamefont{Mead}}, in
+  \emph{\bibinfo{booktitle}{Carnivore Behavior, Ecology, and Evolution}}
+  (\bibinfo{publisher}{Springer US}, \bibinfo{address}{Boston, MA},
+  \bibinfo{year}{1989}), pp. \bibinfo{pages}{437--464}.
+
+\bibitem[{\citenamefont{Sandell}(1990)}]{Sandell:1990kw}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Sandell}},
+  \bibinfo{journal}{The Quarterly Review of Biology}
+  \textbf{\bibinfo{volume}{65}}, \bibinfo{pages}{23} (\bibinfo{year}{1990}).
+
+\bibitem[{\citenamefont{Bulik et~al.}(1999)\citenamefont{Bulik, Sullivan, Fear,
+  Pickering, Dawn, and McCullin}}]{Bulik:1999eo}
+\bibinfo{author}{\bibfnamefont{C.~M.} \bibnamefont{Bulik}},
+  \bibinfo{author}{\bibfnamefont{P.~F.} \bibnamefont{Sullivan}},
+  \bibinfo{author}{\bibfnamefont{J.~L.} \bibnamefont{Fear}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Pickering}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Dawn}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{McCullin}},
+  \bibinfo{journal}{J. Clin. Psychiatry} \textbf{\bibinfo{volume}{60}},
+  \bibinfo{pages}{130} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Trites and Donnelly}(2003)}]{Trites:2003cc}
+\bibinfo{author}{\bibfnamefont{A.~W.} \bibnamefont{Trites}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~P.} \bibnamefont{Donnelly}},
+  \bibinfo{journal}{Mammal Review} \textbf{\bibinfo{volume}{33}},
+  \bibinfo{pages}{3} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Glazier}(2009)}]{Glazier:2009hq}
+\bibinfo{author}{\bibfnamefont{D.~S.} \bibnamefont{Glazier}},
+  \bibinfo{journal}{Funct. Ecol.} \textbf{\bibinfo{volume}{23}},
+  \bibinfo{pages}{963} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Kooijman}(2000)}]{Kooi2000}
+\bibinfo{author}{\bibfnamefont{S.~A. L.~M.} \bibnamefont{Kooijman}},
+  \emph{\bibinfo{title}{{Dynamic Energy and Mass Budgets in Biological
+  Systems}}} (\bibinfo{address}{Cambridge}, \bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Sousa et~al.}(2010)\citenamefont{Sousa, Domingos,
+  Poggiale, and Kooijman}}]{Sousa:2010ez}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Sousa}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Domingos}},
+  \bibinfo{author}{\bibfnamefont{J.~C.} \bibnamefont{Poggiale}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{S.~A. L.~M.}
+  \bibnamefont{Kooijman}}, \bibinfo{journal}{Philos. T. Roy. Soc. B}
+  \textbf{\bibinfo{volume}{365}}, \bibinfo{pages}{3413} (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Diekmann and Metz}(2010)}]{Diekmann:2010da}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Diekmann}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~A.~J.} \bibnamefont{Metz}},
+  \bibinfo{journal}{Philos. T. Roy. Soc. B} \textbf{\bibinfo{volume}{365}},
+  \bibinfo{pages}{3523} (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Murdoch et~al.}(2003)\citenamefont{Murdoch, Briggs, and
+  Nisbet}}]{murdoch:2003}
+\bibinfo{author}{\bibfnamefont{W.~W.} \bibnamefont{Murdoch}},
+  \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Briggs}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.~M.}
+  \bibnamefont{Nisbet}}, \emph{\bibinfo{title}{{Consumer-resource Dynamics}}},
+  Monographs in population biology (\bibinfo{publisher}{Princeton University
+  Press}, \bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Benichou and Redner}(2014)}]{Benichou:2014wu}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Benichou}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Redner}},
+  \bibinfo{journal}{arXiv}  (\bibinfo{year}{2014}), \eprint{1405.5054v3}.
+
+\bibitem[{\citenamefont{Guckenheimer and Holmes}(1983)}]{GuckHolmes}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Guckenheimer}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Holmes}},
+  \emph{\bibinfo{title}{{Nonlinear oscillations, dynamical systems, and
+  bifurcations of vector fields}}} (\bibinfo{publisher}{Springer},
+  \bibinfo{address}{New York}, \bibinfo{year}{1983}).
+
+\bibitem[{\citenamefont{Gross and Feudel}(2004)}]{Gross:2004p2428}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Gross}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Feudel}},
+  \bibinfo{journal}{Physica D} \textbf{\bibinfo{volume}{195}},
+  \bibinfo{pages}{292} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Hastings}(2001)}]{Hastings:2001jh}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Hastings}},
+  \bibinfo{journal}{Ecol. Lett.} \textbf{\bibinfo{volume}{4}},
+  \bibinfo{pages}{215} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Neubert and Caswell}(1997)}]{Neubert:1997wk}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Neubert}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Caswell}},
+  \bibinfo{journal}{Ecology} \textbf{\bibinfo{volume}{78}},
+  \bibinfo{pages}{653} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Caswell and Neubert}(2005)}]{Caswell:2005eo}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Caswell}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~G.} \bibnamefont{Neubert}},
+  \bibinfo{journal}{Journal of Difference Equations and Applications}
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{295} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Neubert and Caswell}(2009)}]{Neubert:2009td}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Neubert}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Caswell}},
+  \bibinfo{journal}{Ecology}  (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Yodzis and Innes}(1992)}]{Yodzis:1992hg}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Yodzis}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Innes}},
+  \bibinfo{journal}{Am. Nat.} \textbf{\bibinfo{volume}{139}},
+  \bibinfo{pages}{1151} (\bibinfo{year}{1992}).
+
+\bibitem[{\citenamefont{Brown et~al.}(2004)\citenamefont{Brown, Gillooly,
+  Allen, Savage, and West}}]{Brown:2004wq}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Brown}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Gillooly}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Savage}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{West}},
+  \bibinfo{journal}{Ecology} \textbf{\bibinfo{volume}{85}},
+  \bibinfo{pages}{1771} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{West et~al.}(2002{\natexlab{a}})\citenamefont{West,
+  Woodruff, and Brown}}]{West:2002it}
+\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{W.~H.} \bibnamefont{Woodruff}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}},
+  \bibinfo{journal}{Proc. Natl. Acad. Sci. USA} \textbf{\bibinfo{volume}{99
+  Suppl 1}}, \bibinfo{pages}{2473} (\bibinfo{year}{2002}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{DeLong et~al.}(2010)\citenamefont{DeLong, Okie, Moses,
+  Sibly, and Brown}}]{DeLong:2010dy}
+\bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{DeLong}},
+  \bibinfo{author}{\bibfnamefont{J.~G.} \bibnamefont{Okie}},
+  \bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{Moses}},
+  \bibinfo{author}{\bibfnamefont{R.~M.} \bibnamefont{Sibly}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}},
+  \bibinfo{journal}{PNAS} \textbf{\bibinfo{volume}{107}},
+  \bibinfo{pages}{12941} (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{West et~al.}(2001)\citenamefont{West, Brown, and
+  Enquist}}]{West:2001bv}
+\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.~J.} \bibnamefont{Enquist}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{413}},
+  \bibinfo{pages}{628} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Moses et~al.}(2008)\citenamefont{Moses, Hou, Woodruff,
+  West, Nekola, Zuo, and Brown}}]{moses2008rmo}
+\bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{Moses}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Hou}},
+  \bibinfo{author}{\bibfnamefont{W.~H.} \bibnamefont{Woodruff}},
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{J.~C.} \bibnamefont{Nekola}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Zuo}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}},
+  \bibinfo{journal}{http://dx.doi.org.proxy.lib.sfu.ca/10.1086/679735}
+  \textbf{\bibinfo{volume}{171}}, \bibinfo{pages}{632} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Gillooly et~al.}(2002)\citenamefont{Gillooly, Charnov,
+  West, Savage, and Brown}}]{gillooly2002esa}
+\bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Gillooly}},
+  \bibinfo{author}{\bibfnamefont{E.~L.} \bibnamefont{Charnov}},
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{V.~M.} \bibnamefont{Savage}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{417}}, \bibinfo{pages}{70}
+  (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Hou et~al.}(2008)\citenamefont{Hou, Zuo, Moses,
+  Woodruff, Brown, and West}}]{hou}
+\bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Hou}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Zuo}},
+  \bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{Moses}},
+  \bibinfo{author}{\bibfnamefont{W.~H.} \bibnamefont{Woodruff}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{322}},
+  \bibinfo{pages}{736} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Folland et~al.}(2008)\citenamefont{Folland, Mc~Cauley,
+  and Williams}}]{Folland:2008ij}
+\bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Folland}},
+  \bibinfo{author}{\bibfnamefont{T.~M.} \bibnamefont{Mc~Cauley}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~G.}
+  \bibnamefont{Williams}}, \bibinfo{journal}{Eur J Appl Physiol}
+  \textbf{\bibinfo{volume}{102}}, \bibinfo{pages}{739} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Calder~III}(1983)}]{CalderIII:1983jd}
+\bibinfo{author}{\bibfnamefont{W.~A.} \bibnamefont{Calder~III}},
+  \bibinfo{journal}{J. Theor. Biol.} \textbf{\bibinfo{volume}{100}},
+  \bibinfo{pages}{275} (\bibinfo{year}{1983}).
+
+\bibitem[{\citenamefont{Peterson et~al.}(1984)\citenamefont{Peterson, PAGE, and
+  DODGE}}]{Peterson:1984hj}
+\bibinfo{author}{\bibfnamefont{R.~O.} \bibnamefont{Peterson}},
+  \bibinfo{author}{\bibfnamefont{R.~E.} \bibnamefont{PAGE}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.~M.} \bibnamefont{DODGE}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{224}},
+  \bibinfo{pages}{1350} (\bibinfo{year}{1984}).
+
+\bibitem[{\citenamefont{Krukonis and Schaffer}(1991)}]{Krukonis:1991fk}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Krukonis}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{W.~M.} \bibnamefont{Schaffer}},
+  \bibinfo{journal}{J. Theor. Biol.} \textbf{\bibinfo{volume}{148}},
+  \bibinfo{pages}{469} (\bibinfo{year}{1991}).
+
+\bibitem[{\citenamefont{Hendriks and Mulder}(2012)}]{Hendriks:2012fc}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Hendriks}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Mulder}},
+  \bibinfo{journal}{Ecological Complexity} \textbf{\bibinfo{volume}{9}},
+  \bibinfo{pages}{43} (\bibinfo{year}{2012}).
+
+\bibitem[{\citenamefont{Kendall et~al.}(1999)\citenamefont{Kendall, Briggs,
+  Murdoch, Turchin, Ellner, McCauley, Nisbet, and Wood}}]{Kendall:1999iy}
+\bibinfo{author}{\bibfnamefont{B.~E.} \bibnamefont{Kendall}},
+  \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Briggs}},
+  \bibinfo{author}{\bibfnamefont{W.~W.} \bibnamefont{Murdoch}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Turchin}},
+  \bibinfo{author}{\bibfnamefont{S.~P.} \bibnamefont{Ellner}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{McCauley}},
+  \bibinfo{author}{\bibfnamefont{R.~M.} \bibnamefont{Nisbet}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{S.~N.} \bibnamefont{Wood}},
+  \bibinfo{journal}{Ecology} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{1789} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{H{\"o}gstedt et~al.}(2005)\citenamefont{H{\"o}gstedt,
+  Seldal, and Breistol}}]{Hogstedt:2005cr}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{H{\"o}gstedt}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Seldal}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Breistol}},
+  \bibinfo{journal}{Ecology} \textbf{\bibinfo{volume}{86}},
+  \bibinfo{pages}{373} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Kendall et~al.}(1998)\citenamefont{Kendall,
+  Prendergast, and Bjornstad}}]{Kendall:1998hl}
+\bibinfo{author}{\bibnamefont{Kendall}},
+  \bibinfo{author}{\bibnamefont{Prendergast}}, \bibnamefont{and}
+  \bibinfo{author}{\bibnamefont{Bjornstad}}, \bibinfo{journal}{Ecol. Lett.}
+  \textbf{\bibinfo{volume}{1}}, \bibinfo{pages}{160} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Brown et~al.}(1993)\citenamefont{Brown, Marquet, and
+  Taper}}]{Brown:1993p708}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Brown}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Marquet}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Taper}},
+  \bibinfo{journal}{Am. Nat.} \textbf{\bibinfo{volume}{142}},
+  \bibinfo{pages}{573} (\bibinfo{year}{1993}).
+
+\bibitem[{\citenamefont{West et~al.}(1997)\citenamefont{West, Brown, and
+  Enquist}}]{West:1997cg}
+\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.~J.} \bibnamefont{Enquist}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{276}},
+  \bibinfo{pages}{122} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{West et~al.}(2002{\natexlab{b}})\citenamefont{West,
+  Woodruff, and Brown}}]{West:2002ud}
+\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{West}},
+  \bibinfo{author}{\bibfnamefont{W.~H.} \bibnamefont{Woodruff}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}},
+  \bibinfo{journal}{Proc. Natl. Acad. Sci. USA} \textbf{\bibinfo{volume}{99}},
+  \bibinfo{pages}{2473} (\bibinfo{year}{2002}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Millar and Hickling}(1990)}]{Millar:1990p923}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Millar}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Hickling}},
+  \bibinfo{journal}{Funct. Ecol.} \textbf{\bibinfo{volume}{4}},
+  \bibinfo{pages}{5} (\bibinfo{year}{1990}).
+
+\bibitem[{\citenamefont{Alroy}(1998)}]{Alroy:1998p1594}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Alroy}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{280}},
+  \bibinfo{pages}{731} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Clauset and Redner}(2009)}]{Clauset:2009fh}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Clauset}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Redner}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{102}},
+  \bibinfo{pages}{038103} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Smith et~al.}(2010)\citenamefont{Smith, Boyer, Brown,
+  and Costa}}]{Smith:2010p3442}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Smith}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Boyer}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Brown}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Costa}},
+  \bibinfo{journal}{Science}  (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Saarinen et~al.}(2014)\citenamefont{Saarinen, Boyer,
+  Brown, Costa, Ernest, Evans, Fortelius, Gittleman, Hamilton, Harding
+  et~al.}}]{Saarinen:2014br}
+\bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Saarinen}},
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Boyer}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Brown}},
+  \bibinfo{author}{\bibfnamefont{D.~P.} \bibnamefont{Costa}},
+  \bibinfo{author}{\bibfnamefont{S.~K.~M.} \bibnamefont{Ernest}},
+  \bibinfo{author}{\bibfnamefont{A.~R.} \bibnamefont{Evans}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Fortelius}},
+  \bibinfo{author}{\bibfnamefont{J.~L.} \bibnamefont{Gittleman}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Hamilton}},
+  \bibinfo{author}{\bibfnamefont{L.~E.} \bibnamefont{Harding}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Proc Biol Sci}
+  \textbf{\bibinfo{volume}{281}}, \bibinfo{pages}{20132049}
+  (\bibinfo{year}{2014}).
+
+\bibitem[{\citenamefont{Kempes et~al.}(2014)\citenamefont{Kempes, Okegbe,
+  Mears-Clarke, Follows, and Dietrich}}]{kempes2014morphological}
+\bibinfo{author}{\bibfnamefont{C.~P.} \bibnamefont{Kempes}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Okegbe}},
+  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Mears-Clarke}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Follows}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~E.}
+  \bibnamefont{Dietrich}}, \bibinfo{journal}{Proceedings of the National
+  Academy of Sciences} \textbf{\bibinfo{volume}{111}}, \bibinfo{pages}{208}
+  (\bibinfo{year}{2014}).
+
+\bibitem[{\citenamefont{Pirt}(1965)}]{pirt}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Pirt}},
+  \bibinfo{journal}{Proceedings of the Royal Society of London B: Biological
+  Sciences} \textbf{\bibinfo{volume}{163}}, \bibinfo{pages}{224}
+  (\bibinfo{year}{1965}).
+
+\bibitem[{\citenamefont{Heijnen and Roels}(1981)}]{Heijnen}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Heijnen}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Roels}},
+  \bibinfo{journal}{Biotechnology and Bioengineering}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{739} (\bibinfo{year}{1981}).
+
+\bibitem[{\citenamefont{Peters}(1986)}]{peters1986ecological}
+\bibinfo{author}{\bibfnamefont{R.~H.} \bibnamefont{Peters}},
+  \emph{\bibinfo{title}{The Ecological Implications of Body Size}},
+  vol.~\bibinfo{volume}{2} (\bibinfo{publisher}{Cambridge University Press},
+  \bibinfo{address}{Cambridge}, \bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Blueweiss et~al.}(1978)\citenamefont{Blueweiss, Fox,
+  Kudzma, Nakashima, Peters, and Sams}}]{blueweiss1978relationships}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Blueweiss}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Fox}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Kudzma}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Nakashima}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Peters}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Sams}},
+  \bibinfo{journal}{Oecologia} \textbf{\bibinfo{volume}{37}},
+  \bibinfo{pages}{257} (\bibinfo{year}{1978}).
+
+\bibitem[{\citenamefont{Stryer}(1995)}]{stryer}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Stryer}},
+  \emph{\bibinfo{title}{{Biochemistry, Fourth Edition}}}
+  (\bibinfo{publisher}{W.H. Freeman and Company}, \bibinfo{address}{New York},
+  \bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Dunbrack and Ramsay}(1993)}]{Dunbrack:1993ec}
+\bibinfo{author}{\bibfnamefont{R.~L.} \bibnamefont{Dunbrack}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Ramsay}},
+  \bibinfo{journal}{Oikos} \textbf{\bibinfo{volume}{66}}, \bibinfo{pages}{336}
+  (\bibinfo{year}{1993}).
+
+\bibitem[{\citenamefont{Lindstedt and Boyce}(1985)}]{Lindstedt:1985hm}
+\bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Lindstedt}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Boyce}},
+  \bibinfo{journal}{Am. Nat.} \textbf{\bibinfo{volume}{125}},
+  \bibinfo{pages}{873} (\bibinfo{year}{1985}).
+
+\bibitem[{\citenamefont{Lindstedt and Schaeffer}(2002)}]{Lindstedt:2002td}
+\bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Lindstedt}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.~J.}
+  \bibnamefont{Schaeffer}}, \bibinfo{journal}{Lab. Anim.}
+  \textbf{\bibinfo{volume}{36}}, \bibinfo{pages}{1} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Estermann et~al.}(2001)\citenamefont{Estermann,
+  Wettstein, Sutter, and Kreuzer}}]{estermann}
+\bibinfo{author}{\bibfnamefont{B.~L.} \bibnamefont{Estermann}},
+  \bibinfo{author}{\bibfnamefont{H.-R.} \bibnamefont{Wettstein}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Sutter}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kreuzer}},
+  \bibinfo{journal}{Animal Research} \textbf{\bibinfo{volume}{50}},
+  \bibinfo{pages}{477} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Michaletz et~al.}(2014)\citenamefont{Michaletz, Cheng,
+  Kerkhoff, and Enquist}}]{michaletz2014convergence}
+\bibinfo{author}{\bibfnamefont{S.~T.} \bibnamefont{Michaletz}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Cheng}},
+  \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Kerkhoff}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.~J.}
+  \bibnamefont{Enquist}}, \bibinfo{journal}{Nature}
+  \textbf{\bibinfo{volume}{512}}, \bibinfo{pages}{39} (\bibinfo{year}{2014}).
+
+\bibitem[{\citenamefont{Damuth}(1987)}]{damuth1987interspecific}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Damuth}},
+  \bibinfo{journal}{Biological Journal of the Linnean Society}
+  \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{193} (\bibinfo{year}{1987}).
+
+\end{thebibliography}
