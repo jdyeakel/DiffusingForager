@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: 18.aux
 The style file: pnas.bst
 Database file #1: aa_starving3.bib
-You've used 62 entries,
+You've used 63 entries,
             1765 wiz_defined-function locations,
-            891 strings with 14419 characters,
-and the built_in function-call counts, 14569 in all, are:
-= -- 1457
-> -- 575
+            896 strings with 14561 characters,
+and the built_in function-call counts, 14797 in all, are:
+= -- 1481
+> -- 583
 < -- 5
-+ -- 211
-- -- 149
-* -- 1161
-:= -- 2349
-add.period$ -- 116
-call.type$ -- 62
-change.case$ -- 54
++ -- 214
+- -- 151
+* -- 1179
+:= -- 2386
+add.period$ -- 118
+call.type$ -- 63
+change.case$ -- 55
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 600
-empty$ -- 1300
-format.name$ -- 154
-if$ -- 3124
+cite$ -- 63
+duplicate$ -- 609
+empty$ -- 1320
+format.name$ -- 156
+if$ -- 3172
 int.to.chr$ -- 0
-int.to.str$ -- 62
-missing$ -- 68
-newline$ -- 313
-num.names$ -- 66
-pop$ -- 98
+int.to.str$ -- 63
+missing$ -- 69
+newline$ -- 318
+num.names$ -- 67
+pop$ -- 99
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 95
+skip$ -- 96
 stack$ -- 0
-substring$ -- 1412
-swap$ -- 157
+substring$ -- 1437
+swap$ -- 159
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 168
-width$ -- 64
-write$ -- 681
+while$ -- 171
+width$ -- 65
+write$ -- 692
