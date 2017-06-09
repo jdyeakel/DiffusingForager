@@ -1,0 +1,130 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Kempes:2012hy}
+\bibinfo{author}{Kempes, C.~P.}, \bibinfo{author}{Dutkiewicz, S.} \&
+  \bibinfo{author}{Follows, M.~J.}
+\newblock \bibinfo{title}{{Growth, metabolic partitioning, and the size of
+  microorganisms.}}
+\newblock \emph{\bibinfo{journal}{PNAS}} \textbf{\bibinfo{volume}{109}},
+  \bibinfo{pages}{495--500} (\bibinfo{year}{2012}).
+
+\bibitem{kempes2014morphological}
+\bibinfo{author}{Kempes, C.~P.}, \bibinfo{author}{Okegbe, C.},
+  \bibinfo{author}{Mears-Clarke, Z.}, \bibinfo{author}{Follows, M.~J.} \&
+  \bibinfo{author}{Dietrich, L.~E.}
+\newblock \bibinfo{title}{Morphological optimization for access to dual
+  oxidants in biofilms}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{111}}, \bibinfo{pages}{208--213}
+  (\bibinfo{year}{2014}).
+
+\bibitem{West:2001bv}
+\bibinfo{author}{West, G.~B.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{Enquist, B.~J.}
+\newblock \bibinfo{title}{{A general model for ontogenetic growth}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{413}},
+  \bibinfo{pages}{628--631} (\bibinfo{year}{2001}).
+
+\bibitem{moses2008rmo}
+\bibinfo{author}{Moses, M.~E.} \emph{et~al.}
+\newblock \bibinfo{title}{{Revisiting a model of ontogenetic growth: Estimating
+  model parameters from theory and data}}.
+\newblock
+  \emph{\bibinfo{journal}{http://dx.doi.org.proxy.lib.sfu.ca/10.1086/679735}}
+  \textbf{\bibinfo{volume}{171}}, \bibinfo{pages}{632--645}
+  (\bibinfo{year}{2008}).
+
+\bibitem{hou}
+\bibinfo{author}{Hou, C.} \emph{et~al.}
+\newblock \bibinfo{title}{{Energy uptake and allocation during ontogeny}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{322}},
+  \bibinfo{pages}{736--739} (\bibinfo{year}{2008}).
+
+\bibitem{pirt}
+\bibinfo{author}{Pirt, S.}
+\newblock \bibinfo{title}{The maintenance energy of bacteria in growing
+  cultures}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the Royal Society of London B:
+  Biological Sciences}} \textbf{\bibinfo{volume}{163}},
+  \bibinfo{pages}{224--231} (\bibinfo{year}{1965}).
+
+\bibitem{Heijnen}
+\bibinfo{author}{Heijnen, J.} \& \bibinfo{author}{Roels, J.}
+\newblock \bibinfo{title}{A macroscopic model describing yield and maintenance
+  relationships in aerobic fermentation processes}.
+\newblock \emph{\bibinfo{journal}{Biotechnology and Bioengineering}}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{739--763}
+  (\bibinfo{year}{1981}).
+
+\bibitem{peters1986ecological}
+\bibinfo{author}{Peters, R.~H.}
+\newblock \emph{\bibinfo{title}{The Ecological Implications of Body Size}},
+  vol.~\bibinfo{volume}{2} (\bibinfo{publisher}{Cambridge University Press},
+  \bibinfo{address}{Cambridge}, \bibinfo{year}{1986}).
+
+\bibitem{blueweiss1978relationships}
+\bibinfo{author}{Blueweiss, L.} \emph{et~al.}
+\newblock \bibinfo{title}{Relationships between body size and some life history
+  parameters}.
+\newblock \emph{\bibinfo{journal}{Oecologia}} \textbf{\bibinfo{volume}{37}},
+  \bibinfo{pages}{257--272} (\bibinfo{year}{1978}).
+
+\bibitem{stryer}
+\bibinfo{author}{Stryer, L.}
+\newblock \emph{\bibinfo{title}{{Biochemistry, Fourth Edition}}}
+  (\bibinfo{publisher}{W.H. Freeman and Company}, \bibinfo{address}{New York},
+  \bibinfo{year}{1995}).
+
+\bibitem{Dunbrack:1993ec}
+\bibinfo{author}{Dunbrack, R.~L.} \& \bibinfo{author}{Ramsay, M.~A.}
+\newblock \bibinfo{title}{{The Allometry of Mammalian Adaptations to Seasonal
+  Environments: A Critique of the Fasting Endurance Hypothesis}}.
+\newblock \emph{\bibinfo{journal}{Oikos}} \textbf{\bibinfo{volume}{66}},
+  \bibinfo{pages}{336--342} (\bibinfo{year}{1993}).
+
+\bibitem{Lindstedt:1985hm}
+\bibinfo{author}{Lindstedt, S.~L.} \& \bibinfo{author}{Boyce, M.~S.}
+\newblock \bibinfo{title}{{Seasonality, Fasting Endurance, and Body Size in
+  Mammals}}.
+\newblock \emph{\bibinfo{journal}{Am. Nat.}} \textbf{\bibinfo{volume}{125}},
+  \bibinfo{pages}{873--878} (\bibinfo{year}{1985}).
+
+\bibitem{Lindstedt:2002td}
+\bibinfo{author}{Lindstedt, S.~L.} \& \bibinfo{author}{Schaeffer, P.~J.}
+\newblock \bibinfo{title}{{Use of allometry in predicting anatomical and
+  physiological parameters of mammals.}}
+\newblock \emph{\bibinfo{journal}{Lab. Anim.}} \textbf{\bibinfo{volume}{36}},
+  \bibinfo{pages}{1--19} (\bibinfo{year}{2002}).
+
+\bibitem{estermann}
+\bibinfo{author}{Estermann, B.~L.}, \bibinfo{author}{Wettstein, H.-R.},
+  \bibinfo{author}{Sutter, F.} \& \bibinfo{author}{Kreuzer, M.}
+\newblock \bibinfo{title}{Nutrient and energy conversion of grass-fed dairy and
+  suckler beef cattle kept indoors and on high altitude pasture}.
+\newblock \emph{\bibinfo{journal}{Animal Research}}
+  \textbf{\bibinfo{volume}{50}}, \bibinfo{pages}{477--493}
+  (\bibinfo{year}{2001}).
+
+\bibitem{michaletz2014convergence}
+\bibinfo{author}{Michaletz, S.~T.}, \bibinfo{author}{Cheng, D.},
+  \bibinfo{author}{Kerkhoff, A.~J.} \& \bibinfo{author}{Enquist, B.~J.}
+\newblock \bibinfo{title}{Convergence of terrestrial plant production across
+  global climate gradients}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{512}},
+  \bibinfo{pages}{39--43} (\bibinfo{year}{2014}).
+
+\bibitem{damuth1987interspecific}
+\bibinfo{author}{Damuth, J.}
+\newblock \bibinfo{title}{Interspecific allometry of population density in
+  mammals and other animals: the independence of body mass and population
+  energy-use}.
+\newblock \emph{\bibinfo{journal}{Biological Journal of the Linnean Society}}
+  \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{193--246}
+  (\bibinfo{year}{1987}).
+
+\end{thebibliography}

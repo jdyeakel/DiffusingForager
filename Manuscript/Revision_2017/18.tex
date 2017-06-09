@@ -371,11 +371,11 @@ muscle tissues, and that muscle tissue scales with body mass according to
 $M_{\rm musc}=u_{0}M^{\zeta}$.  This gives
 $\epsilon_{\mu}=1-\left(f_{0}M^{\gamma}+u_{0}M^{\zeta}\right)/M$. Muscle
 mass has been shown to be roughly proportional to body mass~\cite{Folland:2008ij} in
-mammals and thus $\epsilon_{\mu}$ is merely $\epsilon_{\sigma}$ minus a constant. The time to go from starvation to death is the total time to reach $\epsilon_{\mu}M$ minus the time to starve, or
-\begin{eqnarray}
-\label{mutimescale}
-t_{\mu}=-\frac{M^{1-\eta}}{a^{\prime}}\ln\left(\epsilon_{\mu}\right)-t_{\sigma},
-\end{eqnarray}
+mammals and thus $\epsilon_{\mu}$ is merely $\epsilon_{\sigma}$ minus a constant. The time to go from starvation to death is the total time to reach $\epsilon_{\mu}M$ minus the time to starve, or $t_{\mu}=-M^{1-\eta}\ln\left(\epsilon_{\mu}\right)/a^{\prime}-t_{\sigma}$,
+% \begin{eqnarray}
+% \label{mutimescale}
+% t_{\mu}=-\frac{M^{1-\eta}}{a^{\prime}}\ln\left(\epsilon_{\mu}\right)-t_{\sigma},
+% \end{eqnarray}
 and $\mu=1/t_{\mu}$.
 
 
@@ -470,7 +470,7 @@ Figure \ref{fig:mass}\emph{A} shows that both $F^{*}$ and $H^{*}$ scale as $M^{-
 This result is remarkable because it illustrates that the steady state values of the NSM combined with the derived timescales naturally give rise to energy equivalence.
 
 Our model shows that the equivalence breaks down at the maximum observed body sizes for mammals, suggesting that this maximum is a hard limit where deviations outside of this range are energetically suboptimal. %, violating the energy equivalence. % set by deviations from constant efficiency obeyed by other populations.
-In the framework of our model, the total metabolic rate of $F$ and $H$ becomes infinite at a finite mass, and occur at the same scale where the steady state resources vanish (Fig.~\ref{fig:mass}). This asymptotic behavior is governed by body sizes at which $\epsilon_{\mu}$ and $\epsilon_{\lambda}$ equal zero causing the timescales to become infinite (see Equation \ref{mutimescale}) and the rates $\mu$ and $\lambda$ to equal zero.
+In the framework of our model, the total metabolic rate of $F$ and $H$ becomes infinite at a finite mass, and occur at the same scale where the steady state resources vanish (Fig.~\ref{fig:mass}). This asymptotic behavior is governed by body sizes at which $\epsilon_{\mu}$ and $\epsilon_{\lambda}$ equal zero, causing the timescales to become infinite and the rates $\mu$ and $\lambda$ to equal zero.
 The $\mu=0$ asymptote occurs first when $f_{0}M^{\gamma-1}+u_{0}M^{\zeta-1}=1$, and corresponds to $(F^*,H^*,R^*)=(0,0,0)$. This point predicts a strong upper bound on mammalian body size and occurs at $M_{\rm max}=6.54\times10^7$.
 Moreover, $M_{\rm max}$, which is entirely determined by the population-level consequences of energetic constraints, is close to the maximum body size observed in the North American mammalian fossil record~\cite{Alroy:1998p1594}, as well as the mass predicted from an evolutionary model of body size evolution~\cite{Clauset:2009fh}.
 It should be noted that the asymptotic behavior and predicted upper bound depend only on the scaling of body composition and are independent of the resource parameters.
@@ -488,6 +488,19 @@ We also note that the prediction of an asymptotic limit on mammalian size parall
 
 We contend that the NSM provides a mechanistic understanding of the energetic dynamics that give rise to both observed limitations on mammalian body size, as well as the observed trend towards larger body size over evolutionary time.
 The NSM predicts that the steady state resource density $R^{*}$ decreases with increasing body size of the consumer population (Fig. \ref{fig:mass}\emph{A}, inset), and classic resource competition theory predicts that the species surviving on the lowest resource abundance will outcompete others \cite{tilman1981,dutkiewicz2009,barton2010}. Thus, the combined NSM steady-state dynamics and allometric timescales predict that larger mammals have an intrinsic competitive advantage given a common resource, but does not offer a within-lineage mechanism by which larger body sizes are selected for.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{fig_Invasion.eps}
+\caption{\small{ Invasion feasibility for organisms with a proportional change in
+  mass $\chi$ against a population with a resident body mass $M$.  The blue
+  region denotes proportions of modified mass $\chi$ resulting in successful invasion.  The
+  red region denotes values of $\chi$ that result in a mass that is below the
+  starvation threshold and are thus infeasible.
+  Arrows point to the predicted optimal mass from our model $M_{\rm opt}=1.748\times 10^7$, which may serve as an evolutionary attractor for body mass.
+  The black wedge points to the largest body mass known for terrestrial mammals (\emph{Deinotherium} spp.) at $1.74\times10^7$g~\cite{Smith:2010p3442}.}\label{fig:invasion}}
+\end{figure}
+
 
 To examine whether the NSM could provide such a mechanism, we begin by noting that a theoretical upper bound on mammalian body size is given by $\epsilon_\sigma=0$, where mammals are entirely composed of metabolic reserves, and this occurs at $M=8.3\times 10^8$, or $120$ times the mass of a male African elephant.
 Next we examine to what extent a more realistic upper bound to body mass may serve as an evolutionary attractor, thus providing a suitable within-lineage mechanism for Cope's rule.
@@ -507,17 +520,6 @@ However, for $M> 1.748\times10^7$g, leaner individuals ($\chi < 0$) have lower r
 %reserves \sid{I don't understand the phrase after the comma AND STILL DON'T}.
 
 
-\begin{figure}
-\centering
-\includegraphics[width=0.4\textwidth]{fig_Invasion.eps}
-\caption{\small{ Invasion feasibility for organisms with a proportional change in
-  mass $\chi$ against a population with a resident body mass $M$.  The blue
-  region denotes proportions of modified mass $\chi$ resulting in successful invasion.  The
-  red region denotes values of $\chi$ that result in a mass that is below the
-  starvation threshold and are thus infeasible.
-  Arrows point to the predicted optimal mass from our model $M_{\rm opt}=1.748\times 10^7$, which may serve as an evolutionary attractor for body mass.
-  The black wedge points to the largest body mass known for terrestrial mammals (\emph{Deinotherium} spp.) at $1.74\times10^7$g~\cite{Smith:2010p3442}.}\label{fig:invasion}}
-\end{figure}
 
 The observed switch in susceptibility as a function of $\chi$ at $M_{\rm opt}= 1.748\times10^7$g thus serves as an attractor, such that the NSM predicts organismal mass to increase if $M<M_{\rm opt}$ and decrease if $M>M_{\rm opt}$.
 This value is close to but smaller than the asymptotic upper bound for terrestrial mammal body size predicted by the NSM, however it is remarkably close to independent estimates of the largest land mammals, the early Oligocene \emph{Indricotherium} at ca. $1.5\times10^7$g and the late Miocene \emph{Deinotherium} at ca. $1.74\times10^7$g ~\cite{Smith:2010p3442}.
@@ -619,7 +621,366 @@ Future efforts will involve exploring the consequences of these dynamics in a sp
 % \end{figure}
 
 
-\bibliography{aa_starving3}
+% \bibliography{aa_starving3}
+\begin{thebibliography}{10}
+
+\bibitem{Martin:1987dl}
+Martin TE
+\newblock (1987) {Food as a limit on breeding birds: A life-history
+  perspective}.
+\newblock \emph{Annu. Rev. Ecol. Syst.} 18:453--487.
+
+\bibitem{Kirk:1997cc}
+Kirk KL
+\newblock (1997) {Life-history responses to variable environments: Starvation
+  and reproduction in planktonic rotifers}.
+\newblock \emph{Ecology} 78:434--441.
+
+\bibitem{Kempes:2012hy}
+Kempes CP, Dutkiewicz S, Follows MJ
+\newblock (2012) {Growth, metabolic partitioning, and the size of
+  microorganisms}.
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 109:495--500.
+
+\bibitem{Mangel:1988uaa}
+Mangel M, Clark CW
+\newblock (1988) \emph{{Dynamic Modeling in Behavioral Ecology}}
+\newblock (Princeton University Press, Princeton).
+
+\bibitem{Mangel:2014kz}
+Mangel M
+\newblock (2014) {Stochastic dynamic programming illuminates the link between
+  environment, physiology, and evolution}.
+\newblock \emph{B. Math. Biol.} 77:857--877.
+
+\bibitem{Yeakel:2013hi}
+Yeakel JD, Dominy NJ, Koch PL, Mangel M
+\newblock (2014) {Functional morphology, stable isotopes, and human evolution:
+  a model of consilience}.
+\newblock \emph{Evolution} 68:190--203.
+
+\bibitem{Morris:1987eo}
+Morris DW
+\newblock (1987) {Optimal allocation of parental investment}.
+\newblock \emph{Oikos} 49:332--339.
+
+\bibitem{Tveraa:2003fq}
+Tveraa T, Fauchald P, Henaug C, Yoccoz NG
+\newblock (2003) {An examination of a compensatory relationship between food
+  limitation and predation in semi-domestic reindeer}.
+\newblock \emph{Oecologia} 137:370--376.
+
+\bibitem{Daan:1988va}
+Daan S, Dijkstra C, Drent R, Meijer T
+\newblock (1989) in \emph{Acta XIX Congressus Internationalis Ornithologici,
+  Volume I: Proceedings XIX International Ornithological Congress, 1986,
+  Ottawa}, ed{} Ouellet H
+\newblock (Proceedings XIX International Ornithological Congress, Ottawa), pp
+  392--407.
+
+\bibitem{Jacot:2009dv}
+Jacot A, Valcu M, van Oers K, Kempenaers B
+\newblock (2009) {Experimental nest site limitation affects reproductive
+  strategies and parental investment in a hole-nesting passerine}.
+\newblock \emph{Animal Behaviour} 77:1075--1083.
+
+\bibitem{Stearns:1989ip}
+Stearns SC
+\newblock (1989) {Trade-offs in life-history evolution}.
+\newblock \emph{Funct. Ecol.} 3:259.
+
+\bibitem{Barboza:2002in}
+Barboza P, Jorde D
+\newblock (2002) {Intermittent fasting during winter and spring affects body
+  composition and reproduction of a migratory duck}.
+\newblock \emph{J Comp Physiol B} 172:419--434.
+
+\bibitem{Threlkeld:1976ih}
+Threlkeld ST
+\newblock (1976) {Starvation and the size structure of zooplankton
+  communities}.
+\newblock \emph{Freshwater Biol.} 6:489--496.
+
+\bibitem{Weber:1998jg}
+Weber TP, Ens BJ, Houston AI
+\newblock (1998) {Optimal avian migration: A dynamic model of fuel stores and
+  site use}.
+\newblock \emph{Evolutionary Ecology} 12:377--401.
+
+\bibitem{Mduma:1999cp}
+Mduma SAR, Sinclair ARE, Hilborn R
+\newblock (1999) {Food regulates the Serengeti wildebeest: a 40-year record}.
+\newblock \emph{J. Anim. Ecol.} 68:1101--1122.
+
+\bibitem{Moore:2014hi}
+Moore JW, Yeakel JD, Peard D, Lough J, Beere M
+\newblock (2014) {Life-history diversity and its importance to population
+  stability and persistence of a migratory fish: steelhead in two large North
+  American watersheds}.
+\newblock \emph{J. Anim. Ecol.} 83:1035--1046.
+
+\bibitem{Mead:1989dt}
+Mead RA
+\newblock (1989) in \emph{Carnivore Behavior, Ecology, and Evolution}, ed{}
+  Gittleman JL
+\newblock (Springer US, Ithaca), pp 437--464.
+
+\bibitem{Sandell:1990kw}
+Sandell M
+\newblock (1990) {The evolution of seasonal delayed implantation}.
+\newblock \emph{Q Rev Biol} 65:23--42.
+
+\bibitem{Bulik:1999eo}
+Bulik CM, {et~al.}
+\newblock (1999) {Fertility and reproduction in women with anorexia nervosa}.
+\newblock \emph{J. Clin. Psychiat.} 60:130--135.
+
+\bibitem{Trites:2003cc}
+Trites AW, Donnelly CP
+\newblock (2003) {The decline of Steller sea lions Eumetopias jubatus in
+  Alaska: a review of the nutritional stress hypothesis}.
+\newblock \emph{Mammal Rev.} 33:3--28.
+
+\bibitem{Glazier:2009hq}
+Glazier DS
+\newblock (2009) {Metabolic level and size scaling of rates of respiration and
+  growth in unicellular organisms}.
+\newblock \emph{Funct. Ecol.} 23:963--968.
+
+\bibitem{Kooi2000}
+Kooijman SALM
+\newblock (2000) \emph{{Dynamic Energy and Mass Budgets in Biological Systems}}
+\newblock (Cambridge).
+
+\bibitem{Sousa:2010ez}
+Sousa T, Domingos T, Poggiale JC, Kooijman SALM
+\newblock (2010) {Dynamic energy budget theory restores coherence in biology}.
+\newblock \emph{Philos. T. Roy. Soc. B} 365:3413--3428.
+
+\bibitem{Diekmann:2010da}
+Diekmann O, Metz JAJ
+\newblock (2010) {How to lift a model for individual behaviour to the
+  population level?}
+\newblock \emph{Philos. T. Roy. Soc. B} 365:3523--3530.
+
+\bibitem{murdoch:2003}
+Murdoch WW, Briggs CJ, Nisbet RM
+\newblock (2003) \emph{{Consumer-resource Dynamics}}, Monographs in population
+  biology
+\newblock (Princeton University Press, Princeton) Vol.{}~36.
+
+\bibitem{Benichou:2014wu}
+Benichou O, Redner S
+\newblock (2014) {Depletion-Controlled Starvation of a Diffusing Forager}.
+\newblock \emph{arXiv} pp 1--5.
+
+\bibitem{Benichou:2016wl}
+B{\'e}nichou O, Chupeau M, Redner S
+\newblock (2016) {Role of depletion on the dynamics of a diffusing forager}.
+\newblock \emph{Journal of Physics A: {\ldots}}.
+
+\bibitem{Chupeau:2016jf}
+Chupeau M, B{\'e}nichou O, Redner S
+\newblock (2016) {Universality classes of foraging with resource renewal}.
+\newblock \emph{Phys. Rev. E} 93:032403.
+
+\bibitem{Persson:1998hz}
+Persson L, Leonardsson K, De~Roos AM, Gyllenberg M, Christensen B
+\newblock (1998) {Ontogenetic scaling of foraging rates and the dynamics of a
+  size-structured consumer-resource model}.
+\newblock \emph{Theor Popul Biol} 54:270--293.
+
+\bibitem{murray2011mathematical}
+Murray JD
+\newblock (2011) \emph{{Mathematical Biology: I. An Introduction}},
+  Interdisciplinary Applied Mathematics
+\newblock (Springer New York) Vol.{} 110.
+
+\bibitem{Strogatz:2008wo}
+Strogatz SH
+\newblock (2008) \emph{{Nonlinear Dynamics and Chaos: With Applications to
+  Physics, Biology, Chemistry, and Engineering}}, Studies in nonlinearity
+\newblock (Westview Press, Boulder).
+
+\bibitem{GuckHolmes}
+Guckenheimer J, Holmes P
+\newblock (1983) \emph{{Nonlinear Oscillations, Dynamical Systems, and
+  Bifurcations of Vector Fields}}
+\newblock (Springer, New York).
+
+\bibitem{Gross:2004p2428}
+Gross T, Feudel U
+\newblock (2004) {Analytical search for bifurcation surfaces in parameter
+  space}.
+\newblock \emph{Physica D} 195:292--302.
+
+\bibitem{Hastings:2001jh}
+Hastings A
+\newblock (2001) {Transient dynamics and persistence of ecological systems}.
+\newblock \emph{Ecol. Lett.} 4:215--220.
+
+\bibitem{Neubert:1997wk}
+Neubert M, Caswell H
+\newblock (1997) {Alternatives to resilience for measuring the responses of
+  ecological systems to perturbations}.
+\newblock \emph{Ecology} 78:653--665.
+
+\bibitem{Caswell:2005eo}
+Caswell H, Neubert MG
+\newblock (2005) {Reactivity and transient dynamics of discrete-time ecological
+  systems}.
+\newblock \emph{J Differ Equ Appl} 11:295--310.
+
+\bibitem{Neubert:2009td}
+Neubert M, Caswell H
+\newblock (2009) {Detecting reactivity}.
+\newblock \emph{Ecology} 90:2683--2688.
+
+\bibitem{Yodzis:1992hg}
+Yodzis P, Innes S
+\newblock (1992) {Body size and consumer-resource dynamics}.
+\newblock \emph{Am. Nat.} 139:1151--1175.
+
+\bibitem{Brown:2004wq}
+Brown J, Gillooly J, Allen A, Savage V, West G
+\newblock (2004) {Toward a metabolic theory of ecology}.
+\newblock \emph{Ecology} 85:1771--1789.
+
+\bibitem{West:2002it}
+West GB, Woodruff WH, Brown JH
+\newblock (2002) {Allometric scaling of metabolic rate from molecules and
+  mitochondria to cells and mammals.}
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 99 Suppl 1:2473--2478.
+
+\bibitem{DeLong:2010dy}
+DeLong JP, Okie JG, Moses ME, Sibly RM, Brown JH
+\newblock (2010) {Shifts in metabolic scaling, production, and efficiency
+  across major evolutionary transitions of life}.
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 107:12941--12945.
+
+\bibitem{West:2001bv}
+West GB, Brown JH, Enquist BJ
+\newblock (2001) {A general model for ontogenetic growth}.
+\newblock \emph{Nature} 413:628--631.
+
+\bibitem{moses2008rmo}
+Moses ME, {et~al.}
+\newblock (2008) {Revisiting a Model of Ontogenetic Growth: Estimating Model
+  Parameters from Theory and Data.}
+\newblock \emph{Am. Nat.} 171:632--645.
+
+\bibitem{gillooly2002esa}
+Gillooly JF, Charnov EL, West GB, Savage VM, Brown JH
+\newblock (2002) {Effects of size and temperature on developmental time}.
+\newblock \emph{Nature} 417:70--73.
+
+\bibitem{hou}
+Hou C, {et~al.}
+\newblock (2008) {Energy uptake and allocation during ontogeny}.
+\newblock \emph{Science} 322:736--739.
+
+\bibitem{bettencourt}
+Bettencourt LMA, Lobo J, Helbing D, Kuhnert C, West GB
+\newblock (2007) {Growth, innovation, scaling, and the pace of life in cities}.
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 104:7301--7306.
+
+\bibitem{Folland:2008ij}
+Folland JP, Mc~Cauley TM, Williams AG
+\newblock (2008) {Allometric scaling of strength measurements to body size}.
+\newblock \emph{Eur J Appl Physiol} 102:739--745.
+
+\bibitem{Brown:1993p708}
+Brown J, Marquet P, Taper M
+\newblock (1993) {Evolution of body size: consequences of an energetic
+  definition of fitness}.
+\newblock \emph{Am. Nat.} 142:573--584.
+
+\bibitem{West:1997cg}
+West GB, Brown JH, Enquist BJ
+\newblock (1997) {A general model for the origin of allometric scaling laws in
+  biology}.
+\newblock \emph{Science} 276:122--126.
+
+\bibitem{West:2002ud}
+West GB, Woodruff WH, Brown JH
+\newblock (2002) {Allometric scaling of metabolic rate from molecules and
+  mitochondria to cells and mammals.}
+\newblock \emph{Proc. Natl. Acad. Sci. USA} 99 Suppl 1:2473--2478.
+
+\bibitem{Millar:1990p923}
+Millar J, Hickling G
+\newblock (1990) {Fasting endurance and the evolution of mammalian body size}.
+\newblock \emph{Funct. Ecol.} 4:5--12.
+
+\bibitem{Alroy:1998p1594}
+Alroy J
+\newblock (1998) {Cope's rule and the dynamics of body mass evolution in North
+  American fossil mammals}.
+\newblock \emph{Science} 280:731--734.
+
+\bibitem{Clauset:2009fh}
+Clauset A, Redner S
+\newblock (2009) {Evolutionary model of species body mass diversification}.
+\newblock \emph{Phys. Rev. Lett.} 102:038103.
+
+\bibitem{Smith:2010p3442}
+Smith FA, {et~al.}
+\newblock (2010) {The evolution of maximum body size of terrestrial mammals}.
+\newblock \emph{Science} 330:1216--1219.
+
+\bibitem{Saarinen:2014br}
+Saarinen JJ, {et~al.}
+\newblock (2014) {Patterns of maximum body size evolution in Cenozoic land
+  mammals: Eco-evolutionary processes and abiotic forcing}.
+\newblock \emph{Proc Biol Sci} 281:20132049.
+
+\bibitem{Damuth:1987kr}
+Damuth J
+\newblock (1987) {Interspecific allometry of population density in mammals and
+  other animals: the independence of body mass and population energy-use}.
+\newblock \emph{Biol. J. Linn. Soc.} 31:193--246.
+
+\bibitem{DeLong:2012kw}
+DeLong JP, Vasseur DA
+\newblock (2012) {A dynamic explanation of size{\textendash}density scaling in
+  carnivores}.
+\newblock \emph{Ecology} 93:470--476.
+
+\bibitem{allen2002}
+Allen AP, Brown JH, Gillooly JF
+\newblock (2002) {Global biodiversity, biochemical kinetics, and the
+  energetic-equivalence rule}.
+\newblock \emph{Science} 297:1545--1548.
+
+\bibitem{enquist1998}
+Enquist BJ, Brown JH, West GB
+\newblock (1998) {Allometric scaling of plant energetics and population
+  density}.
+\newblock \emph{Nature} 395:163--165.
+
+\bibitem{Kempes:2016}
+Kempes CP, Wang L, Amend JP, Doyle J, Hoehler T
+\newblock (2016) {Evolutionary tradeoffs in cellular composition across diverse
+  bacteria}.
+\newblock \emph{ISME J} 10:2145--2157.
+
+\bibitem{tilman1981}
+Tilman D
+\newblock (1981) {Tests of resource competition theory using four species of
+  lake michigan algae}.
+\newblock \emph{Ecology} 62:802--815.
+
+\bibitem{dutkiewicz2009}
+Dutkiewicz S, Follows MJ, Bragg JG
+\newblock (2009) {Modeling the coupling of ocean ecology and biogeochemistry}.
+\newblock \emph{Global Biogeochem. Cycles} 23:1--15.
+
+\bibitem{barton2010}
+Barton AD, Dutkiewicz S, Flierl G, Bragg J, Follows MJ
+\newblock (2010) {Patterns of diversity in marine phytoplankton}.
+\newblock \emph{Science} 327:1509--1511.
+
+\end{thebibliography}
 
 
 

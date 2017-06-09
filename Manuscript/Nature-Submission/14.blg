@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 14.aux
+The style file: pnas.bst
+Database file #1: aa_starving3.bib
+Warning--empty journal in Benichou:2016wl
+You've used 67 entries,
+            1765 wiz_defined-function locations,
+            916 strings with 15332 characters,
+and the built_in function-call counts, 15171 in all, are:
+= -- 1504
+> -- 599
+< -- 2
++ -- 222
+- -- 155
+* -- 1204
+:= -- 2462
+add.period$ -- 126
+call.type$ -- 67
+change.case$ -- 59
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 629
+empty$ -- 1364
+format.name$ -- 161
+if$ -- 3233
+int.to.chr$ -- 0
+int.to.str$ -- 67
+missing$ -- 73
+newline$ -- 336
+num.names$ -- 67
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 84
+stack$ -- 0
+substring$ -- 1457
+swap$ -- 150
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 171
+width$ -- 69
+write$ -- 726
+(There was 1 warning)
