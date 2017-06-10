@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 JUN 2017 14:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 JUN 2017 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,59 +685,65 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
  [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--86
-
- []
-
-[4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 146--157
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-[7] [8] [9] [10]
-Overfull \hbox (22.05966pt too wide) in paragraph at lines 265--271
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 88--94
+
+ []
+
+[3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 154--165
+
+ []
+
+[7] [8] [9]
+Overfull \hbox (22.05966pt too wide) in paragraph at lines 273--279
 \OT1/ptm/m/n/12 The star-va-tion rate is then $\OML/cmm/m/it/12 ^^[ \OT1/cmr/m/
 n/12 = 1\OML/cmm/m/it/12 =t[]$\OT1/ptm/m/n/12 , which scales with replete-state
  mass as $\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 =M[] [] []$\OT1/ptm/m/n/12 .
  []
 
-
-Overfull \hbox (1.0697pt too wide) in paragraph at lines 287--289
+[10]
+Overfull \hbox (1.0697pt too wide) in paragraph at lines 295--297
 []\OT1/ptm/m/n/12 Although the rate equa-tions [] are gen-eral, here we fo-cus 
 on pa-ram-e-ter-i-za-tions for terrestrial-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
+Underfull \hbox (badness 10000) in paragraph at lines 295--297
 
  []
 
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 326--334
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 334--342
 
  []
 
-[13] [14] [15] [16] [17] [18] (./Nature-temp.bbl [19] [20]
+[12] [13] [14] [15] [16] [17] (./Nature-temp.bbl [18] [19] [20]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 213.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [21] [22]
-[23] [24] [25])
+[23] [24])
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 516.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 524.
 
-Overfull \hbox (66.38367pt too wide) in paragraph at lines 526--528
+Overfull \hbox (66.38367pt too wide) in paragraph at lines 534--536
 []\OT1/ptm/m/n/10.95 Correspondence and re-quests for ma-te-ri-als should be ad
 -dressed to J.D.Y. (email: jdyeakel@gmail.com). 
  []
 
-[26]
+[25] [26]
 Package epstopdf Info: Source file: <fig_FixedPoint2.eps>
 (epstopdf)                    date: 2017-03-18 12:19:28
 (epstopdf)                    size: 312020 bytes
@@ -746,14 +752,15 @@ Package epstopdf Info: Source file: <fig_FixedPoint2.eps>
 (epstopdf)                    size: 313999 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig_FixedPoint2-eps-conver
 ted-to.pdf fig_FixedPoint2.eps>
-(epstopdf)             \includegraphics on input line 542.
+(epstopdf)             \includegraphics on input line 550.
 Package epstopdf Info: Output file is already uptodate.
- <fig_FixedPoint2-eps-converted-to.pdf, id=105, 274.02374pt x 210.7875pt>
+
+<fig_FixedPoint2-eps-converted-to.pdf, id=105, 274.02374pt x 210.7875pt>
 File: fig_FixedPoint2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig_FixedPoint2-eps-converted-to.pdf>
 Package pdftex.def Info: fig_FixedPoint2-eps-converted-to.pdf used on input lin
-e 542.
+e 550.
 (pdftex.def)             Requested size: 281.85587pt x 216.82729pt.
 Package epstopdf Info: Source file: <Growth-trajectory-diagram.eps>
 (epstopdf)                    date: 2017-03-10 17:02:27
@@ -764,7 +771,7 @@ Package epstopdf Info: Source file: <Growth-trajectory-diagram.eps>
 (epstopdf)                    size: 76270 bytes
 (epstopdf)             Command: <repstopdf --outfile=Growth-trajectory-diagram-
 eps-converted-to.pdf Growth-trajectory-diagram.eps>
-(epstopdf)             \includegraphics on input line 555.
+(epstopdf)             \includegraphics on input line 563.
 Package epstopdf Info: Output file is already uptodate.
 
 <Growth-trajectory-diagram-eps-converted-to.pdf, id=106, 1027.84pt x 770.88pt>
@@ -772,7 +779,7 @@ File: Growth-trajectory-diagram-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Growth-trajectory-diagram-eps-converted-to.pdf>
 Package pdftex.def Info: Growth-trajectory-diagram-eps-converted-to.pdf used on
- input line 555.
+ input line 563.
 (pdftex.def)             Requested size: 281.85587pt x 211.38687pt.
 Package epstopdf Info: Source file: <fig_ExtinctionAllometricComb3.eps>
 (epstopdf)                    date: 2017-03-10 16:58:19
@@ -783,7 +790,7 @@ d-to.pdf>
 (epstopdf)                    size: 367461 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig_ExtinctionAllometricCo
 mb3-eps-converted-to.pdf fig_ExtinctionAllometricComb3.eps>
-(epstopdf)             \includegraphics on input line 565.
+(epstopdf)             \includegraphics on input line 573.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig_ExtinctionAllometricComb3-eps-converted-to.pdf, id=107, 672.5125pt x 215.8
@@ -792,7 +799,7 @@ File: fig_ExtinctionAllometricComb3-eps-converted-to.pdf Graphic file (type pdf
 )
  <use fig_ExtinctionAllometricComb3-eps-converted-to.pdf>
 Package pdftex.def Info: fig_ExtinctionAllometricComb3-eps-converted-to.pdf use
-d on input line 565.
+d on input line 573.
 (pdftex.def)             Requested size: 422.77664pt x 135.66887pt.
 Package epstopdf Info: Source file: <fig_FPAllometric2.eps>
 (epstopdf)                    date: 2017-03-20 13:59:54
@@ -802,7 +809,7 @@ Package epstopdf Info: Source file: <fig_FPAllometric2.eps>
 (epstopdf)                    size: 214881 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig_FPAllometric2-eps-conv
 erted-to.pdf fig_FPAllometric2.eps>
-(epstopdf)             \includegraphics on input line 572.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig_FPAllometric2-eps-converted-to.pdf, id=108, 410.53375pt x 147.55125pt>
@@ -810,7 +817,7 @@ File: fig_FPAllometric2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig_FPAllometric2-eps-converted-to.pdf>
 Package pdftex.def Info: fig_FPAllometric2-eps-converted-to.pdf used on input l
-ine 572.
+ine 580.
 (pdftex.def)             Requested size: 375.80544pt x 135.06883pt.
 Package epstopdf Info: Source file: <fig_Invasion.eps>
 (epstopdf)                    date: 2017-03-10 17:00:47
@@ -820,7 +827,7 @@ Package epstopdf Info: Source file: <fig_Invasion.eps>
 (epstopdf)                    size: 140039 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig_Invasion-eps-converted
 -to.pdf fig_Invasion.eps>
-(epstopdf)             \includegraphics on input line 582.
+(epstopdf)             \includegraphics on input line 590.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig_Invasion-eps-converted-to.pdf, id=109, 361.35pt x 231.86626pt>
@@ -828,7 +835,7 @@ File: fig_Invasion-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig_Invasion-eps-converted-to.pdf>
 Package pdftex.def Info: fig_Invasion-eps-converted-to.pdf used on input line 5
-82.
+90.
 (pdftex.def)             Requested size: 281.85587pt x 180.85847pt.
 
 
@@ -837,36 +844,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [27 <./fig_FixedPoint2-eps-converted-to.pdf>] [28 <./Growth-trajectory-diagram-
 eps-converted-to.pdf>] [29 <./fig_ExtinctionAllometricComb3-eps-converted-to.pd
 f> <./fig_FPAllometric2-eps-converted-to.pdf>] [30 <./fig_Invasion-eps-converte
-d-to.pdf>] (./Nature-temp.aux) ) 
+d-to.pdf>] (./Nature-temp.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13223 strings out of 493014
- 257385 string characters out of 6133351
- 295372 words of memory out of 5000000
- 16449 multiletter control sequences out of 15000+600000
- 28065 words of font info for 66 fonts, out of 8000000 for 9000
+ 13226 strings out of 493014
+ 257418 string characters out of 6133351
+ 294372 words of memory out of 5000000
+ 16451 multiletter control sequences out of 15000+600000
+ 29691 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,54p,1749b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/d
-vips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on Nature-temp.pdf (30 pages, 1356441 bytes).
+ 55i,15n,54p,1249b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utm
+r8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Nature-temp.pdf (30 pages, 1355761 bytes).
 PDF statistics:
  212 PDF objects out of 1000 (max. 8388607)
  142 compressed objects within 2 object streams
