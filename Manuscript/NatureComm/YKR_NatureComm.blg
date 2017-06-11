@@ -2,11 +2,17 @@ This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: YKR_NatureComm.aux
 The style file: naturemag.bst
-I found no \citation commands---while reading file YKR_NatureComm.aux
 I found no \bibdata command---while reading file YKR_NatureComm.aux
+Warning--I didn't find a database entry for "pirt"
+Warning--I didn't find a database entry for "Heijnen"
+Warning--I didn't find a database entry for "West:2001bv"
+Warning--I didn't find a database entry for "moses2008rmo"
+Warning--I didn't find a database entry for "hou"
+Warning--I didn't find a database entry for "peters1986ecological"
+Warning--I didn't find a database entry for "michaletz2014convergence"
 You've used 0 entries,
             2348 wiz_defined-function locations,
-            974 strings with 8735 characters,
+            983 strings with 8834 characters,
 and the built_in function-call counts, 28 in all, are:
 = -- 0
 > -- 0
@@ -45,4 +51,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 7
-(There were 2 error messages)
+(There was 1 error message)
