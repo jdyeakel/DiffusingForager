@@ -2,53 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: YKR_NatureComm.aux
 The style file: naturemag.bst
-I found no \bibdata command---while reading file YKR_NatureComm.aux
-Warning--I didn't find a database entry for "pirt"
-Warning--I didn't find a database entry for "Heijnen"
-Warning--I didn't find a database entry for "West:2001bv"
-Warning--I didn't find a database entry for "moses2008rmo"
-Warning--I didn't find a database entry for "hou"
-Warning--I didn't find a database entry for "peters1986ecological"
-Warning--I didn't find a database entry for "michaletz2014convergence"
-You've used 0 entries,
+Database file #1: aa_starving3.bib
+Warning--missing publisher in Kooi2000
+You've used 64 entries,
             2348 wiz_defined-function locations,
-            983 strings with 8834 characters,
-and the built_in function-call counts, 28 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            1412 strings with 19893 characters,
+and the built_in function-call counts, 26418 in all, are:
+= -- 1916
+> -- 652
+< -- 2
++ -- 324
+- -- 163
+* -- 3338
+:= -- 2880
+add.period$ -- 188
+call.type$ -- 64
+change.case$ -- 62
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 65
+duplicate$ -- 2284
+empty$ -- 2454
+format.name$ -- 211
+if$ -- 5267
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 64
+missing$ -- 549
+newline$ -- 324
+num.names$ -- 68
+pop$ -- 395
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 394
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 1468
+swap$ -- 2339
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 7
-(There was 1 error message)
+warning$ -- 1
+while$ -- 179
+width$ -- 66
+write$ -- 698
+(There was 1 warning)
