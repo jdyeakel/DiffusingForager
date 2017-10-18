@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bu2.aux
+The style file: unsrt.bst
+Database file #1: aa_starving_supplement.bib
+You've used 16 entries,
+            1791 wiz_defined-function locations,
+            571 strings with 6599 characters,
+and the built_in function-call counts, 3912 in all, are:
+= -- 356
+> -- 178
+< -- 1
++ -- 66
+- -- 50
+* -- 336
+:= -- 633
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 146
+empty$ -- 370
+format.name$ -- 50
+if$ -- 829
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 18
+newline$ -- 83
+num.names$ -- 16
+pop$ -- 25
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 335
+swap$ -- 17
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 44
+width$ -- 18
+write$ -- 179

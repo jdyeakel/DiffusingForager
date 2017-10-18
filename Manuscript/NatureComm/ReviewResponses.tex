@@ -1,0 +1,80 @@
+\documentclass[ucm,12pt]{ucletter}
+
+\setlength\parindent{1cm}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+%\name{Justin D. Yeakel}
+\telephone{(209)~285-9571}
+\email{jyeakel@ucmerced.edu}
+
+\newcounter{section}
+\newcounter{subsection}[section]
+\setcounter{secnumdepth}{3}
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries}}
+\newcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries}}
+\renewcommand \thesection{\@arabic\c@section}
+\renewcommand\thesubsection{\thesection.\@arabic\c@subsection}
+
+\makeatother
+
+
+\begin{document}
+\begin{letter}{
+    Philosophical Transactions of the Royal Society B\\
+    Publishing Section\\
+    The Royal Society\\
+    6-9 Carlton House Terrace\\
+    London SW1Y 5AG\\
+    England\\
+    \centerline{\bf{Re: Eco-evolutionary dynamics and collective dispersal:}}\\
+     \centerline{\bf{implications for salmon metapopulation robustness}}
+}
+
+
+\opening{To the editorial committee at Nature Communications,}
+
+We thank both the Reviewers for their insightful comments and criticisms. Below, we address each one, point by point. We believe that the edits that we have made have increased the clarity of our contribution, in no small part due to the thought and detail exercised by the Reviewers. We hope that our responses satisfy the concerns listed below. Please do not hesitate to contact us if there are additional clarifications required.
+
+\setstretch{1.2}
+
+\section*{Reviewer I}
+\subsection*{Major comments:}
+\noindent \textcolor{cyan}{
+{\bf Comment 1.1} stuff
+}
+
+\noindent {\bf Response 1.1} Stuff
+\noindent To clarify, we have made the following edits to the text:\\
+\noindent {\bf Line 111:} \emph{The partial derivative in Eq. 4 determines how the mean trait changes through time due to natural selection [ref], which is proportional to the change in mean fitness with respect to $\mu_i$.
+We note that the derivative is dependent on both $\mu_i$ and $\mu_j$ due to the influence of the logarithm on the sum.}
+
+\noindent \textcolor{cyan}{
+{\bf Comment 1.2} Stuff
+}
+
+\noindent {\bf Response 1.2} Stuff
+
+\vspace{5mm}
+
+\singlespacing
+\closing{Sincerely,\\
+\fromsig{\includegraphics[scale=0.2]{signature.jpg}}\\
+\fromname{
+Justin D. Yeakel\\
+Christopher P. Kempes\\
+Sidney Redner}
+}
+
+
+\end{letter}
+\end{document}

@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: YKR_NatureComm-Revision-1.aux
+The style file: naturemag.bst
+Database file #1: aa_starving3.bib
+Warning--missing publisher in Kooi2000
+You've used 66 entries,
+            2348 wiz_defined-function locations,
+            1426 strings with 20614 characters,
+and the built_in function-call counts, 27378 in all, are:
+= -- 1990
+> -- 676
+< -- 2
++ -- 336
+- -- 169
+* -- 3460
+:= -- 2986
+add.period$ -- 194
+call.type$ -- 66
+change.case$ -- 64
+chr.to.int$ -- 0
+cite$ -- 67
+duplicate$ -- 2359
+empty$ -- 2541
+format.name$ -- 219
+if$ -- 5458
+int.to.chr$ -- 0
+int.to.str$ -- 66
+missing$ -- 567
+newline$ -- 334
+num.names$ -- 70
+pop$ -- 406
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 406
+stack$ -- 0
+substring$ -- 1548
+swap$ -- 2417
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 185
+width$ -- 68
+write$ -- 720
+(There was 1 warning)
