@@ -77,6 +77,7 @@ We consider the following generalized set of explicit dynamics for starvation, r
 \dot{H_{d}} &= \sigma \left(1-\frac{R_{d}}{C}\right)F_{d} - \rho_{max}R_{d} H_{d}/k - \mu H_{d},  \\
 \dot{R_{d}} &= \alpha R_{d}\left(1-\frac{R_{d}}{C}\right) -\\
 & \left[\left(\frac{\rho_{max}R_{d}}{Y_{H}k}+P_{H}\right)H_{d}+\left(\frac{\lambda_{max}}{Y_{F}}+P_{F}\right)F_{d}\right].
+\label{bigdynamics}
 \end{split}
 \end{align}
 where each term has a mechanistic meaning that we detail below (we will denote the dimensional equations with $_{d}$ before introducing the non-dimensional form that is presented in the main text). In the above equations $Y$ represents the yield coefficient (e.g., Refs. \citep{pirt,Heijnen}) which is the quantity of resources required to build a unit of organism (gram of mammal produced per gram of resource consumed) and $P$ is the specific maintenance rate of resource consumption (g resource $\cdot$ s$^{-1}$ $\cdot$ g organism). If we pick $F_{d}$ and $H_{d}$ to have units of (g organisms $\cdot$ m$^{-2}$), then all of the terms of $\dot{R_{d}}$, such as $\frac{\rho\left(R_{d}\right)}{Y}H_{d}$, have units of (g resource $\cdot$ m$^{-2}$ $\cdot$ s$^{-1}$) which are the units of net primary productivity (NPP), a natural choice for $\dot{R_{d}}$. This choice also gives $R_{d}$ as (g $\cdot$ m$^{-2}$) which is also a natural unit and is simply the biomass density. In this system of units $\alpha$ (s$^{-1}$) is the specific growth rate of $R_{d}$, and $C$ is the carrying capacity, or maximum density, of $R_{d}$ in a particular environment, and $k$ is the half-saturation constant (half the density of resources that would lead to maximum growth).
@@ -120,6 +121,7 @@ If we make the natural choice of $s=1$, $q=1/C$, and $f=1/Y_{H}k$, then we are l
 \dot{F} &= \lambda F + \xi \rho RH - \sigma \left(1-R\right)F,  \\
 \dot{H} &= \sigma \left(1-R\right)F - \xi \rho RH - \mu H,  \\
 \dot{R} &= \alpha R\left(1-R\right) -\left(\rho R+\delta\right)H-\beta F
+\label{reduceddynamics}
 \end{split}
 \end{align}
 where we have dropped the subscripts on $\lambda_{max}$ and $\rho_{max}$ for simplicity, and $\xi=C/k$, $\delta=Y_{H}kP_{H}/C$, and $\beta=Y_{H}k\left(\frac{\lambda_{max}}{Y_{F}}+P_{F}\right)/C$. The above equations represent the system of equations presented in the main text.
@@ -241,6 +243,54 @@ Finally, we can calculate the maintenance of the invaders as
 \end{align}
 
 To determine whether or not the invader or resident population has an advantage, we compute $R^*(M)$ and $R^*(M^\prime=M(1+\chi))$ for values of $\chi \in (-f_0M^{\gamma-1},1/\epsilon_{\lambda}-1)$, and the invading population is assumed to have an advantage over the resident population if $R^*(M^\prime)<R^*(M)$.
+
+{\color{red} \section{Sensitivity to additional death terms}
+
+It should be noted that our set of dynamics (Equations \ref{bigdynamics} and \ref{reduceddynamics}) could include a constant death term of the form $-d_{F}F$ and $-d_{H}H$ to represent death not directly linked to starvation. Adding terms of this form to our model would simply adjust the effective value of $\lambda$ and $\mu$, and we could rewrite Equation \ref{reduceddynamics} with $\lambda^{\prime}=\lambda-d$ and $\mu^{\prime}=\mu-d$. These substitutions would not alter the functional form of our model nor the steady-states and qualitative results, however the quantitive values could shift based on the size of $d$ relative to $\lambda$ and $\mu$. 
+
+Survivorship has a well-known functional form which changes systematically with size \cite{}. Typically survivorship is defined using the Gompertz curve 
+\begin{equation}
+F=F_{0}e^{\left(q_{0}/c\right)\left(1-e^{ct}\right)}
+\label{gompertz}
+\end{equation}
+where the parameters have the following allometric dependencies on adult mass \cite{}.
+
+We are interested in the specific death rate of the form $\cdot{F}=-dF$, and using the derivative of Equation \ref{gompertz} we find that $d=e^{ct}q_{0}$. Our model considers the average rates over a population and lifecycle and the average death rate is given by 
+\begin{eqnarray}
+\bar{d}&=&\frac{1}{t_{exp}}\int_{0}^{t_{exp}}e^{ct}q_{0} dt \\
+&=&\frac{q_{0}\left(e^{c t_{exp}}-1\right)}{ct_{exp}}
+\end{eqnarray}
+where $t_{exp}$ is the expected lifespan following the allometry of $t_{exp}=$ \cite{}. Given the allometries above we have that
+\begin{equation}
+d=
+\end{equation}
+which scales roughly like $SCALING$. In figure \ref{} we compare the value of $d$ to the reproductive and starvation mortality rates . The values of $d$ are orders of magnitude smaller than these rates at all scales, and adding this non-starvation based death rate to our model does not shift our results within numerical confidence. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.48\textwidth]{fig_FPAllometric2.eps}
+\caption{\small{ Total energetic use $B_{\rm tot}$ of consumer populations at the steady state as a function of body mass.
+  The data are from Damuth \citep{Damuth:1987kr} and have been converted to
+  total population metabolism using the allometric relationships for
+  metabolic rate (e.g. Refs.~\citep{West:2001bv,hou,moses2008rmo}).}\label{fig:equivalence}}
+\end{figure}
+
+}
+
+{\color{red} \section{NSM and the energy equivalence hypothesis}
+
+The energy equivalence hypothesis is based on the observation that if one assumes that the total metabolism of an ecosystem $B_{\rm tot}$ is equally partitioned between all species ($B_{i}$, the total metabolism of one species, is a constant), then the abundances should follow $N\left(M\right)B\left(M\right)=B_{i}$ implying that $N\left(M\right)\propto M^{-\eta}$, where $\eta$ is the metabolic scaling exponent \citep{allen2002,enquist1998}. As $\eta \approx 3/4$ this hypothesis is consistent with Damuth's law \citep{allen2002}, however the actually equivalence of energy usage of diverse species has not been measured at the population level for a variety of whole populations. Figure \ref{fig:equivalence} shows that $F^{*}B$ is nearly constant over this same range. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.48\textwidth]{fig_FPAllometric2.eps}
+\caption{\small{ Total energetic use $B_{\rm tot}$ of consumer populations at the steady state as a function of body mass.
+  The data are from Damuth \citep{Damuth:1987kr} and have been converted to
+  total population metabolism using the allometric relationships for
+  metabolic rate (e.g. Refs.~\citep{West:2001bv,hou,moses2008rmo}).}\label{fig:equivalence}}
+\end{figure}
+
+}
 
 \bibliography{aa_starving_supplement}
 

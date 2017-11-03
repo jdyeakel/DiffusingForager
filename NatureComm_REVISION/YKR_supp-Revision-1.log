@@ -1,11 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_2) (preloaded format=pdflatex 2017.9.26)  16 OCT 2017 10:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 NOV 2017 20:33
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
+ \write18 enabled.
  %&-line parsing enabled.
-**\input YKR_supp-Revision-1.tex
+**YKR_supp-Revision-1.tex
 (./YKR_supp-Revision-1.tex
-(/opt/local/share/texmf-texlive/tex/latex/lineno/lineno.sty
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count79
 \output=\toks14
@@ -23,7 +24,7 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box26
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(/opt/local/share/texmf-texlive/tex/latex/revtex4/revtex4.cls
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex4/revtex4.cls
 Document Class: revtex4 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for do
 cumentation)
  Copyright (c) 2001 The American Physical Society.
@@ -49,9 +50,9 @@ ltxgrid: portions licensed from W. E. Baxter (web@superscript.com)
 \pagegrid@col=\count89
 Class revtex4 Info: Incorporating package {textcase}  [1998/11/12 v0.06 Text on
 ly upper/lower case changing (DPC)]. on input line 3682.
-(/Users/redner/Library/texmf/tex/latex/url/url.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 \c@affil=\count90
 \absbox=\box32
@@ -66,7 +67,7 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 \c@figure=\count97
 \c@table=\count98
 
-(/opt/local/share/texmf-texlive/tex/latex/natbib/natbib.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
@@ -76,15 +77,15 @@ LaTeX Info: Redefining \cite on input line 694.
 \widetext@top=\box33
 \widetext@bot=\box34
 
-(/opt/local/share/texmf-texlive/tex/latex/revtex4/revsymb.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex4/revsymb.sty
 Package: revsymb 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for documenta
 tion)
 LaTeX Info: Redefining \REV@mathfrak on input line 118.
 ))
-(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks17
 \symAMSa=\mathgroup4
@@ -94,41 +95,41 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Info: Redefining \frak on input line 111.
 LaTeX Info: Redefining \Bbb on input line 113.
 ))
-(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-(/opt/local/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen107
 ))
-(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen108
 )
-(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count100
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count101
 \leftroot@=\count102
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count103
 \DOTSCASE@=\count104
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box35
 \strutbox@=\box36
 \big@size=\dimen109
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count105
 \c@MaxMatrixCols=\count106
 \dotsspace@=\muskip11
@@ -149,28 +150,28 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip46
 \multlinetaggap=\skip47
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
 
 Class revtex4 Warning: No Society specified, using generic APS style.
 
-(/opt/local/share/texmf-texlive/tex/latex/revtex4/aps.rtx
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex4/aps.rtx
 File: aps.rtx 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for documentatio
 n)
 )
-(/opt/local/share/texmf-texlive/tex/latex/revtex4/10pt.rtx
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex4/10pt.rtx
 File: 10pt.rtx 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for documentati
 on)
 )
-(/opt/local/share/texmf-texlive/tex/generic/babel/babel.sty
-Package: babel 2017/05/19 3.10 The Babel package
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
 
-(/opt/local/share/texmf-texlive/tex/generic/babel-english/english.ldf
-Language: english 2017/01/24 v3.3q English support from the babel system
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 
-(/opt/local/share/texmf-texlive/tex/generic/babel/babel.def
-File: babel.def 2017/05/19 3.10 Babel common definitions
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count112
 \U@D=\dimen116
 )
@@ -178,41 +179,41 @@ File: babel.def 2017/05/19 3.10 Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/opt/local/share/texmf-texlive/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks23
 \inpenc@posthook=\toks24
 
-(/opt/local/share/texmf-texlive/tex/latex/base/latin1.def
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
 ))
-(/opt/local/share/texmf-texlive/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/opt/local/share/texmf-texlive/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(/opt/local/share/texmf-texlive/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
 
-(/opt/local/share/texmf-texlive/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 147.
+Package color Info: Driver file: pdftex.def on input line 144.
 
-(/opt/local/share/texmf-texlive/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count113
 ))
-(/opt/local/share/texmf-texlive/tex/latex/float/float.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count114
 \float@exts=\toks25
@@ -220,45 +221,45 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks26
 \@floatcapt=\box38
 )
-(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks27
 \verbatim@line=\toks28
 \verbatim@in@stream=\read1
 )
-(/opt/local/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/opt/local/share/texmf-texlive/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks29
 )
-(/opt/local/share/texmf-texlive/tex/latex/graphics/graphics.sty
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
 
-(/opt/local/share/texmf-texlive/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/opt/local/share/texmf-texlive/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 )
 \Gin@req@height=\dimen117
 \Gin@req@width=\dimen118
 )
-(/opt/local/share/texmf-texlive/tex/latex/tools/bm.sty
-Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2016/02/27 v1.2a Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
-LaTeX Info: Redefining \bm on input line 207.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
+LaTeX Info: Redefining \bm on input line 208.
 )
-(/opt/local/share/texmf-texlive/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
-(/opt/local/share/texmf-texlive/tex/latex/tools/calc.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count115
 \calc@Bcount=\count116
@@ -271,7 +272,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count117
 \calc@Cskip=\skip50
 )
-(/opt/local/share/texmf-texlive/tex/latex/mathtools/mhsetup.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
@@ -288,17 +289,17 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen126
 \l_MT_below_shortintertext_sep=\dimen127
 )
-(/opt/local/share/texmf-texlive/tex/latex/stmaryrd/stmaryrd.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
-(/opt/local/share/texmf-texlive/tex/latex/anyfontsize/anyfontsize.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 )
 
-./YKR_supp-Revision-1.tex:29: LaTeX Error: Option clash for package natbib.
+! LaTeX Error: Option clash for package natbib.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -306,16 +307,12 @@ Type  H <return>  for immediate help.
                                                   
 l.29 \bibpunct
               {}{}{,}{s}{}{;}
-The package natbib has already been loaded with options:
-  [sort&compress]
-There has now been an attempt to load it with options
-  [comma,sort&compress]
-Adding the global options:
-  sort&compress,comma,sort&compress
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
+? 
+(./YKR_supp-Revision-1.aux
 
-(./YKR_supp-Revision-1.aux)
+LaTeX Warning: Label `fig:equivalence' multiply defined.
+
+)
 \openout1 = `YKR_supp-Revision-1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -333,8 +330,7 @@ LaTeX Font Info:    ... okay on input line 40.
 Class revtex4 Info: Patching LaTeX tabular. on input line 40.
 Class revtex4 Info: cite was not loaded (OK!) on input line 40.
 Class revtex4 Info: multicol was not loaded (OK!) on input line 40.
-
-(/opt/local/share/texmf-texlive/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
 \scratchdimen=\dimen128
@@ -347,162 +343,251 @@ Class revtex4 Info: multicol was not loaded (OK!) on input line 40.
 \MPnumerator=\count123
 \makeMPintoPDFobject=\count124
 \everyMPtoPDFconversion=\toks31
-) (/opt/local/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/opt/local/share/texmf-texlive/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/opt/local/share/texmf-texlive/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/opt/local/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
-(/opt/local/share/texmf-texlive/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 56.
 
-(/opt/local/share/texmf-texlive/tex/latex/base/t1cmss.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 56.
 
-(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
-(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+stmry on input line 56.
 
-(/opt/local/share/texmf-texlive/tex/latex/stmaryrd/Ustmry.fd)
-Overfull \hbox (66.01436pt too wide) in paragraph at lines 116--116
+(/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+Overfull \hbox (66.01436pt too wide) in paragraph at lines 117--117
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--127
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
-[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1014) in paragraph at lines 151--154
+[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 1014) in paragraph at lines 153--156
 \T1/cmr/m/n/10 by the NPP di-vided by the cor-re-spond-ing biomass
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 151--154
+Underfull \hbox (badness 1264) in paragraph at lines 153--156
 \T1/cmr/m/n/10 these steady states with the data from Damuth$[]$.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []\T1/cmr/m/n/8 Metabolic Nor-mal-iza-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--179
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
 []\T1/cmr/m/n/8 Fat scal-ing nor-mal-iza-tion
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 180--180
+Underfull \hbox (badness 1484) in paragraph at lines 182--182
 []\T1/cmr/m/n/8 Muscle mass scal-ing ex-po-
  []
 
 
-Overfull \hbox (19.15465pt too wide) in paragraph at lines 167--200
+Overfull \hbox (19.15465pt too wide) in paragraph at lines 169--202
  []$ 
  []
 
-[2] (./YKR_supp-Revision-1.bbl
+[2]
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 267.
+
+Package epstopdf Info: Source file: <fig_FPAllometric2.eps>
+(epstopdf)                    date: 2017-11-01 11:56:14
+(epstopdf)                    size: 674906 bytes
+(epstopdf)             Output file: <fig_FPAllometric2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-01 11:59:27
+(epstopdf)                    size: 142536 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig_FPAllometric2-eps-conve
+rted-to.pdf fig_FPAllometric2.eps>
+(epstopdf)             \includegraphics on input line 271.
+Package epstopdf Info: Output file is already uptodate.
+<fig_FPAllometric2-eps-converted-to.pdf, id=34, 206.7725pt x 148.555pt>
+File: fig_FPAllometric2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig_FPAllometric2-eps-converted-to.pdf>
+Package pdftex.def Info: fig_FPAllometric2-eps-converted-to.pdf used on input l
+ine 271.
+(pdftex.def)             Requested size: 244.79782pt x 175.87819pt.
+
+
+Package natbib Warning: Citation `Damuth:1987kr' on page 3 undefined on input l
+ine 275.
+
+
+Package natbib Warning: Citation `Damuth:1987kr' on page 3 undefined on input l
+ine 275.
+
+[3]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 280.
+
+
+Package natbib Warning: Citation `allen2002' on page 4 undefined on input line 
+282.
+
+
+Package natbib Warning: Citation `enquist1998' on page 4 undefined on input lin
+e 282.
+
+
+Package natbib Warning: Citation `allen2002' on page 4 undefined on input line 
+282.
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 282--283
+\T1/cmr/m/n/10 is a con-stant), then the abun-dances should fol-low
+ []
+
+Package epstopdf Info: Source file: <fig_FPAllometric2.eps>
+(epstopdf)                    date: 2017-11-01 11:56:14
+(epstopdf)                    size: 674906 bytes
+(epstopdf)             Output file: <fig_FPAllometric2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-01 11:59:27
+(epstopdf)                    size: 142536 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig_FPAllometric2-eps-conve
+rted-to.pdf fig_FPAllometric2.eps>
+(epstopdf)             \includegraphics on input line 286.
+Package epstopdf Info: Output file is already uptodate.
+File: fig_FPAllometric2-eps-converted-to.pdf Graphic file (type pdf)
+<use fig_FPAllometric2-eps-converted-to.pdf>
+Package pdftex.def Info: fig_FPAllometric2-eps-converted-to.pdf used on input l
+ine 286.
+(pdftex.def)             Requested size: 244.79782pt x 175.87819pt.
+
+
+Package natbib Warning: Citation `Damuth:1987kr' on page 4 undefined on input l
+ine 290.
+
+
+Package natbib Warning: Citation `Damuth:1987kr' on page 4 undefined on input l
+ine 290.
+
+(./YKR_supp-Revision-1.bbl
 Underfull \hbox (badness 1281) in paragraph at lines 105--112
  []\T1/cmr/m/n/9 Estermann, B. L., Wettstein, H.-R., Sut-ter, F. &
  []
 
-[3]) [4] (./YKR_supp-Revision-1.aux) ) 
+[4 <./fig_FPAllometric2-eps-converted-to.pdf>])
+
+Package natbib Warning: There were undefined citations.
+
+[5] (./YKR_supp-Revision-1.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5874 strings out of 494108
- 78690 string characters out of 6155685
- 185396 words of memory out of 5000000
- 9106 multiletter control sequences out of 15000+600000
- 26567 words of font info for 77 fonts, out of 8000000 for 9000
- 430 hyphenation exceptions out of 8191
- 39i,18n,28p,1306b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/opt/local/share/texmf-texlive/fonts/enc
-/dvips/cm-super/cm-super-t1.enc}</opt/local/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmmi5.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/lo
-cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/local/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/local/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/local/share/texmf-texlive/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmsy5.pfb></opt/local/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sfbx0
-900.pfb></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sfbx1000.pf
-b></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sfbx1200.pfb></op
-t/local/share/texmf-texlive/fonts/type1/public/cm-super/sfrm0600.pfb></opt/loca
-l/share/texmf-texlive/fonts/type1/public/cm-super/sfrm0700.pfb></opt/local/shar
-e/texmf-texlive/fonts/type1/public/cm-super/sfrm0800.pfb></opt/local/share/texm
-f-texlive/fonts/type1/public/cm-super/sfrm0900.pfb></opt/local/share/texmf-texl
-ive/fonts/type1/public/cm-super/sfrm1000.pfb></opt/local/share/texmf-texlive/fo
-nts/type1/public/cm-super/sfss0500.pfb></opt/local/share/texmf-texlive/fonts/ty
-pe1/public/cm-super/sfti0600.pfb></opt/local/share/texmf-texlive/fonts/type1/pu
-blic/cm-super/sfti0900.pfb>
-Output written on YKR_supp-Revision-1.pdf (4 pages, 397303 bytes).
+ 5851 strings out of 493014
+ 78912 string characters out of 6133351
+ 185232 words of memory out of 5000000
+ 9241 multiletter control sequences out of 15000+600000
+ 28129 words of font info for 79 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,18n,34p,1299b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/cm-super/sfbx0600.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2016/texmf-dist/fonts
+/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+cm-super/sfss0500.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm
+-super/sfti0600.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-s
+uper/sfti0900.pfb>
+Output written on YKR_supp-Revision-1.pdf (5 pages, 583618 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 147 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

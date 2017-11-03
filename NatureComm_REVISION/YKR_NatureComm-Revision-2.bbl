@@ -1,0 +1,527 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Martin:1987dl}
+\bibinfo{author}{Martin, T.~E.}
+\newblock \bibinfo{title}{{Food as a limit on breeding birds: A life-history
+  perspective}}.
+\newblock \emph{\bibinfo{journal}{Annu. Rev. Ecol. Syst.}}
+  \textbf{\bibinfo{volume}{18}}, \bibinfo{pages}{453--487}
+  (\bibinfo{year}{1987}).
+
+\bibitem{Kirk:1997cc}
+\bibinfo{author}{Kirk, K.~L.}
+\newblock \bibinfo{title}{{Life-history responses to variable environments:
+  Starvation and reproduction in planktonic rotifers}}.
+\newblock \emph{\bibinfo{journal}{Ecology}} \textbf{\bibinfo{volume}{78}},
+  \bibinfo{pages}{434--441} (\bibinfo{year}{1997}).
+
+\bibitem{Kempes:2012hy}
+\bibinfo{author}{Kempes, C.~P.}, \bibinfo{author}{Dutkiewicz, S.} \&
+  \bibinfo{author}{Follows, M.~J.}
+\newblock \bibinfo{title}{{Growth, metabolic partitioning, and the size of
+  microorganisms}}.
+\newblock \emph{\bibinfo{journal}{Proc. Natl. Acad. Sci. USA}}
+  \textbf{\bibinfo{volume}{109}}, \bibinfo{pages}{495--500}
+  (\bibinfo{year}{2012}).
+
+\bibitem{Mangel:1988uaa}
+\bibinfo{author}{Mangel, M.} \& \bibinfo{author}{Clark, C.~W.}
+\newblock \emph{\bibinfo{title}{{Dynamic Modeling in Behavioral Ecology}}}
+  (\bibinfo{publisher}{Princeton University Press},
+  \bibinfo{address}{Princeton}, \bibinfo{year}{1988}).
+
+\bibitem{Mangel:2014kz}
+\bibinfo{author}{Mangel, M.}
+\newblock \bibinfo{title}{{Stochastic dynamic programming illuminates the link
+  between environment, physiology, and evolution}}.
+\newblock \emph{\bibinfo{journal}{B. Math. Biol.}}
+  \textbf{\bibinfo{volume}{77}}, \bibinfo{pages}{857--877}
+  (\bibinfo{year}{2014}).
+
+\bibitem{Yeakel:2013hi}
+\bibinfo{author}{Yeakel, J.~D.}, \bibinfo{author}{Dominy, N.~J.},
+  \bibinfo{author}{Koch, P.~L.} \& \bibinfo{author}{Mangel, M.}
+\newblock \bibinfo{title}{{Functional morphology, stable isotopes, and human
+  evolution: a model of consilience}}.
+\newblock \emph{\bibinfo{journal}{Evolution}} \textbf{\bibinfo{volume}{68}},
+  \bibinfo{pages}{190--203} (\bibinfo{year}{2014}).
+
+\bibitem{Morris:1987eo}
+\bibinfo{author}{Morris, D.~W.}
+\newblock \bibinfo{title}{{Optimal allocation of parental investment}}.
+\newblock \emph{\bibinfo{journal}{Oikos}} \textbf{\bibinfo{volume}{49}},
+  \bibinfo{pages}{332--339} (\bibinfo{year}{1987}).
+
+\bibitem{Tveraa:2003fq}
+\bibinfo{author}{Tveraa, T.}, \bibinfo{author}{Fauchald, P.},
+  \bibinfo{author}{Henaug, C.} \& \bibinfo{author}{Yoccoz, N.~G.}
+\newblock \bibinfo{title}{{An examination of a compensatory relationship
+  between food limitation and predation in semi-domestic reindeer}}.
+\newblock \emph{\bibinfo{journal}{Oecologia}} \textbf{\bibinfo{volume}{137}},
+  \bibinfo{pages}{370--376} (\bibinfo{year}{2003}).
+
+\bibitem{Daan:1988va}
+\bibinfo{author}{Daan, S.}, \bibinfo{author}{Dijkstra, C.},
+  \bibinfo{author}{Drent, R.} \& \bibinfo{author}{Meijer, T.}
+\newblock \bibinfo{title}{{Food supply and the annual timing of avian
+  reproduction}}.
+\newblock In \bibinfo{editor}{Ouellet, H.} (ed.) \emph{\bibinfo{booktitle}{Acta
+  XIX Congressus Internationalis Ornithologici, Volume I: Proceedings XIX
+  International Ornithological Congress, 1986, Ottawa}},
+  \bibinfo{pages}{392--407} (\bibinfo{publisher}{Proceedings XIX International
+  Ornithological Congress}, \bibinfo{address}{Ottawa}, \bibinfo{year}{1989}).
+
+\bibitem{Jacot:2009dv}
+\bibinfo{author}{Jacot, A.}, \bibinfo{author}{Valcu, M.}, \bibinfo{author}{van
+  Oers, K.} \& \bibinfo{author}{Kempenaers, B.}
+\newblock \bibinfo{title}{{Experimental nest site limitation affects
+  reproductive strategies and parental investment in a hole-nesting
+  passerine}}.
+\newblock \emph{\bibinfo{journal}{Animal Behaviour}}
+  \textbf{\bibinfo{volume}{77}}, \bibinfo{pages}{1075--1083}
+  (\bibinfo{year}{2009}).
+
+\bibitem{Stearns:1989ip}
+\bibinfo{author}{Stearns, S.~C.}
+\newblock \bibinfo{title}{{Trade-offs in life-history evolution}}.
+\newblock \emph{\bibinfo{journal}{Funct. Ecol.}} \textbf{\bibinfo{volume}{3}},
+  \bibinfo{pages}{259} (\bibinfo{year}{1989}).
+
+\bibitem{Barboza:2002in}
+\bibinfo{author}{Barboza, P.} \& \bibinfo{author}{Jorde, D.}
+\newblock \bibinfo{title}{{Intermittent fasting during winter and spring
+  affects body composition and reproduction of a migratory duck}}.
+\newblock \emph{\bibinfo{journal}{J Comp Physiol B}}
+  \textbf{\bibinfo{volume}{172}}, \bibinfo{pages}{419--434}
+  (\bibinfo{year}{2002}).
+
+\bibitem{Threlkeld:1976ih}
+\bibinfo{author}{Threlkeld, S.~T.}
+\newblock \bibinfo{title}{{Starvation and the size structure of zooplankton
+  communities}}.
+\newblock \emph{\bibinfo{journal}{Freshwater Biol.}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{489--496}
+  (\bibinfo{year}{1976}).
+
+\bibitem{Weber:1998jg}
+\bibinfo{author}{Weber, T.~P.}, \bibinfo{author}{Ens, B.~J.} \&
+  \bibinfo{author}{Houston, A.~I.}
+\newblock \bibinfo{title}{{Optimal avian migration: A dynamic model of fuel
+  stores and site use}}.
+\newblock \emph{\bibinfo{journal}{Evolutionary Ecology}}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{377--401}
+  (\bibinfo{year}{1998}).
+
+\bibitem{Mduma:1999cp}
+\bibinfo{author}{Mduma, S. A.~R.}, \bibinfo{author}{Sinclair, A. R.~E.} \&
+  \bibinfo{author}{Hilborn, R.}
+\newblock \bibinfo{title}{{Food regulates the Serengeti wildebeest: a 40-year
+  record}}.
+\newblock \emph{\bibinfo{journal}{J. Anim. Ecol.}}
+  \textbf{\bibinfo{volume}{68}}, \bibinfo{pages}{1101--1122}
+  (\bibinfo{year}{1999}).
+
+\bibitem{Moore:2014hi}
+\bibinfo{author}{Moore, J.~W.}, \bibinfo{author}{Yeakel, J.~D.},
+  \bibinfo{author}{Peard, D.}, \bibinfo{author}{Lough, J.} \&
+  \bibinfo{author}{Beere, M.}
+\newblock \bibinfo{title}{{Life-history diversity and its importance to
+  population stability and persistence of a migratory fish: steelhead in two
+  large North American watersheds}}.
+\newblock \emph{\bibinfo{journal}{J. Anim. Ecol.}}
+  \textbf{\bibinfo{volume}{83}}, \bibinfo{pages}{1035--1046}
+  (\bibinfo{year}{2014}).
+
+\bibitem{Mead:1989dt}
+\bibinfo{author}{Mead, R.~A.}
+\newblock \bibinfo{title}{{The Physiology and Evolution of Delayed Implantation
+  in Carnivores}}.
+\newblock In \bibinfo{editor}{Gittleman, J.~L.} (ed.)
+  \emph{\bibinfo{booktitle}{Carnivore Behavior, Ecology, and Evolution}},
+  \bibinfo{pages}{437--464} (\bibinfo{publisher}{Springer US},
+  \bibinfo{address}{Ithaca}, \bibinfo{year}{1989}).
+
+\bibitem{Sandell:1990kw}
+\bibinfo{author}{Sandell, M.}
+\newblock \bibinfo{title}{{The evolution of seasonal delayed implantation}}.
+\newblock \emph{\bibinfo{journal}{Q Rev Biol}} \textbf{\bibinfo{volume}{65}},
+  \bibinfo{pages}{23--42} (\bibinfo{year}{1990}).
+
+\bibitem{Bulik:1999eo}
+\bibinfo{author}{Bulik, C.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{{Fertility and reproduction in women with anorexia
+  nervosa}}.
+\newblock \emph{\bibinfo{journal}{J. Clin. Psychiat.}}
+  \textbf{\bibinfo{volume}{60}}, \bibinfo{pages}{130--135}
+  (\bibinfo{year}{1999}).
+
+\bibitem{Trites:2003cc}
+\bibinfo{author}{Trites, A.~W.} \& \bibinfo{author}{Donnelly, C.~P.}
+\newblock \bibinfo{title}{{The decline of Steller sea lions Eumetopias jubatus
+  in Alaska: a review of the nutritional stress hypothesis}}.
+\newblock \emph{\bibinfo{journal}{Mammal Rev.}} \textbf{\bibinfo{volume}{33}},
+  \bibinfo{pages}{3--28} (\bibinfo{year}{2003}).
+
+\bibitem{Glazier:2009hq}
+\bibinfo{author}{Glazier, D.~S.}
+\newblock \bibinfo{title}{{Metabolic level and size scaling of rates of
+  respiration and growth in unicellular organisms}}.
+\newblock \emph{\bibinfo{journal}{Funct. Ecol.}} \textbf{\bibinfo{volume}{23}},
+  \bibinfo{pages}{963--968} (\bibinfo{year}{2009}).
+
+\bibitem{Kooi2000}
+\bibinfo{author}{Kooijman, S. A. L.~M.}
+\newblock \emph{\bibinfo{title}{{Dynamic Energy and Mass Budgets in Biological
+  Systems}}} (\bibinfo{address}{Cambridge}, \bibinfo{year}{2000}).
+
+\bibitem{Sousa:2010ez}
+\bibinfo{author}{Sousa, T.}, \bibinfo{author}{Domingos, T.},
+  \bibinfo{author}{Poggiale, J.~C.} \& \bibinfo{author}{Kooijman, S. A. L.~M.}
+\newblock \bibinfo{title}{{Dynamic energy budget theory restores coherence in
+  biology}}.
+\newblock \emph{\bibinfo{journal}{Philos. T. Roy. Soc. B}}
+  \textbf{\bibinfo{volume}{365}}, \bibinfo{pages}{3413--3428}
+  (\bibinfo{year}{2010}).
+
+\bibitem{Diekmann:2010da}
+\bibinfo{author}{Diekmann, O.} \& \bibinfo{author}{Metz, J. A.~J.}
+\newblock \bibinfo{title}{{How to lift a model for individual behaviour to the
+  population level?}}
+\newblock \emph{\bibinfo{journal}{Philos. T. Roy. Soc. B}}
+  \textbf{\bibinfo{volume}{365}}, \bibinfo{pages}{3523--3530}
+  (\bibinfo{year}{2010}).
+
+\bibitem{murdoch:2003}
+\bibinfo{author}{Murdoch, W.~W.}, \bibinfo{author}{Briggs, C.~J.} \&
+  \bibinfo{author}{Nisbet, R.~M.}
+\newblock \emph{\bibinfo{title}{{Consumer-resource Dynamics}}},
+  vol.~\bibinfo{volume}{36} of \emph{\bibinfo{series}{Monographs in population
+  biology}} (\bibinfo{publisher}{Princeton University Press},
+  \bibinfo{address}{Princeton}, \bibinfo{year}{2003}).
+
+\bibitem{Benichou:2014wu}
+\bibinfo{author}{Benichou, O.} \& \bibinfo{author}{Redner, S.}
+\newblock \bibinfo{title}{{Depletion-Controlled Starvation of a Diffusing
+  Forager}}.
+\newblock \emph{\bibinfo{journal}{arXiv}} \bibinfo{pages}{1--5}
+  (\bibinfo{year}{2014}).
+\newblock \eprint{1405.5054v3}.
+
+\bibitem{Benichou:2016wl}
+\bibinfo{author}{B{\'e}nichou, O.}, \bibinfo{author}{Chupeau, M.} \&
+  \bibinfo{author}{Redner, S.}
+\newblock \bibinfo{title}{{Role of depletion on the dynamics of a diffusing
+  forager}}.
+\newblock \emph{\bibinfo{journal}{Journal of Physics A: {\ldots}}}
+  (\bibinfo{year}{2016}).
+
+\bibitem{Chupeau:2016jf}
+\bibinfo{author}{Chupeau, M.}, \bibinfo{author}{B{\'e}nichou, O.} \&
+  \bibinfo{author}{Redner, S.}
+\newblock \bibinfo{title}{{Universality classes of foraging with resource
+  renewal}}.
+\newblock \emph{\bibinfo{journal}{Phys. Rev. E}} \textbf{\bibinfo{volume}{93}},
+  \bibinfo{pages}{032403} (\bibinfo{year}{2016}).
+
+\bibitem{Persson:1998hz}
+\bibinfo{author}{Persson, L.}, \bibinfo{author}{Leonardsson, K.},
+  \bibinfo{author}{De~Roos, A.~M.}, \bibinfo{author}{Gyllenberg, M.} \&
+  \bibinfo{author}{Christensen, B.}
+\newblock \bibinfo{title}{{Ontogenetic scaling of foraging rates and the
+  dynamics of a size-structured consumer-resource model}}.
+\newblock \emph{\bibinfo{journal}{Theor Popul Biol}}
+  \textbf{\bibinfo{volume}{54}}, \bibinfo{pages}{270--293}
+  (\bibinfo{year}{1998}).
+
+\bibitem{murray2011mathematical}
+\bibinfo{author}{Murray, J.~D.}
+\newblock \emph{\bibinfo{title}{{Mathematical Biology: I. An Introduction}}},
+  vol. \bibinfo{volume}{110} of \emph{\bibinfo{series}{Interdisciplinary
+  Applied Mathematics}} (\bibinfo{publisher}{Springer New York},
+  \bibinfo{year}{2011}).
+
+\bibitem{Strogatz:2008wo}
+\bibinfo{author}{Strogatz, S.~H.}
+\newblock \emph{\bibinfo{title}{{Nonlinear Dynamics and Chaos: With
+  Applications to Physics, Biology, Chemistry, and Engineering}}}.
+\newblock Studies in nonlinearity (\bibinfo{publisher}{Westview Press},
+  \bibinfo{address}{Boulder}, \bibinfo{year}{2008}).
+
+\bibitem{GuckHolmes}
+\bibinfo{author}{Guckenheimer, J.} \& \bibinfo{author}{Holmes, P.}
+\newblock \emph{\bibinfo{title}{{Nonlinear Oscillations, Dynamical Systems, and
+  Bifurcations of Vector Fields}}} (\bibinfo{publisher}{Springer},
+  \bibinfo{address}{New York}, \bibinfo{year}{1983}).
+
+\bibitem{Gross:2004p2428}
+\bibinfo{author}{Gross, T.} \& \bibinfo{author}{Feudel, U.}
+\newblock \bibinfo{title}{{Analytical search for bifurcation surfaces in
+  parameter space}}.
+\newblock \emph{\bibinfo{journal}{Physica D}} \textbf{\bibinfo{volume}{195}},
+  \bibinfo{pages}{292--302} (\bibinfo{year}{2004}).
+
+\bibitem{Hastings:2001jh}
+\bibinfo{author}{Hastings, A.}
+\newblock \bibinfo{title}{{Transient dynamics and persistence of ecological
+  systems}}.
+\newblock \emph{\bibinfo{journal}{Ecol. Lett.}} \textbf{\bibinfo{volume}{4}},
+  \bibinfo{pages}{215--220} (\bibinfo{year}{2001}).
+
+\bibitem{Neubert:1997wk}
+\bibinfo{author}{Neubert, M.} \& \bibinfo{author}{Caswell, H.}
+\newblock \bibinfo{title}{{Alternatives to resilience for measuring the
+  responses of ecological systems to perturbations}}.
+\newblock \emph{\bibinfo{journal}{Ecology}} \textbf{\bibinfo{volume}{78}},
+  \bibinfo{pages}{653--665} (\bibinfo{year}{1997}).
+
+\bibitem{Caswell:2005eo}
+\bibinfo{author}{Caswell, H.} \& \bibinfo{author}{Neubert, M.~G.}
+\newblock \bibinfo{title}{{Reactivity and transient dynamics of discrete-time
+  ecological systems}}.
+\newblock \emph{\bibinfo{journal}{J Differ Equ Appl}}
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{295--310}
+  (\bibinfo{year}{2005}).
+
+\bibitem{Neubert:2009td}
+\bibinfo{author}{Neubert, M.} \& \bibinfo{author}{Caswell, H.}
+\newblock \bibinfo{title}{{Detecting reactivity}}.
+\newblock \emph{\bibinfo{journal}{Ecology}} \textbf{\bibinfo{volume}{90}},
+  \bibinfo{pages}{2683--2688} (\bibinfo{year}{2009}).
+
+\bibitem{Yodzis:1992hg}
+\bibinfo{author}{Yodzis, P.} \& \bibinfo{author}{Innes, S.}
+\newblock \bibinfo{title}{{Body size and consumer-resource dynamics}}.
+\newblock \emph{\bibinfo{journal}{Am. Nat.}} \textbf{\bibinfo{volume}{139}},
+  \bibinfo{pages}{1151--1175} (\bibinfo{year}{1992}).
+
+\bibitem{Brown:2004wq}
+\bibinfo{author}{Brown, J.}, \bibinfo{author}{Gillooly, J.},
+  \bibinfo{author}{Allen, A.}, \bibinfo{author}{Savage, V.} \&
+  \bibinfo{author}{West, G.}
+\newblock \bibinfo{title}{{Toward a metabolic theory of ecology}}.
+\newblock \emph{\bibinfo{journal}{Ecology}} \textbf{\bibinfo{volume}{85}},
+  \bibinfo{pages}{1771--1789} (\bibinfo{year}{2004}).
+
+\bibitem{Liow:2008jx}
+\bibinfo{author}{Liow, L.~H.} \emph{et~al.}
+\newblock \bibinfo{title}{{Higher origination and extinction rates in larger
+  mammals}}.
+\newblock \emph{\bibinfo{journal}{Proc. Natl. Acad. Sci. USA}}
+  \textbf{\bibinfo{volume}{105}}, \bibinfo{pages}{6097--6102}
+  (\bibinfo{year}{2008}).
+
+\bibitem{DeLong:2012kw}
+\bibinfo{author}{DeLong, J.~P.} \& \bibinfo{author}{Vasseur, D.~A.}
+\newblock \bibinfo{title}{{A dynamic explanation of size{\textendash}density
+  scaling in carnivores}}.
+\newblock \emph{\bibinfo{journal}{Ecology}} \textbf{\bibinfo{volume}{93}},
+  \bibinfo{pages}{470--476} (\bibinfo{year}{2012}).
+
+\bibitem{Damuth:1987kr}
+\bibinfo{author}{Damuth, J.}
+\newblock \bibinfo{title}{{Interspecific allometry of population density in
+  mammals and other animals: the independence of body mass and population
+  energy-use}}.
+\newblock \emph{\bibinfo{journal}{Biol. J. Linn. Soc.}}
+  \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{193--246}
+  (\bibinfo{year}{1987}).
+
+\bibitem{allen2002}
+\bibinfo{author}{Allen, A.~P.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{Gillooly, J.~F.}
+\newblock \bibinfo{title}{{Global biodiversity, biochemical kinetics, and the
+  energetic-equivalence rule}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{297}},
+  \bibinfo{pages}{1545--1548} (\bibinfo{year}{2002}).
+
+\bibitem{enquist1998}
+\bibinfo{author}{Enquist, B.~J.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{West, G.~B.}
+\newblock \bibinfo{title}{{Allometric scaling of plant energetics and
+  population density}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{395}},
+  \bibinfo{pages}{163--165} (\bibinfo{year}{1998}).
+
+\bibitem{West:2001bv}
+\bibinfo{author}{West, G.~B.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{Enquist, B.~J.}
+\newblock \bibinfo{title}{{A general model for ontogenetic growth}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{413}},
+  \bibinfo{pages}{628--631} (\bibinfo{year}{2001}).
+
+\bibitem{hou}
+\bibinfo{author}{Hou, C.} \emph{et~al.}
+\newblock \bibinfo{title}{{Energy uptake and allocation during ontogeny}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{322}},
+  \bibinfo{pages}{736--739} (\bibinfo{year}{2008}).
+
+\bibitem{moses2008rmo}
+\bibinfo{author}{Moses, M.~E.} \emph{et~al.}
+\newblock \bibinfo{title}{{Revisiting a Model of Ontogenetic Growth: Estimating
+  Model Parameters from Theory and Data.}}
+\newblock \emph{\bibinfo{journal}{Am. Nat.}} \textbf{\bibinfo{volume}{171}},
+  \bibinfo{pages}{632--645} (\bibinfo{year}{2008}).
+
+\bibitem{Alroy:1998p1594}
+\bibinfo{author}{Alroy, J.}
+\newblock \bibinfo{title}{{Cope's rule and the dynamics of body mass evolution
+  in North American fossil mammals}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{280}},
+  \bibinfo{pages}{731--734} (\bibinfo{year}{1998}).
+
+\bibitem{Clauset:2009fh}
+\bibinfo{author}{Clauset, A.} \& \bibinfo{author}{Redner, S.}
+\newblock \bibinfo{title}{{Evolutionary model of species body mass
+  diversification}}.
+\newblock \emph{\bibinfo{journal}{Phys. Rev. Lett.}}
+  \textbf{\bibinfo{volume}{102}}, \bibinfo{pages}{038103}
+  (\bibinfo{year}{2009}).
+
+\bibitem{Kempes:2016}
+\bibinfo{author}{Kempes, C.~P.}, \bibinfo{author}{Wang, L.},
+  \bibinfo{author}{Amend, J.~P.}, \bibinfo{author}{Doyle, J.} \&
+  \bibinfo{author}{Hoehler, T.}
+\newblock \bibinfo{title}{{Evolutionary tradeoffs in cellular composition
+  across diverse bacteria}}.
+\newblock \emph{\bibinfo{journal}{ISME J}} \textbf{\bibinfo{volume}{10}},
+  \bibinfo{pages}{2145--2157} (\bibinfo{year}{2016}).
+
+\bibitem{Brown:1993p708}
+\bibinfo{author}{Brown, J.}, \bibinfo{author}{Marquet, P.} \&
+  \bibinfo{author}{Taper, M.}
+\newblock \bibinfo{title}{{Evolution of body size: consequences of an energetic
+  definition of fitness}}.
+\newblock \emph{\bibinfo{journal}{Am. Nat.}} \textbf{\bibinfo{volume}{142}},
+  \bibinfo{pages}{573--584} (\bibinfo{year}{1993}).
+
+\bibitem{West:1997cg}
+\bibinfo{author}{West, G.~B.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{Enquist, B.~J.}
+\newblock \bibinfo{title}{{A general model for the origin of allometric scaling
+  laws in biology}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{276}},
+  \bibinfo{pages}{122--126} (\bibinfo{year}{1997}).
+
+\bibitem{West:2002ud}
+\bibinfo{author}{West, G.~B.}, \bibinfo{author}{Woodruff, W.~H.} \&
+  \bibinfo{author}{Brown, J.~H.}
+\newblock \bibinfo{title}{{Allometric scaling of metabolic rate from molecules
+  and mitochondria to cells and mammals.}}
+\newblock \emph{\bibinfo{journal}{Proc. Natl. Acad. Sci. USA}}
+  \textbf{\bibinfo{volume}{99 Suppl 1}}, \bibinfo{pages}{2473--2478}
+  (\bibinfo{year}{2002}).
+
+\bibitem{Millar:1990p923}
+\bibinfo{author}{Millar, J.} \& \bibinfo{author}{Hickling, G.}
+\newblock \bibinfo{title}{{Fasting endurance and the evolution of mammalian
+  body size}}.
+\newblock \emph{\bibinfo{journal}{Funct. Ecol.}} \textbf{\bibinfo{volume}{4}},
+  \bibinfo{pages}{5--12} (\bibinfo{year}{1990}).
+
+\bibitem{Smith:2010p3442}
+\bibinfo{author}{Smith, F.~A.} \emph{et~al.}
+\newblock \bibinfo{title}{{The evolution of maximum body size of terrestrial
+  mammals}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{330}},
+  \bibinfo{pages}{1216--1219} (\bibinfo{year}{2010}).
+
+\bibitem{Saarinen:2014br}
+\bibinfo{author}{Saarinen, J.~J.} \emph{et~al.}
+\newblock \bibinfo{title}{{Patterns of maximum body size evolution in Cenozoic
+  land mammals: Eco-evolutionary processes and abiotic forcing}}.
+\newblock \emph{\bibinfo{journal}{Proc Biol Sci}}
+  \textbf{\bibinfo{volume}{281}}, \bibinfo{pages}{20132049}
+  (\bibinfo{year}{2014}).
+
+\bibitem{tilman1981}
+\bibinfo{author}{Tilman, D.}
+\newblock \bibinfo{title}{{Tests of resource competition theory using four
+  species of lake michigan algae}}.
+\newblock \emph{\bibinfo{journal}{Ecology}} \textbf{\bibinfo{volume}{62}},
+  \bibinfo{pages}{802--815} (\bibinfo{year}{1981}).
+
+\bibitem{dutkiewicz2009}
+\bibinfo{author}{Dutkiewicz, S.}, \bibinfo{author}{Follows, M.~J.} \&
+  \bibinfo{author}{Bragg, J.~G.}
+\newblock \bibinfo{title}{{Modeling the coupling of ocean ecology and
+  biogeochemistry}}.
+\newblock \emph{\bibinfo{journal}{Global Biogeochem. Cycles}}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{1--15} (\bibinfo{year}{2009}).
+
+\bibitem{barton2010}
+\bibinfo{author}{Barton, A.~D.}, \bibinfo{author}{Dutkiewicz, S.},
+  \bibinfo{author}{Flierl, G.}, \bibinfo{author}{Bragg, J.} \&
+  \bibinfo{author}{Follows, M.~J.}
+\newblock \bibinfo{title}{{Patterns of diversity in marine phytoplankton}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{327}},
+  \bibinfo{pages}{1509--1511} (\bibinfo{year}{2010}).
+
+\bibitem{Carbone:1999ju}
+\bibinfo{author}{Carbone, C.}, \bibinfo{author}{Mace, G.~M.},
+  \bibinfo{author}{Roberts, S.~C.} \& \bibinfo{author}{Macdonald, D.~W.}
+\newblock \bibinfo{title}{{Energetic constraints on the diet of terrestrial
+  carnivores}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{402}},
+  \bibinfo{pages}{286--288} (\bibinfo{year}{1999}).
+
+\bibitem{Okie:2013ju}
+\bibinfo{author}{Okie, J.~G.} \emph{et~al.}
+\newblock \bibinfo{title}{{Effects of allometry, productivity and lifestyle on
+  rates and limits of body size evolution}}.
+\newblock \emph{\bibinfo{journal}{Proc Biol Sci}}
+  \textbf{\bibinfo{volume}{280}}, \bibinfo{pages}{20131007--20131007}
+  (\bibinfo{year}{2013}).
+
+\bibitem{West:2002it}
+\bibinfo{author}{West, G.~B.}, \bibinfo{author}{Woodruff, W.~H.} \&
+  \bibinfo{author}{Brown, J.~H.}
+\newblock \bibinfo{title}{{Allometric scaling of metabolic rate from molecules
+  and mitochondria to cells and mammals.}}
+\newblock \emph{\bibinfo{journal}{Proc. Natl. Acad. Sci. USA}}
+  \textbf{\bibinfo{volume}{99 Suppl 1}}, \bibinfo{pages}{2473--2478}
+  (\bibinfo{year}{2002}).
+
+\bibitem{DeLong:2010dy}
+\bibinfo{author}{DeLong, J.~P.}, \bibinfo{author}{Okie, J.~G.},
+  \bibinfo{author}{Moses, M.~E.}, \bibinfo{author}{Sibly, R.~M.} \&
+  \bibinfo{author}{Brown, J.~H.}
+\newblock \bibinfo{title}{{Shifts in metabolic scaling, production, and
+  efficiency across major evolutionary transitions of life}}.
+\newblock \emph{\bibinfo{journal}{Proc. Natl. Acad. Sci. USA}}
+  \textbf{\bibinfo{volume}{107}}, \bibinfo{pages}{12941--12945}
+  (\bibinfo{year}{2010}).
+
+\bibitem{gillooly2002esa}
+\bibinfo{author}{Gillooly, J.~F.}, \bibinfo{author}{Charnov, E.~L.},
+  \bibinfo{author}{West, G.~B.}, \bibinfo{author}{Savage, V.~M.} \&
+  \bibinfo{author}{Brown, J.~H.}
+\newblock \bibinfo{title}{{Effects of size and temperature on developmental
+  time}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{417}},
+  \bibinfo{pages}{70--73} (\bibinfo{year}{2002}).
+
+\bibitem{bettencourt}
+\bibinfo{author}{Bettencourt, L. M.~A.}, \bibinfo{author}{Lobo, J.},
+  \bibinfo{author}{Helbing, D.}, \bibinfo{author}{Kuhnert, C.} \&
+  \bibinfo{author}{West, G.~B.}
+\newblock \bibinfo{title}{{Growth, innovation, scaling, and the pace of life in
+  cities}}.
+\newblock \emph{\bibinfo{journal}{Proc. Natl. Acad. Sci. USA}}
+  \textbf{\bibinfo{volume}{104}}, \bibinfo{pages}{7301--7306}
+  (\bibinfo{year}{2007}).
+
+\bibitem{Folland:2008ij}
+\bibinfo{author}{Folland, J.~P.}, \bibinfo{author}{Mc~Cauley, T.~M.} \&
+  \bibinfo{author}{Williams, A.~G.}
+\newblock \bibinfo{title}{{Allometric scaling of strength measurements to body
+  size}}.
+\newblock \emph{\bibinfo{journal}{Eur J Appl Physiol}}
+  \textbf{\bibinfo{volume}{102}}, \bibinfo{pages}{739--745}
+  (\bibinfo{year}{2008}).
+
+\end{thebibliography}
