@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 NOV 2017 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 NOV 2017 17:23
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **YKR_supp-Revision-1.tex
 (./YKR_supp-Revision-1.tex
@@ -308,29 +308,26 @@ Type  H <return>  for immediate help.
 l.29 \bibpunct
               {}{}{,}{s}{}{;}
 ? 
-(./YKR_supp-Revision-1.aux
-
-LaTeX Warning: Label `fig:equivalence' multiply defined.
-
-)
+(./YKR_supp-Revision-1.aux)
 \openout1 = `YKR_supp-Revision-1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-Class revtex4 Info: Patching LaTeX tabular. on input line 40.
-Class revtex4 Info: cite was not loaded (OK!) on input line 40.
-Class revtex4 Info: multicol was not loaded (OK!) on input line 40.
- (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+Class revtex4 Info: Patching LaTeX tabular. on input line 42.
+Class revtex4 Info: cite was not loaded (OK!) on input line 42.
+Class revtex4 Info: multicol was not loaded (OK!) on input line 42.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
 \scratchdimen=\dimen128
@@ -390,45 +387,35 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 56.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 56.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Overfull \hbox (66.01436pt too wide) in paragraph at lines 117--117
+Overfull \hbox (41.12587pt too wide) in paragraph at lines 118--118
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--129
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1014) in paragraph at lines 153--156
-\T1/cmr/m/n/10 by the NPP di-vided by the cor-re-spond-ing biomass
- []
-
-
-Underfull \hbox (badness 1264) in paragraph at lines 153--156
-\T1/cmr/m/n/10 these steady states with the data from Damuth$[]$.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
 
  []
 
@@ -453,106 +440,57 @@ Overfull \hbox (19.15465pt too wide) in paragraph at lines 169--202
  []
 
 [2]
-
-LaTeX Warning: Reference `' on page 3 undefined on input line 267.
-
-Package epstopdf Info: Source file: <fig_FPAllometric2.eps>
-(epstopdf)                    date: 2017-11-01 11:56:14
-(epstopdf)                    size: 674906 bytes
-(epstopdf)             Output file: <fig_FPAllometric2-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-01 11:59:27
-(epstopdf)                    size: 142536 bytes
-(epstopdf)             Command: <epstopdf --outfile=fig_FPAllometric2-eps-conve
-rted-to.pdf fig_FPAllometric2.eps>
-(epstopdf)             \includegraphics on input line 271.
+Package epstopdf Info: Source file: <mortality-rate-comparison.eps>
+(epstopdf)                    date: 2017-11-02 20:19:37
+(epstopdf)                    size: 164486 bytes
+(epstopdf)             Output file: <mortality-rate-comparison-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-11-02 20:22:46
+(epstopdf)                    size: 10908 bytes
+(epstopdf)             Command: <repstopdf --outfile=mortality-rate-comparison-
+eps-converted-to.pdf mortality-rate-comparison.eps>
+(epstopdf)             \includegraphics on input line 260.
 Package epstopdf Info: Output file is already uptodate.
-<fig_FPAllometric2-eps-converted-to.pdf, id=34, 206.7725pt x 148.555pt>
-File: fig_FPAllometric2-eps-converted-to.pdf Graphic file (type pdf)
 
-<use fig_FPAllometric2-eps-converted-to.pdf>
-Package pdftex.def Info: fig_FPAllometric2-eps-converted-to.pdf used on input l
-ine 271.
-(pdftex.def)             Requested size: 244.79782pt x 175.87819pt.
-
-
-Package natbib Warning: Citation `Damuth:1987kr' on page 3 undefined on input l
-ine 275.
-
-
-Package natbib Warning: Citation `Damuth:1987kr' on page 3 undefined on input l
-ine 275.
-
-[3]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 280.
-
-
-Package natbib Warning: Citation `allen2002' on page 4 undefined on input line 
-282.
-
-
-Package natbib Warning: Citation `enquist1998' on page 4 undefined on input lin
-e 282.
-
-
-Package natbib Warning: Citation `allen2002' on page 4 undefined on input line 
-282.
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 282--283
+<mortality-rate-comparison-eps-converted-to.pdf, id=35, 351.3125pt x 227.85126p
+t>
+File: mortality-rate-comparison-eps-converted-to.pdf Graphic file (type pdf)
+ <use mortality-rate-comparison-eps-converted-to.pdf>
+Package pdftex.def Info: mortality-rate-comparison-eps-converted-to.pdf used on
+ input line 260.
+(pdftex.def)             Requested size: 203.99689pt x 132.31026pt.
+ [3 <./mortality-rate-comparison-eps-converted-to.pdf>]
+Underfull \hbox (badness 1442) in paragraph at lines 277--278
 \T1/cmr/m/n/10 is a con-stant), then the abun-dances should fol-low
  []
 
-Package epstopdf Info: Source file: <fig_FPAllometric2.eps>
-(epstopdf)                    date: 2017-11-01 11:56:14
-(epstopdf)                    size: 674906 bytes
-(epstopdf)             Output file: <fig_FPAllometric2-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-01 11:59:27
-(epstopdf)                    size: 142536 bytes
-(epstopdf)             Command: <epstopdf --outfile=fig_FPAllometric2-eps-conve
-rted-to.pdf fig_FPAllometric2.eps>
-(epstopdf)             \includegraphics on input line 286.
+Package epstopdf Info: Source file: <fig_FPenergyequiv.eps>
+(epstopdf)                    date: 2017-11-01 10:56:25
+(epstopdf)                    size: 352799 bytes
+(epstopdf)             Output file: <fig_FPenergyequiv-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-02 20:05:57
+(epstopdf)                    size: 78527 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig_FPenergyequiv-eps-conv
+erted-to.pdf fig_FPenergyequiv.eps>
+(epstopdf)             \includegraphics on input line 281.
 Package epstopdf Info: Output file is already uptodate.
-File: fig_FPAllometric2-eps-converted-to.pdf Graphic file (type pdf)
-<use fig_FPAllometric2-eps-converted-to.pdf>
-Package pdftex.def Info: fig_FPAllometric2-eps-converted-to.pdf used on input l
-ine 286.
-(pdftex.def)             Requested size: 244.79782pt x 175.87819pt.
+<fig_FPenergyequiv-eps-converted-to.pdf, id=55, 430.60875pt x 298.11375pt>
+File: fig_FPenergyequiv-eps-converted-to.pdf Graphic file (type pdf)
 
-
-Package natbib Warning: Citation `Damuth:1987kr' on page 4 undefined on input l
-ine 290.
-
-
-Package natbib Warning: Citation `Damuth:1987kr' on page 4 undefined on input l
-ine 290.
-
-(./YKR_supp-Revision-1.bbl
-Underfull \hbox (badness 1281) in paragraph at lines 105--112
- []\T1/cmr/m/n/9 Estermann, B. L., Wettstein, H.-R., Sut-ter, F. &
- []
-
-[4 <./fig_FPAllometric2-eps-converted-to.pdf>])
-
-Package natbib Warning: There were undefined citations.
-
-[5] (./YKR_supp-Revision-1.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+<use fig_FPenergyequiv-eps-converted-to.pdf>
+Package pdftex.def Info: fig_FPenergyequiv-eps-converted-to.pdf used on input l
+ine 281.
+(pdftex.def)             Requested size: 203.99689pt x 141.2325pt.
+ [4 <./fig_FPenergyequiv-eps-converted-to.pdf>] [5] (./YKR_supp-Revision-1.aux)
  ) 
 Here is how much of TeX's memory you used:
- 5851 strings out of 493014
- 78912 string characters out of 6133351
- 185232 words of memory out of 5000000
- 9241 multiletter control sequences out of 15000+600000
- 28129 words of font info for 79 fonts, out of 8000000 for 9000
+ 5864 strings out of 493014
+ 79356 string characters out of 6133351
+ 184305 words of memory out of 5000000
+ 9257 multiletter control sequences out of 15000+600000
+ 27253 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,18n,34p,1299b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,21n,34p,1307b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -566,28 +504,29 @@ xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
 6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist
-/fonts/type1/public/cm-super/sfbx0600.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-cm-super/sfss0500.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm
--super/sfti0600.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-s
-uper/sfti0900.pfb>
-Output written on YKR_supp-Revision-1.pdf (5 pages, 583618 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
+/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/c
+m-super/sfss0500.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-
+super/sfti0600.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-su
+per/sfti0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-supe
+r/sfti0900.pfb>
+Output written on YKR_supp-Revision-1.pdf (5 pages, 555506 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 163 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

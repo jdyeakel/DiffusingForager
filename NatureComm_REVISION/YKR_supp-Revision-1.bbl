@@ -127,4 +127,41 @@
   \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{193--246}
   (\bibinfo{year}{1987}).
 
+\bibitem{calder1984}
+\bibinfo{author}{Calder, W.~A.}
+\newblock \emph{\bibinfo{title}{Size, function, and life history}}
+  (\bibinfo{publisher}{Harvard University Press}, \bibinfo{year}{1984}).
+
+\bibitem{damuth1982analysis}
+\bibinfo{author}{Damuth, J.}
+\newblock \bibinfo{title}{Analysis of the preservation of community structure
+  in assemblages of fossil mammals}.
+\newblock \emph{\bibinfo{journal}{Paleobiology}} \textbf{\bibinfo{volume}{8}},
+  \bibinfo{pages}{434--446} (\bibinfo{year}{1982}).
+
+\bibitem{allen2002}
+\bibinfo{author}{Allen, A.~P.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{Gillooly, J.~F.}
+\newblock \bibinfo{title}{{Global biodiversity, biochemical kinetics, and the
+  energetic-equivalence rule}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{297}},
+  \bibinfo{pages}{1545--1548} (\bibinfo{year}{2002}).
+
+\bibitem{enquist1998}
+\bibinfo{author}{Enquist, B.~J.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{West, G.~B.}
+\newblock \bibinfo{title}{{Allometric scaling of plant energetics and
+  population density}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{395}},
+  \bibinfo{pages}{163--165} (\bibinfo{year}{1998}).
+
+\bibitem{Damuth:1987kr}
+\bibinfo{author}{Damuth, J.}
+\newblock \bibinfo{title}{{Interspecific allometry of population density in
+  mammals and other animals: the independence of body mass and population
+  energy-use}}.
+\newblock \emph{\bibinfo{journal}{Biol. J. Linn. Soc.}}
+  \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{193--246}
+  (\bibinfo{year}{1987}).
+
 \end{thebibliography}

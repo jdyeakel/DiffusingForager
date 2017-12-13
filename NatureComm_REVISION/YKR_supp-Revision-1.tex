@@ -35,19 +35,21 @@
 % \usepackage{bibunits}
 
 \linenumbers
-% \setlength\linenumbersep{3pt}
+ \setlength\linenumbersep{3pt}
+ 
+\addto\captionsenglish{\renewcommand{\figurename}{Figure S\!}}
 
 \begin{document}
 
 
 \author{Justin D. Yeakel} \affiliation{School of Natural Sciences, University
-  of California, Merced, Merced, CA 95340, USA}\affiliation{The Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA}\affiliation{Contributed equally}\affiliation{Corresponding author: jdyeakel@gmail.com}
+  of California, Merced, Merced, CA 95340, USA}\affiliation{The Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA}\affiliation{Contributed equally}\affiliation{Corresponding author}
 
 \author{Christopher P. Kempes} \affiliation{The Santa Fe Institute, 1399 Hyde
-  Park Road, Santa Fe, NM 87501, USA}\affiliation{Contributed equally}
+  Park Road, Santa Fe, NM 87501, USA}\affiliation{Contributed equally}\affiliation{Corresponding author}
 
 \author{Sidney Redner} \affiliation{The Santa Fe Institute, 1399 Hyde Park
-  Road, Santa Fe, NM 87501, USA}\affiliation{Contributed equally}
+  Road, Santa Fe, NM 87501, USA}\affiliation{Contributed equally}\affiliation{Corresponding author}
 
 \title{ Supporting Information for ``The dynamics of starvation and recovery''}%: Eco-evolutionary feedbacks}
 
@@ -65,22 +67,20 @@
 
 \clearpage
 
-
-
 {\bf Mechanisms of Starvation and Recovery}
-Our overall goal is to understand the dynamics of starvation, recovery, reproduction, and resource competition, where our framework partitions starvation and reproduction into two classes of the consumer: a full class that is able to reproduce and a hungry class that experiences mortality at a given rate and is unable to reproduce. For the dynamics of growth, reproduction, and resource consumption, past efforts have combined the overall metabolic rate as dictated by body size with a growth rate that is dependent on resource abundance and, in turn, dictates resource consumption (see Refs. \citep{Kempes:2012hy,kempes2014morphological} for a brief review of this perspective). This approach has been used to understand a range of phenomena including a derivation of ontogenetic growth curves from a partitioning of metabolism into maintenance and biosynthesis (e.g. \citep{West:2001bv,moses2008rmo,hou,Kempes:2012hy}) and predictions for the steady-state resource abundance in communities of cells \citep{kempes2014morphological}. Here we leverage these mechanisms, combined with several additional concepts, to define our Nutritional State Model (NSM).
+To understand the dynamics of starvation, recovery, reproduction, and resource competition, our framework partitions consumers into two classes: (a) a full class that is able to reproduce and, (b) a hungry class that experiences mortality at a given rate and is unable to reproduce. For the dynamics of growth, reproduction, and resource consumption, past efforts have combined the overall metabolic rate, as dictated by body size, with a growth rate that is dependent on resource abundance and, in turn, dictates resource consumption (see Refs. \citep{Kempes:2012hy,kempes2014morphological} for a brief review of this perspective). This approach has been used to understand a range of phenomena including a derivation of ontogenetic growth curves from a partitioning of metabolism into maintenance and biosynthesis (e.g. \citep{West:2001bv,moses2008rmo,hou,Kempes:2012hy}) and predictions for the steady-state resource abundance in communities of cells \citep{kempes2014morphological}. Here we leverage these mechanisms, combined with several additional concepts, to define our Nutritional State Model (NSM).
 
 We consider the following generalized set of explicit dynamics for starvation, recovery, reproduction, and resource growth and consumption
 \begin{align}
 \begin{split}
-\dot{F_{d}} &= \lambda_{max} F_{d} + \rho_{max}R_{d}H_{d}/k - \sigma \left(1-\frac{R_{d}}{C}\right)F_{d},  \\
-\dot{H_{d}} &= \sigma \left(1-\frac{R_{d}}{C}\right)F_{d} - \rho_{max}R_{d} H_{d}/k - \mu H_{d},  \\
+\dot{F_{d}} &= \lambda_{\text{max}} F_{d} + \rho_{\text{max}}R_{d}H_{d}/k - \sigma \left(1-\frac{R_{d}}{C}\right)F_{d},  \\
+\dot{H_{d}} &= \sigma \left(1-\frac{R_{d}}{C}\right)F_{d} - \rho_{\text{max}}R_{d} H_{d}/k - \mu H_{d},  \\
 \dot{R_{d}} &= \alpha R_{d}\left(1-\frac{R_{d}}{C}\right) -\\
-& \left[\left(\frac{\rho_{max}R_{d}}{Y_{H}k}+P_{H}\right)H_{d}+\left(\frac{\lambda_{max}}{Y_{F}}+P_{F}\right)F_{d}\right].
+& \left[\left(\frac{\rho_{\text{max}}R_{d}}{Y_{H}k}+P_{H}\right)H_{d}+\left(\frac{\lambda_{\text{max}}}{Y_{F}}+P_{F}\right)F_{d}\right].
 \label{bigdynamics}
 \end{split}
 \end{align}
-where each term has a mechanistic meaning that we detail below (we will denote the dimensional equations with $_{d}$ before introducing the non-dimensional form that is presented in the main text). In the above equations $Y$ represents the yield coefficient (e.g., Refs. \citep{pirt,Heijnen}) which is the quantity of resources required to build a unit of organism (gram of mammal produced per gram of resource consumed) and $P$ is the specific maintenance rate of resource consumption (g resource $\cdot$ s$^{-1}$ $\cdot$ g organism). If we pick $F_{d}$ and $H_{d}$ to have units of (g organisms $\cdot$ m$^{-2}$), then all of the terms of $\dot{R_{d}}$, such as $\frac{\rho\left(R_{d}\right)}{Y}H_{d}$, have units of (g resource $\cdot$ m$^{-2}$ $\cdot$ s$^{-1}$) which are the units of net primary productivity (NPP), a natural choice for $\dot{R_{d}}$. This choice also gives $R_{d}$ as (g $\cdot$ m$^{-2}$) which is also a natural unit and is simply the biomass density. In this system of units $\alpha$ (s$^{-1}$) is the specific growth rate of $R_{d}$, and $C$ is the carrying capacity, or maximum density, of $R_{d}$ in a particular environment, and $k$ is the half-saturation constant (half the density of resources that would lead to maximum growth).
+where each term has a mechanistic meaning that we detail below (we will denote the dimensional equations with the subscript $_{d}$ before introducing the non-dimensional form that is presented in the main text). In the above equations $Y$ represents the yield coefficient (e.g., Refs. \citep{pirt,Heijnen}) which is the quantity of resources required to build a unit of organism (gram of mammal produced per gram of resource consumed) and $P$ is the specific maintenance rate of resource consumption (g resource $\cdot$ s$^{-1}$ $\cdot$ g organism$^{-1}$). If we pick $F_{d}$ and $H_{d}$ to have units of (g organisms $\cdot$ m$^{-2}$), then all of the terms of $\dot{R_{d}}$, such as $\frac{\rho\left(R_{d}\right)}{Y}H_{d}$, have units of (g resource $\cdot$ m$^{-2}$ $\cdot$ s$^{-1}$) which are the units of net primary productivity (NPP), a natural choice for $\dot{R_{d}}$. This choice also gives $R_{d}$ as (g $\cdot$ m$^{-2}$) which is also a natural unit and is simply the biomass density. In these units $\alpha$ (s$^{-1}$) is the specific growth rate of $R_{d}$, $C$ is the carrying capacity, or maximum density, of $R_{d}$ in a particular environment, and $k$ is the half-saturation constant (half the density of resources that would lead to maximum growth).
 %(note this is not fully explicit because I don't know how to deal with the response of $\sigma$ to resources, although I have an idea for a derivation which may be necessary given the following approximations)
 
 
@@ -106,13 +106,14 @@ where each term has a mechanistic meaning that we detail below (we will denote t
 
 %where $\beta=\frac{\lambda_{max}}{Y_{F}}+P$ which is just a constant that depends on the size of an organisms via the allometries for $\lambda_{max}$ and $P$ discussed later.
 
-We can formally non-dimensionalize this system by choosing the general rescaling of $F=fF_{d}$, $H=fH_{d}$, $R=qR_{d}$, $t=st_{d}$, in which case our system of equations becomes
+We can formally non-dimensionalize this system by the rescaling of $F=fF_{d}$, $H=fH_{d}$, $R=qR_{d}$, $t=st_{d}$, in which case our system of equations becomes
 %(ignoring the $\sigma (1-R)F$ terms which I don't have a dimensional form for yet),:
 \begin{align}
 \begin{split}
-\dot{F} &= \frac{1}{s}\left[\lambda_{max} F + \rho_{max}\frac{R}{qk}H - \sigma \left(1-\frac{R}{qC}\right)F\right],  \\
-\dot{H} &= \frac{1}{s}\left[\sigma \left(1-\frac{R}{qC}\right)F - \rho_{max}\frac{R}{qk} H - \mu H\right],  \\
-\dot{R} &= \frac{1}{s}\left[\alpha R\left(1-\frac{R}{qC}\right) -\frac{q}{f}\left[\left(\frac{\rho_{max}R}{Y_{H}kq}+P_{H}\right)H+\left(\frac{\lambda_{max}}{Y_{F}}+P_{F}\right) F\right]\right].
+&\dot{F} = \frac{1}{s}\left[\lambda_{\text{max}} F + \rho_{\text{max}}\frac{R}{qk}H - \sigma \left(1-\frac{R}{qC}\right)F\right],  \\
+&\dot{H} = \frac{1}{s}\left[\sigma \left(1-\frac{R}{qC}\right)F - \rho_{\text{max}}\frac{R}{qk} H - \mu H\right],  \\
+& \dot{R} = \\
+&\frac{1}{s}\left[\alpha R\left(1-\frac{R}{qC}\right) -\frac{q}{f}\left[\left(\frac{\rho_{\text{max}}R}{Y_{H}kq}+P_{H}\right)H+\left(\frac{\lambda_{\text{max}}}{Y_{F}}+P_{F}\right)F\right]\right].
 \end{split}
 \end{align}
 If we make the natural choice of $s=1$, $q=1/C$, and $f=1/Y_{H}k$, then we are left with
@@ -124,7 +125,7 @@ If we make the natural choice of $s=1$, $q=1/C$, and $f=1/Y_{H}k$, then we are l
 \label{reduceddynamics}
 \end{split}
 \end{align}
-where we have dropped the subscripts on $\lambda_{max}$ and $\rho_{max}$ for simplicity, and $\xi=C/k$, $\delta=Y_{H}kP_{H}/C$, and $\beta=Y_{H}k\left(\frac{\lambda_{max}}{Y_{F}}+P_{F}\right)/C$. The above equations represent the system of equations presented in the main text.
+where we have dropped the subscripts on $\lambda_{\text{max}}$ and $\rho_{\text{max}}$ for simplicity, and $\xi\equiv C/k$, $\delta\equiv Y_{H}kP_{H}/C$, and $\beta\equiv Y_{H}k\left(\frac{\lambda_{\text{max}}}{Y_{F}}+P_{F}\right)/C$. The above equations represent the system of equations presented in the main text.
 \\
 
 {\bf Parameter Values and Estimates}
@@ -136,7 +137,7 @@ An important feature of our framework is the starting size, $m_{0}$, of a mammal
 
 The energy to synthesize a unit of biomass, $E_{m}$, has been reported to vary between $1800$ to $9500$ (J g$^{-1}$) (e.g. Refs. \citep{West:2001bv,moses2008rmo,hou}) in mammals with a mean value across many taxonomic groups of $5,774$ (J g$^{-1}$) \citep{moses2008rmo}. The unit energy available during starvation, $E^{\prime}$, could range between $7000$ (J g$^{-1}$), the return of the total energy stored during ontogeny \citep{hou} to a biochemical upper bound of $E^{\prime}=36,000$ (J g$^{-1}$) for the energetics of palmitate \citep{stryer,hou}. For our calculations we use the measured value for bulk tissues of $7000$ which assumes that the energy stored during ontogeny is returned during starvation \citep{hou}.
 
-For the scaling of body composition it has been shown that fat mass follows $M_{\rm fat}=f_{0}M^{\gamma}$, with measured  relationships following  $0.018M^{1.25}$ \citep{Dunbrack:1993ec}, $0.02M^{1.19}$ \citep{Lindstedt:1985hm}, and $0.026M^{1.14}$ \citep{Lindstedt:2002td}. We use the values from \citep{Lindstedt:1985hm} which falls in the middle of this range. Similarly, the muscle mass follows $M_{\rm musc}=u_{0}M^{\zeta}$ with $u_{0}=0.383$ and $\zeta=1.00$ \citep{Lindstedt:2002td}.
+For the scaling of body composition it has been shown that fat mass follows $M_{\rm fat}=f_{0}M^{\gamma}$, with measured  relationships following  $0.018M^{1.25}$ ~\citep{Dunbrack:1993ec}, $0.02M^{1.19}$ ~\citep{Lindstedt:1985hm}, and $0.026M^{1.14}$ ~\citep{Lindstedt:2002td}. We use the values from \citep{Lindstedt:1985hm} which falls in the middle of this range. Similarly, the muscle mass follows $M_{\rm musc}=u_{0}M^{\zeta}$ with $u_{0}=0.383$ and $\zeta=1.00$ ~\citep{Lindstedt:2002td}.
 
 %We also connect the resource growth rate to the total metabolic rate of an organism. That is, we are interested in the relative rates of resource recovery and consumption by the total population. From \citep{allen2002global} the total resource use of a population with an individual body size of $M$ is given by $B_{pop}=0.00061x^{-0.03}$ (W m$^{-2}$). Considering an energy density of $18200$ (J g$^{-1}$) of grass \citep{estermann} and an NPP between and $1.59\times10^{-6}$ and $7.92\times10^{-5}$ (g s$^{-1}$ m$^{-2}$) would give a range of resource rates between  $0.029$ and $1.44$ (W m$^{-2}$). This gives a ratio of total resource consumption to supply rates between $0.00042$ and $0.021$, and we used a value of $0.002$ in our calculations and simulations.
 
@@ -144,13 +145,13 @@ Typically the value of $\xi=C/k$ should roughly be $2$. The value of $\rho$, $\l
 \begin{equation}
 B_{\lambda}=\int_{0}^{t_{\lambda}}B_{0}m\left(t\right)^{\eta}dt.
 \end{equation}
-Similarly, the maintenance for hungry individuals is $P_{H}=B_{0}(\epsilon_{\sigma}M)^{3/4}/(\epsilon_{\sigma}M)E_{d}$, and the yield for hungry individuals (representing the cost on resources to return to the full state) is given by $Y_{H}=ME_{d}/B_{\rho}$ where
+Similarly, the maintenance resource consumption rate for hungry individuals is $P_{H}=B_{0}(\epsilon_{\sigma}M)^{3/4}/(\epsilon_{\sigma}M)E_{d}$, and the yield for hungry individuals (representing the cost on resources to return to the full state) is given by $Y_{H}=ME_{d}/B_{\rho}$ where
 \begin{equation}
 B_{\rho}=\int_{\tau\left(\epsilon_{\sigma}\epsilon_{\lambda}\right)}^{t_{\lambda}}B_{0}m\left(t\right)^{\eta}dt.
 \end{equation}
 Taken together, these relationships allow us to calculate $\rho$, $\delta$, and $\beta$.
 
-Finally, the value of $\alpha$ can be roughly estimated by the NPP divided by the corresponding biomass densities. From the data in Ref. \citep{michaletz2014convergence} we estimate the value of $\alpha$ to range between $2.81\times10^{-10}$ (s$^{-1}$) and $2.19\times10^{-8}$ (s$^{-1}$) globally. It should be noted that the value of $\alpha$ sets the overall scale of the $F^{*}$ and $H^{*}$ steady states along with the $B_{tot}$ for each type, and as such, we use $\alpha$ as our fit parameter to match these steady states with the data from Damuth \citep{damuth1987interspecific}. We find that the best fit is $\alpha=9.45\times10^{-9}$ (s$^{-1}$) which compares well with the calculated range above. However, two points are important to note here: first, our framework predicts the overall scaling of $F^{*}$ and $H^{*}$ independently of $\alpha$ and this correctly matches data, and second, both the asymptotic behavior and slope of $F^{*}$ and $H^{*}$ are independent of $\alpha$, such that our prediction of the maximum mammal size does not depend on $\alpha$.
+Finally, the value of $\alpha$ can be roughly estimated by the NPP divided by the corresponding biomass densities. From the data in Ref. \citep{michaletz2014convergence} we estimate the value of $\alpha$ to range between $2.81\times10^{-10}$ (s$^{-1}$) and $2.19\times10^{-8}$ (s$^{-1}$) globally. It should be noted that the value of $\alpha$ sets the overall scale of the $F^{*}$ and $H^{*}$ steady states along with $B_{tot}$ for each type. As such, we use $\alpha$ as our fit parameter to match these steady states with the data from Damuth \citep{damuth1987interspecific}. We find that the best fit is $\alpha=9.45\times10^{-9}$ (s$^{-1}$) which compares well with the calculated range above. However, two points are important to note here: first, our framework predicts the overall scaling of $F^{*}$ and $H^{*}$ independently of $\alpha$ and this correctly matches data, and second, both the asymptotic behavior and slope of $F^{*}$ and $H^{*}$ are independent of $\alpha$, such that our prediction of the maximum mammal size does not depend on $\alpha$.
 \\
 %For the growth rate $\lambda$ we consider the standard model of $\ln\left(\upsilon\right)/t_{\lambda}$
 
@@ -161,7 +162,6 @@ Finally, the value of $\alpha$ can be roughly estimated by the NPP divided by th
 
 
  \begin{table}[h]
-  {\color{red}
 \caption{Parameter values for mammals}
 \label{param}
     \begin{center}
@@ -200,7 +200,6 @@ Finally, the value of $\alpha$ can be roughly estimated by the NPP divided by th
    \hline
     \end{tabular}
     \end{center}
-    }
    \end{table}
 
 
@@ -244,55 +243,223 @@ Finally, we can calculate the maintenance of the invaders as
 
 To determine whether or not the invader or resident population has an advantage, we compute $R^*(M)$ and $R^*(M^\prime=M(1+\chi))$ for values of $\chi \in (-f_0M^{\gamma-1},1/\epsilon_{\lambda}-1)$, and the invading population is assumed to have an advantage over the resident population if $R^*(M^\prime)<R^*(M)$.
 
-{\color{red} \section{Sensitivity to additional death terms}
 
-It should be noted that our set of dynamics (Equations \ref{bigdynamics} and \ref{reduceddynamics}) could include a constant death term of the form $-d_{F}F$ and $-d_{H}H$ to represent death not directly linked to starvation. Adding terms of this form to our model would simply adjust the effective value of $\lambda$ and $\mu$, and we could rewrite Equation \ref{reduceddynamics} with $\lambda^{\prime}=\lambda-d$ and $\mu^{\prime}=\mu-d$. These substitutions would not alter the functional form of our model nor the steady-states and qualitative results, however the quantitive values could shift based on the size of $d$ relative to $\lambda$ and $\mu$. 
+{\bf Sensitivity to additional death terms}
 
-Survivorship has a well-known functional form which changes systematically with size \cite{}. Typically survivorship is defined using the Gompertz curve 
+It should be noted that our set of dynamics (Equations \ref{bigdynamics} and \ref{reduceddynamics}) could include a constant death term of the form $-d_{F}F$ and $-d_{H}H$ to represent death not directly linked to starvation. Adding terms of this form to our model would simply adjust the effective value of $\lambda$ and $\mu$, and we could rewrite Equation \ref{reduceddynamics} with $\lambda^{\prime}=\lambda-d$ and $\mu^{\prime}=\mu-d$. These substitutions would not alter the functional form of our model nor the steady-states and qualitative results, however the quantitative values could shift based on the size of $d$ relative to $\lambda$ and $\mu$. 
+
+Survivorship has a well-known functional form which changes systematically with size (e.g. \cite{calder1984}). Typically survivorship is defined using the Gompertz curve 
 \begin{equation}
-F=F_{0}e^{\left(q_{0}/c\right)\left(1-e^{ct}\right)}
+F=F_{0}e^{\left(c_{0}/c_{1}\right)\left(1-e^{c_{1}t}\right)}
 \label{gompertz}
 \end{equation}
-where the parameters have the following allometric dependencies on adult mass \cite{}.
+where the parameters have the following allometric dependencies on adult mass $c_{0}=a_{0}M^{b_{0}}$ and $c_{1}=a_{1}M^{b_{1}}$, with $a_{0}=1.88\times10^{-8}$ (s g$^{-b_{0}}$), $b_{0}=-0.56$, $a_{1}=1.45\times10^{-7}$ (s g$^{-b_{1}}$), and $b_{1}=-0.27$ (see \cite{calder1984} for a review).
 
-We are interested in the specific death rate of the form $\cdot{F}=-dF$, and using the derivative of Equation \ref{gompertz} we find that $d=e^{ct}q_{0}$. Our model considers the average rates over a population and lifecycle and the average death rate is given by 
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth]{mortality-rate-comparison.eps}
+\caption{\small{The rates of reproduction $\lambda$ (blue), starvation-based mortality $\mu$ (red), and survivorship-based death $\bar{d}$ (black) as a function of adult mass.}\label{fig:ratescomp}}
+\end{figure}
+
+We are interested in the specific death rate of the form $\dot{F}=-dF$, and using the derivative of Equation \ref{gompertz} we find that $d=c_{0}e^{c_{1}t}$. Our model considers the average rates over a population and lifecycle and the average death rate is given by 
 \begin{eqnarray}
-\bar{d}&=&\frac{1}{t_{exp}}\int_{0}^{t_{exp}}e^{ct}q_{0} dt \\
-&=&\frac{q_{0}\left(e^{c t_{exp}}-1\right)}{ct_{exp}}
+\bar{d}&=&\frac{1}{t_{\text{exp}}}\int_{0}^{t_{\text{exp}}}c_{0}e^{c_{1}t} dt \\
+&=&\frac{c_{0}\left(e^{c_{1} t_{\text{exp}}}-1\right)}{c_{1}t_{\text{exp}}}
 \end{eqnarray}
-where $t_{exp}$ is the expected lifespan following the allometry of $t_{exp}=$ \cite{}. Given the allometries above we have that
+where $t_{\text{exp}}$ is the expected lifespan following the allometry of $t_{\text{exp}}=a_{2}M^{b_{2}}$ with $a_{2}=4.04\times10^{6}$ (s g$^{-b_{2}}$) and $b_{2}=0.30$ ~\cite{damuth1982analysis,calder1984}. Given the allometries above we have that
 \begin{equation}
-d=
+\bar{d}=\frac{a_{0} \left(e^{a_{1}a_{2}M^{b_{1}+b_{2}}}-1\right) M^{b_{0}-b_{1}-b_{2}}}{a_{1} a_{2}}
 \end{equation}
-which scales roughly like $SCALING$. In figure \ref{} we compare the value of $d$ to the reproductive and starvation mortality rates . The values of $d$ are orders of magnitude smaller than these rates at all scales, and adding this non-starvation based death rate to our model does not shift our results within numerical confidence. 
+which scales roughly like $M^{b_{0}}$ because $b_{1}$ and $b_{2}$ are close in value but opposite in sign. In Figure S\ref{fig:ratescomp} we compare the value of $\bar{d}$ to the reproductive, $\lambda$, and starvation-based mortality, $\mu$, rates. The values of $\bar{d}$ are orders of magnitude smaller than these rates for all mammalian masses, and thus, adding this non-starvation based death rate to our model does not shift our results within numerical confidence. 
 
-\begin{figure}
+{\bf NSM and the energy equivalence hypothesis}
+
+The energy equivalence hypothesis is based on the observation that if one assumes that the total metabolism of an ecosystem $B_{\rm tot}$ is equally partitioned between all species ($B_{i}$, the total metabolism of one species, is a constant), then the abundances should follow $N\left(M\right)B\left(M\right)=B_{i}$ implying that $N\left(M\right)\propto M^{-\eta}$, where $\eta$ is the metabolic scaling exponent \citep{allen2002,enquist1998}. As $\eta \approx 3/4$ this hypothesis is consistent with Damuth's law \citep{allen2002}. However, the actual equivalence of energy usage of diverse species has not been measured at the population level for a variety of whole populations. Figure S\ref{fig:equivalence} recasts the results of the NSM in terms of this hypothesis and shows that $F^{*}B$ is nearly constant over the same range of mammalian sizes up to the asymptotic behavior for the largest terrestrial mammals. 
+
+\begin{figure}[h!]
 \centering
-\includegraphics[width=0.48\textwidth]{fig_FPAllometric2.eps}
-\caption{\small{ Total energetic use $B_{\rm tot}$ of consumer populations at the steady state as a function of body mass.
-  The data are from Damuth \citep{Damuth:1987kr} and have been converted to
+\includegraphics[width=0.4\textwidth]{fig_FPenergyequiv.eps}
+\caption{\small{ Total energetic use $B_{\rm tot}$ of consumer populations at the steady state as a function of body mass ($F^*$ is shown in green and $H^*$ in orange).  The data are from Damuth \citep{Damuth:1987kr} and have been converted to
   total population metabolism using the allometric relationships for
   metabolic rate (e.g. Refs.~\citep{West:2001bv,hou,moses2008rmo}).}\label{fig:equivalence}}
 \end{figure}
 
-}
+{\bf Application of NSM limits to aquatic mammals}
+A theoretical upper bound on mammalian body size is given by $\epsilon_\sigma=0$, where mammals are entirely composed of metabolic reserves, and this occurs at $M=8.3\times 10^8$ (g), or $120$ times the mass of a male African elephant. We note this particular limit as it may have future relevance to considerations of the ultimate constraints on aquatic mammals.
 
-{\color{red} \section{NSM and the energy equivalence hypothesis}
 
-The energy equivalence hypothesis is based on the observation that if one assumes that the total metabolism of an ecosystem $B_{\rm tot}$ is equally partitioned between all species ($B_{i}$, the total metabolism of one species, is a constant), then the abundances should follow $N\left(M\right)B\left(M\right)=B_{i}$ implying that $N\left(M\right)\propto M^{-\eta}$, where $\eta$ is the metabolic scaling exponent \citep{allen2002,enquist1998}. As $\eta \approx 3/4$ this hypothesis is consistent with Damuth's law \citep{allen2002}, however the actually equivalence of energy usage of diverse species has not been measured at the population level for a variety of whole populations. Figure \ref{fig:equivalence} shows that $F^{*}B$ is nearly constant over this same range. 
+\def\bibfont{\footnotesize}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.48\textwidth]{fig_FPAllometric2.eps}
-\caption{\small{ Total energetic use $B_{\rm tot}$ of consumer populations at the steady state as a function of body mass.
-  The data are from Damuth \citep{Damuth:1987kr} and have been converted to
-  total population metabolism using the allometric relationships for
-  metabolic rate (e.g. Refs.~\citep{West:2001bv,hou,moses2008rmo}).}\label{fig:equivalence}}
-\end{figure}
 
-}
+% \bibliography{aa_starving_supplement}
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
 
-\bibliography{aa_starving_supplement}
+\bibitem{Kempes:2012hy}
+\bibinfo{author}{Kempes, C.~P.}, \bibinfo{author}{Dutkiewicz, S.} \&
+  \bibinfo{author}{Follows, M.~J.}
+\newblock \bibinfo{title}{{Growth, metabolic partitioning, and the size of
+  microorganisms.}}
+\newblock \emph{\bibinfo{journal}{PNAS}} \textbf{\bibinfo{volume}{109}},
+  \bibinfo{pages}{495--500} (\bibinfo{year}{2012}).
+
+\bibitem{kempes2014morphological}
+\bibinfo{author}{Kempes, C.~P.}, \bibinfo{author}{Okegbe, C.},
+  \bibinfo{author}{Mears-Clarke, Z.}, \bibinfo{author}{Follows, M.~J.} \&
+  \bibinfo{author}{Dietrich, L.~E.}
+\newblock \bibinfo{title}{Morphological optimization for access to dual
+  oxidants in biofilms}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}} \textbf{\bibinfo{volume}{111}}, \bibinfo{pages}{208--213}
+  (\bibinfo{year}{2014}).
+
+\bibitem{West:2001bv}
+\bibinfo{author}{West, G.~B.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{Enquist, B.~J.}
+\newblock \bibinfo{title}{{A general model for ontogenetic growth}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{413}},
+  \bibinfo{pages}{628--631} (\bibinfo{year}{2001}).
+
+\bibitem{moses2008rmo}
+\bibinfo{author}{Moses, M.~E.} \emph{et~al.}
+\newblock \bibinfo{title}{{Revisiting a model of ontogenetic growth: Estimating
+  model parameters from theory and data}}.
+\newblock
+  \emph{\bibinfo{journal}{http://dx.doi.org.proxy.lib.sfu.ca/10.1086/679735}}
+  \textbf{\bibinfo{volume}{171}}, \bibinfo{pages}{632--645}
+  (\bibinfo{year}{2008}).
+
+\bibitem{hou}
+\bibinfo{author}{Hou, C.} \emph{et~al.}
+\newblock \bibinfo{title}{{Energy uptake and allocation during ontogeny}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{322}},
+  \bibinfo{pages}{736--739} (\bibinfo{year}{2008}).
+
+\bibitem{pirt}
+\bibinfo{author}{Pirt, S.}
+\newblock \bibinfo{title}{The maintenance energy of bacteria in growing
+  cultures}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the Royal Society of London B:
+  Biological Sciences}} \textbf{\bibinfo{volume}{163}},
+  \bibinfo{pages}{224--231} (\bibinfo{year}{1965}).
+
+\bibitem{Heijnen}
+\bibinfo{author}{Heijnen, J.} \& \bibinfo{author}{Roels, J.}
+\newblock \bibinfo{title}{A macroscopic model describing yield and maintenance
+  relationships in aerobic fermentation processes}.
+\newblock \emph{\bibinfo{journal}{Biotechnology and Bioengineering}}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{739--763}
+  (\bibinfo{year}{1981}).
+
+\bibitem{peters1986ecological}
+\bibinfo{author}{Peters, R.~H.}
+\newblock \emph{\bibinfo{title}{The Ecological Implications of Body Size}},
+  vol.~\bibinfo{volume}{2} (\bibinfo{publisher}{Cambridge University Press},
+  \bibinfo{address}{Cambridge}, \bibinfo{year}{1986}).
+
+\bibitem{blueweiss1978relationships}
+\bibinfo{author}{Blueweiss, L.} \emph{et~al.}
+\newblock \bibinfo{title}{Relationships between body size and some life history
+  parameters}.
+\newblock \emph{\bibinfo{journal}{Oecologia}} \textbf{\bibinfo{volume}{37}},
+  \bibinfo{pages}{257--272} (\bibinfo{year}{1978}).
+
+\bibitem{stryer}
+\bibinfo{author}{Stryer, L.}
+\newblock \emph{\bibinfo{title}{{Biochemistry, Fourth Edition}}}
+  (\bibinfo{publisher}{W.H. Freeman and Company}, \bibinfo{address}{New York},
+  \bibinfo{year}{1995}).
+
+\bibitem{Dunbrack:1993ec}
+\bibinfo{author}{Dunbrack, R.~L.} \& \bibinfo{author}{Ramsay, M.~A.}
+\newblock \bibinfo{title}{{The Allometry of Mammalian Adaptations to Seasonal
+  Environments: A Critique of the Fasting Endurance Hypothesis}}.
+\newblock \emph{\bibinfo{journal}{Oikos}} \textbf{\bibinfo{volume}{66}},
+  \bibinfo{pages}{336--342} (\bibinfo{year}{1993}).
+
+\bibitem{Lindstedt:1985hm}
+\bibinfo{author}{Lindstedt, S.~L.} \& \bibinfo{author}{Boyce, M.~S.}
+\newblock \bibinfo{title}{{Seasonality, Fasting Endurance, and Body Size in
+  Mammals}}.
+\newblock \emph{\bibinfo{journal}{Am. Nat.}} \textbf{\bibinfo{volume}{125}},
+  \bibinfo{pages}{873--878} (\bibinfo{year}{1985}).
+
+\bibitem{Lindstedt:2002td}
+\bibinfo{author}{Lindstedt, S.~L.} \& \bibinfo{author}{Schaeffer, P.~J.}
+\newblock \bibinfo{title}{{Use of allometry in predicting anatomical and
+  physiological parameters of mammals.}}
+\newblock \emph{\bibinfo{journal}{Lab. Anim.}} \textbf{\bibinfo{volume}{36}},
+  \bibinfo{pages}{1--19} (\bibinfo{year}{2002}).
+
+\bibitem{estermann}
+\bibinfo{author}{Estermann, B.~L.}, \bibinfo{author}{Wettstein, H.-R.},
+  \bibinfo{author}{Sutter, F.} \& \bibinfo{author}{Kreuzer, M.}
+\newblock \bibinfo{title}{Nutrient and energy conversion of grass-fed dairy and
+  suckler beef cattle kept indoors and on high altitude pasture}.
+\newblock \emph{\bibinfo{journal}{Animal Research}}
+  \textbf{\bibinfo{volume}{50}}, \bibinfo{pages}{477--493}
+  (\bibinfo{year}{2001}).
+
+\bibitem{michaletz2014convergence}
+\bibinfo{author}{Michaletz, S.~T.}, \bibinfo{author}{Cheng, D.},
+  \bibinfo{author}{Kerkhoff, A.~J.} \& \bibinfo{author}{Enquist, B.~J.}
+\newblock \bibinfo{title}{Convergence of terrestrial plant production across
+  global climate gradients}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{512}},
+  \bibinfo{pages}{39--43} (\bibinfo{year}{2014}).
+
+\bibitem{damuth1987interspecific}
+\bibinfo{author}{Damuth, J.}
+\newblock \bibinfo{title}{Interspecific allometry of population density in
+  mammals and other animals: the independence of body mass and population
+  energy-use}.
+\newblock \emph{\bibinfo{journal}{Biological Journal of the Linnean Society}}
+  \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{193--246}
+  (\bibinfo{year}{1987}).
+
+\bibitem{calder1984}
+\bibinfo{author}{Calder, W.~A.}
+\newblock \emph{\bibinfo{title}{Size, function, and life history}}
+  (\bibinfo{publisher}{Harvard University Press}, \bibinfo{year}{1984}).
+
+\bibitem{damuth1982analysis}
+\bibinfo{author}{Damuth, J.}
+\newblock \bibinfo{title}{Analysis of the preservation of community structure
+  in assemblages of fossil mammals}.
+\newblock \emph{\bibinfo{journal}{Paleobiology}} \textbf{\bibinfo{volume}{8}},
+  \bibinfo{pages}{434--446} (\bibinfo{year}{1982}).
+
+\bibitem{allen2002}
+\bibinfo{author}{Allen, A.~P.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{Gillooly, J.~F.}
+\newblock \bibinfo{title}{{Global biodiversity, biochemical kinetics, and the
+  energetic-equivalence rule}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{297}},
+  \bibinfo{pages}{1545--1548} (\bibinfo{year}{2002}).
+
+\bibitem{enquist1998}
+\bibinfo{author}{Enquist, B.~J.}, \bibinfo{author}{Brown, J.~H.} \&
+  \bibinfo{author}{West, G.~B.}
+\newblock \bibinfo{title}{{Allometric scaling of plant energetics and
+  population density}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{395}},
+  \bibinfo{pages}{163--165} (\bibinfo{year}{1998}).
+
+\bibitem{Damuth:1987kr}
+\bibinfo{author}{Damuth, J.}
+\newblock \bibinfo{title}{{Interspecific allometry of population density in
+  mammals and other animals: the independence of body mass and population
+  energy-use}}.
+\newblock \emph{\bibinfo{journal}{Biol. J. Linn. Soc.}}
+  \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{193--246}
+  (\bibinfo{year}{1987}).
+
+\end{thebibliography}
+
 
 
 % \end{bibunit}
